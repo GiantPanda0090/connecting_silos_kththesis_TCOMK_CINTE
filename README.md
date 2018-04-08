@@ -1,4 +1,5 @@
-# connecting_silos_kththesis_TCOMK_CINTE
+# Connecting_Silos_KTHthesis_TCOMK_CINTE
+ Automation System for Thesis Processing in Canvas and Diva<br /><br />
  KTH CINTE and TCOMK Thesis Project <br />
  
  Author:<br /> 
