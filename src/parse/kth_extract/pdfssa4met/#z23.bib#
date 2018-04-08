@@ -1,0 +1,23 @@
+@MastersThesis{,
+  author = 	 {},
+  title = 	 {},
+  school = 	 {},
+  year = 	 {},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@mastersthesis{Sallberg843073,
+   author = {S{\"a}llberg, Kristian},
+   institution = {KTH, Radio Systems Laboratory (RS Lab)},
+   pages = {xix,120},
+   school = {KTH, Radio Systems Laboratory (RS Lab)},
+   title = {A Data Model Driven Approach to Managing Network Functions Virtualization : Aiding Network Operators in Provisioning and Configuring Network Functions},
+   series = {TRITA-ICT-EX},
+   number = {2015:159},
+   year = {2015}
+}

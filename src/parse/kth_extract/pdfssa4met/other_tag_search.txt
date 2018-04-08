@@ -1,0 +1,226 @@
+<heading>Power Enhancement in Piezoelectric Energy Harvesting</heading> 
+
+<heading>ZOHREH ALAEI</heading> 
+
+<heading>KTH ROYAL INSTITUTE OF TECHNOLOGY SCHOOL OF INFORMATION AND COMMUNICATION TECHNOLOGY</heading> 
+
+<heading>	</heading> 
+
+<heading>Table of Contents</heading> 
+
+<heading>Abstract</heading> 
+
+<heading>Methods</heading> 
+
+<heading>1</heading> 
+
+<heading>Introduction</heading> 
+
+<heading>2</heading> 
+
+<heading>Piezoelectricity and Their Performance in</heading> 
+
+<heading>Energy Harvesters</heading> 
+
+<heading>2.1 Introduction to Piezoelectric Effect:</heading> 
+
+<heading>2.1.2 Piezoelectric Transduction Principle</heading> 
+
+<heading>2.2 Piezoelectric Constants and Constitutive Equations</heading> 
+
+<heading>2.2.1 Piezoelectric charge constant</heading> 
+
+<heading>d 33</heading> 
+
+<heading>d 31</heading> 
+
+<heading>d 15</heading> 
+
+<heading>2.2.2 Piezoelectric Voltage Constant</heading> 
+
+<heading>g 33</heading> 
+
+<heading>g 31</heading> 
+
+<heading>g 15</heading> 
+
+<heading>3</heading> 
+
+<heading>Piezoelectric Material</heading> 
+
+<heading>3.1 Piezoelectric Ceramics</heading> 
+
+<heading>3 )</heading> 
+
+<heading>For example, sodium potassium niobate displays</heading> 
+
+<heading>properties very identical to PZT without the lead existence.</heading> 
+
+<heading>PZT is important because of its high Curie temperature that allows it to operate in a</heading> 
+
+<heading>wide range before it loses the piezoelectricity effect. In the past few years a wide</heading> 
+
+<heading>range of this material has been modified by changing their chemical composition such</heading> 
+
+<heading>as PZT-5H and PZT5-A.</heading> 
+
+<heading>Piezoelectric ceramics are chosen based on the characteristics of the mechanical</heading> 
+
+<heading>energy applied to them. One of the advantages for piezo ceramics is their easy</heading> 
+
+<heading>integration to thin sheets can simply be planted on a cantilever beam structure, which</heading> 
+
+<heading>this mechanical structure is one of the most used structure in energy harvesters.</heading> 
+
+<heading>Roundy[5] did a study using a PZT-5A ceramic on a cantilever beam with a length of</heading> 
+
+<heading>1,75 cm while a proof mass was attached to the tip of the cantilever to decrease its</heading> 
+
+<heading>resonance frequency. The device was set at 100 Hz and, matching its natural</heading> 
+
+<heading>frequency and a driving acceleration of 2.25 m/s 2 . By setting the load resistance to</heading> 
+
+<heading>about 220 ohms , he achieved a power around 60 í µí¼í µí±. Later he experienced with two</heading> 
+
+<heading>additional lengths of 1.5 cm and 3 cm and was able to achieve an output power of 200</heading> 
+
+<heading>í µí¼í µí± and 380 í µí¼í µí±, respectively. Yuan et al [6] also studied the output power of</heading> 
+
+<heading>trapezoidal and rectangular PZT cantilevers, which were a few centimeters larger than</heading> 
+
+<heading>Also complete insensitiveness to humidity</heading> 
+
+<heading>and to atmosphere change, this material is considered a favorable material.</heading> 
+
+<heading>3.2 Piezoelectric polymers</heading> 
+
+<heading>PVDF (polyvinylidene difluoride ) as a semi-</heading> 
+
+<heading>crystalline polymer is one of the extreme cases of the high-energy density material</heading> 
+
+<heading>among piezoelectric polymers. It contains about 50% crystals that are embedded in an</heading> 
+
+<heading>amorphous matrix. Beside their high-energy density, they are easy to deform under</heading> 
+
+<heading>the mechanical shock, which makes them resilient and suitable for curved surfaces.</heading> 
+
+<heading>3.3 Piezoelectric Single Crystals</heading> 
+
+<heading>3 ]</heading> 
+
+<heading>3.4 Conclusion</heading> 
+
+<heading>4</heading> 
+
+<heading>Configuration of Piezoelectric Energy Harvesters</heading> 
+
+<heading>4.1 Energy harvesting systems</heading> 
+
+<heading>4.2 Cantilever beams</heading> 
+
+<heading>A.T. Mineto et</heading> 
+
+<heading>al [17], a beam with length, width, thickness of 0.5, 0.05, and 0.04 respectively with a</heading> 
+
+<heading>piezoelectric material with length, width, and thickness is 0.05, 0.05,0.5x10 -3 m</heading> 
+
+<heading>respectively, mounted on it was exposed to force equal to 1 N. The force was applied</heading> 
+
+<heading>on different placed of the beam. The following results shows how output energy can</heading> 
+
+<heading>vary with the location of the applied force and location of the piezoelectric material</heading> 
+
+<heading>(PZT).</heading> 
+
+<heading>4.3 Cymbal type</heading> 
+
+<heading>4.4 Circular Diaphragms</heading> 
+
+<heading>4.5 Conclusion</heading> 
+
+<heading>5</heading> 
+
+<heading>Piezoelectric Circuit Topologies</heading> 
+
+<heading>5.1 Mechanical and electrical modeling</heading> 
+
+<heading>Energy Equation</heading> 
+
+<heading>Provided</heading> 
+
+<heading>Kinetic</heading> 
+
+<heading>Potential</heading> 
+
+<heading>Dissipated</heading> 
+
+<heading>Transferred</heading> 
+
+<heading>í µí°¼ = 	í µí»¼í µí±¢ − í µí°¶ í µí±</heading> 
+
+<heading>í µí±</heading> 
+
+<heading>− 1 í µí±í µí¼í µí°¶ í µí±</heading> 
+
+<heading>í µí± = í µí»¼í µí±í µí±¢ − í µí± í µí±í µí¼í µí°¶ í µí±</heading> 
+
+<heading>í µí»¼í µí±¢ í µí± = í µí± í µí±í µí¼í µí°¶ + 1</heading> 
+
+<heading>í µí± = í µí»¼í µí± 1 + í µí±í µí¼í µí±í µí°¶ í µí±í µí¼í µí±¢</heading> 
+
+<heading>5.2 Synchronized Switch Harvesting (SSH) techniques</heading> 
+
+<heading>í µí± = 4í µí±í µí»¼ (í µí±í µí°¶ í µí¼ 1 − í µí»¾ + í µí¼) í µí¼ í µí±¢</heading> 
+
+<heading>í µí± = 4í µí±í µí»¼ (1 + í µí»¾) (í µí±í µí°¶ í µí¼ 1 + í µí»¾ + í µí¼ 1 − í µí»¾ ) í µí¼ í µí±¢</heading> 
+
+<heading>5.3 Synchronous Electric Charge Extraction (SECE)</heading> 
+
+<heading>5.4 Voltage Doubler</heading> 
+
+<heading>5.5 Conclusion</heading> 
+
+<heading>Topology Output Power</heading> 
+
+<heading>STD</heading> 
+
+<heading>VD</heading> 
+
+<heading>P-SSHI</heading> 
+
+<heading>S-SSHI</heading> 
+
+<heading>SECE</heading> 
+
+<heading>6</heading> 
+
+<heading>Experimental Results</heading> 
+
+<heading>Length</heading> 
+
+<heading>(cm)</heading> 
+
+<heading>Voltage</heading> 
+
+<heading>(V)</heading> 
+
+<heading>7</heading> 
+
+<heading>Use of Piezoelectric Energy Harvesting in Medical Engineering</heading> 
+
+<heading>recently designed a device that harvests energy from the of</heading> 
+
+<heading>heartbeats through the chest and converts it to electricity to run.</heading> 
+
+<heading>8</heading> 
+
+<heading>Conclusion</heading> 
+
+<heading>References</heading> 
+
+<heading>Sri Ramaswamy Memorial University,</heading> 
+
+<heading>Vol.26(28), John Wiley & Sons, Inc. 2014</heading> 
+
+<heading>www.kth.se</heading> 
+
