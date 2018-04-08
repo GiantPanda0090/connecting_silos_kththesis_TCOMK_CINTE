@@ -2,18 +2,18 @@
  KTH CINTE and TCOMK Thesis Project <br />
  
  Author:<br /> 
- Qi Li, Shiva Besharat Pour<br />
+ Qi Li, Shiva Besharat Pour<br /><br />
  Examinar:<br />
- Gerald Q. Maguire Jr.<br />
+ Gerald Q. Maguire Jr.<br /><br />
  Academic adviser:<br />
- Anders Västberg<br />
+ Anders Västberg<br /><br />
  Examin Insitutution:<br />
  KTH Royal Institute of Technology<br />
  School of Electrical Engineering and Computer Science (EECS))<br />
  Department of Communication Systems<br />
- Stockholm, Sweden<br />
+ Stockholm, Sweden<br /><br />
  
- Project Outline:
+ Project Outline:<br />
  Process Module: src/parse/kth_extract/pdfssa4met<br />
  Canvas RestAPI Operation: src/Canvas<br />
  DiVA Operation: src/Diva<br />
