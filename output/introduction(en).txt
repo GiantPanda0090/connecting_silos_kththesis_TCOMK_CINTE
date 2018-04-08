@@ -1,0 +1,38 @@
+<p>Energy harvesting or energy scavenging is a process of generating electricity from</p> 
+
+<p>ambient environment through various sources of energy. The development of energy</p> 
+
+<p>harvesting from natural sources has received a great deal of interest in the industrial</p> 
+
+<p>world and research communities over the past few decades. Nowadays electronic</p> 
+
+<p>devices use wireless data transmission to function. A lot of devices are desired to be</p> 
+
+<p>wireless and self-powered to make everyday life easier and also to use natural</p> 
+
+<p>ambient sources to have a green world and clean from fuel based energy. Supplying</p> 
+
+<p>power for these devices may proceed from batteries or some other wireless power or</p> 
+
+<p>energy suppliers. But energy suppliers or batteries have some disadvantages such as</p> 
+
+<p>replacement, discharging and other maintenance costs. For example, in many areas</p> 
+
+<p>that devices are controlled by remotes, continuous charging methods aren’t possible.</p> 
+
+<p>So some methods must be used to keep the batteries charged. To resolve such</p> 
+
+<p>problem, we need to work on different ideas to provide the required energy. Energy</p> 
+
+<p>harvesting can be the most efficient way to provide the energy from the ambient</p> 
+
+<p>environment. It can help to utilize the energy for future use. Energy harvesting</p> 
+
+<p>hierarchy can be categorized as shown in figure 1. As it can be seen in the picture</p> 
+
+<p>there are several ways to extract energy from ambient sources. Among them motion is</p> 
+
+<p>one of sources which includes piezoelectric material as one of the ways to generated</p> 
+
+<p>power.</p> 
+

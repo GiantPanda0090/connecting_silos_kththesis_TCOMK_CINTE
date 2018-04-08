@@ -1,0 +1,372 @@
+maguire@birkv:/u2/home/maguire/Working/Exjobs/pdfssa4met>  find .. -name *with-cover\*.pdf -exec ./kthextract.py  {} \; -print 
+<Title>Internet of Things</Title>
+<Subtitle>Internet of Things</Subtitle>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>Internet of Things (IoT) is a concept that encompasses various objects and methods of communication to exchange information. Today IoT is more a descriptive term of a vision that everything should be connected to the internet. IoT will be fundamental in the future because the concept opens up opportunities for new services and new innovations. All objects will be connected and able to communicate with each other, while they operate in unprotected environments. This later aspect leads to major security challenges.</p>
+<p>Today, IoT is in great need of standardization and clear architectures that describe how this technology should be implemented and how IoT devices interact with each other in a secure manner. The security challenges are rooted in the technology and how information is acquired and manipulated by this technology. This thesis provides an introduction to what the IoT is and how it can be used as well as some of the threats that IoT may face in regards to information security. In addition, the thesis provides the reader with some suggestions about how to potentially solve the fundamental need for authentication and secure communications. The solutions presented are based on both contemporary solutions and technologies that are under development for the future. Contemporary solutions are based on security protocols such as IPSec and DTLS. These protocols are being used in an environment that extends across the Internet and into a 6LoWPAN network. The proposed authentication solution has been developed based on a public key infrastructure and trust models for certificate management.</p>
+<p>As future work, the thesis presents several research areas where this thesis can be used as a basis. These specialization areas include further analysis of vulnerabilities and an implementation of the proposed solutions.</p>
+<p>Keywords:</p>
+<p>Internet of Things, IoT, information security, identification, authentication, secure communication</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>Internet of Things (IoT) är ett koncept som omfattar olika objekt och kommunikationsmetoder för utbyte av information. Idag är IoT mer en beskrivande term av den framtidsvision som finns att allting ska vara uppkopplat på internet. IoT kommer vara fundamentalt i framtiden eftersom konceptet öppnar upp möjligheter för nya tjänster samt nya innovationer. Då alla objekt ska vara uppkopplade och kunna kommunicera med varandra samtidigt som de skall kunna operera i oskyddade miljöer, bidrar detta till stora säkerhetsutmaningar.</p>
+<p>Dagens IoT är i stort behov av standardisering och klara strukturer för hur tekniken ska implementeras samt samverka med varandra på ett säkert sätt. Utmaningarna ligger i att säkra tekniken samt informationen som tekinken bidrar med. Denna rapport ger en introduktion till vad IoT är och hur det kan användas samt vilka hot som IoT kan möta i avseende till informationssäkerhet. Utöver detta så förser rapporten läsaren med förslag om hur man eventuellt kan lösa de fundamentala behoven av autentisering och säker kommunikation. Lösningarna som läggs fram är baserade på både nutida lösningar och teknik som är under utveckling inför framtiden. Nutida lösningar är baserade på säkerhetsprotokoll som IPsec och DTLS som används i en miljö som sträcker över internet och in i ett 6LoWPAN nätverk. Den autentiseringslösning som tagits fram grundar sig på PKI och förtroendemodeller för certifikathantering.</p>
+<p>För framtida arbete presenteras flertalet vidare fördjupningsområden där denna rapport kan användas som grund. Dessa fördjupningsområden inkluderar vidare analys av sårbarheter och implementation av de lösningar som tagits fram.</p>
+<p>Nyckelord:</p>
+<p>Internet of Things, IoT, informationssäkerhet, identifiering, autentisering, säker kommunikation</p>
+<heading>Internet of Things</heading>
+<heading>Exploring and Securing a Future Concept</heading>
+<heading>CRISTIAN BUDE and ANDREAS KERVEFORS BERGSTRAND</heading>
+<heading>Internet of Things</heading>
+<subtitle>Exploring and Securing a Future Concept</subtitle>
+<author>Cristian Bude and Andreas Kervefors Bergstrand</author>
+<heading>2015-06-15</heading>
+<heading>Bachelor’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Industrial adviser Emma Andersdotter and Johan Thulin</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150615-Cristian_Bude_Andreas_Kervefors_Bergstrand-with-cover.pdf
+<Title>Sanitization of embedded network devices</Title>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>Embedded devices such as routers, switches, and firewalls commonly have sensitive information stored on them such as passwords, cryptographic keys, and information about the network around them and services that these device(s) provide. When disposing of or reselling this equipment in the secondary market it is crucial to erase this sensitive information. However, there is an important question that must be asked: Do the erase commands and routines offered by the device manufacturers actually erase the sensitive data?</p>
+<p>This thesis investigates methods and tools to determine the completeness of this erasure in some common network devices. These methods are used on a sample of networking equipment found to still contain sensitive information after being erased according to vendor recommendations. A computer program was developed to show how this information can be removed.</p>
+<p>The information in this document is useful for equipment owners, brokers and others looking to remarket their current equipment; all of whom want to minimize the risk of leaking sensitive data to other parties.</p>
+<p>Keywords</p>
+<p>Network device, router, switch, sanitization, forensics, flash, EEPROM, configuration erase, rommon. NVRAM, JTAG, programmer, RS-232, terminal, marker probability in data</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>Nätverksutrustning såsom routrar, switchar och brandväggar har ofta känslig information lagrad internt, som lösenord, kryptografiska nycklar, information om nätverket runt dem samt tjänster de tillhandahåller. Om denna utrustning ska säljas på andrahandsmarkanden eller på annat sätt byta ägare är det viktigt att all känslig information raderas. Men kan man lita på att raderings rutiner och metoder som tillhandahålls av tillverkaren verkligen raderar känslig data?</p>
+<p>Denna avhandling undersöker lämpliga verktyg och metoder för att granska vilken information som minnen i inbyggda system innehåller. Dessa metoder testas praktiskt på några system som visar sig ha kvar känslig information efter att de raderats enligt tillverkarens rekommendationer. Ett datorprogram som demonstrerar hur denna information kan undersökas och raderas finns med som en del av avhandlingen.</p>
+<p>Informationen i detta dokument är användbar för ägare av datakomutrustning, mäklare av sådana samt andra som vill minimera risken för att läcka känslig information vid återförsäljning av sin begagnade utrustning.</p>
+<p>Nyckelord</p>
+<p>Nätverksutrustning, router, switch informations sanering, flash, EEPROM, radera konfigurationer, rommon, NVRAM, JTAG, programmerare, RS-232 terminal, markör sannolikhet i data</p>
+<heading>Sanitization of embedded network devices</heading>
+<heading>Investigation of vendor’s factory reset procedures</heading>
+<heading>MAGNUS LARSSON</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>Sanitization of embedded network devices</heading>
+<author>Investigation of vendor’s factory reset procedures</author>
+<heading>Magnus Larsson magnus@stril.com</heading>
+<heading>2015-05-07</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic Adviser Gerald Q. Maguire Jr.</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150507-Magnus_Larsson-with-cover-old.pdf
+<Title>Improving the Quality of Web Content through Automated Metrics</Title>
+<Subtitle>Improving the Quality of Web Content through Automated Metrics</Subtitle>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>Today many organizations make a great deal of content available via a web interface. For this project the main scope will be the public web of KTH Royal Institute of Technology. KTH has lots of data available online. The problem that occurs is that the people who write this content do not get feedback about what they post. The idea of this project is to change that and by giving the responsible person(s) feedback about their content.</p>
+<p>The main goal of the project is keeping track of changes of web pages. For example, each course has its own content and information pages - which can be changed by the person(s) responsible for the course. When pages are available in two languages and changes are made to one of them the logical expectation would be that the other language has to be changed as well. However, in the current system there is no systematic way that this change occurs or that someone would be reminded when only one version changed. Similarly for other content pages, although these might not be in multiple languages it would be interesting to see how often a page is updated and to notify the responsible person(s) that a certain page has not been updated in quite some time.</p>
+<p>A secondary goal of this project is to provide a proof of concept implementation of a tool that can automatically access web page in KTH Social (a locally developed web service) – thus enabling users to write code that can access, modify, and annotate web pages. Such a tool could be used to compute readability scores for each page and then annotate the page with this score.</p>
+<p>The code that was implemented for this project accomplished both goals. Some suggestions are made for how this process can be improved and how alternatively this processing could be done by working directly on the databases used to produce dynamic content.</p>
+<p>Keywords</p>
+<p>web crawling, readability</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>I dagens läge lägger många organisationer upp stora mängder material på webben. Detta projekt tittar främst på det offentliga webgränssnittet för KTH.</p>
+<p>KTH har stora mängder data tillgängligt online. Ett problem är att användare som redigerar och lägger upp denna data inte får återkoppling på den. Iden bakom detta projekt är att ge dessa användare återkoppling om deras material.</p>
+<p>Det slutgiltiga målet i detta projekt är att hålla koll på förändring i websidor. Till exempel kurshemsidorna på KTH som har sin egen information och innehåll och kan ändras av kursansvarige. När websidor är tillgängliga i mer än ett språk och det sker en förändring i ena språkets version förväntar man sig att informationen ska ändras på de andra språken också. I det nuvarande systemet finns det dock inget systematiskt sätt som detta ändras på och den ansvarige blir inte påmind att endast den ena ändrats. Man kan tänka sig något liknande för andra typer av innehåll. Till exempel kan det vara intressant att se hur ofta en sida uppdateras och påminna den ansvarige när en sida inte blivit uppdaterad på ett tag.</p>
+<p>Ett sekundärt mål med detta projekt är att visa upp ett verktyg som kan nå websidor på KTH Social och möjliggöra ändrandet av websidor med kod. Ett sådant verktyg kan användas för att beräkna “läsbarhetspoäng” (readability points) för varje websida och sedan kommentera sidan med denna poäng.</p>
+<p>Den implementerade koden för detta projekt uppnådde båda dessa mål. Några förslag har formulerats för hur denna process kan förbättras till exempel genom att arbeta direkt i databaserna för att producera dynamiskt material.</p>
+<p>Nyckelord</p>
+<p>webbsökning, läsbarhet</p>
+<heading>Improving the Quality of Web Content through Automated Metrics</heading>
+<heading>An attempt to process course pages at the kth.se website</heading>
+<heading>JENS BAETENS</heading>
+<heading>Improving the Quality of Web Content through Automated Metrics</heading>
+<subtitle>An attempt to process course pages at the kth.se website</subtitle>
+<author>Jens Baetens</author>
+<heading>2015-06-08</heading>
+<heading>IK2553 Project Report</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150606-Jens_Baetens-project-report-with-cover.pdf
+<Title>Security challenges within Software Defined Networks</Title>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>A large amount of today's communication occurs within data centers where a large number of virtual servers (running one or more virtual machines) provide service providers with the infrastructure needed for their applications and services. In this thesis, we will look at the next step in the virtualization revolution, the virtualized network. Software-defined networking (SDN) is a relatively new concept that is moving the field towards a more software-based solution to networking. Today when a packet is forwarded through a network of routers, decisions are made at each router as to which router is the next hop destination for the packet. With SDN these decisions are made by a centralized SDN controller that decides upon the best path and instructs the devices along this path as to what action each should perform. Taking SDN to its extreme minimizes the physical network components and increases the number of virtualized components. The reasons behind this trend are several, although the most prominent are simplified processing and network administration, a greater degree of automation, increased flexibility, and shorter provisioning times. This in turn leads to a reduction in operating expenditures and capital expenditures for data center owners, which both drive the further development of this technology.</p>
+<p>Virtualization has been gaining ground in the last decade. However, the initial introduction of virtualization began in the 1970s with server virtualization offering the ability to create several virtual server instances on one physical server. Today we already have taken small steps towards a virtualized network by virtualization of network equipment such as switches, routers, and firewalls. Common to virtualization is that it is in early stages all of the technologies have encountered trust issues and general concerns related to whether software-based solutions are as rugged and reliable as hardware- based solutions. SDN has also encountered these issues, and discussion of these issues continues among both believers and skeptics. Concerns about trust remain a problem for the growing number of cloud-based services where multitenant deployments may lead to loss of personal integrity and other security risks. As a relatively new technology, SDN is still immature and has a number of vulnerabilities. As with most software-based solutions, the potential for security risks increases. This thesis investigates how denial-of-service (DoS) attacks affect an SDN environment and a single- threaded controller, described by text and via simulations.</p>
+<p>The results of our investigations concerning trust in a multi-tenancy environment in SDN suggest that standardization and clear service level agreements are necessary to consolidate customers’ confidence. Attracting small groups of customers to participate in user cases in the initial stages of implementation can generate valuable support for a broader implementation of SDN in the underlying infrastructure. With regard to denial-of-service attacks, our conclusion is that hackers can by target the centralized SDN controller, thus negatively affect most of the network infrastructure (because the entire infrastructure directly depends upon a functioning SDN controller). SDN introduces new vulnerabilities, which is natural as SDN is a relatively new technology. Therefore, SDN needs to be thoroughly tested and examined before making a widespread deployment.</p>
+<p>Keywords</p>
+<p>Software Defined Networks (SDN), network security, denial of service, distributed denial of service, multi-tenancy</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>Dagens kommunikation sker till stor del via serverhallar där till stor grad virtualiserade servermiljöer förser serviceleverantörer med infrastukturen som krävs för att driva dess applikationer och tjänster. I vårt arbete kommer vi titta på nästa steg i denna virtualiseringsrevolution, den om virtualiserade nätverk. mjukvarudefinierat nätverk (eng. Software-defined network, eller SDN) kallas detta förhållandevis nya begrepp som syftar till mjukvarubaserade nätverk. När ett paket idag transporteras genom ett nätverk tas beslut lokalt vid varje router vilken router som är nästa destination för paketet, skillnaden i ett SDN nätverk är att besluten istället tas utifrån ett fågelperspektiv där den bästa vägen beslutas i en centraliserad mjukvaruprocess med överblick över hela nätverket och inte bara tom nästa router, denna process är även kallad SDN kontroll.</p>
+<p>Drar man uttrycket SDN till sin spets handlar det om att ersätta befintlig nätverksutrustning med virtualiserade dito. Anledningen till stegen mot denna utveckling är flera, de mest framträdande torde vara; förenklade processer samt nätverksadministration, större grad av automation, ökad flexibilitet och kortare provisionstider. Detta i sin tur leder till en sänkning av löpande kostnader samt anläggningskostnader för serverhallsinnehavare, något som driver på utvecklingen.</p>
+<p>Virtualisering har sedan början på 2000-talet varit på stark frammarsch, det började med servervirtualisering och förmågan att skapa flertalet virtualiserade servrar på en fysisk server. Idag har vi virtualisering av nätverksutrustning, såsom switchar, routrar och brandväggar. Gemensamt för all denna utveckling är att den har i tidigt stadie stött på förtroendefrågor och överlag problem kopplade till huruvida mjukvarubaserade lösningar är likvärdigt robusta och pålitliga som traditionella hårdvarubaserade lösningar. Detta problem är även något som SDN stött på och det diskuteras idag flitigt bland förespråkare och skeptiker. Dessa förtroendefrågor går på tvären mot det ökande antalet molnbaserade tjänster, typiska tjänster där säkerheten och den personliga integriten är vital. Vidare räknar man med att SDN, liksom annan ny teknik medför vissa barnsjukdomar såsom kryphål i säkerheten. Vi kommer i detta arbete att undersöka hur överbelastningsattacker (eng. Denial-of-Service, eller DoS-attacker) påverkar en SDN miljö och en singel-trådig kontroller, i text och genom simulering.</p>
+<p>Resultatet av våra undersökningar i ämnet SDN i en multitenans miljö är att standardisering och tydliga servicenivåavtal behövs för att befästa förtroendet bland kunder. Att attrahera kunder för att delta i mindre användningsfall (eng. user cases) i ett inledningsskede är också värdefullt i argumenteringen för en bredare implementering av SDN i underliggande infrastruktur. Vad gäller DoS-attacker kom vi fram till att det som hackare går att manipulera en SDN infrastruktur på ett sätt som inte är möjligt med dagens lösningar. Till exempel riktade attacker mot den centraliserade SDN kontrollen, slår man denna kontroll ur funktion påverkas stora delar av infrastrukturen eftersom de är i ett direkt beroende av en fungerande SDN kontroll. I och med att SDN är en ny teknik så öppnas också upp nya möjligheter för angrepp, med det i åtanke är det viktigt att SDN genomgår rigorösa tester innan större implementation.</p>
+<p>Nyckelord</p>
+<p>mjukvarudefinierat nätverk, nätverkssäkerhet, överbelastningsattack, distribuerad överbelastningsattack, multitenans</p>
+<heading>Security challenges within Software Defined Networks</heading>
+<heading>GABRIEL SUND and HAROON AHMED</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>Security challenges within Software Defined Networks</heading>
+<author>Gabriel Sund and Haroon Ahmed</author>
+<heading>2014-11-13</heading>
+<heading>Bachelor’s Thesis</heading>
+<heading>Examiner and academic adviser Professor Gerald Q. Maguire Jr.</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+<heading>Stockholm, 12 November 2014</heading>
+<heading>Haroon Ahmed</heading>
+<heading>Gabriel Sund</heading>
+../141113-Haroon-Ahmed_and_Gabriel_Sund-with-cover.pdf
+<Title>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</Title>
+<Subtitle>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</Subtitle>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>During the recent years, a new area called Cloud Networked Robotics (CNR) has evolved from conventional robotics, thanks to the increasing availability of cheap robot systems and steady improvements in the area of cloud computing. Cloud networked robots refers to robots with the ability to offload computation heavy modules to a cloud, in order to make use of storage, scalable computation power, and other functionalities enabled by a cloud such as shared knowledge between robots on a global level. However, these cloud robots face a problem with reachability and QoS of crucial modules that are offloaded to the cloud, when operating in unstable network environments. Under such conditions, the robots might lose the connection to the cloud at any moment; in worst case, leaving the robots “brain-dead”.</p>
+<p>This thesis project proposes a machine learning-based network aware framework for a cloud robot, that can choose the most efficient module placement based on location, task, and the network condition. The proposed solution was implemented upon a cloud robot prototype based on the TurtleBot 2 robot development kit, running Robot Operating System (ROS). A continuous experiment was conducted where the cloud robot was ordered to execute a simple task in the laboratory corridor under various network conditions. The proposed solution was evaluated by comparing the results from the continuous experiment with measurements taken from the same robot, with all modules placed locally, doing the same task.</p>
+<p>The results show that the proposed framework can potentially decrease the battery consumption by 10% while improving the efficiency of the task by 2.4 seconds (2.8%). However, there is an inherent bottleneck in the proposed solution where each new robot would need 2 months to accumulate enough data for the training set, in order to show good performance. The proposed solution can potentially benefit the area of CNR if connected and integrated with a shared-knowledge platform which can enable new robots to skip the training phase, by downloading the existing knowledge from the cloud.</p>
+<p>Keywords</p>
+<p>CNR, ROS, network awareness, cloud, open-source, TurtleBot.</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>Under de senaste åren har ett nytt forskningsområde kallat Cloud Networked Robotics (CNR) växt fram inom den konventionella robottekniken, tack vare den ökade tillgången på billiga robotsystem och stadiga framsteg inom området cloud computing. Molnrobotar syftar på robotar med förmågan att flytta resurstunga moduler till ett moln för att ta del av lagringskapaciteten, den skalbara processorkraften och andra tjänster som ett moln kan tillhandahålla, t.ex. en kunskapsdatabas för robotar över hela världen. Det finns dock ett problem med dessa sorters robotar gällande nåbarhet och QoS för kritiska moduler placerade på ett moln, när dessa robotar verkar i instabila nätverksmiljöer. I ett sådant scenario kan robotarna när som helst förlora anslutningen till molnet, vilket i värsta fall lämnar robotarna hjärndöda.</p>
+<p>Den här rapporten föreslår en maskininlärningsbaserad nätverksmedveten ramverkslösning för en molnrobot, som kan välja de mest effektiva modulplaceringarna baserat på robotens position, den givna uppgiften och de rådande nätverksförhållanderna. Ramverkslösningen implementerades på en molnrobotsprototyp, baserad på ett robot development kit kallat TurtleBot 2, som använder sig av ett middleware som heter Robot Operating System (ROS). Ett fortskridande experiment utfördes där molnroboten fick i uppgift att utföra ett enkelt uppdrag i laboratoriets korridor, under varierande nätverksförhållanden. Ramverkslösningen utvärderades genom att jämföra resultaten från det fortskridrande experimentet med mätningar som gjordes med samma robot som utförde samma uppgift, fast med alla moduler placerade lokalt på roboten.</p>
+<p>Resultaten visar att den föreslagna ramverkslösningen kan potentiellt minska batterikonsumptionen med 10%, samtidigt som tiden för att utföra en uppgift kan minskas med 2.4 sekunder (2.8%). Däremot uppstår en flaskhals i framtagna lösningen där varje ny robot kräver 2 månader för att samla ihop nog med data för att maskinilärningsalgoritmen ska visa bra prestanda. Den förlsagna lösningen kan dock vara fördelaktig för CNR om man integrerar den med en kunskapsdatabas för robotar, som kan möjliggöra för varje ny robot att kringå den 2 månader långa träningsperioden, genom att ladda ner existerande kunskap från molnet.</p>
+<p>Nyckelord</p>
+<p>CNR, ROS, nätverksmedvetenhet, moln, öppen källkod, TurtleBot.</p>
+<heading>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</heading>
+<heading>A machine learning-based approach</heading>
+<heading>FREDRIK HANS NORDLUND</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</heading>
+<subtitle>A machine learning-based approach</subtitle>
+<author>Fredrik Hans Nordlund</author>
+<heading>2015-03-02</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Academic adviser in Japan Shinji Shimojo</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150222-Fredrik_Nordlund-with-cover.pdf
+<Title>Using Six Sigma Methodology to improve the performance of the Shipment Test</Title>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>Competition and lead-time pressure motivates us to find new and better ways of continuously improving the output of our work. The emphasis on improvement in both efficiency and quality has become more and more significant in daily activities. The performance of Ericsson’s AXE/APZ products during shipment test phase is one such activity and is the focus of this thesis project. One of the essential principles of shipment testing is to ensure that the test campaigns finish on time. Over the last several decades companies have spent large amounts of time and money on improving test quality and efficiency. Unfortunately, the results have not always been as good as expected. It seems that it is very difficult to improve shipment testing performance using traditional test management methods.</p>
+<p>Motorola introduced Six Sigma in 1986 and achieved 5.4 Sigma level which help them saved 2.2 Billion dollars during the first six years. From Statistic aspect, it means only 3.4 defects per million opportunities. The Six Sigma methodology has been applied as a management philosophy focused on improving efficiency and performance during the shipment test period.</p>
+<p>This thesis gives an introduction to the Six Sigma approach, including the concepts of Six Sigma, its history, development, and methodology. More specifically the author uses the Define, Measure, Analyze, Improve, and Control (DMAIC) approach to evaluate the performance of Ericsson’s AXE/APZ Shipment Testing. This project goal was defined: Compare with the performance of 08AXE shipment test which 87% of test campaigns (2.68 sigma level) were finished on time, 3 sigma level in 09AXE shipment test which means 93%of the test campaigns will be finished on time has to be achieved. The thesis measured the 08AXE shipment test performance and analyzed the lead time of test campaigns, found the root causes such as poor documents quality from the legacy project, lack of test resources, no system impact analysis. The thesis also provided a set of proposals for improvements and control of the improved process in order to ensure sustainable improved performance results. Finally 93% test campaigns were finished on time in 09AXE and project goal was fulfilled.</p>
+<p>Keywords</p>
+<p>Six Sigma, quality, performance, AXE</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>Konkurrens och ledtid tryck motiverar oss att hitta nya och bättre vägar att kontinuerligt förbättra resultatet av vårt arbete. Betoningen av förbättring av både effektivitet och kvalité har blivit allt mer signifikant i våra dagliga aktiviteter. Prestationen av Ericssons AXE/APZ produkter under sändningens test fas är en sådan aktivitet och det är där fokusen på detta tes projekt ligger. En av de grundläggande principerna av sändnings test är att se till att test kampanjer avslutat i tid. Under de senaste årtionden har företag spenderat stora summor tid och pengar att förbättra test kvalité och effektivitet. Tyvärr har resultaten inte vart så bra som förväntat. Det ser ut så att det är mycket svårt att förbättra sändnings test prestationen när du använder traditionella test förvaltningsmetoder. Six Sigma metodik har blivit tillämpad som en ledningsfilosofi fokuserad på att förbättra effektivitet och prestation under test exekverings perioden.</p>
+<p>Denna tes ger en introduktion till Six Sigma tillvägagångssättet, inklusive konceptet från Sig Sigma, dess historia, utveckling och metodik. Mer specifikt använder vi Define, Measure, Analyze, Improve och Control (DMAIC) tillvägagångssätt för att utvärdera prestationen av Ericssons AXE/APZ sändnings testning. Denna process kräver definitionen av prestationsmålet, mätningar av nuvarande prestanda och analys av data för att hitta rötterna till orsakerna av problemen. Resultatet av denna definition, mätning och analys var en rad förslag till förbättringar och kontroll av den förbättrade processen för att säkerhetsställa hållbara förbättrade prestations resultat.</p>
+<p>Nyckelord</p>
+<p>Six Sigma, kvalitet, Prestanda, AXE</p>
+<heading>Using Six Sigma Methodology to improve the performance of the Shipment Test</heading>
+<heading>YANG BIN</heading>
+<heading>Using Six Sigma Methodology to improve the performance of the Shipment Test</heading>
+<author>Yang Bin</author>
+<heading>binyang@kth.se</heading>
+<heading>2015-06-26</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.examiner’s name</heading>
+<heading>Industrial adviser Bogumila Rutkowska</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+<heading>Preface</heading>
+../150626-Yang_Bin-with-cover.pdf
+<Title>Design and implementation of LTE-A and 5G kernel algorithms on SIMD vector processor</Title>
+Abstract (en):
+output_blocks_on_page = 5
+starting_block=2
+<p>With the wide spread of wireless technology, the time for 4G has arrived, and 5G will appear not so far in the future. However, no matter whether it is 4G or 5G, low latency is a mandatory requirement for baseband processing at base stations for modern cellular standards. In particular, in a future 5G wireless system, with massive MIMO and ultra-dense cells, the demand for low round trip latency between the mobile device and the base station requires a baseband processing delay of 1 ms. This is 10 percentage of today’s LTE-A round trip latency, while at the same time massive MIMO requires large-scale matrix computations. This is especially true for channel estimation and MIMO detection at the base station. Therefore, it is essential to ensure low latency for the user data traffic.</p>
+<p>In this master’s thesis, LTE/LTE-A uplink physical layer processing is examined, especially the process of channel estimation and MIMO detection. In order to analyze this processing we compare two conventional algorithms’ performance and complexity for channel estimation and MIMO detection. The key aspect which affects the algorithms’ speed is identified as the need for “massive complex matrix inversion”. A parallel coding scheme is proposed to implement a matrix inversion kernel algorithm on a single instruction multiple data stream (SIMD) vector processor.</p>
+<p>The major contribution of this thesis is implementation and evaluation of a parallel massive complex matrix inversion algorithm. Two aspects have been addressed: the selection of the algorithm to perform this matrix computation and the implementation of a highly parallel version of this algorithm.</p>
+<p>Keywords: channel estimation, MIMO detection, massive complex matrix inversion, SIMD</p>
+Sammanfattning (sv):
+output_blocks_on_page = 7
+starting_block=2
+<p>Med den breda spridningen av trådlös teknik, har tiden för 4G kommit, och 5G kommer inom en överskådlig framtid. Men oavsett om det gäller 4G eller 5G, låg latens är ett obligatoriskt krav för basbandsbehandling vid basstationer för moderna mobila standarder. I synnerhet i ett framtida trådlöst 5G-system, med massiva MIMO och ultratäta celler, behövs en basbandsbehandling fördröjning på 1 ms för att klara efterfrågan på en låg rundresa latens mellan den mobila enheten och basstationen. Detta är 10 procent av dagens LTE-E rundresa latens, medan massiva MIMO samtidigt kräver storskaliga matrisberäkningar. Detta är särskilt viktigt för kanaluppskattning och MIMO- detektion vid basstationen. Därför är det viktigt att se till att det är låg latens för användardatatrafik.</p>
+<p>I detta examensarbete, skall LTE/LTE-A upplänk fysiska lagret bearbetning undersökas, och då särskilt processen för kanaluppskattning och MIMO-detektion. För att analysera denna processing jämför vi två konventionella algoritmers prestationer och komplexitet för kanaluppskattning och MIMO-detektion. Den viktigaste aspekten som påverkar algoritmernas hastighet identifieras som behovet av "massiva komplex matrisinversion". Ett parallellt kodningsschema föreslås för att implementera en "matrisinversion kernel-algoritmen" på singelinstruktion multidataström (SIMD) vektorprocessor.</p>
+<p>Det största bidraget med denna avhandling är genomförande och utvärdering av en parallell massiva komplex matrisinversion kernel-algoritmen. Två aspekter har tagits upp: valet av algoritm för att utföra denna matrisberäkning och implementationen av en högst parallell version av denna algoritm.</p>
+<p>Nyckelord: kanaluppskattning, MIMO-detektion, massiva komplex matrisinversion, SIMD</p>
+<heading>Design and implementation of LTE-A and 5G kernel algorithms on SIMD vector processor</heading>
+<heading>JIABING GUO</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>Design and implementation of LTE-A and 5G kernel algorithms on SIMD vector processor</heading>
+<heading>Jiabing Guo</heading>
+<heading>Jiabing@kth.se</heading>
+<heading>2015.01.30</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner & Academic supervisor</heading>
+<heading>Gerald Q. Maguire Jr.</heading>
+<heading>Industrial supervisor Dake Liu, BIT China</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150130-Jiabing_Gao-with-cover.pdf
+<heading>D R A G A N C A B A R K A P A</heading>
+<heading>Authorization Architecture for SWoT</heading>
+<heading>Authorization Architecture for SWoT</heading>
+Automatically running the program again with the option --caps
+looking for ABSTRACT and other headers in all caps
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>Author: Dragan Cabarkapa Title: Authorization Architecture for SWoT Date: August 26, 2013 Pages: ix + 105 Professorship: Data Communication Software Code: T-110 Supervisors: Professor Gerald Q. Maguire Jr., Professor Tuomas Aura Instructors: Christian Schaefer, Farjola Zalosnja Social Web of Things (SWoT) is a user centric framework which facilitates interaction between software agents deployed on smart things and in the cloud. Software agents deployed on smart things are remotely accessible, host sensitive resources, and often represent high value targets. SWoT currently does not feature adequate security mechanisms which could protect software agents from unauthorized access. In this thesis, we aim to rectify this deﬁciency by introducing platform independent, ﬂexible, and user centric authorization mechanism in SWoT.</p>
+<p>We derive requirements and design of abstract authorization architecture from the preceding seminal work performed in SENSEI project. SENSEI and SWoT share same problem domain, but while SENSEI addresses enterprise use cases SWoT focusses on consumer use cases. This single but fundamental diﬀerence motivates adaptations of SENSEI contributions for application in SWoT. To realize concrete authorization architecture we perform extensive study of various authorization solutions. Results of our study indicate that novel User Managed Access (UMA) protocol represents promising solution for SWoT.</p>
+<p>We present the Authorization as a Service solution for SWoT framework, based on UMA protocol. This solution enables users to manage and control communication between software agents deployed on smart things and in the cloud from single centralized location. It also features runtime association of software agents, management, evaluation, and enforcement of access permissions for resources provided by software agents.</p>
+<p>Keywords: SWoT, Security, Authorization, User Managed Access Language: English</p>
+<p>ii</p>
+Sammanfattning (sv):
+output_blocks_on_page = 4
+starting_block=2
+<p>Utf¨ ort av: Dragan Cabarkapa Arbetets namn:</p>
+<p>!Fixme Thesis title in Swedish. Fixme!</p>
+<p>Datum: 2013 Sidantal: ix + 105 Professur: Datakommunikationsprogram Kod: T-110 ¨ Overvakare: Professor Gerald Q. Maguire Jr., Professor Tuomas Aura Handledare: Christian Schaefer, Farjola Zalosnja</p>
+<p>!Fixme Write thesis abstract in Swedish. Fixme!</p>
+<p>Nyckelord: !Fixme Keywords in Swedish. Fixme! Spr˚ ak: Engelska</p>
+<p>iii</p>
+<heading>Degree project in Communication Systems Second level, 30.0 HEC Stockholm, Sweden</heading>
+<heading>D R A G A N C A B A R K A P A</heading>
+<heading>Authorization Architecture for SWoT</heading>
+<heading>Authorization Architecture for SWoT</heading>
+<heading>AALTO UNIVERSITY School of Science and Technology Faculty of Information and Natural Sciences Department of Computer Science and Engineering</heading>
+<heading>ABSTRACT OF MASTER’S THESIS</heading>
+<heading>AALTO-UNIVERSITETET Tekniska H¨ ogskolan Fakulteten for Informations och Naturvetenskaper Utbildningsprogrammet f¨ or Datateknik</heading>
+<heading>SAMMANFATTNING AV DIPLOMARBETE</heading>
+<heading>First of all, I would like to thank Ericsson AB for providing me an opportunity to work on this exceptional research project. My gratitude goes to my supervisors, Christian Schaefer and Farjola Zalosnja for their continual support. Without their advices through countless discussions this thesis would not be possible.</heading>
+<heading>I would like to specially thank my supervisors, Prof. Gerald Q. Maguire Jr. and Prof. Tuomas Aura for their excellent supervision and valuable feedback throughout this thesis work.</heading>
+<heading>I owe gratitude to NordSecMob program coordinators ﬁrst for creating it and second for providing me an opportunity to be part of it. I am also grateful for their patience and consideration when I had diﬃculties keeping with the initial thesis schedule.</heading>
+<heading>My biggest thanks goes to my family, my girlfriend, and my friends whose support helped me navigate through educational endeavors, gave me strength to overcome all obstacles, and achieve this ﬁnal accomplishment.</heading>
+<heading>Stockholm, August 26, 2013</heading>
+<heading>Dragan Cabarkapa</heading>
+<heading>iv</heading>
+../131127-Dragan_Cabarkapa-with-cover.pdf
+<Title>Sanitization of embedded network devices</Title>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>Embedded devices such as routers, switches, and firewalls commonly have sensitive information stored on them such as passwords, cryptographic keys, and information about the network around them and services that these device(s) provide. When disposing of or reselling this equipment in the secondary market it is crucial to erase this sensitive information. However, there is an important question that must be asked: Do the erase commands and routines offered by the device manufacturers actually erase the sensitive data?</p>
+<p>This thesis investigates methods and tools to determine the completeness of this erasure in some common network devices. These methods are used on a sample of networking equipment found to still contain sensitive information after being erased according to vendor recommendations. A computer program was developed to show how this information can be removed.</p>
+<p>The information in this document is useful for equipment owners, brokers and others looking to remarket their current equipment; all of whom want to minimize the risk of leaking sensitive data to other parties.</p>
+<p>Keywords</p>
+<p>Network device, router, switch, sanitization, forensics, flash, EEPROM, configuration erase, rommon. NVRAM, JTAG, programmer, RS-232, terminal, marker probability in data</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>Nätverksutrustning såsom routrar, switchar och brandväggar har ofta känslig information lagrad internt, som lösenord, kryptografiska nycklar, information om nätverket runt dem samt tjänster de tillhandahåller. Om denna utrustning ska säljas på andrahandsmarkanden eller på annat sätt byta ägare är det viktigt att all känslig information raderas. Men kan man lita på att raderings rutiner och metoder som tillhandahålls av tillverkaren verkligen raderar känslig data?</p>
+<p>Denna avhandling undersöker lämpliga verktyg och metoder för att granska vilken information som minnen i inbyggda system innehåller. Dessa metoder testas praktiskt på några system som visar sig ha kvar känslig information efter att de raderats enligt tillverkarens rekommendationer. Ett datorprogram som demonstrerar hur denna information kan undersökas och raderas finns med som en del av avhandlingen.</p>
+<p>Informationen i detta dokument är användbar för ägare av datakomutrustning, mäklare av sådana samt andra som vill minimera risken för att läcka känslig information vid återförsäljning av sin begagnade utrustning.</p>
+<p>Nyckelord</p>
+<p>Nätverksutrustning, router, switch informations sanering, flash, EEPROM, radera konfigurationer, rommon, NVRAM, JTAG, programmerare, RS-232 terminal, markör sannolikhet i data</p>
+<heading>Sanitization of embedded network devices</heading>
+<heading>Investigation of vendor’s factory reset procedures</heading>
+<heading>MAGNUS LARSSON</heading>
+<heading>Sanitization of embedded network devices</heading>
+<author>Investigation of vendor’s factory reset procedures</author>
+<heading>Magnus Larsson magnus@stril.com</heading>
+<heading>2015-05-07</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic Adviser Gerald Q. Maguire Jr.</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150507-Magnus_Larsson-with-cover.pdf
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=1
+<p>In this thesis we will discuss how to implement a ToIP device that en- ables communication with a standard textphone over Internet Protocol using open software and hardware solutions.</p>
+<p>We will make an analog to telephone adapter capable of supporting Baudot textphones with the help of the software Asterisk, Open Baudot and the hardware platform IP04. We will discuss if the use of this device, if it is outdated already. We have performed practical testing of our solution and compared it with a voice channel setup.</p>
+<p>i</p>
+Referat (sv):
+output_blocks_on_page = 4
+starting_block=1
+<p>IP-telefoni för texttelefoner</p>
+<p>Jag borde skriva ett Referat på svenska.</p>
+<p>ii</p>
+<heading>Master of Science Thesis Stockholm, Sweden 2010</heading>
+<heading>COS/CCS 2008-10</heading>
+<heading>M A R T I N H Ö R L I N</heading>
+<heading>Voice over IP for Textphones</heading>
+<heading>Voice over IP for Textphones</heading>
+<heading>MARTIN HÖRLIN</heading>
+<heading>Abstract</heading>
+<heading>Referat</heading>
+../20100524-Martin_Hoerlin-with-cover.pdf
+<Title>Cloud-Based Alerting System for IP-Telephony</Title>
+<Subtitle>Cloud-Based Alerting System for IP-Telephony</Subtitle>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>An increasing number of people in Sweden are having problems with their hearing ability. The three major tools to aid hearing-impaired and deaf individuals are: hearing aids, special telephony, and alerting systems. Both hearing aids and telephony have seen a huge technical development. Hearing aids have gone from huge ponderous devices to small delicate in-ear devices. Simple text telephones have evolved into total conversation telephones with audio, video, and text all operating in real-time. Although smart lamps and other alerting services not specifically made for hearing- impaired individuals do exist, the development of alerting system is unsatisfactory. The gap in technology is a huge problem and integration between modern products and alerting systems is getting harder. This thesis explores how to close this gap. The result of this thesis project is a prototype that provides the missing technological link between an alerting systems and modern smart devices. An eventual product should support all kinds of services, but the prototype is limited to solving the problem of connecting an alerting system to a modern total conversation telephones. The prototype was evaluated and based on the evaluation data a timeline was created. An overall positive response towards the product exists and the timeline had adding more third party services (such as Skype and FaceTime) as a high priority. The complete timeline as well as adding Signal Initiation Protocol support is left as future work.</p>
+<p>Keywords</p>
+<p>Cloud-Based services, alerting system, IP-telephony</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>I Sverige har antalet personer med hörselskada ökat de senaste åren. För att hjälpa de med hörselproblem finns det tre viktiga hjälpmedel: hörapparater, special telefoner och varseblivningssystem. Stora teknologiska framsteg har skett för både hörapparater och special telefoner. Hörapparater har gått från stora otympliga apparater till små nätta anordningar som man har i örat. Enkla texttelefoner är idag komplexa system som stödjer både video, ljud och text i realtid. Även fast smarta lampor och andra varseblivningsprodukter existerar så är utveckling för varseblivning speciellt gjorda hörselskadade och döva undermåliga. Gapet som skapats mellan moderna varseblivningsprodukter och varseblivning som hjälpmedel växer sig allt större. Denna rapport ska undersöka detta gap. Resultatet av detta projekt är en prototyp som tillhandahåller den teknologin som ska länka modern varseblivning och varseblivning som hjälpmedel. Den tänkta produkten kan användas för många olika tjänster men i detta projekt är den begränsad till total konversations telefoner. Prototypen har blivit utvärderad och en tidslinje, baserad på utvädringen, har skapats. Tidslinjen ska beskriva kommande tjänster och enheter som skall kunna användas tillsammans med prototypen. Det visar sig att den skapade prototypen blev positivt mottagen och att tjänster som Skype och Facetime skulle ha hög prioritering på tidslinjen.</p>
+<p>Nyckelord</p>
+<p>Molnbaserade tjänster, varseblivning, IP-telefoni</p>
+<heading>Cloud-Based Alerting System for IP-Telephony</heading>
+<heading>A prototype development</heading>
+<heading>PER-JOHAN SIMON JAKOBSSON</heading>
+<heading>Cloud-Based Alerting System for IP-Telephony</heading>
+<subtitle>A prototype development</subtitle>
+<author>Per-Johan Simon Jakobsson</author>
+<heading>2015-07-19</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Industrial adviser Christer Ulfsparre</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150719-Simon_Jakobsson-with-cover.pdf
+<Title>Distributed denial of service attacks</Title>
+<Subtitle>Distributed denial of service attacks</Subtitle>
+Abstract (en):
+output_blocks_on_page = 3
+starting_block=2
+<p>Distributed Denial of Service attacks is a problem that constantly threatens companies that rely on the internet for major parts of their business. A successful DDoS attack that manages to penetrate a company’s network can lead to devastating damages in the form of lost income, reduced productivity, increase in costs, and damage to the company’s image and reputation.</p>
+<p>The different DDoS attacks are many and of different character and often Offer different parts of the network, which makes it very difficult to defend against. It is also very clear that DDoS attacks are increasing in both numbers and size every year. From our experiments we have proven that anyone with little knowledge and limited resources can perform DDoS attacks that will make a website unavailable. This fact should cause companies that base their business on the internet, aware that they are likely to someday be subject to a DDoS attack.</p>
+<p>From our research we have found a variety of different DDoS solutions on the market that promise to offer protection. Many of which claim to protect against all different types of DDoS attacks. In practice it is impossible to find something that guarantees 100% safety. According to earlier research in the field, there are many different ways of protecting a network against DDoS attacks, e.g. via Software Defined Networking, Hop-Count Filtering, or Kill-bots.</p>
+<p>Our own tests show that a virtual firewall can offer protection against DDoS attacks on a low scale, but that such a solution has a number of weaknesses. If the firewall does protect the website, the attacker could instead shift to attacking the firewall itself.</p>
+<p>Our research also shows that the most common motives behind DDoS attacks are criminal purposes. Criminals use DDoS attacks to earn money by offering directed DDoS attacks against websites or by trying to blackmail companies into paying a fee for not being attacked.</p>
+<p>We have also seen that the economic consequence of DDoS attacks are devastating if not handled with a sufficiently fast response. After investigating the e-commerce company CDON.com we learned that they could potentially lose roughly 36 410 SEK per minute when a DDoS attack is underway against them.</p>
+<p>In today’s business climate it is important for companies to be able to rely on the internet for their activity and for customers to have easy access to the company’s products and services. However, companies’ websites are being attacked and thus these companies need an explicit plan of how to mitigate such attacks.</p>
+<p>Keywords</p>
+<p>DDoS, Zombie, Botnet, Botmaster, Spoofing</p>
+Sammanfattning (sv):
+output_blocks_on_page = 5
+starting_block=2
+<p>Distributed Denial of Service (DDoS) attacker är ett problem som ständigt hotar företag, som förlitar sig till internet för centrala delar av sin verksamhet. En DDoS-attack som lyckas penetrerar ett företags nätverk kan medföra förödande skador i form av förlorade intäkter, minskad produktivitet, ökade kostnader samt skada på företagets rykte/varumärke.</p>
+<p>DDoS-attackerna är många och av olika karaktär, som attackerar olika delar av ett företags nätverk, vilket leder till att det är svårt att effektivt skydda sig mot DDoS-attacker. Det står också klart att DDoS-attacker ökar både till antalet och storleksmässigt för varje år som går. Utifrån våra egna experiment har vi kunnat bevisa att vem som helst med små medel och begränsade kunskaper kan utföra en DDoS-attack som sänker en webbsida. Ett faktum som gör att alla företag vars verksamhet är baserad på internet bör räkna med att de någon gång bli utsatta för en DDoS-attack.</p>
+<p>Utifrån våra undersökningar kan vi se att det finns en uppsjö av olika DDoS-skydd på marknaden, skydd som hanterar några problem som DDoS-attacker medför, men det finns inga kompletta skydd som kan garantera 100 % säkerhet. Utifrån tidigare forskning på området framgår det att det finns många olika sätt att skydda sig mot DDoS-attacker, t.ex. genom Software Defined Networks, Hop-Count Filtering eller Kill-bots.</p>
+<p>Våra egna tester visar på att en virtuell brandvägg kan vara ett sätt att skydda sig mot DDoS- attacker, men testerna visar också att en sådan lösning inte heller är säker då man kan förstöra åtkomsten till webbsidan genom att överbelasta brandväggen.</p>
+<p>Undersökningen visar också att ett av de vanligaste motiven bakom DDoS-attacker är kriminella ändamål. Kriminella som använder DDoS-attacker för att tjäna pengar genom att erbjuda riktade DDoS-attacker mot websidor eller genom försök att utpressa till betalning med DDoS- attacker som ett hot.</p>
+<p>Vi har kommit fram till att de ekonomiska konsekvenserna av DDoS-attacker kan vara ödestigna för företag om det inte hanteras i tid. Genom våra egna beräkningar har vi visat att e- handelsföretaget CDON.com riskerar att förlora ca 36 415,90 kr per minut som en DDoS-attack pågår mot företaget.</p>
+<p>Anledningen till av vi valt att ägnad denna uppsats åt DDoS-problemet, är den skrämmande ökningen av DDoS-attacker som man kan se sker årligen. Attackerna blir flera, de ökar storleksmässigt och de blir allt mer sofistikerade. Attackerna utförs också tillsynes omotiverat i vissa fall, men också välplanerade attacker utförs för att skada företag ekonomiskt.</p>
+<p>I dagens företagsklimat är det viktigt att företaget har möjlighet att använda sig av internet för att driva verksamheten och göra det enkelt för kunder att ta del av företagets produkter/tjänster. Att företags webbsidor blir utslagen på grund av en DDoS-attacker är idag en verklighet, och en tydlig plan för att hur man ska hantera en sådan incident bör finns på plats inom företag.</p>
+<p>Nyckelord</p>
+<p>DDoS, Zombie, Botnet, Botmaster, Spoofing</p>
+<heading>Distributed denial of service attacks</heading>
+<heading>Protection, Mitigation, and Economic Consequences</heading>
+<heading>MARTIN EKLUND and PATRIK STÅHLBERG</heading>
+<heading>Distributed denial of service attacks</heading>
+<subtitle>Protection, Mitigation, and Economic Consequences</subtitle>
+<author>Martin Eklund and Patrik Ståhlberg</author>
+<heading>2015-07-14</heading>
+<heading>Bachelor’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Industrial adviser Björn Fredriksson (Nordea)</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+../150713-Martin_Eklund_and_Patrik_Ståhlberg-with-cover.pdf
