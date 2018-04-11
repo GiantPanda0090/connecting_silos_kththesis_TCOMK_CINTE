@@ -1,0 +1,30 @@
+<p>This section summarises the scientiﬁc research method involved in our thesis work. We used the resources available to us during the whole process. We have brieﬂy explained the observation, analysis, hypothesis, design, development and testing phases. Our research is based on empirical and mathematical methods to avoid subjectivity in the whole process.</p> 
+
+<p>1.4.1 Observation and Requirements Gathering</p> 
+
+<p>Our work is based on observation and experiment. During the literature review phase, we studied dierent algorithms for graph partitioning. This gave us an idea of what has been done so far for graph partitioning. Streaming graph partitioning is a quite new technique, therefore all the work done for it is recent. To the extent of our knowledge, we chose the most recent and ecient partitioning algorithms for implementation. Certain algorithms are based on mathematical models that require a deductive logic for the proof. Moreover, we also observed and tested the current partitioning approach for graph streams used by dierent Graph processing APIs in order to ﬁnd out how we can improve it. This observation and testing helped us ﬁnding the problem. Our approach is based on both reason and research.</p> 
+
+<p>1.4.2 Design and Development</p> 
+
+<p>The literature study and testing, lead us to the design phase of the project. For the proof of concept, we implemented the existing streaming graph partitioning algorithms and compared them. The major challenge we faced was that there was no open source code for these partitioning algorithms. Therefore, we had to design methods and propose dierent data structures for implementing them. Firstly, we implemented them in Java for single-threaded implementation, and secondly, we ported them to the Apache Flink Graph streaming API for multi-threaded implementation. As a result, we came up with our own custom partitioner, having certain properties of the existing ones.</p> 
+
+<p>1.4.3 Testing and Evaluation</p> 
+
+<p>We performed our experiments with all the available resources, which include: the online available resources mentioned in the bibliography section, an open source Apache Flink API [11], and the cluster machines from our department. Furthermore, to achieve ecient results during the experiments, an isolated environment is main- tained. Latest versions of the processing engine i.e Apache Flink is used for creating and running our tests to keep everything up-to-date. All the data set information is</p> 
+
+<p>6</p> 
+
+<p>1.5 Structure of Thesis</p> 
+
+<p>included in the thesis for reproducibility. The input data sets used are generated from a very recent release of the Apache Flink Gelly API [11]. version: 1.1.</p> 
+
+<p>1.5 Structure of Thesis</p> 
+
+<p>After the Introduction in section 1, section 2 is about Graph partitioning, which explains dierent partitioning approaches and PowerLaw graphs [9]. In this section we discuss in detail dierent partitioning algorithms implemented in the thesis. This section includes the theoretical explanation and mathematical models of these partitioning algorithms along with their comparison.</p> 
+
+<p>Section 3 contains the literature review and background work. This section gives a good overview of streaming models and graph processing models along with references to the related work. Moreover, it also contains a detailed topic about Apache Flink explaining Gelly and the Flink Streaming API. Our Implementation details for porting these algorithms to Flink are discussed in section 4.</p> 
+
+<p>The experimental setup, tests, input data and output results are presented in section 5. Lastly, the conclusion of the thesis is presented in section 6, this also includes the future work.</p> 
+
+<p>7</p> 
+

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="320" />
+    <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="362" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/output/abstract(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/heading.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/introduction(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/method(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/title.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
+      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/run.sh" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/run.sh" />
+      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/test_document_to_xml.xml" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/test_document_to_xml.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +30,8 @@
       <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="217" column="95" lean-forward="true" selection-start-line="217" selection-start-column="95" selection-end-line="217" selection-end-column="95" />
+            <state relative-caret-position="334">
+              <caret line="146" column="22" lean-forward="false" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -72,12 +79,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>output_blocks_on_page</find>
       <find>Found_Method</find>
-      <find>abstractOut_path</find>
       <find>found_</find>
-      <find>Found_Introduction</find>
-      <find>introductionOut_path</find>
       <find>text_start_to_exclude</find>
       <find>filter_headings</find>
       <find>author</find>
@@ -85,10 +88,21 @@
       <find>main</find>
       <find>pdf2heads</find>
       <find>page</find>
-      <find>title_node</find>
       <find>txt</find>
       <find>heading_path</find>
       <find>title_path</find>
+      <find>print</find>
+      <find>path</find>
+      <find>author_path</find>
+      <find>abstractOut_path</find>
+      <find>Found_Introduction</find>
+      <find>introductionOut_path</find>
+      <find>head_txt</find>
+      <find>output_blocks_on_page</find>
+      <find>page_node</find>
+      <find>look_for_all_caps_headings</find>
+      <find>title_node</find>
+      <find>tree</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -237,13 +251,14 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3210634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3210634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12506738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -252,7 +267,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -304,8 +318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="217" column="95" lean-forward="true" selection-start-line="217" selection-start-column="95" selection-end-line="217" selection-end-column="95" />
+        <state relative-caret-position="334">
+          <caret line="146" column="22" lean-forward="false" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
           <folding />
         </state>
       </provider>

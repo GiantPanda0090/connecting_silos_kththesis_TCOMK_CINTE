@@ -1,0 +1,22 @@
+<heading>Streaming Graph Partitioning</heading> 
+
+<heading>DEGREE PROJECT IN DISTRIBUTED COMPUTING AT KTH INFORMATION AND COMMUNICATION TECHNOLOGY</heading> 
+
+<author>ZAINAB ABBAS</author> 
+
+<heading>KTH ROYAL INSTITUTE OF TECHNOLOGY SCHOOL OF COMPUTER SCIENCE AND COMMUNICATION</heading> 
+
+<heading>www.kth.se</heading> 
+
+<heading>KTH Royal Institute of Technology</heading> 
+
+<heading>Dept. of Software and Computer Systems</heading> 
+
+<heading>Streaming Graph Partitioning</heading> 
+
+<heading>Abstract</heading> 
+
+<heading>Referat</heading> 
+
+<heading>Acknowledgment</heading> 
+

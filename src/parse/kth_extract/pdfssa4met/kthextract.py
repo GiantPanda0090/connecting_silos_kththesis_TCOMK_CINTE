@@ -107,24 +107,50 @@ def filter_headings(h1):
 #<p>field, their function and their progress has also been reviewed.</p>
 #print block search OBS this function do not print tag search. tag search print afterwards in the end of pdf2heads
 def output_blocks_on_page(a_page_node, starting_block, page_number,filename):
-    page_txts=[]
+   page_txts=[]
+   next_page_tag=True
+   while next_page_tag: #per page
     print "output_blocks_on_page = " + str(page_number)
     print "starting_block=" + str(starting_block)
-
     local_block_number=0
-    for block_node in a_page_node.xpath('.//BLOCK'):
+    #print a_page_node
+    for block_node in a_page_node.xpath('.//BLOCK'): #all the blocks in a page
         local_block_number=local_block_number+1
         if local_block_number <= starting_block:
             continue
         st = "<p>"
         et = "</p>"
+
+        check_headers = block_node.xpath(".//TOKEN[@font-size > {0}]".format(20))
+        check_headers_txt =' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in check_headers])
+        #print "check header: " + check_headers_txt
+
+
         headers = block_node.xpath(".//TOKEN[@font-size > {0}]".format(9))
         page_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
+       
+       
+        if len(check_headers_txt):
+           print "check header: " + check_headers_txt
+           print "page text: " + page_txt
+           if (check_headers_txt == page_txt):
+               print "time to leave!!!!!!!!!!!!!!!!!!!!!!!!!"
+               next_page_tag = False
+               break
+        
         if len(page_txt):
+            #print page_txt
             page_txts.append("{0}{1}{2}".format(st, page_txt, et))#text append
+    if (next_page_tag):
+        #ready for next page
+      page_number+=1
+      starting_block=0
+      a_page_node = tree.xpath('//PAGE[{0}]'.format(page_number)) [0]
+      #print a_page_node
+
     with open(filename, 'w') as f:
         for txt in page_txts:
-            sys.stdout.writelines([txt, '\n'])#print append text #txt is per line
+            #sys.stdout.writelines([txt, '\n'])#print append text #txt is per line
             print >> f,txt, "\n"   # Python 2.x
 
 
@@ -143,11 +169,20 @@ def pdf2heads(opts, args):
     global Found_Sammanfattning
     global Found_Method
     global Found_Introduction
+    global Found_TOC
     global abstractOut_path
+    global referat_path
     global methodOut_path
     global introductionOut_path
+    global toc_path
     global heading_path
     global title_path
+    global author_path
+    global subtitle_path
+    global end_tag
+    global tree
+
+
 
 
 
@@ -197,11 +232,11 @@ def pdf2heads(opts, args):
 
             title_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in title_headers])
             if len(title_head_txt):#sucess title found
-                title_path = '../../../../output/title.txt'
+                print "Title: found"
+                title_path = '../../../../output/parse_result/title.txt'
                 txt = "<Title>" + title_head_txt + "</Title>"
                 with open(title_path, 'w') as f:
                     print >> f, txt, "\n"  # print tag information to certain file
-                print txt #title
                 title_node=trial_title_node
                 next_block=block+1
                 break
@@ -209,11 +244,12 @@ def pdf2heads(opts, args):
         except IndexError: page+=1
 
     # find subtitle - note that a subtitle is option - start on the 2nd page and second block on the page
-    page = 2
-    block = 2
+    # WRONG SECOND PAGE IS TABLE OF CONTENt.
+    page = 1
+    block = 1
     next_block=2
     subtitle_node = None
-    while True:
+    while (page < 2):
         try:
             trial_subtitle_node  = tree.xpath("//PAGE[{0}]//BLOCK[{1}]".format(page, block))[0]
             if Verbose_flag:
@@ -221,53 +257,56 @@ def pdf2heads(opts, args):
                 print trial_subtitle_node
 
 # the Subtitle is assumed to be larger than 19 points
-            subtitle_headers = trial_subtitle_node.xpath(".//TOKEN[@font-size > {0}]".format(19))
+            subtitle_headers = trial_subtitle_node.xpath(".//TOKEN[@font-size < {0} and @bold = 'no']".format(20))
             if Verbose_flag:
                 print "subtitle_headers:"
                 print subtitle_headers 
 
-            if len(subtitle_headers) == 0:
-                next_block=2
-                break
             subtitle_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in subtitle_headers])
             if len(subtitle_head_txt):
+
+
+                print "Subtitle: found"
+                subtitle_path = '../../../../output/parse_result/subtitle.txt'
+                txt = "<Subtitle>" + title_head_txt + "</Subtitle>"
+                with open(subtitle_path, 'w') as f:
+                    print >> f, txt, "\n"  # print tag information to certain file
                 subtitle_node=trial_subtitle_node
-                print "<Subtitle>" + title_head_txt + "</Subtitle>"
                 next_block=3
                 break
 
         except IndexError: block+=1
-        else: break
-        if block > 4:
-            # probably not going to find it now
-            break
     
-    # find author - on inside cover
-    page = 2
-    block = next_block
+    # find author - on cover page
+    page = 1
+    block = 1
     auth_node = None
-    while True:
+    while (page < 2):
         try:
             trial_auth_node  = tree.xpath("//PAGE[{0}]//BLOCK[{1}]".format(page, block))[0]
             if Verbose_flag:
                 print "trial_auth_node:"
                 print trial_auth_node
 
-# the author's name(s) is(are) assumed to be 15 points or larger in size
-            auth_headers = trial_auth_node.xpath(".//TOKEN[@font-size > {0}]".format(15))
+# the author's name(s) is(are) assumed to be smaller than title   bigger than   degree project...
+            auth_headers = trial_auth_node.xpath(".//TOKEN[@font-size < {0} and @bold = 'yes']".format(20))
+
             if Verbose_flag:
                 print "auth_headers:"
                 print auth_headers
+
             auth_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in auth_headers])
-            if len(title_head_txt):
+            if len(auth_head_txt): #found
+                print "Author: found"
+                author_path = '../../../../output/parse_result/author.txt'
+                txt = "<Author>" + auth_head_txt + "</Author>"
+                with open(author_path, 'w') as f:
+                    print >> f, txt, "\n"  # print tag information to certain file
                 auth_node=trial_auth_node
                 break
+            block =block+1
+        except IndexError: page+=1
 
-        except IndexError: block+=1
-        else: break
-        if block > 4:
-            # probably not going to find it now
-            break
     
 
     font_sizes = tree.xpath('//TOKEN/@font-size')
@@ -295,11 +334,14 @@ def pdf2heads(opts, args):
     Found_Sammanfattning = False
     Found_Method = False
     Found_Introduction = False
-    abstractOut_path = '../../../../output/abstract(en).txt'
-    methodOut_path = '../../../../output/method(en).txt'
-    introductionOut_path = '../../../../output/introduction(en).txt'
-    heading_path = '../../../../output/heading.txt'
-    title_path = '../../../../output/title.txt'
+    Found_TOC = False
+    abstractOut_path = '../../../../output/parse_result/abstract(en).txt'
+    referat_path = '../../../../output/parse_result/referat(sv).txt'
+    methodOut_path = '../../../../output/parse_result/method(en).txt'
+    toc_path = '../../../../output/parse_result/toc(en).txt'
+    introductionOut_path = '../../../../output/parse_result/introduction(en).txt'
+    heading_path = '../../../../output/parse_result/heading.txt'
+    title_path = '../../../../output/parse_result/title.txt'
 
 
     #page node
@@ -341,6 +383,8 @@ def pdf2heads(opts, args):
 
             head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
 
+           # print head_txt
+
 
             if head_txt in text_start_to_exclude:
                 start_to_exclude = True
@@ -353,40 +397,55 @@ def pdf2heads(opts, args):
                 #abstract model
             if head_txt.find("Abstract") >= 0 or head_txt.find("ABSTRACT") >= 0:
                 if not Found_abstract: #if the abstract has not been found yet
-                    print "Abstract (en):"
+                    print "Abstract (en): found"
                     output_blocks_on_page(page_node, block_number, page,abstractOut_path)
                     Found_abstract = True
                 break
 
             if head_txt.find("Sammanfattning") >= 0 or head_txt.find("SAMMANFATTNING") >= 0:
                 if not Found_Sammanfattning:
-                    print "Sammanfattning (sv):"
+                    print "Sammanfattning (sv): found"
                     output_blocks_on_page(page_node, block_number, page,abstractOut_path)
                     Found_Sammanfattning = True
                 break
 
             if head_txt.find("Abstrakt") >= 0 or head_txt.find("ABSTRAKT") >= 0:
                 if not Found_Sammanfattning:
-                    print "Abstrakt (sv):"
+                    print "Abstrakt (sv): found"
                     output_blocks_on_page(page_node, block_number, page,abstractOut_path)
                     Found_Sammanfattning = True
                 break
 
             if head_txt.find("Referat") >= 0 or head_txt.find("REFERAT") >= 0:
                 if not Found_Sammanfattning:
-                    print "Referat (sv):"
-                    output_blocks_on_page(page_node, block_number, page,abstractOut_path)
+                    print "Referat (sv): found"
+                    output_blocks_on_page(page_node, block_number, page,referat_path)
                     Found_Sammanfattning = True
                 break
+                 #table of content
+            if head_txt.find("Table of Contents") >= 0 or head_txt.find("Contents") >= 0:
+                    if not Found_TOC:  # if the abstract has not been found yet
+                        print "TOC (en): found"
+                        output_blocks_on_page(page_node, block_number, page, toc_path)
+                        Found_TOC = True
+                    break
+
+
+
             if head_txt.find("Introduction") >= 0 or head_txt.find("INTRODUCTION") >= 0:
                     if not Found_Introduction:  # if the abstract has not been found yet
-                        print "Introduction (en):"
+                        print "Introduction (en): found"
                         output_blocks_on_page(page_node, block_number, page, introductionOut_path)
                         Found_Introduction = True
+
+
+                        #Found_Introduction = True
                     break
+
+
             if head_txt.find("Methods") >= 0 or head_txt.find("METHODS") >= 0 or head_txt.find("Methodology") >= 0 or head_txt.find("METHODOLOGY") >= 0:
                 if not Found_Method: #if the abstract has not been found yet
-                    print "Methods (en):"
+                    print "Methods (en): found"
                     output_blocks_on_page(page_node, block_number, page,methodOut_path)
                     Found_Method = True
                 break
@@ -412,7 +471,7 @@ def pdf2heads(opts, args):
             break
     with open(heading_path, 'w') as f:
         for txt in head_txts:#print all append text
-            sys.stdout.writelines([txt, '\n'])
+            #sys.stdout.writelines([txt, '\n'])
             #reference https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python
             print >> f, txt, "\n"  # print tag information to certain file
 
