@@ -48,7 +48,7 @@ from pdf2xml import pdf2etree
 
 # text to filter out from the output
 text_to_filter = {
-    'K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y',
+    'K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y',
     'E L E C T R I C A L E N G I N E E R I N G A N D C O M P U T E R S C I E N C E'
     'K T H E l e c t r i c a l E n g i n e e r i n g a n d',
     'C o m p u t e r S c i e n c e',
@@ -147,6 +147,7 @@ def pdf2heads(opts, args):
     global methodOut_path
     global introductionOut_path
     global heading_path
+    global title_path
 
 
 
@@ -178,31 +179,35 @@ def pdf2heads(opts, args):
     page = 1
     block = 1
     title_node = None
-    while True:
+    while (page < 2):
         try:
             trial_title_node = tree.xpath("//PAGE[{0}]//BLOCK[{1}]".format(page, block))[0]
-            if Verbose_flag:
+
+            if Verbose_flag:#verse flag
                 print "trial_title_node:"
                 print trial_title_node
 
 #            title_headers = trial_title_node.xpath(".//TOKEN[@font-size > {0}]".format(23))
 # note that the Title is assumed to be 20 points or larger in size
             title_headers = trial_title_node.xpath(".//TOKEN[@font-size > {0}]".format(20))
-            if Verbose_flag:
+
+            if Verbose_flag:#verse flag
                 print "title_headers:"
-                print title_headers 
+                print title_headers
+
             title_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in title_headers])
-            if len(title_head_txt):
-                print "<Title>" + title_head_txt + "</Title>"
+            if len(title_head_txt):#sucess title found
+                title_path = '../../../../output/title.txt'
+                txt = "<Title>" + title_head_txt + "</Title>"
+                with open(title_path, 'w') as f:
+                    print >> f, txt, "\n"  # print tag information to certain file
+                print txt #title
                 title_node=trial_title_node
                 next_block=block+1
                 break
+            block =block+1
         except IndexError: page+=1
-        else: break
-        if page > 2:
-            # probably not going to find it now
-            break
-        
+
     # find subtitle - note that a subtitle is option - start on the 2nd page and second block on the page
     page = 2
     block = 2
@@ -294,6 +299,8 @@ def pdf2heads(opts, args):
     methodOut_path = '../../../../output/method(en).txt'
     introductionOut_path = '../../../../output/introduction(en).txt'
     heading_path = '../../../../output/heading.txt'
+    title_path = '../../../../output/title.txt'
+
 
     #page node
     for page_node in tree.xpath('//PAGE'):
@@ -303,6 +310,7 @@ def pdf2heads(opts, args):
             block_number = block_number+1
             if xmltag:
 #specify data mining model
+#all gone to heading....not working!!
 
                 if block_node == title_node:#found title
                     st = "<title>"
@@ -310,7 +318,7 @@ def pdf2heads(opts, args):
                 if block_node == subtitle_node:#found subtitle
                     st = "<subtitle>"
                     et = "</subtitle>"
-                elif block_node == auth_node:#found author
+                elif block_node == auth_node:#found author #not working
                     st = "<author>"
                     et = "</author>"
                 else:
