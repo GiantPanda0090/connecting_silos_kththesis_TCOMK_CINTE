@@ -90,6 +90,8 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
         next_block_tag =True
         st_list =["<Author>","<Address_line1>","<Address_line2>","<Email>","<PhoneNumber>","<Other_info>"]
         et_list =["</Author>","</Address_line1>","</Address_line2>","</Email>","</PhoneNumber>","</Other_info>"]
+        global address
+        author_count=0
 
             # print a_page_node
         for block_node in a_page_node.xpath('.//BLOCK'):  # all the blocks in a page
@@ -133,17 +135,52 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                   if len(page_txt):
                     # print page_txt
                     print page_txt
+                    save_path= None
                     local_text_number = local_text_number + 1
                     if (local_text_number>5):
                         local_text_number=5
-                    page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
-        with open(filename, 'w') as f:
-            for txt in page_txts:
-              # sys.stdout.writelines([txt, '\n'])#print append text #txt is per line
-              print >> f, txt, "\n"  # Python 2.x
+                    if (st == "<Author>"):
+                        author_count+=1
+                        name_split = page_txt.split();
+                        save_path= '../../../../output/parse_result/author_'+str(author_count)+'_frontname'+'.txt'
+                        txt = "<FrontName>" + name_split[0] + "</FrontName>"
+                        with open(save_path, 'w') as f:
+                            print >> f, txt, "\n"  # print tag information to certain file
+                        save_path = '../../../../output/parse_result/author_' + str(
+                            author_count) + '_aftername' + '.txt'
+                        txt = "<AfterName>" + name_split[1] + "</AfterName>"
+                        with open(save_path, 'w') as f:
+                            print >> f, txt, "\n"  # print tag information to certain file
 
+                        save_path = '../../../../output/parse_result/author_' + str(
+                            author_count) + '.txt'
+                        page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
 
+                    if (st == "<Address_line1>"):
+                        address=page_txt+" " ;
+                    if (st == "<Email>"):
+                        save_path = '../../../../output/parse_result/author_email_'+str(author_count)+'.txt'
+                        page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
 
+                    if (st == "<PhoneNumber>"):
+                        save_path = '../../../../output/parse_result/author_PhoneNumber_'+str(author_count)+'.txt'
+                        page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
+
+                    if (st == "<Other_info>"):
+                        save_path = '../../../../output/parse_result/author_Other_info_'+str(author_count)+'.txt'
+                        page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
+
+                    if (st == "<Address_line2>"):
+                        page_txts.append("{0}{1}{2}{3}".format(st,address,page_txt,et))  # text append
+                        save_path = '../../../../output/parse_result/author_address_'+str(author_count)+'.txt'
+
+                    if (save_path!=None):
+                      with open(save_path, 'w') as f:
+                            for txt in page_txts:
+                                # sys.stdout.writelines([txt, '\n'])#print append text #txt is per line
+                                print txt + "in" + save_path
+                                print >> f, txt, "\n"  # Python 2.x
+                                page_txts = []
 
 
 # Note that this code filters out text that is smaller than 9 points
@@ -359,12 +396,13 @@ def pdf2heads(opts, args,document_type):
     
     # find author - on cover page
     Found_Author=False
-    author_path = '../../../../output/parse_result/author.txt'
+    author_path = '../../../../output/parse_result/author_detail.txt'
     frontname_path = '../../../../output/parse_result/front_name.txt'
     aftername_path = '../../../../output/parse_result/after_name.txt'
     page = 1
     block = 1
     auth_node = None
+    auth_count=0
     while (page < 2):
         try:
             trial_auth_node  = tree.xpath("//PAGE[{0}]//BLOCK[{1}]".format(page, block))[0]
@@ -373,7 +411,7 @@ def pdf2heads(opts, args,document_type):
                 print trial_auth_node
 
 # the author's name(s) is(are) assumed to be smaller than title   bigger than   degree project...
-            auth_headers = trial_auth_node.xpath(".//TOKEN[@font-size < {0} and @bold = 'yes']".format(20))
+            auth_headers = trial_auth_node.xpath(".//TOKEN[@font-size < {0} and @bold = 'yes' and @font-size > {1}]".format(20,15))
 
             print auth_headers
             if Verbose_flag:
@@ -384,19 +422,29 @@ def pdf2heads(opts, args,document_type):
 
             if len(auth_head_txt)>0: #found
                 print "Author: found"
+                auth_count +=1
 
                 name_split = auth_head_txt.split();
                 txt = "<Author>" + auth_head_txt + "</Author>"
+
+                author_path = '../../../../output/parse_result/author_'+str(auth_count)+'.txt'
+
                 with open(author_path, 'w') as f:
                     print >> f, txt, "\n"  # print tag information to certain file
                 txt = "<FrontName>" + name_split[0] + "</FrontName>"
+
+                frontname_path = '../../../../output/parse_result/author_'+str(auth_count)+'_frontname'+'.txt'
+
                 with open(frontname_path, 'w') as f:
                     print >> f, txt, "\n"  # print tag information to certain file
                 txt = "<AfterName>" + name_split[1] + "</AfterName>"
+
+                aftername_path = '../../../../output/parse_result/author_'+str(auth_count)+'_aftername'+'.txt'
+
                 with open(aftername_path, 'w') as f:
                     print >> f, txt, "\n"  # print tag information to certain file
                 auth_node=trial_auth_node
-                break
+
             block =block+1
         except IndexError: page+=1
 

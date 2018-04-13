@@ -1,4 +1,4 @@
-<author>Bachelor Degree Project</author> 
+<heading>Bachelor Degree Project</heading> 
 
 <subtitle>20171215</subtitle> 
 
