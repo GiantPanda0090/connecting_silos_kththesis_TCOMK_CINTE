@@ -1,2 +1,2 @@
-<Subtitle>Streaming Graph Partitioning</Subtitle> 
+<Subtitle></Subtitle> 
 

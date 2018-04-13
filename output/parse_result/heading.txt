@@ -1,22 +1,50 @@
-<heading>Streaming Graph Partitioning</heading> 
+<author>Bachelor Degree Project</author> 
 
-<heading>DEGREE PROJECT IN DISTRIBUTED COMPUTING AT KTH INFORMATION AND COMMUNICATION TECHNOLOGY</heading> 
+<subtitle>20171215</subtitle> 
 
-<author>ZAINAB ABBAS</author> 
+<heading>Project proposal</heading> 
 
-<heading>KTH ROYAL INSTITUTE OF TECHNOLOGY SCHOOL OF COMPUTER SCIENCE AND COMMUNICATION</heading> 
+<heading>Project Title:</heading> 
 
-<heading>www.kth.se</heading> 
+<heading>Authors</heading> 
 
-<heading>KTH Royal Institute of Technology</heading> 
+<heading>Bachelor Degree Project</heading> 
 
-<heading>Dept. of Software and Computer Systems</heading> 
+<heading>20171215</heading> 
 
-<heading>Streaming Graph Partitioning</heading> 
+<heading>Purpose</heading> 
 
-<heading>Abstract</heading> 
+<heading>Goal(s)</heading> 
 
-<heading>Referat</heading> 
+<heading>Tasks</heading> 
 
-<heading>Acknowledgment</heading> 
+<heading>pdfssa4met</heading> 
+
+<heading>Bachelor Degree Project</heading> 
+
+<heading>20171215</heading> 
+
+<heading>Method</heading> 
+
+<heading>Milestone chart (time schedule)</heading> 
+
+<heading>< Milestone chart illustrates the project timeline and when will particularly</heading> 
+
+<heading>meaningful points, referred to as milestones, are to be completed.</heading> 
+
+<heading>Also mention the deliverable for each of these milestones. ></heading> 
+
+<heading>Risks, Consequences and Ethics</heading> 
+
+<heading>Bachelor Degree Project</heading> 
+
+<heading>20171215</heading> 
+
+<heading>Summary</heading> 
+
+<heading>Reference(s)</heading> 
+
+<heading>Bachelor Degree Project</heading> 
+
+<heading>20171215</heading> 
 

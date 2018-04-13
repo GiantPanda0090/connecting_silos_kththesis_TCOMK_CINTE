@@ -4,5 +4,5 @@
 rm -rf ../../../../output/parse_result
 mkdir ../../../../output/parse_result
 
-python kthextract.py $1
+python kthextract.py $1 $2
 

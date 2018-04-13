@@ -81,6 +81,71 @@ def filter_headings(h1):
     else:
         return h1
 
+def output_text_on_block_on_page(a_page_node, starting_block, page_number, filename):
+        page_txts = []
+        next_page_tag = True
+        print "output_blocks_on_page = " + str(page_number)
+        print "starting_block=" + str(starting_block)
+        local_block_number = 0
+        next_block_tag =True
+        st_list =["<Author>","<Address_line1>","<Address_line2>","<Email>","<PhoneNumber>","<Other_info>"]
+        et_list =["</Author>","</Address_line1>","</Address_line2>","</Email>","</PhoneNumber>","</Other_info>"]
+
+            # print a_page_node
+        for block_node in a_page_node.xpath('.//BLOCK'):  # all the blocks in a page
+                if next_block_tag == False:
+                    break
+                local_block_number = local_block_number + 1
+                if local_block_number <= starting_block:
+                    continue
+
+                if look_for_all_caps_headings:
+                    check_headers_1 = block_node.xpath(
+                        ".//TOKEN[@font-size > {0} or @bold = 'yes']".format(mean_font_size,main_font_color))
+                else:
+                    check_headers_1 = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' ]".format(mean_font_size * 1.05, main_font_color))
+                print "mean front size is detected as: " + str(mean_font_size * 1.05)
+
+                check_headers_txt_1 = ' '.join(
+                    [etree.tostring(el, method='text', encoding="UTF-8") for el in check_headers_1])
+                #print check_headers_txt_1
+                local_text_number = 0
+                for text_node in block_node.xpath('.//TEXT'):  # all the blocks in a page
+                  #if local_text_number <= 5:
+                      #continue
+                  st=""
+                  et=""
+                  st = st_list[local_text_number]
+                  et = et_list[local_text_number]
+                # print "check header: " + check_headers_txt
+                  headers = text_node.xpath(".//TOKEN[@font-size > {0} ]".format(9))
+                  page_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
+                  font=text_node.xpath(".//TOKEN[@font-name = dejavusans]")
+                  font_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in font])
+                  print font_txt
+                  if len(check_headers_txt_1):
+                         print "check header: " + check_headers_txt_1
+                         print "page text: " + page_txt
+                         if (check_headers_txt_1 == page_txt):
+                            print "time to leave!!!!!!!!!!!!!!!!!!!!!!!!!"
+                            next_block_tag = False
+                            break
+                  if len(page_txt):
+                    # print page_txt
+                    print page_txt
+                    local_text_number = local_text_number + 1
+                    if (local_text_number>5):
+                        local_text_number=5
+                    page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
+        with open(filename, 'w') as f:
+            for txt in page_txts:
+              # sys.stdout.writelines([txt, '\n'])#print append text #txt is per line
+              print >> f, txt, "\n"  # Python 2.x
+
+
+
+
+
 # Note that this code filters out text that is smaller than 9 points
 #Exaple print:
 #Abstract (en): (keyword)
@@ -106,7 +171,7 @@ def filter_headings(h1):
 #<p>Because of the outgrowing industry of piezoelectric energy harvesting in Medical</p>
 #<p>field, their function and their progress has also been reviewed.</p>
 #print block search OBS this function do not print tag search. tag search print afterwards in the end of pdf2heads
-def output_blocks_on_page(a_page_node, starting_block, page_number,filename):
+def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chapter):
    page_txts=[]
    next_page_tag=True
    while next_page_tag: #per page
@@ -121,19 +186,25 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename):
         st = "<p>"
         et = "</p>"
 
-        check_headers = block_node.xpath(".//TOKEN[@font-size > {0}]".format(20))
+        if look_for_all_caps_headings:
+            check_headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' or @font-color != '{1}']".format(mean_font_size,main_font_color))
+        else:
+            check_headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' or @font-color != '{1}']".format(mean_font_size * 1.05,main_font_color))
+        #print "mean front size is detected as: " + (mean_font_size * 1.05)
         check_headers_txt =' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in check_headers])
         #print "check header: " + check_headers_txt
 
 
         headers = block_node.xpath(".//TOKEN[@font-size > {0}]".format(9))
         page_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
-       
+
        
         if len(check_headers_txt):
            print "check header: " + check_headers_txt
            print "page text: " + page_txt
-           if (check_headers_txt == page_txt):
+           print "check standard: " + str(chapter) + "."
+           print chapter
+           if (check_headers_txt == page_txt and check_headers_txt.find(str(chapter) + ".") < 0):
                print "time to leave!!!!!!!!!!!!!!!!!!!!!!!!!"
                next_page_tag = False
                break
@@ -153,24 +224,31 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename):
             #sys.stdout.writelines([txt, '\n'])#print append text #txt is per line
             print >> f,txt, "\n"   # Python 2.x
 
+#reference https://stackoverflow.com/questions/19859282/check-if-a-string-contains-a-number
+def hasNumbers(inputString):
+     return any(char.isdigit() for char in inputString)
 
 #scan the PDF file for headers
-def pdf2heads(opts, args):
+def pdf2heads(opts, args,document_type):
     global Verbose_flag
     xmltag = True
     highlight = False
     titleonly = False
     authonly = False
     Verbose_flag = False
+    global look_for_all_caps_headings
     look_for_all_caps_headings = False
     global automatic_rerunning
     global Found_Heading
     global Found_abstract
+    global Found_org
+    global Found_Author
     global Found_Sammanfattning
     global Found_Method
     global Found_Introduction
     global Found_TOC
     global abstractOut_path
+    global OrgandSup_path
     global referat_path
     global methodOut_path
     global introductionOut_path
@@ -181,7 +259,8 @@ def pdf2heads(opts, args):
     global subtitle_path
     global end_tag
     global tree
-
+    global mean_font_size
+    global main_font_color
 
 
 
@@ -209,6 +288,8 @@ def pdf2heads(opts, args):
         look_for_all_caps_headings = True
             
     tree = pdf2etree(args)
+
+
 
     # find title - look on the first page of the document at the first block of text on the page
     page = 1
@@ -264,8 +345,6 @@ def pdf2heads(opts, args):
 
             subtitle_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in subtitle_headers])
             if len(subtitle_head_txt):
-
-
                 print "Subtitle: found"
                 subtitle_path = '../../../../output/parse_result/subtitle.txt'
                 txt = "<Subtitle>" + title_head_txt + "</Subtitle>"
@@ -274,10 +353,15 @@ def pdf2heads(opts, args):
                 subtitle_node=trial_subtitle_node
                 next_block=3
                 break
+            block =block + 1
 
         except IndexError: block+=1
     
     # find author - on cover page
+    Found_Author=False
+    author_path = '../../../../output/parse_result/author.txt'
+    frontname_path = '../../../../output/parse_result/front_name.txt'
+    aftername_path = '../../../../output/parse_result/after_name.txt'
     page = 1
     block = 1
     auth_node = None
@@ -291,26 +375,33 @@ def pdf2heads(opts, args):
 # the author's name(s) is(are) assumed to be smaller than title   bigger than   degree project...
             auth_headers = trial_auth_node.xpath(".//TOKEN[@font-size < {0} and @bold = 'yes']".format(20))
 
+            print auth_headers
             if Verbose_flag:
                 print "auth_headers:"
                 print auth_headers
-
+            print document_type
             auth_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in auth_headers])
-            if len(auth_head_txt): #found
+
+            if len(auth_head_txt)>0: #found
                 print "Author: found"
-                author_path = '../../../../output/parse_result/author.txt'
+
+                name_split = auth_head_txt.split();
                 txt = "<Author>" + auth_head_txt + "</Author>"
                 with open(author_path, 'w') as f:
+                    print >> f, txt, "\n"  # print tag information to certain file
+                txt = "<FrontName>" + name_split[0] + "</FrontName>"
+                with open(frontname_path, 'w') as f:
+                    print >> f, txt, "\n"  # print tag information to certain file
+                txt = "<AfterName>" + name_split[1] + "</AfterName>"
+                with open(aftername_path, 'w') as f:
                     print >> f, txt, "\n"  # print tag information to certain file
                 auth_node=trial_auth_node
                 break
             block =block+1
         except IndexError: page+=1
 
-    
-
     font_sizes = tree.xpath('//TOKEN/@font-size')
-    mean_font_size =  mean(font_sizes)
+    mean_font_size = mean(font_sizes)
     median_font_size = median(font_sizes)
 
 #    print "Median Font Size (i.e. body text):", median_font_size
@@ -331,10 +422,12 @@ def pdf2heads(opts, args):
 
     page = 0
     Found_abstract = False
+    Found_org=False
     Found_Sammanfattning = False
     Found_Method = False
     Found_Introduction = False
     Found_TOC = False
+    OrgandSup_path = '../../../../output/parse_result/Orignization_supervisor(en).txt'
     abstractOut_path = '../../../../output/parse_result/abstract(en).txt'
     referat_path = '../../../../output/parse_result/referat(sv).txt'
     methodOut_path = '../../../../output/parse_result/method(en).txt'
@@ -384,49 +477,66 @@ def pdf2heads(opts, args):
             head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
 
            # print head_txt
-
-
             if head_txt in text_start_to_exclude:
                 start_to_exclude = True
             head_txt=filter_headings(head_txt)
 
+
             if len(head_txt) and (not start_to_exclude):
                 head_txts.append("{0}{1}{2}".format(st, head_txt, et)) #append st tag_content andet
 
+                # model for proposal
+            if (int(document_type) == 1):
+             if head_txt.find("Authors") >= 0 or head_txt.find("Author") >= 0:
+                        print "I should be herer!!!!!"
+                        if not Found_Author:  # if the abstract has not been found yet
+                            print "Authors(en): OVERIDE "
+                            print "Authors and detail information (en): found "
+                            output_text_on_block_on_page(page_node, block_number, page, author_path)
+                            Found_Author = True
+                            break
 
-                #abstract model
+            if head_txt.find("Organization and Supervisor") >= 0 or head_txt.find("Organization and Supervisor") >= 0:
+                       if not Found_org:  # if the abstract has not been found yet
+                          print "Organization and Supervisor (en): found"
+                          output_blocks_on_page(page_node, block_number, page, OrgandSup_path, 0)
+                          Found_orf = True
+                          break
+
+
+                # model for thesis
             if head_txt.find("Abstract") >= 0 or head_txt.find("ABSTRACT") >= 0:
                 if not Found_abstract: #if the abstract has not been found yet
                     print "Abstract (en): found"
-                    output_blocks_on_page(page_node, block_number, page,abstractOut_path)
+                    output_blocks_on_page(page_node, block_number, page,abstractOut_path,0)
                     Found_abstract = True
                 break
 
             if head_txt.find("Sammanfattning") >= 0 or head_txt.find("SAMMANFATTNING") >= 0:
                 if not Found_Sammanfattning:
                     print "Sammanfattning (sv): found"
-                    output_blocks_on_page(page_node, block_number, page,abstractOut_path)
+                    output_blocks_on_page(page_node, block_number, page,abstractOut_path,0)
                     Found_Sammanfattning = True
                 break
 
             if head_txt.find("Abstrakt") >= 0 or head_txt.find("ABSTRAKT") >= 0:
                 if not Found_Sammanfattning:
                     print "Abstrakt (sv): found"
-                    output_blocks_on_page(page_node, block_number, page,abstractOut_path)
+                    output_blocks_on_page(page_node, block_number, page,abstractOut_path,0)
                     Found_Sammanfattning = True
                 break
 
             if head_txt.find("Referat") >= 0 or head_txt.find("REFERAT") >= 0:
                 if not Found_Sammanfattning:
                     print "Referat (sv): found"
-                    output_blocks_on_page(page_node, block_number, page,referat_path)
+                    output_blocks_on_page(page_node, block_number, page,referat_path,0)
                     Found_Sammanfattning = True
                 break
                  #table of content
             if head_txt.find("Table of Contents") >= 0 or head_txt.find("Contents") >= 0:
                     if not Found_TOC:  # if the abstract has not been found yet
                         print "TOC (en): found"
-                        output_blocks_on_page(page_node, block_number, page, toc_path)
+                        output_blocks_on_page(page_node, block_number, page, toc_path,0)
                         Found_TOC = True
                     break
 
@@ -435,7 +545,7 @@ def pdf2heads(opts, args):
             if head_txt.find("Introduction") >= 0 or head_txt.find("INTRODUCTION") >= 0:
                     if not Found_Introduction:  # if the abstract has not been found yet
                         print "Introduction (en): found"
-                        output_blocks_on_page(page_node, block_number, page, introductionOut_path)
+                        output_blocks_on_page(page_node, block_number, page, introductionOut_path, 1)
                         Found_Introduction = True
 
 
@@ -446,7 +556,7 @@ def pdf2heads(opts, args):
             if head_txt.find("Methods") >= 0 or head_txt.find("METHODS") >= 0 or head_txt.find("Methodology") >= 0 or head_txt.find("METHODOLOGY") >= 0:
                 if not Found_Method: #if the abstract has not been found yet
                     print "Methods (en): found"
-                    output_blocks_on_page(page_node, block_number, page,methodOut_path)
+                    output_blocks_on_page(page_node, block_number, page,methodOut_path, 0)
                     Found_Method = True
                 break
 
@@ -484,6 +594,7 @@ def main(argv=None):
     if argv is None:
 #argv=flag
         argv = sys.argv[1:]
+
     try:
         try:
 #opts pdf address
@@ -500,12 +611,16 @@ def main(argv=None):
             #global automatic_rerunning
             #global Found_abstract
             #global Found_Sammanfattning
-        pdf2heads(opts, args)
+
+
+        print args[0]
+
+        pdf2heads(opts, [args[0]],args[1])
 
         if not Found_abstract:
             print "Automatically running the program again with the option --caps"
             automatic_rerunning=True
-            pdf2heads(opts, args)
+            pdf2heads(opts, [args[0]],args[1])
 
 
     except UsageError as err:
