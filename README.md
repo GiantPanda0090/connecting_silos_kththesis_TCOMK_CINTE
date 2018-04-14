@@ -23,9 +23,14 @@
  
  Project Managment Tool: Atlassian Jira Cloud<br />
  
+ General start up:<br />
+ ./start.sh
+ 
  Process unit usage: <br />
  ./run.sh <pdf_document> <document_type><br />
  Thesis: document_type = 0<br />
  Proporsal: document_type = 1<br />
+ 
+ 
  
  Project is currently in progress...........
