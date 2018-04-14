@@ -1,2 +1,0 @@
-<PhoneNumber>0046-760 65 61 53</PhoneNumber> 
-

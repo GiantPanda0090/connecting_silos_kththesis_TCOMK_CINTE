@@ -8,6 +8,21 @@ based upon John Harrison's headings.py
 Note that you need to install pdfssa4met
 (available from http://code.google.com/p/pdfssa4met/ ).
 
+------------
+
+
+Modified on 2018.04.14
+@author: Qi LI.
+
+Modified to fit the Connecting silo requirment
+
+fit the data mining model with thesis proporsal and thesis report BASED ON 2018 NEW EECS templet. ICT department templet is not competible
+
+fits the requirment of DiVA
+
+
+------------
+
 Modified on 2015.06.10
 @author: Gerald Q. Maguire Jr.
 
@@ -39,7 +54,9 @@ OPTIONS:
 
 
 """
+import urllib2
 
+import os
 
 import sys, getopt
 from lxml import etree
@@ -144,37 +161,37 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                     if (st == "<Author>" and author_count <2):
                         author_count+=1
                         name_split = page_txt.split();
-                        save_path= '../../../../output/parse_result/author_'+str(author_count)+'_frontname'+'.txt'
+                        save_path= '../../../../output/parse_result/'+directiory+'/author_'+str(author_count)+'_frontname'+'.txt'
                         txt = "<FrontName>" + name_split[0] + "</FrontName>"
                         with open(save_path, 'w') as f:
                             print >> f, txt, "\n"  # print tag information to certain file
-                        save_path = '../../../../output/parse_result/author_' + str(
+                        save_path = '../../../../output/parse_result/'+directiory+'/author_' + str(
                             author_count) + '_aftername' + '.txt'
                         txt = "<AfterName>" + name_split[1] + "</AfterName>"
                         with open(save_path, 'w') as f:
                             print >> f, txt, "\n"  # print tag information to certain file
 
-                        save_path = '../../../../output/parse_result/author_' + str(
+                        save_path = '../../../../output/parse_result/'+directiory+'/author_' + str(
                             author_count) + '.txt'
                         page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
 
                     if (st == "<Address_line1>"):
                         address=page_txt+" " ;
                     if (st == "<Email>"):
-                        save_path = '../../../../output/parse_result/author_email_'+str(author_count)+'.txt'
+                        save_path = '../../../../output/parse_result/'+directiory+'/author_email_'+str(author_count)+'.txt'
                         page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
 
                     if (st == "<PhoneNumber>"):
-                        save_path = '../../../../output/parse_result/author_PhoneNumber_'+str(author_count)+'.txt'
+                        save_path = '../../../../output/parse_result/'+directiory+'/author_PhoneNumber_'+str(author_count)+'.txt'
                         page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
 
                     if (st == "<Other_info>"):
-                        save_path = '../../../../output/parse_result/author_Other_info_'+str(author_count)+'.txt'
+                        save_path = '../../../../output/parse_result/'+directiory+'/author_Other_info_'+str(author_count)+'.txt'
                         page_txts.append("{0}{1}{2}".format(st, page_txt, et))  # text append
 
                     if (st == "<Address_line2>"):
                         page_txts.append("{0}{1}{2}{3}".format(st,address,page_txt,et))  # text append
-                        save_path = '../../../../output/parse_result/author_address_'+str(author_count)+'.txt'
+                        save_path = '../../../../output/parse_result/'+directiory+'/author_address_'+str(author_count)+'.txt'
 
                     if (save_path!=None):
                       with open(save_path, 'w') as f:
@@ -266,7 +283,7 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
                         break
                     count += 1
 
-                save_path = '../../../../output/parse_result/Orgnization.txt'
+                save_path = '../../../../output/parse_result/'+directiory+'/Orgnization.txt'
                 org_split[0]="<Orgnization>"
                 org_split.append("</Orgnization>")
 
@@ -285,7 +302,7 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
                         break
                     count += 1
 
-                save_path = '../../../../output/parse_result/Supervisor.txt'
+                save_path = '../../../../output/parse_result/'+directiory+'/Supervisor.txt'
                 org_split[0] = "<Supervisor>"
                 org_split.append("</Supervisor>")
              if (page_txt.find("Examiner") >= 0) or ((page_txt.find("Examiner") >= 0) and (page_txt.find("name")>= 0)):
@@ -303,7 +320,7 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
                     count += 1
 
 
-                save_path = '../../../../output/parse_result/Examiner.txt'
+                save_path = '../../../../output/parse_result/'+directiory+'/Examiner.txt'
                 org_split[0] = "<Examiner>"
                 org_split.append("</Examiner>")
 
@@ -425,7 +442,7 @@ def pdf2heads(opts, args,document):
             title_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in title_headers])
             if len(title_head_txt):#sucess title found
                 print "Title: found"
-                title_path = '../../../../output/parse_result/title.txt'
+                title_path = '../../../../output/parse_result/'+directiory+'/title.txt'
                 txt = "<Title>" + title_head_txt + "</Title>"
                 with open(title_path, 'w') as f:
                     print >> f, txt, "\n"  # print tag information to certain file
@@ -457,7 +474,7 @@ def pdf2heads(opts, args,document):
             subtitle_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in subtitle_headers])
             if len(subtitle_head_txt):
                 print "Subtitle: found"
-                subtitle_path = '../../../../output/parse_result/subtitle.txt'
+                subtitle_path = '../../../../output/parse_result/'+directiory+'/subtitle.txt'
                 txt = "<Subtitle>" + title_head_txt + "</Subtitle>"
                 with open(subtitle_path, 'w') as f:
                     print >> f, txt, "\n"  # print tag information to certain file
@@ -470,9 +487,9 @@ def pdf2heads(opts, args,document):
     
     # find author - on cover page
     Found_Author=False
-    author_path = '../../../../output/parse_result/author_detail.txt'
-    frontname_path = '../../../../output/parse_result/front_name.txt'
-    aftername_path = '../../../../output/parse_result/after_name.txt'
+    author_path = '../../../../output/parse_result/'+directiory+'/author_detail.txt'
+    frontname_path = '../../../../output/parse_result/'+directiory+'/front_name.txt'
+    aftername_path = '../../../../output/parse_result/'+directiory+'/after_name.txt'
     page = 1
     block = 1
     auth_node = None
@@ -500,21 +517,21 @@ def pdf2heads(opts, args,document):
 
                 name_split = auth_head_txt.split();
                 txt = "<Author>" + auth_head_txt + "</Author>"
-                author_path = '../../../../output/parse_result/author_'+str(auth_count)+'.txt'
+                author_path = '../../../../output/parse_result/'+directiory+'/author_'+str(auth_count)+'.txt'
 
                 with open(author_path, 'w') as f:
                     print txt + "in" + author_path
                     print >> f, txt, "\n"  # print tag information to certain file
                 txt = "<FrontName>" + name_split[0] + "</FrontName>"
 
-                frontname_path = '../../../../output/parse_result/author_'+str(auth_count)+'_frontname'+'.txt'
+                frontname_path = '../../../../output/parse_result/'+directiory+'/author_'+str(auth_count)+'_frontname'+'.txt'
 
                 with open(frontname_path, 'w') as f:
                     print txt + "in" + frontname_path
                     print >> f, txt, "\n"  # print tag information to certain file
                 txt = "<AfterName>" + name_split[1] + "</AfterName>"
 
-                aftername_path = '../../../../output/parse_result/author_'+str(auth_count)+'_aftername'+'.txt'
+                aftername_path = '../../../../output/parse_result/'+directiory+'/author_'+str(auth_count)+'_aftername'+'.txt'
 
                 with open(aftername_path, 'w') as f:
                     print txt + "in" + aftername_path
@@ -552,15 +569,15 @@ def pdf2heads(opts, args,document):
     Found_Method = False
     Found_Introduction = False
     Found_TOC = False
-    OrgandSup_path = '../../../../output/parse_result/Orignization_supervisor(en).txt'
-    key_path = '../../../../output/parse_result/Keyword(en).txt'
-    abstractOut_path = '../../../../output/parse_result/abstract(en).txt'
-    referat_path = '../../../../output/parse_result/referat(sv).txt'
-    methodOut_path = '../../../../output/parse_result/method(en).txt'
-    toc_path = '../../../../output/parse_result/toc(en).txt'
-    introductionOut_path = '../../../../output/parse_result/introduction(en).txt'
-    heading_path = '../../../../output/parse_result/heading.txt'
-    title_path = '../../../../output/parse_result/title.txt'
+    OrgandSup_path = '../../../../output/parse_result/'+directiory+'/Orignization_supervisor(en).txt'
+    key_path = '../../../../output/parse_result/'+directiory+'/Keyword(en).txt'
+    abstractOut_path = '../../../../output/parse_result/'+directiory+'/abstract(en).txt'
+    referat_path = '../../../../output/parse_result/'+directiory+'/referat(sv).txt'
+    methodOut_path = '../../../../output/parse_result/'+directiory+'/method(en).txt'
+    toc_path = '../../../../output/parse_result/'+directiory+'/toc(en).txt'
+    introductionOut_path = '../../../../output/parse_result/'+directiory+'/introduction(en).txt'
+    heading_path = '../../../../output/parse_result/'+directiory+'/heading.txt'
+    title_path = '../../../../output/parse_result/'+directiory+'/title.txt'
 
 
     #page node
@@ -723,6 +740,7 @@ def main(argv=None):
     global Found_Sammanfattning
     global automatic_rerunning
     global Found_Introduction
+    global directiory
 
     if argv is None:
 #argv=flag
@@ -748,7 +766,25 @@ def main(argv=None):
 
         print args[0]
 
-        pdf2heads(opts, [args[0]],args[1])
+
+        #download module(expierment - might migarte into cavnas module later)
+        #reference: http://www.pythonforbeginners.com/python-on-the-web/how-to-use-urllib2-in-python/
+        file = urllib2.urlopen(args[0])
+
+        pdffile='analyze.pdf'
+
+        output = open(pdffile, 'wb')
+
+        output.write(file.read())
+
+        output.close()
+
+        directiory=args[0].split(".")[0]
+
+        if not os.path.exists('../../../../output/parse_result/'+directiory):
+            os.makedirs('../../../../output/parse_result/'+directiory)
+
+        pdf2heads(opts, [pdffile],args[1])
 
         #if not Found_abstract:
          #   print "Automatically running the program again with the option --caps"

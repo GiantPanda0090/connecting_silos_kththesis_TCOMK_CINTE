@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="581" />
+    <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="598" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/Examiner.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/Keyword(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/Orgnization.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/Orignization_supervisor(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/Supervisor.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_1_aftername.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_1_frontname.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_2_aftername.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_2_frontname.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_Other_info_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_PhoneNumber_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_PhoneNumber_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_address_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_address_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_email_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/author_email_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/heading.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/subtitle.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,9 +42,11 @@
       <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="230" column="120" lean-forward="false" selection-start-line="230" selection-start-column="120" selection-end-line="230" selection-end-column="120" />
-              <folding />
+            <state relative-caret-position="-4608">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#1449#1463#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,13 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mean_font_size</find>
-      <find>look_for_all_caps_headings</find>
-      <find>introd</find>
-      <find>filename</find>
-      <find>method</find>
-      <find>abstractOut_path</find>
-      <find>Found_abstract</find>
       <find>pdf2heads</find>
       <find>args</find>
       <find>font_sizes</find>
@@ -64,6 +78,13 @@
       <find>OrgandSup_path</find>
       <find>Found_key</find>
       <find>check header</find>
+      <find>os</find>
+      <find>import</find>
+      <find>/'+directory+'/</find>
+      <find>directory</find>
+      <find>directiory</find>
+      <find>parse_result</find>
+      <find>global directiory</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,7 +269,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1449#1463#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -290,9 +313,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="230" column="120" lean-forward="false" selection-start-line="230" selection-start-column="120" selection-end-line="230" selection-end-column="120" />
-          <folding />
+        <state relative-caret-position="-4608">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#1449#1463#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
