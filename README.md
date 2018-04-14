@@ -24,7 +24,7 @@
  Project Managment Tool: Atlassian Jira Cloud<br />
  
  Process unit usage: <br />
- python kthextract.py <pdf_document> <document_type><br />
+ ./run.sh <pdf_document> <document_type><br />
  Thesis: document_type = 0<br />
  Proporsal: document_type = 1<br />
  
