@@ -1,16 +1,24 @@
-<heading>Bachelor Degree Project</heading> 
-
-<subtitle>20171215</subtitle> 
-
 <heading>Project proposal</heading> 
 
-<heading>Project Title:</heading> 
+<author>Project Title:</author> 
 
 <heading>Authors</heading> 
 
-<heading>Bachelor Degree Project</heading> 
+<heading>shivabp@kth.se</heading> 
 
-<heading>20171215</heading> 
+<heading>qi5@kth.se</heading> 
+
+<heading>Organization and Supervisor</heading> 
+
+<heading>Keywords</heading> 
+
+<heading>RESTful APIs, Canvas, DiVA, Calendars, data mining</heading> 
+
+<heading>Background</heading> 
+
+<heading>Problem statement</heading> 
+
+<heading>Problem</heading> 
 
 <heading>Purpose</heading> 
 
@@ -19,10 +27,6 @@
 <heading>Tasks</heading> 
 
 <heading>pdfssa4met</heading> 
-
-<heading>Bachelor Degree Project</heading> 
-
-<heading>20171215</heading> 
 
 <heading>Method</heading> 
 
@@ -36,15 +40,7 @@
 
 <heading>Risks, Consequences and Ethics</heading> 
 
-<heading>Bachelor Degree Project</heading> 
-
-<heading>20171215</heading> 
-
 <heading>Summary</heading> 
 
 <heading>Reference(s)</heading> 
-
-<heading>Bachelor Degree Project</heading> 
-
-<heading>20171215</heading> 
 

@@ -122,10 +122,12 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                 # print "check header: " + check_headers_txt
                   headers = text_node.xpath(".//TOKEN[@font-size > {0} ]".format(9))
                   page_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
+
+                  #font text debug
                   font=text_node.xpath(".//TOKEN[@font-name = dejavusans]")
                   font_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in font])
                   print font_txt
-                  if len(check_headers_txt_1):
+                  if len(check_headers_txt_1): #check title to skip
                          print "check header: " + check_headers_txt_1
                          print "page text: " + page_txt
                          if (check_headers_txt_1 == page_txt):
@@ -139,7 +141,7 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                     local_text_number = local_text_number + 1
                     if (local_text_number>5):
                         local_text_number=5
-                    if (st == "<Author>"):
+                    if (st == "<Author>" and author_count <2):
                         author_count+=1
                         name_split = page_txt.split();
                         save_path= '../../../../output/parse_result/author_'+str(author_count)+'_frontname'+'.txt'
@@ -247,8 +249,53 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
                break
         
         if len(page_txt):
-            #print page_txt
-            page_txts.append("{0}{1}{2}".format(st, page_txt, et))#text append
+             org_split=[]
+
+             if page_txt.find( "Organization:")>=0:
+                print "Orgnization (en): Found"
+                org_split = page_txt.split();
+                save_path = '../../../../output/parse_result/Orgnization.txt'
+                org_split[0]="<Orgnization>"
+                org_split.append("</Orgnization>")
+
+             if page_txt.find("Supervisor:") >= 0:
+                print "Supervisor (en): Found"
+                org_split = page_txt.split();
+                save_path = '../../../../output/parse_result/Supervisor.txt'
+                org_split[0] = "<Supervisor>"
+                org_split.append("</Supervisor>")
+             if (page_txt.find("Examiner") >= 0) or ((page_txt.find("Examiner") >= 0) and (page_txt.find("name")>= 0)):
+                print "Examiner (en): Found"
+                org_split = page_txt.split();
+                count = 0
+                for txt in org_split:
+                    print "txt is: "+txt
+                    if txt.find(":") >=0:
+                        print "found!!!!! :"
+                        while count>0:
+                            del org_split[count]
+                            count-=1
+                        break
+                    count += 1
+
+
+                save_path = '../../../../output/parse_result/Examiner.txt'
+                org_split[0] = "<Examiner>"
+                org_split.append("</Examiner>")
+
+
+             if len(org_split):
+              i=0
+              prt_str =""
+              while (i<len(org_split)):
+                 prt_str=prt_str+" "+org_split[i]
+                 i+=1
+
+                # text append
+
+              with open(save_path, 'w') as f:
+                        print >> f, prt_str  # print tag information to certain file #print page_txt
+             page_txts.append("{0}{1}{2}".format(st, page_txt, et))#text append
     if (next_page_tag):
         #ready for next page
       page_number+=1
@@ -266,7 +313,7 @@ def hasNumbers(inputString):
      return any(char.isdigit() for char in inputString)
 
 #scan the PDF file for headers
-def pdf2heads(opts, args,document_type):
+def pdf2heads(opts, args,document):
     global Verbose_flag
     xmltag = True
     highlight = False
@@ -298,7 +345,9 @@ def pdf2heads(opts, args,document_type):
     global tree
     global mean_font_size
     global main_font_color
+    global document_type
 
+    document_type=document
 
 
 
@@ -420,28 +469,30 @@ def pdf2heads(opts, args,document_type):
             print document_type
             auth_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in auth_headers])
 
-            if len(auth_head_txt)>0: #found
+            if (len(auth_head_txt)>0) and auth_count<2: #found
                 print "Author: found"
                 auth_count +=1
 
                 name_split = auth_head_txt.split();
                 txt = "<Author>" + auth_head_txt + "</Author>"
-
                 author_path = '../../../../output/parse_result/author_'+str(auth_count)+'.txt'
 
                 with open(author_path, 'w') as f:
+                    print txt + "in" + author_path
                     print >> f, txt, "\n"  # print tag information to certain file
                 txt = "<FrontName>" + name_split[0] + "</FrontName>"
 
                 frontname_path = '../../../../output/parse_result/author_'+str(auth_count)+'_frontname'+'.txt'
 
                 with open(frontname_path, 'w') as f:
+                    print txt + "in" + frontname_path
                     print >> f, txt, "\n"  # print tag information to certain file
                 txt = "<AfterName>" + name_split[1] + "</AfterName>"
 
                 aftername_path = '../../../../output/parse_result/author_'+str(auth_count)+'_aftername'+'.txt'
 
                 with open(aftername_path, 'w') as f:
+                    print txt + "in" + aftername_path
                     print >> f, txt, "\n"  # print tag information to certain file
                 auth_node=trial_auth_node
 
@@ -518,9 +569,9 @@ def pdf2heads(opts, args,document_type):
 # note that the assumption that the Abstract headings is set in a larger font then the median font sized used on a page, will not find
 # abstracts of Aalto university - as they set the word ABSTRACT in a slightly larger size font as used for the rest of the text, but they do set it in all CAPs
             if look_for_all_caps_headings:
-                headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' or @font-color != '{1}']".format(mean_font_size, main_font_color))
+                headers = block_node.xpath(".//TOKEN[(@font-size > {0} and @bold = 'yes') or @font-color != '{1}']".format(mean_font_size, main_font_color))
             else:
-                headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' or @font-color != '{1}']".format(mean_font_size*1.05, main_font_color))
+                headers = block_node.xpath(".//TOKEN[(@font-size > {0} and @bold = 'yes') or @font-color != '{1}']".format(mean_font_size*1.05, main_font_color))
 
             head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
 
@@ -535,6 +586,7 @@ def pdf2heads(opts, args,document_type):
 
                 # model for proposal
             if (int(document_type) == 1):
+             print "first content check: "+head_txt
              if head_txt.find("Authors") >= 0 or head_txt.find("Author") >= 0:
                         print "I should be herer!!!!!"
                         if not Found_Author:  # if the abstract has not been found yet
@@ -542,14 +594,14 @@ def pdf2heads(opts, args,document_type):
                             print "Authors and detail information (en): found "
                             output_text_on_block_on_page(page_node, block_number, page, author_path)
                             Found_Author = True
-                            break
 
-            if head_txt.find("Organization and Supervisor") >= 0 or head_txt.find("Organization and Supervisor") >= 0:
+
+             if head_txt.find("Organization and Supervisor") >= 0 or (head_txt.find("Organization") >= 0 and head_txt.find("Supervisor") >= 0):
                        if not Found_org:  # if the abstract has not been found yet
                           print "Organization and Supervisor (en): found"
                           output_blocks_on_page(page_node, block_number, page, OrgandSup_path, 0)
-                          Found_orf = True
-                          break
+                          Found_org = True
+
 
 
                 # model for thesis
@@ -665,10 +717,10 @@ def main(argv=None):
 
         pdf2heads(opts, [args[0]],args[1])
 
-        if not Found_abstract:
-            print "Automatically running the program again with the option --caps"
-            automatic_rerunning=True
-            pdf2heads(opts, [args[0]],args[1])
+        #if not Found_abstract:
+         #   print "Automatically running the program again with the option --caps"
+          #  automatic_rerunning=True
+          #  pdf2heads(opts, [args[0]],args[1])
 
 
     except UsageError as err:
