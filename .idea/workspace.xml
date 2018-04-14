@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="554" />
+    <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="581" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/author_3.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/author_3_aftername.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/author_3_frontname.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/heading.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +23,8 @@
       <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="276" column="36" lean-forward="false" selection-start-line="276" selection-start-column="36" selection-end-line="276" selection-end-column="36" />
+            <state relative-caret-position="243">
+              <caret line="230" column="120" lean-forward="false" selection-start-line="230" selection-start-column="120" selection-end-line="230" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -38,10 +34,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>title_node</find>
-      <find>tree</find>
-      <find>name</find>
-      <find>tree.xpath</find>
       <find>mean_font_size</find>
       <find>look_for_all_caps_headings</find>
       <find>introd</find>
@@ -68,6 +60,10 @@
       <find>print</find>
       <find>prt_str</find>
       <find>page_txt</find>
+      <find>Found_org</find>
+      <find>OrgandSup_path</find>
+      <find>Found_key</find>
+      <find>check header</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -294,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="276" column="36" lean-forward="false" selection-start-line="276" selection-start-column="36" selection-end-line="276" selection-end-column="36" />
+        <state relative-caret-position="243">
+          <caret line="230" column="120" lean-forward="false" selection-start-line="230" selection-start-column="120" selection-end-line="230" selection-end-column="120" />
           <folding />
         </state>
       </provider>

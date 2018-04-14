@@ -105,8 +105,8 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                     check_headers_1 = block_node.xpath(
                         ".//TOKEN[@font-size > {0} or @bold = 'yes']".format(mean_font_size,main_font_color))
                 else:
-                    check_headers_1 = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' ]".format(mean_font_size * 1.05, main_font_color))
-                print "mean front size is detected as: " + str(mean_font_size * 1.05)
+                    check_headers_1 = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' ]".format(mean_font_size * 1.05))
+                print "mean font size is detected as: " + str(mean_font_size * 1.05)
 
                 check_headers_txt_1 = ' '.join(
                     [etree.tostring(el, method='text', encoding="UTF-8") for el in check_headers_1])
@@ -226,9 +226,9 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
         et = "</p>"
 
         if look_for_all_caps_headings:
-            check_headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' or @font-color != '{1}']".format(mean_font_size,main_font_color))
+            check_headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' ]".format(mean_font_size))
         else:
-            check_headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' or @font-color != '{1}']".format(mean_font_size * 1.05,main_font_color))
+            check_headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' ]".format(mean_font_size * 1.05))
         #print "mean front size is detected as: " + (mean_font_size * 1.05)
         check_headers_txt =' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in check_headers])
         #print "check header: " + check_headers_txt
@@ -254,6 +254,18 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
              if page_txt.find( "Organization:")>=0:
                 print "Orgnization (en): Found"
                 org_split = page_txt.split();
+
+                count = 0
+                for txt in org_split:
+                    print "txt is: " + txt
+                    if txt.find(":") >= 0:
+                        print "found!!!!! :"
+                        while count > 0:
+                            del org_split[count]
+                            count -= 1
+                        break
+                    count += 1
+
                 save_path = '../../../../output/parse_result/Orgnization.txt'
                 org_split[0]="<Orgnization>"
                 org_split.append("</Orgnization>")
@@ -261,6 +273,18 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
              if page_txt.find("Supervisor:") >= 0:
                 print "Supervisor (en): Found"
                 org_split = page_txt.split();
+
+                count = 0
+                for txt in org_split:
+                    print "txt is: " + txt
+                    if txt.find(":") >= 0:
+                        print "found!!!!! :"
+                        while count > 0:
+                            del org_split[count]
+                            count -= 1
+                        break
+                    count += 1
+
                 save_path = '../../../../output/parse_result/Supervisor.txt'
                 org_split[0] = "<Supervisor>"
                 org_split.append("</Supervisor>")
@@ -326,6 +350,7 @@ def pdf2heads(opts, args,document):
     global Found_Heading
     global Found_abstract
     global Found_org
+    global Found_key
     global Found_Author
     global Found_Sammanfattning
     global Found_Method
@@ -522,11 +547,13 @@ def pdf2heads(opts, args,document):
     page = 0
     Found_abstract = False
     Found_org=False
+    Found_key = False
     Found_Sammanfattning = False
     Found_Method = False
     Found_Introduction = False
     Found_TOC = False
     OrgandSup_path = '../../../../output/parse_result/Orignization_supervisor(en).txt'
+    key_path = '../../../../output/parse_result/Keyword(en).txt'
     abstractOut_path = '../../../../output/parse_result/abstract(en).txt'
     referat_path = '../../../../output/parse_result/referat(sv).txt'
     methodOut_path = '../../../../output/parse_result/method(en).txt'
@@ -588,7 +615,6 @@ def pdf2heads(opts, args,document):
             if (int(document_type) == 1):
              print "first content check: "+head_txt
              if head_txt.find("Authors") >= 0 or head_txt.find("Author") >= 0:
-                        print "I should be herer!!!!!"
                         if not Found_Author:  # if the abstract has not been found yet
                             print "Authors(en): OVERIDE "
                             print "Authors and detail information (en): found "
@@ -601,6 +627,13 @@ def pdf2heads(opts, args,document):
                           print "Organization and Supervisor (en): found"
                           output_blocks_on_page(page_node, block_number, page, OrgandSup_path, 0)
                           Found_org = True
+
+             if head_txt.find("Keywords") >= 0 or head_txt.find("Keyword") >= 0:
+                 print "I should be herer!!!!!"
+                 if not Found_key:  # if the abstract has not been found yet
+                          print "Keywords(en): found"
+                          output_blocks_on_page(page_node, block_number, page, key_path, 0)
+                          Found_key = True
 
 
 
