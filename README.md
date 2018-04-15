@@ -27,7 +27,7 @@
  ./start.sh
  
  Process unit usage: <br />
- ./run.sh <pdf_document> <document_type><br />
+ ./run.sh <pdf_document> <document_type> <student_name> <br />
  Thesis: document_type = 0<br />
  Proporsal: document_type = 1<br />
  
