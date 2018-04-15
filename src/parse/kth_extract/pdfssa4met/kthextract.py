@@ -8,21 +8,6 @@ based upon John Harrison's headings.py
 Note that you need to install pdfssa4met
 (available from http://code.google.com/p/pdfssa4met/ ).
 
-------------
-
-
-Modified on 2018.04.14
-@author: Qi LI.
-
-Modified to fit the Connecting silo requirment
-
-fit the data mining model with thesis proporsal and thesis report BASED ON 2018 NEW EECS templet. ICT department templet is not competible
-
-fits the requirment of DiVA
-
-
-------------
-
 Modified on 2015.06.10
 @author: Gerald Q. Maguire Jr.
 
@@ -36,6 +21,7 @@ Author is on the cover in 16 point font (pdfxml says it is 16.02 point)
 The Abstract page begins with the word Abstract
 
 The Sammanfattning page begins with the word Sammanfattning
+
 
 ------------
 Created on Mar 1, 2010
@@ -764,7 +750,7 @@ def main(argv=None):
             #global Found_Sammanfattning
 
 
-        print args[0]
+       # print args[0]
 
 
         #download module(expierment - might migarte into cavnas module later)
@@ -779,7 +765,8 @@ def main(argv=None):
 
         output.close()
 
-        directiory=args[0].split(".")[0]
+        directiory=args[2].split(".")[0] 
+
 
         if not os.path.exists('../../../../output/parse_result/'+directiory):
             os.makedirs('../../../../output/parse_result/'+directiory)
