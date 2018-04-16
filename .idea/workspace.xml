@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/config.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/parse/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/parse/kth_extract/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/pdftoxml.linux64.exe.1.2_7" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/start.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/author_1.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/author_1_aftername.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/author_1_frontname.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/heading.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/introduction(en).txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/method(en).txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/subtitle.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/title.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/http:/kth/toc(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/parse/__init__.py" afterPath="$PROJECT_DIR$/src/parse/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/__init__.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py" />
       <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
-      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/run.sh" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/run.sh" />
+      <change beforePath="$PROJECT_DIR$/src/start.py" afterPath="$PROJECT_DIR$/src/start.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
-              <caret line="767" column="41" lean-forward="false" selection-start-line="767" selection-start-column="41" selection-end-line="767" selection-end-column="41" />
+              <caret line="767" column="40" lean-forward="false" selection-start-line="767" selection-start-column="40" selection-end-line="767" selection-end-column="40" />
               <folding>
                 <element signature="e#1163#1177#0" expanded="true" />
               </folding>
@@ -58,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="start.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+            <state relative-caret-position="797">
+              <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
               <folding>
                 <element signature="e#349#358#0" expanded="true" />
               </folding>
@@ -93,8 +81,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -104,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/parse/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -113,8 +101,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -170,14 +158,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/start.py" />
-        <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py" />
-        <option value="$PROJECT_DIR$/src/parse/kth_extract/__init__.py" />
-        <option value="$PROJECT_DIR$/src/parse/__init__.py" />
         <option value="$PROJECT_DIR$/src/config.py" />
         <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/pdf2xml.py" />
         <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/config.py" />
-        <option value="$PROJECT_DIR$/src/start.py" />
         <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
+        <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py" />
+        <option value="$PROJECT_DIR$/src/parse/__init__.py" />
+        <option value="$PROJECT_DIR$/src/parse/kth_extract/__init__.py" />
+        <option value="$PROJECT_DIR$/src/start.py" />
       </list>
     </option>
   </component>
@@ -405,30 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parse/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -461,22 +425,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/start.py">
+    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+        <state relative-caret-position="334">
+          <caret line="767" column="40" lean-forward="false" selection-start-line="767" selection-start-column="40" selection-end-line="767" selection-end-column="40" />
           <folding>
-            <element signature="e#349#358#0" expanded="true" />
+            <element signature="e#1163#1177#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
+    <entry file="file://$PROJECT_DIR$/src/parse/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="767" column="41" lean-forward="false" selection-start-line="767" selection-start-column="41" selection-end-line="767" selection-end-column="41" />
+        <state relative-caret-position="198">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
           <folding>
-            <element signature="e#1163#1177#0" expanded="true" />
+            <element signature="e#349#358#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -9,6 +9,6 @@
 
 
 
-from kth_extract import run
+from kth_extract import *
 
 

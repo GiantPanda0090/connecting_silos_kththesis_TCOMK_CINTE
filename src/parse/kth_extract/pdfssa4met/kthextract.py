@@ -765,7 +765,7 @@ def main(argv=None):
 
         output.close()
 
-        directiory=args[2].split(".")[0] 
+        directiory=args[2].split(".")[0]
 
 
         if not os.path.exists('../../../../output/parse_result/'+directiory):

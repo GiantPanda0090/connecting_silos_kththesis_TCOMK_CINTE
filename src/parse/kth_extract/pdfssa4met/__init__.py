@@ -9,6 +9,6 @@
 
 
 
-from kthextract import run
+from kthextract import *
 
 

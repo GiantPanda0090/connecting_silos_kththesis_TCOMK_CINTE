@@ -9,6 +9,6 @@
 
 
 
-from pdfssa4met import run
+from pdfssa4met import *
 
 
