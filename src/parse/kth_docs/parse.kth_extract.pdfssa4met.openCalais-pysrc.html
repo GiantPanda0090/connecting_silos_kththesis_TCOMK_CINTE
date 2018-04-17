@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>parse.kth_extract.pdfssa4met.openCalais</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="parse-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="parse-module.html">Package&nbsp;parse</a> ::
+        <a href="parse.kth_extract-module.html">Package&nbsp;kth_extract</a> ::
+        <a href="parse.kth_extract.pdfssa4met-module.html">Package&nbsp;pdfssa4met</a> ::
+        Module&nbsp;openCalais
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="parse.kth_extract.pdfssa4met.openCalais-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="parse.kth_extract.pdfssa4met.openCalais-module.html">Module parse.kth_extract.pdfssa4met.openCalais</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""Module for communicating with OpenCalais Web-Service.</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">Created on Mar 2, 2010</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">@author: John Harrison</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">urllib</tt><tt class="py-op">,</tt> <tt class="py-name">urllib2</tt><tt class="py-op">,</tt> <tt class="py-name">socket</tt><tt class="py-op">,</tt> <tt class="py-name">uuid</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">rdflib</tt> <tt class="py-keyword">import</tt> <tt class="py-name">StringInputSource</tt><tt class="py-op">,</tt> <tt class="py-name">URIRef</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">rdflib</tt> <tt class="py-keyword">import</tt> <tt class="py-name">ConjunctiveGraph</tt> <tt class="py-keyword">as</tt> <tt class="py-name">Graph</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">warnings</tt> <tt class="py-keyword">import</tt> <tt class="py-name">filterwarnings</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-name">filterwarnings</tt><tt class="py-op">(</tt><tt class="py-string">'ignore'</tt><tt class="py-op">,</tt> <tt class="py-string">'the sets module is deprecated'</tt><tt class="py-op">,</tt>  <tt class="py-name">DeprecationWarning</tt><tt class="py-op">,</tt> <tt class="py-string">'rdflib'</tt><tt class="py-op">)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"> </tt>
+<a name="OpenCalaisService"></a><div id="OpenCalaisService-def"><a name="L16"></a><tt class="py-lineno">16</tt> <a class="py-toggle" href="#" id="OpenCalaisService-toggle" onclick="return toggle('OpenCalaisService');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html">OpenCalaisService</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="OpenCalaisService-expanded"><a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">    <tt id="link-0" class="py-name" targets="Variable parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.namespaces=parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#namespaces"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.namespaces" class="py-name" href="#" onclick="return doclink('link-0', 'namespaces', 'link-0');">namespaces</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">'rdf'</tt><tt class="py-op">:</tt><tt class="py-string">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">         <tt class="py-op">,</tt><tt class="py-string">'c'</tt><tt class="py-op">:</tt> <tt class="py-string">"http://s.opencalais.com/1/pred/"</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">         <tt class="py-op">}</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">     </tt>
+<a name="OpenCalaisService.__init__"></a><div id="OpenCalaisService.__init__-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="OpenCalaisService.__init__-toggle" onclick="return toggle('OpenCalaisService.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">api_url</tt><tt class="py-op">=</tt><tt class="py-string">"http://api1.opencalais.com/enlighten/rest/"</tt><tt class="py-op">,</tt> <tt class="py-param">api_key</tt><tt class="py-op">=</tt><tt class="py-string">"xxx"</tt><tt class="py-op">,</tt> <tt class="py-param">app_name</tt><tt class="py-op">=</tt><tt class="py-string">"Semantic PDF Open Calais Tagger"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OpenCalaisService.__init__-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">        <tt class="py-name">object</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.__init__()=parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#__init__,Method parse.kth_extract.pdfssa4met.utils.ConfigError.__init__()=parse.kth_extract.pdfssa4met.utils.ConfigError-class.html#__init__,Method parse.kth_extract.pdfssa4met.utils.UsageError.__init__()=parse.kth_extract.pdfssa4met.utils.UsageError-class.html#__init__"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.__init__
+parse.kth_extract.pdfssa4met.utils.ConfigError.__init__
+parse.kth_extract.pdfssa4met.utils.UsageError.__init__" class="py-name" href="#" onclick="return doclink('link-1', '__init__', 'link-1');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">api_url</tt> <tt class="py-op">=</tt> <tt class="py-name">api_url</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">api_key</tt> <tt class="py-op">=</tt> <tt class="py-name">api_key</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">app_name</tt> <tt class="py-op">=</tt> <tt class="py-name">app_name</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="OpenCalaisService.post_data"></a><div id="OpenCalaisService.post_data-def"><a name="L28"></a><tt class="py-lineno">28</tt> <a class="py-toggle" href="#" id="OpenCalaisService.post_data-toggle" onclick="return toggle('OpenCalaisService.post_data');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#post_data">post_data</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">myUrl</tt><tt class="py-op">,</tt> <tt class="py-param">postdata</tt><tt class="py-op">,</tt> <tt class="py-param">tries</tt><tt class="py-op">=</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-param">timeout</tt><tt class="py-op">=</tt><tt class="py-number">20</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService.post_data-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OpenCalaisService.post_data-expanded"><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt class="py-name">oldtimeout</tt> <tt class="py-op">=</tt> <tt class="py-name">socket</tt><tt class="py-op">.</tt><tt class="py-name">getdefaulttimeout</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-name">socket</tt><tt class="py-op">.</tt><tt class="py-name">setdefaulttimeout</tt><tt class="py-op">(</tt><tt class="py-name">timeout</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-name">req</tt> <tt class="py-op">=</tt> <tt class="py-name">urllib2</tt><tt class="py-op">.</tt><tt class="py-name">Request</tt><tt class="py-op">(</tt><tt class="py-name">url</tt><tt class="py-op">=</tt><tt class="py-name">myUrl</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">x</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">tries</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">            <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">                <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">urllib2</tt><tt class="py-op">.</tt><tt class="py-name">urlopen</tt><tt class="py-op">(</tt><tt class="py-name">req</tt><tt class="py-op">,</tt> <tt class="py-name">postdata</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">            <tt class="py-keyword">except</tt> <tt class="py-op">(</tt><tt class="py-name">urllib2</tt><tt class="py-op">.</tt><tt class="py-name">URLError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">                <tt class="py-comment"># problem accessing remote service</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">            <tt class="py-keyword">except</tt> <tt class="py-name">httplib</tt><tt class="py-op">.</tt><tt class="py-name">BadStatusLine</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">                <tt class="py-comment"># response broken</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">                <tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">sleep</tt><tt class="py-op">(</tt><tt class="py-number">0.5</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">                <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">read</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">data</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">         </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt class="py-name">socket</tt><tt class="py-op">.</tt><tt class="py-name">setdefaulttimeout</tt><tt class="py-op">(</tt><tt class="py-name">oldtimeout</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"> </tt>
+<a name="OpenCalaisService.rdfFromText"></a><div id="OpenCalaisService.rdfFromText-def"><a name="L51"></a><tt class="py-lineno">51</tt> <a class="py-toggle" href="#" id="OpenCalaisService.rdfFromText-toggle" onclick="return toggle('OpenCalaisService.rdfFromText');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#rdfFromText">rdfFromText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService.rdfFromText-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OpenCalaisService.rdfFromText-expanded"><a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">        <tt class="py-docstring">"""Take text, return an RDF graph."""</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-name">postdata</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-name">postdata</tt><tt class="py-op">[</tt><tt class="py-string">'licenseID'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">api_key</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">        <tt class="py-name">postdata</tt><tt class="py-op">[</tt><tt class="py-string">'paramsXML'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">' '</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-string">'&lt;c:params xmlns:c="http://s.opencalais.com/1/pred/"'</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;'</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'&lt;c:processingDirectives c:contentType="text/raw"'</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'c:outputFormat="text/xml"'</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'c:enableMetadataType="GenericRelations,SocialTags"&gt;'</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'&lt;/c:processingDirectives&gt;'</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'&lt;c:userDirectives c:allowDistribution="false"'</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'c:allowSearch="false"'</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'c:externalID="{0}"'</tt><tt class="py-op">.</tt><tt class="py-name">format</tt><tt class="py-op">(</tt><tt class="py-name">uuid</tt><tt class="py-op">.</tt><tt class="py-name">uuid4</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt>  </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'c:submitter="{0}"&gt;'</tt><tt class="py-op">.</tt><tt class="py-name">format</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">app_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'&lt;/c:userDirectives&gt;'</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'&lt;c:externalMetadata&gt;&lt;/c:externalMetadata&gt;'</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">                <tt class="py-op">,</tt><tt class="py-string">'&lt;/c:params&gt;'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">        <tt class="py-name">postdata</tt><tt class="py-op">[</tt><tt class="py-string">'content'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">text</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">        <tt class="py-name">poststring</tt> <tt class="py-op">=</tt> <tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">urlencode</tt><tt class="py-op">(</tt><tt class="py-name">postdata</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">        <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.post_data()=parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#post_data"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.post_data" class="py-name" href="#" onclick="return doclink('link-2', 'post_data', 'link-2');">post_data</a></tt><tt class="py-op">(</tt><tt class="py-string">"{0}"</tt><tt class="py-op">.</tt><tt class="py-name">format</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">api_url</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">poststring</tt><tt class="py-op">,</tt> <tt class="py-name">timeout</tt><tt class="py-op">=</tt><tt class="py-number">60</tt><tt class="py-op">*</tt><tt class="py-number">5</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">        <tt class="py-name">graph</tt> <tt class="py-op">=</tt> <tt class="py-name">Graph</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">        <tt class="py-name">inpt</tt> <tt class="py-op">=</tt> <tt class="py-name">StringInputSource</tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> <tt class="py-name">graph</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package parse=parse-module.html"><a title="parse" class="py-name" href="#" onclick="return doclink('link-3', 'parse', 'link-3');">parse</a></tt><tt class="py-op">(</tt><tt class="py-name">inpt</tt><tt class="py-op">,</tt> <tt class="py-string">'xml'</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-name">data</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">graph</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line"> </tt>
+<a name="OpenCalaisService.entitiesFromRdf"></a><div id="OpenCalaisService.entitiesFromRdf-def"><a name="L81"></a><tt class="py-lineno">81</tt> <a class="py-toggle" href="#" id="OpenCalaisService.entitiesFromRdf-toggle" onclick="return toggle('OpenCalaisService.entitiesFromRdf');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#entitiesFromRdf">entitiesFromRdf</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">graph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService.entitiesFromRdf-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OpenCalaisService.entitiesFromRdf-expanded"><a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">        <tt class="py-docstring">"""Use SPARQL to select entities and return them."""</tt> </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">x</tt> <tt class="py-keyword">in</tt> <tt class="py-name">graph</tt><tt class="py-op">.</tt><tt class="py-name">query</tt><tt class="py-op">(</tt><tt class="py-string">'SELECT ?e WHERE { ?x c:detection ?d . ?x c:exact ?e }'</tt><tt class="py-op">,</tt> <tt class="py-name">initNs</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.namespaces" class="py-name" href="#" onclick="return doclink('link-4', 'namespaces', 'link-0');">namespaces</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">result</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line"> </tt>
+<a name="OpenCalaisService.tagsFromRdf"></a><div id="OpenCalaisService.tagsFromRdf-def"><a name="L85"></a><tt class="py-lineno">85</tt> <a class="py-toggle" href="#" id="OpenCalaisService.tagsFromRdf-toggle" onclick="return toggle('OpenCalaisService.tagsFromRdf');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#tagsFromRdf">tagsFromRdf</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">graph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService.tagsFromRdf-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OpenCalaisService.tagsFromRdf-expanded"><a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line">        <tt class="py-docstring">"""Use SPARQL to select semantic tags and return them."""</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line">        <tt class="py-name">tags</tt> <tt class="py-op">=</tt> <tt class="py-name">graph</tt><tt class="py-op">.</tt><tt class="py-name">query</tt><tt class="py-op">(</tt><tt class="py-string">'SELECT ?tn ?x WHERE { ?x c:socialtag ?st . ?x c:name ?tn }'</tt><tt class="py-op">,</tt> <tt class="py-name">initNs</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.namespaces" class="py-name" href="#" onclick="return doclink('link-5', 'namespaces', 'link-0');">namespaces</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">result</tt> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">tags</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line"> </tt>
+<a name="OpenCalaisService.entitiesFromText"></a><div id="OpenCalaisService.entitiesFromText-def"><a name="L90"></a><tt class="py-lineno">90</tt> <a class="py-toggle" href="#" id="OpenCalaisService.entitiesFromText-toggle" onclick="return toggle('OpenCalaisService.entitiesFromText');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#entitiesFromText">entitiesFromText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService.entitiesFromText-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OpenCalaisService.entitiesFromText-expanded"><a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line">        <tt class="py-name">graph</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.rdfFromText()=parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#rdfFromText"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.rdfFromText" class="py-name" href="#" onclick="return doclink('link-6', 'rdfFromText', 'link-6');">rdfFromText</a></tt><tt class="py-op">(</tt><tt class="py-name">text</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno">92</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-7" class="py-name" targets="Method parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.entitiesFromRdf()=parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#entitiesFromRdf"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.entitiesFromRdf" class="py-name" href="#" onclick="return doclink('link-7', 'entitiesFromRdf', 'link-7');">entitiesFromRdf</a></tt><tt class="py-op">(</tt><tt class="py-name">graph</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno">93</tt>  <tt class="py-line"> </tt>
+<a name="OpenCalaisService.tagsFromText"></a><div id="OpenCalaisService.tagsFromText-def"><a name="L94"></a><tt class="py-lineno">94</tt> <a class="py-toggle" href="#" id="OpenCalaisService.tagsFromText-toggle" onclick="return toggle('OpenCalaisService.tagsFromText');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#tagsFromText">tagsFromText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OpenCalaisService.tagsFromText-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OpenCalaisService.tagsFromText-expanded"><a name="L95"></a><tt class="py-lineno">95</tt>  <tt class="py-line">        <tt class="py-name">graph</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.rdfFromText" class="py-name" href="#" onclick="return doclink('link-8', 'rdfFromText', 'link-6');">rdfFromText</a></tt><tt class="py-op">(</tt><tt class="py-name">text</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno">96</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-9" class="py-name" targets="Method parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.tagsFromRdf()=parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService-class.html#tagsFromRdf"><a title="parse.kth_extract.pdfssa4met.openCalais.OpenCalaisService.tagsFromRdf" class="py-name" href="#" onclick="return doclink('link-9', 'tagsFromRdf', 'link-9');">tagsFromRdf</a></tt><tt class="py-op">(</tt><tt class="py-name">graph</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L97"></a><tt class="py-lineno">97</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="parse-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 17 20:57:49 2018
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,5 +1,45 @@
 #!/usr/bin/python
+""" Extract and tag References from a PDF.
 
+Usage: kthextract.py OPTIONS FILEPATH
+
+based upon John Harrison's headings.py
+
+Note that you need to install pdfssa4met
+(available from http://code.google.com/p/pdfssa4met/ ).
+
+Modified on 2015.06.10
+@author: Gerald Q. Maguire Jr.
+
+This is designed to work on a document with the KTH cover page as from my template:
+
+Title on the cover is in 24 point font
+Subtitle on the cover is in ~20 point font (pdfxml says it is 19.98 point)
+
+Author is on the cover in 16 point font (pdfxml says it is 16.02 point)
+
+The Abstract page begins with the word Abstract
+
+The Sammanfattning page begins with the word Sammanfattning
+
+
+------------
+Created on Mar 1, 2010
+@author: John Harrison
+
+Usage: headings.py OPTIONS FILEPATH
+
+OPTIONS:
+--help, -h     Print help and exit
+--noxml        Do not tag individual headings with XML tags.
+                Default is to include tagging.
+--title        Only print title then exit
+--author       Only print author then exit
+--caps         Look for ABSTRACT, SAMMANFATTNING in all caps, rather than set in a different font size
+--verbose      Output lots of information
+
+
+"""
 import urllib2
 
 import os
