@@ -1,0 +1,10 @@
+<heading>Streaming Graph Partitioning</heading> 
+
+<author>ZAINAB ABBAS</author> 
+
+<heading>KTH ROYAL INSTITUTE OF TECHNOLOGY SCHOOL OF COMPUTER SCIENCE AND COMMUNICATION</heading> 
+
+<heading>www.kth.se</heading> 
+
+<heading>Acknowledgment</heading> 
+

@@ -1,0 +1,2 @@
+<p>This section summarises the scientiﬁc research method involved in our thesis work. We used the resources available to us during the whole process. We have brieﬂy explained the observation, analysis, hypothesis, design, development and testing phases. Our research is based on empirical and mathematical methods to avoid subjectivity in the whole process.</p> 
+
