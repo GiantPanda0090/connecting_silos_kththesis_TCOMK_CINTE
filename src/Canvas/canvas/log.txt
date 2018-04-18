@@ -1,0 +1,125 @@
+Tue Apr 17 21:33:28 2018
+Tue Apr 17 21:33:28 2018
+
+--DONE--
+
+
+Tue Apr 17 21:34:48 2018
+Tue Apr 17 21:34:49 2018
+
+--DONE--
+
+
+Wed Apr 18 11:30:42 2018
+Wed Apr 18 11:30:42 2018
+
+--DONE--
+
+
+Wed Apr 18 11:32:33 2018
+Wed Apr 18 11:32:33 2018
+
+--DONE--
+
+
+Wed Apr 18 11:35:19 2018
+Wed Apr 18 11:35:19 2018
+
+--DONE--
+
+
+Wed Apr 18 11:39:24 2018
+Wed Apr 18 11:39:24 2018
+
+--DONE--
+
+
+Wed Apr 18 11:43:56 2018
+result of getting submissions: {"errors":[{"message":"The specified resource does not exist."}],"error_report_id":2968861}
+Wed Apr 18 11:43:56 2018
+
+--DONE--
+
+
+Wed Apr 18 11:44:22 2018
+result of getting submissions: {"errors":[{"message":"The specified resource does not exist."}],"error_report_id":2968862}
+Wed Apr 18 11:44:22 2018
+
+--DONE--
+
+
+Wed Apr 18 11:49:05 2018
+result of getting submissions: [{"id":1530338,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":23497,"user_id":11185,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/23497/submissions/11185?preview=1\u0026version=0"},{"id":1558245,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":23497,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/23497/submissions/73031?preview=1\u0026version=0"},{"id":1559127,"body":null,"url":null,"grade":null,"score":null,"submitted_at":"2018-04-14T18:46:19Z","assignment_id":24563,"user_id":11185,"submission_type":"online_upload","workflow_state":"submitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":1,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions/11185?preview=1\u0026version=1","attachments":[{"id":890327,"uuid":"ubUjN1ftgdfqjBcXHGkKv33XafqI7b6cXMUMYUAZ","folder_id":184774,"display_name":"test_document2.pdf","filename":"test_document2.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890327/download?download_frd=1\u0026verifier=ubUjN1ftgdfqjBcXHGkKv33XafqI7b6cXMUMYUAZ","size":2053483,"created_at":"2018-04-14T18:46:17Z","updated_at":"2018-04-14T18:46:20Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:46:17Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890327,%22type%22:%22canvadoc%22%7D\u0026hmac=01488edf1093f2bf900ce5270f48ea5ac70c7531"}]},{"id":1559128,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24563,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions/73031?preview=1\u0026version=0"},{"id":1559129,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24564,"user_id":11185,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24564/submissions/11185?preview=1\u0026version=0"},{"id":1559130,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24564,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24564/submissions/73031?preview=1\u0026version=0"},{"id":1559131,"body":null,"url":null,"grade":null,"score":null,"submitted_at":"2018-04-14T18:50:01Z","assignment_id":24565,"user_id":11185,"submission_type":"online_upload","workflow_state":"submitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":2,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?preview=1\u0026version=2","attachments":[{"id":890332,"uuid":"9WDoAqPAqlsiXumIT7nh3Zweq1pMbeRQeG2E12sn","folder_id":184774,"display_name":"test_document-1.pdf","filename":"test_document.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890332/download?download_frd=1\u0026verifier=9WDoAqPAqlsiXumIT7nh3Zweq1pMbeRQeG2E12sn","size":2693692,"created_at":"2018-04-14T18:49:57Z","updated_at":"2018-04-14T18:50:02Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:49:57Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890332,%22type%22:%22canvadoc%22%7D\u0026hmac=7b717f13e301010254718d6f4471a737b024a10b"},{"id":890333,"uuid":"4akdgcDxsQJkJymUUgAmJhEPN3A7HAbyrukGpexS","folder_id":184774,"display_name":"analyze.pdf","filename":"test_document2.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890333/download?download_frd=1\u0026verifier=4akdgcDxsQJkJymUUgAmJhEPN3A7HAbyrukGpexS","size":2053483,"created_at":"2018-04-14T18:49:59Z","updated_at":"2018-04-14T18:50:02Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:49:59Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890333,%22type%22:%22canvadoc%22%7D\u0026hmac=ca48a7ffb872f6407f3a68eca292f8050e2fca0d"}]},{"id":1559132,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24565,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24565/submissions/73031?preview=1\u0026version=0"},{"id":1559133,"body":null,"url":null,"grade":null,"score":null,"submitted_at":"2018-04-14T18:46:45Z","assignment_id":24566,"user_id":11185,"submission_type":"online_upload","workflow_state":"submitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":1,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24566/submissions/11185?preview=1\u0026version=1","attachments":[{"id":890328,"uuid":"x0J9E5qbc63TUTidLTY65wr4htImJ86mq0ce2toe","folder_id":184774,"display_name":"test_document3.pdf","filename":"test_document3.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890328/download?download_frd=1\u0026verifier=x0J9E5qbc63TUTidLTY65wr4htImJ86mq0ce2toe","size":1285795,"created_at":"2018-04-14T18:46:43Z","updated_at":"2018-04-14T18:46:45Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:46:43Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890328,%22type%22:%22canvadoc%22%7D\u0026hmac=771f02b599688c885f3d093218b7e566892fa33b"}]},{"id":1559134,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24566,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24566/submissions/73031?preview=1\u0026version=0"}]
+Wed Apr 18 11:49:06 2018
+
+--DONE--
+
+
+Wed Apr 18 20:44:31 2018
+Wed Apr 18 20:44:31 2018
+
+--DONE--
+
+
+Wed Apr 18 20:45:02 2018
+Wed Apr 18 20:45:44 2018
+Wed Apr 18 20:55:01 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 20:57:21 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:00:21 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:06:41 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:07:38 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:17:57 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:22:34 2018
+Wed Apr 18 21:22:54 2018
+Wed Apr 18 21:23:05 2018
+Wed Apr 18 21:23:45 2018
+Wed Apr 18 21:25:14 2018
+Wed Apr 18 21:27:07 2018
+Wed Apr 18 21:27:35 2018
+Wed Apr 18 21:28:01 2018
+Wed Apr 18 21:30:25 2018
+Wed Apr 18 21:34:12 2018
+Wed Apr 18 21:36:49 2018
+Wed Apr 18 21:58:33 2018
+Wed Apr 18 21:58:42 2018
+Wed Apr 18 21:58:44 2018
+
+--DONE--
+
+
+Wed Apr 18 21:59:23 2018
+Wed Apr 18 21:59:25 2018
+
+--DONE--
+
+
+Wed Apr 18 22:04:42 2018
+Wed Apr 18 22:04:44 2018
+
+--DONE--
+
+
+Wed Apr 18 22:05:46 2018
+Wed Apr 18 22:05:48 2018
+
+--DONE--
+
+
+Wed Apr 18 22:08:26 2018
+Wed Apr 18 22:08:28 2018
+
+--DONE--
+
+
+Wed Apr 18 22:15:23 2018
+Wed Apr 18 22:15:24 2018
+
+--DONE--
+
+

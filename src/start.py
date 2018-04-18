@@ -40,7 +40,7 @@ print 'Preperation done'
 
 
 running_path= "kthextract.py"
-pdf_path='http://kth.diva-portal.org/smash/get/diva2:953624/FULLTEXT01.pdf'
+pdf_path='https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332'
 document_type="0"
 student_name = "Qi_Li" #obtain from canvas
 command = "python"+" "+running_path+" " + pdf_path+" " + document_type + " " +student_name

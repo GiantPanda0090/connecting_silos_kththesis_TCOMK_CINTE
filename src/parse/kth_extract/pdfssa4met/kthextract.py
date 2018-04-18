@@ -41,6 +41,7 @@ OPTIONS:
 
 """
 import urllib2
+#import requests
 
 import os
 
@@ -755,7 +756,10 @@ def main(argv=None):
 
         #download module(expierment - might migarte into cavnas module later)
         #reference: http://www.pythonforbeginners.com/python-on-the-web/how-to-use-urllib2-in-python/
-        file = urllib2.urlopen(args[0])
+        file = urllib2.urlopen(urllib2.Request(args[0])).geturl()
+        #r = requests.get(args[0], allow_redirects=True)
+        print (file)
+
 
         pdffile='analyze.pdf'
 
