@@ -1,2 +1,0 @@
-<Subtitle>Streaming Graph Partitioning</Subtitle> 
-

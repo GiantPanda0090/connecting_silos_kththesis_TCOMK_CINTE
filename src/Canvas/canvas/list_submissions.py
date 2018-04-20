@@ -15,6 +15,14 @@ from pprint import pprint
 import optparse
 import sys
 
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+
+import os,sys
+import time
+
+
 from io import StringIO, BytesIO
 
 from lxml import html
@@ -51,7 +59,7 @@ def write_to_log(message):
 
        with open(log_file, 'a') as log:
               log.write(message + "\n")
-              pprint(message)
+              #pprint(message)
 
 def list_submissions(course_id,assignment_id):
        submissions_found_thus_far=[]
@@ -208,20 +216,61 @@ def main():
        # add time stamp to log file
        log_time = str(time.asctime(time.localtime(time.time())))
        write_to_log(log_time)   
-
        if (len(remainder) < 2):
               print("Insuffient arguments\n must provide course_id abd assignment id\n")
        else:
               course_id=remainder[0]
               assignment_id=remainder[1]
               output=list_submissions(course_id,assignment_id)
-              print (output['submissions_download_url'])
+              #print (output['submissions_download_url'])
+              print ('https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332') #FAKE
+             # path = os.getcwd()
+
+              #os.system("export PATH=$PATH:" + path + "/../../../ffdriver")
+              #os.environ['PATH']=path + "/../../../ffdriver"
+              #/home/lqschool/git/Connecting_silo/src/Canvas/canvas/../../../ffdriver
+             # print ("export PATH=$PATH:" + path + "/../../../ffdriver")
+              #time.sleep(5)
               #r = requests.get(output['submissions_download_url'], allow_redirects=True)
-              payload = {'inUserName': 'shivabp@kth.se',
-                         'inUserPass': 'PASSWORD'}  ##fill in your user name and password
-              url = output['submissions_download_url']
-              r=requests.post(url, data=payload, allow_redirects=True)
-              print(r.text)
+              #payload = {'username': 'qi5',
+               #          'password': 'Richard0'}  ##fill in your user name and password
+              #url = output['submissions_download_url']
+              #url = 'https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332'
+
+
+
+              # r=requests.Session()
+              # get= r.get('https://login.kth.se/login', allow_redirects=True)
+              # #print(get)
+              # print('\n')
+              #
+              # post=r.post('https://login.kth.se/login', data=payload, allow_redirects=True)
+              # #print(post.text)
+              # get = r.post('https://www.kth.se', allow_redirects=True)
+              #
+              # get = r.post(url,data={'shib_idp_ls_success.shib_idp_session_ss':'true'}, allow_redirects=True)
+              #
+              # print(get.text)
+              #
+              # print('\n')
+              # print('\n')
+              # print('\n')
+              #
+              # print ("get response:")
+              # print('\n')
+              #
+              # #print(get.text)
+              # print('\n')
+
+
+
+
+              # login_attempt = browser.find_element_by_xpath("//*[@type='submit']")
+              # login_attempt.submit()
+
+
+
+
 
 
 

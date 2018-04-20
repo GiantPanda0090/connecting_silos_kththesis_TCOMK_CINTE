@@ -756,20 +756,21 @@ def main(argv=None):
 
         #download module(expierment - might migarte into cavnas module later)
         #reference: http://www.pythonforbeginners.com/python-on-the-web/how-to-use-urllib2-in-python/
-        file = urllib2.urlopen(urllib2.Request(args[0])).geturl()
-        #r = requests.get(args[0], allow_redirects=True)
-        print (file)
-
-
-        pdffile='analyze.pdf'
-
-        output = open(pdffile, 'wb')
-
-        output.write(file.read())
-
-        output.close()
-
+        # file = urllib2.urlopen(urllib2.Request(args[0])).geturl()
+        # #r = requests.get(args[0], allow_redirects=True)
+        # print (file)
+        #
+        #
+        # pdffile='analyze.pdf'
+        #
+        # output = open(pdffile, 'wb')
+        #
+        # output.write(file.read())
+        #
+        # output.close()
+        #
         directiory=args[2].split(".")[0]
+        pdffile=args[0]
 
 
         if not os.path.exists('../../../../output/parse_result/'+directiory):

@@ -22,9 +22,14 @@
  Unesed Libraries:library<br />
  
  Project Managment Tool: Atlassian Jira Cloud<br />
+
+ Install project requisition:<br />
+ run './install_requisition.sh'<br />
+ project is using python pip3,pip,conda,selenium, lxml and geckodriver for firefox<br />
  
  General start up:<br />
- ./start.sh
+ run 'source src/add_path.sh' during first run or add 'export PATH=$PATH:<src path>/../ffdriver' into .bashrc/.cshrc file under home directory<br />
+ ./src/start.py <course_id> <assignment_id> <KTH_username> <KTH_password> <document_type> <br />
  
  Process unit usage: <br />
  ./run.sh <pdf_document> <document_type> <student_name> <br />
