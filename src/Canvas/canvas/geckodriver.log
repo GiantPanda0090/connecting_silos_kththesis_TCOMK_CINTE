@@ -12139,3 +12139,4 @@ JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifie
 1524210277286	Marionette	INFO	Listening on port 46695
 1524210277362	Marionette	WARN	TLS certificate errors will be ignored for this session
 1524210371130	addons.manager	INFO	Skipping background update check
+1524210666094	addons.manager	INFO	Skipping background update check

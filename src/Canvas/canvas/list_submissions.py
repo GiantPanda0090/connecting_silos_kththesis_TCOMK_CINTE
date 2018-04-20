@@ -222,8 +222,8 @@ def main():
               course_id=remainder[0]
               assignment_id=remainder[1]
               output=list_submissions(course_id,assignment_id)
-              #print (output['submissions_download_url'])
-              print ('https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332') #FAKE
+              print (output['submissions_download_url'])
+              #print ('https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332') #FAKE
              # path = os.getcwd()
 
               #os.system("export PATH=$PATH:" + path + "/../../../ffdriver")
