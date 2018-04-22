@@ -12140,3 +12140,87 @@ JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifie
 1524210277362	Marionette	WARN	TLS certificate errors will be ignored for this session
 1524210371130	addons.manager	INFO	Skipping background update check
 1524210666094	addons.manager	INFO	Skipping background update check
+1524210725612	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1524210725612	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 80
+1524210725614	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 25.0.0
+1524210725618	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 1.0
+1524210725618	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-ZA@firefox.mozilla.org version 59.0.2
+1524210725622	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-GB@firefox.mozilla.org version 59.0.2
+1524210725624	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+1524210725624	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.6
+1524210725624	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1524210725624	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1524210725624	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 2018.02.17.0026-173e2795
+1524210725704	addons.manager	DEBUG	shutdown
+1524210725704	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1524210725704	addons.xpi	DEBUG	shutdown
+1524210725704	addons.xpi-utils	DEBUG	shutdown
+1524210725704	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1524210725704	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1524210725704	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1524210725704	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1524210725708	addons.manager	DEBUG	Async provider shutdown done
+1524210730018	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1524210730020	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 80
+1524210730020	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 25.0.0
+1524210730024	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 1.0
+1524210730024	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-ZA@firefox.mozilla.org version 59.0.2
+1524210730028	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-GB@firefox.mozilla.org version 59.0.2
+1524210730030	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+1524210730030	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.6
+1524210730030	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1524210730030	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1524210730030	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 2018.02.17.0026-173e2795
+1524210730104	addons.manager	DEBUG	shutdown
+1524210730104	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1524210730104	addons.xpi	DEBUG	shutdown
+1524210730104	addons.xpi-utils	DEBUG	shutdown
+1524210730104	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1524210730106	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1524210730106	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1524210730108	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1524210730112	addons.manager	DEBUG	Async provider shutdown done
+1524210732780	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1524210732780	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 80
+1524210732780	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 25.0.0
+1524210732784	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 1.0
+1524210732786	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-ZA@firefox.mozilla.org version 59.0.2
+1524210732788	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-GB@firefox.mozilla.org version 59.0.2
+1524210732790	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+1524210732790	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.6
+1524210732790	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1524210732790	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1524210732792	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 2018.02.17.0026-173e2795
+1524210732864	addons.manager	DEBUG	shutdown
+1524210732866	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1524210732866	addons.xpi	DEBUG	shutdown
+1524210732866	addons.xpi-utils	DEBUG	shutdown
+1524210732866	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1524210732866	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1524210732866	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1524210732866	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1524210732870	addons.manager	DEBUG	Async provider shutdown done
+1524210735546	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1524210735546	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 80
+1524210735548	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 25.0.0
+1524210735552	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 1.0
+1524210735552	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-ZA@firefox.mozilla.org version 59.0.2
+1524210735556	addons.xpi	DEBUG	Calling bootstrap method shutdown on langpack-en-GB@firefox.mozilla.org version 59.0.2
+1524210735558	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+1524210735558	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.6
+1524210735558	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1524210735558	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1524210735558	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 2018.02.17.0026-173e2795
+1524210735636	addons.manager	DEBUG	shutdown
+1524210735636	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1524210735636	addons.xpi	DEBUG	shutdown
+1524210735636	addons.xpi-utils	DEBUG	shutdown
+1524210735638	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1524210735638	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1524210735638	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1524210735638	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1524210735642	addons.manager	DEBUG	Async provider shutdown done
+1524210990154	addons.productaddons	INFO	sending request to: https://aus5.mozilla.org/update/3/GMP/59.0.2/20180404120016/Linux_x86_64-gcc3/null/release-cck-ubuntu/Linux%204.13.0-38-generic%20(GTK%203.18.9%2Clibpulse%208.0.0)/canonical/1.0/update.xml
+1524210991012	addons.productaddons	INFO	Completed downloading document
+1524210991218	addons.productaddons	INFO	downloadXHR File download. status=200
+1524210991222	addons.productaddons	INFO	Downloaded file will be saved to /tmp/tmpaddon-174f52

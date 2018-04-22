@@ -15,7 +15,6 @@ pip install selenium
 pip install lxml
 pip3 install lxml
 
-path = $(pwd)
-export PATH=$PATH:$path/ffdriver
+source src/add_path.sh
 
 

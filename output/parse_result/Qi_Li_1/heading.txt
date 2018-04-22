@@ -1,0 +1,46 @@
+<heading>Project proposal</heading> 
+
+<subtitle>Project Title:</subtitle> 
+
+<heading>Authors</heading> 
+
+<heading>shivabp@kth.se</heading> 
+
+<heading>qi5@kth.se</heading> 
+
+<heading>Organization and Supervisor</heading> 
+
+<heading>Keywords</heading> 
+
+<heading>RESTful APIs, Canvas, DiVA, Calendars, data mining</heading> 
+
+<heading>Background</heading> 
+
+<heading>Problem statement</heading> 
+
+<heading>Problem</heading> 
+
+<heading>Purpose</heading> 
+
+<heading>Goal(s)</heading> 
+
+<heading>Tasks</heading> 
+
+<heading>pdfssa4met</heading> 
+
+<heading>Method</heading> 
+
+<heading>Milestone chart (time schedule)</heading> 
+
+<heading>< Milestone chart illustrates the project timeline and when will particularly</heading> 
+
+<heading>meaningful points, referred to as milestones, are to be completed.</heading> 
+
+<heading>Also mention the deliverable for each of these milestones. ></heading> 
+
+<heading>Risks, Consequences and Ethics</heading> 
+
+<heading>Summary</heading> 
+
+<heading>Reference(s)</heading> 
+
