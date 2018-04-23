@@ -49,6 +49,7 @@ import sys, getopt
 from lxml import etree
 from utils import UsageError, ConfigError, mean, median
 from pdf2xml import pdf2etree
+import shutil
 
 # text to filter out from the output
 text_to_filter = {
@@ -96,8 +97,9 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
         et_list =["</Author>","</Address_line1>","</Address_line2>","</Email>","</PhoneNumber>","</Other_info>"]
         global address
         author_count=0
-
-            # print a_page_node
+        global auth
+        auth =""
+        # print a_page_node
         for block_node in a_page_node.xpath('.//BLOCK'):  # all the blocks in a page
                 if next_block_tag == False:
                     break
@@ -149,6 +151,8 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                     if (st == "<Author>" and author_count <2):
                         author_count+=1
                         name_split = page_txt.split();
+                        auth = auth+"_"+page_txt
+
                         save_path= '../../../../output/parse_result/'+directiory+'/author_'+str(author_count)+'_frontname'+'.txt'
                         txt = "<FrontName>" + name_split[0] + "</FrontName>"
                         with open(save_path, 'w') as f:
@@ -380,6 +384,8 @@ def pdf2heads(opts, args,document):
     global main_font_color
     global document_type
     global mean_font_size
+    global author
+    author=""
 
     document_type=document
 
@@ -512,6 +518,7 @@ def pdf2heads(opts, args,document):
             auth_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in auth_headers])
             auth_list=auth_head_txt.split(";")
 
+
             while (len(auth_head_txt)>0) and auth_count<2 and len(auth_list)>auth_count: #found
                 print "Author: found"
                 auth_head_txt=auth_list[auth_count-1]
@@ -520,6 +527,7 @@ def pdf2heads(opts, args,document):
 
                 name_split = auth_head_txt.split();
                 txt = "<Author>" + auth_head_txt + "</Author>"
+                author = author+"_"+auth_head_txt
                 author_path = '../../../../output/parse_result/'+directiory+'/author_'+str(auth_count)+'.txt'
 
                 with open(author_path, 'w') as f:
@@ -639,7 +647,9 @@ def pdf2heads(opts, args,document):
                         if not Found_Author:  # if the abstract has not been found yet
                             print "Authors(en): OVERIDE "
                             print "Authors and detail information (en): found "
+                            author=""
                             output_text_on_block_on_page(page_node, block_number, page, author_path)
+                            author = auth
                             Found_Author = True
 
 
@@ -786,14 +796,25 @@ def main(argv=None):
         #
         # output.close()
         #
-        directiory=args[2].split(".")[0]
+        directiory="cache"
         pdffile=args[0]
 
+        source_dir ='../../../../output/parse_result/'+directiory
 
-        if not os.path.exists('../../../../output/parse_result/'+directiory):
-            os.makedirs('../../../../output/parse_result/'+directiory)
+        if not os.path.exists(source_dir):
+            os.makedirs(source_dir)
+        pdf2heads(opts, [pdffile], args[1])
 
-        pdf2heads(opts, [pdffile],args[1])
+        source =  os.listdir(source_dir+"/")
+        destination = "../../../../output/parse_result/" + author+"/"
+        if not os.path.exists(destination):
+            os.makedirs(destination)
+        for files in source:
+
+            if files.endswith(".txt"):
+                print "ready to move: "
+                print source_dir+"/"+files
+                shutil.move(source_dir+"/"+files, destination)
 
         #if not Found_abstract:
          #   print "Automatically running the program again with the option --caps"
