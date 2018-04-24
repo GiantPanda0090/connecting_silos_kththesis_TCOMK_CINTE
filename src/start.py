@@ -29,6 +29,9 @@ import sys, getopt
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.firefox.options import Options
+import shutil
+import zipfile
+
 
 import subprocess
 
@@ -56,13 +59,13 @@ def main(argv=None):
     opts, args = getopt.getopt(argv, "ht",
                                        ["help", "test", "noxml", "highlight", "title", "author", "verbose", "caps"])
 
-    student_name = "ZOHREH ALAEI" # TODO:obtain from canvas
-    document_type = args[4]
+    document_type = 0 #0 is thesis 1 is proporsal
 
+    #backup solution. leave it here. if we dont use this in the end, we delete it
     #command = "python" + " " + running_path + " " + pdf_path + " " + document_type + " " + student_name
 
 
-
+#start canvas module
     print os.getcwd()
     print 'Preperation for canvas module start'
     path = os.getcwd()
@@ -81,23 +84,14 @@ def main(argv=None):
     print 'Automating firefox module'
 
     download_dir = os.getcwd()+"/../../../Source"
+    shutil.rmtree(download_dir)
+    os.makedirs(download_dir)    #clean up the source
 
-    #replace with fire fox option
     profile = webdriver.FirefoxProfile()
     option = Options()
 
     profile.set_preference("general.useragent.override",
                                    "Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0")
-
-    # profile.DEFAULT_PREFERENCES['frozen']["browser.helperApps.neverAsk.saveToDisk"]= "application/pdf"
-    # profile.DEFAULT_PREFERENCES['frozen']["browser.download.manager.showWhenStarting"]= False
-    # profile.DEFAULT_PREFERENCES['frozen']["browser.download.manager.showAlertOnComplete"]= False
-    # profile.DEFAULT_PREFERENCES['frozen']["browser.helperApps.alwaysAsk.force"]= False
-    # profile.DEFAULT_PREFERENCES['frozen']["browser.download.folderList"]= 2
-    # profile.DEFAULT_PREFERENCES['frozen']["browser.download.dir"]= download_dir
-
-
-
     profile.set_preference("browser.download.folderList", 2)
     profile.set_preference("browser.download.manager.showWhenStarting", False)
     profile.set_preference("browser.download.manager.showAlertOnComplete", False)
@@ -130,6 +124,16 @@ def main(argv=None):
     time.sleep(10)
     print 'File saved in '+ download_dir
 
+#if the file is a package, unzip and extract it
+    for file in os.listdir(download_dir):
+     if file.endswith(".zip") or file.endswith(".tar") or file.endswith(".tar.gz"):
+         unzip_dir=os.path.join(download_dir, file)
+         print "Extracting file: " + unzip_dir
+         zip_ref = zipfile.ZipFile(unzip_dir, 'r')
+         zip_ref.extractall(download_dir)
+         zip_ref.close()
+
+
 
     print 'Done with canvas module and leaving the module'
 
@@ -138,7 +142,7 @@ def main(argv=None):
 
 
 
-
+#start kthextract module
     #print("running command"+" '"+ command +"'")
     print os.getcwd()
     print 'Preperation for parse module start'
@@ -153,7 +157,7 @@ def main(argv=None):
      if file.endswith(".pdf"):
          pdf_locl_path=os.path.join(download_dir, file)
          print "found pdf file: " + pdf_locl_path
-         kthextract.main([pdf_locl_path,0,student_name])
+         kthextract.main([pdf_locl_path,document_type])
     print 'Done with parse module'
     print 'Whole process done'
 
