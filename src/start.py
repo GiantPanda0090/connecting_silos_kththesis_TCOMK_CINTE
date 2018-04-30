@@ -96,7 +96,7 @@ def main(argv=None):
     profile.set_preference("browser.download.manager.showWhenStarting", False)
     profile.set_preference("browser.download.manager.showAlertOnComplete", False)
     profile.set_preference("browser.helperApps.alwaysAsk.force", False);
-    profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/pdf")
+    profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/zip")
     profile.set_preference("browser.download.dir", download_dir)
     profile.set_preference("pdfjs.disabled", True)
     profile.update_preferences()
@@ -120,8 +120,12 @@ def main(argv=None):
     browser.find_element_by_name("submit").click()
     print 'Dowloading pdf..... This might take a while......'
     print "Downloading from: " + pdf_path
+    browser.get("https://kth.instructure.com/")
     browser.get(pdf_path)
-    time.sleep(10)
+    time.sleep(10) #make it dynamic by checking if the source folder is empty
+    browser.close()
+    #browser.find_element_by_name("download_submission_button").click()
+
     print 'File saved in '+ download_dir
 
 #if the file is a package, unzip and extract it

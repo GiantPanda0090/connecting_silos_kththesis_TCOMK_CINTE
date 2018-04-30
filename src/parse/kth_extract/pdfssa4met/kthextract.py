@@ -807,8 +807,10 @@ def main(argv=None):
 
         source =  os.listdir(source_dir+"/")
         destination = "../../../../output/parse_result/" + author+"/"
+
         if not os.path.exists(destination):
             os.makedirs(destination)
+
         for files in source:
 
             if files.endswith(".txt"):

@@ -1,2 +1,0 @@
-<p>RESTful APIs, Canvas, DiVA, Calendars, data mining</p> 
-
