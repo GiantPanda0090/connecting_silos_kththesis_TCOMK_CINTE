@@ -50,6 +50,7 @@ from lxml import etree
 from utils import UsageError, ConfigError, mean, median
 from pdf2xml import pdf2etree
 import shutil
+from datetime import datetime
 
 # text to filter out from the output
 text_to_filter = {
@@ -803,10 +804,14 @@ def main(argv=None):
 
         if not os.path.exists(source_dir):
             os.makedirs(source_dir)
+        else:
+            shutil.rmtree(source_dir)
+            os.makedirs(source_dir)
+
         pdf2heads(opts, [pdffile], args[1])
 
         source =  os.listdir(source_dir+"/")
-        destination = "../../../../output/parse_result/" + author+"/"
+        destination = "../../../../output/parse_result/" + author+"_"+str(datetime.now())+"_"+str(datetime.now().time())+"/"
 
         if not os.path.exists(destination):
             os.makedirs(destination)
@@ -816,8 +821,8 @@ def main(argv=None):
             if files.endswith(".txt"):
                 print "ready to move: "
                 print source_dir+"/"+files
+                #if not os.path.exists(destination+files):
                 shutil.move(source_dir+"/"+files, destination)
-
         #if not Found_abstract:
          #   print "Automatically running the program again with the option --caps"
           #  automatic_rerunning=True

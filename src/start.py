@@ -23,20 +23,47 @@ fits the requirment of DiVA
 
 
 
+import platform
+import urllib2
 
 from parse.kth_extract.pdfssa4met import kthextract
 import sys, getopt
+import os
+import zipfile
+import shutil
+import tarfile
+
+
+
+#dynamic download geckodriver depends on OS
+print "Dowloading geckodriver for selenium automation base on Operatiing system "
+print "Operating System:  " + platform.system()
+if platform.system()=="Linux":
+    url ="https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz"
+if platform.system() == "Darwin":
+    url ="https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-macos.tar.gz"
+
+response = urllib2.urlopen(url)
+html = response.read()
+print "downloading " + url
+
+# Open our local file for writing
+with open("../ffdriver/geckodriver_linux.tar.gz", "wb") as local_file:
+    local_file.write(html)
+    local_file.close()
+    tar = tarfile.open("../ffdriver/geckodriver_linux.tar.gz")
+    tar.extractall(path='../ffdriver')
+    tar.close()
+
+
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.firefox.options import Options
-import shutil
-import zipfile
 
 
 import subprocess
 
 
-import os
 import time
 
 
@@ -109,7 +136,7 @@ def main(argv=None):
     #firefox_capabilities['binary'] = 'tools/firefox/firefox-bin'
     print 'Logging in KTH'
     browser = webdriver.Firefox(capabilities=firefox_capabilities,firefox_options = opts,firefox_profile=profile)
-    browser.get("https://login.kth.se/login")
+    browser.get("https://kth.instructure.com/")
     time.sleep(3)
 
     username = browser.find_element_by_id("username")
@@ -118,9 +145,11 @@ def main(argv=None):
     username.send_keys(args[2])
     password.send_keys(args[3])
     browser.find_element_by_name("submit").click()
+    browser.get(pdf_path)
+
     print 'Dowloading pdf..... This might take a while......'
     print "Downloading from: " + pdf_path
-    browser.get("https://kth.instructure.com/")
+    
     browser.get(pdf_path)
     time.sleep(10) #make it dynamic by checking if the source folder is empty
     browser.close()
@@ -159,6 +188,12 @@ def main(argv=None):
 
     for file in os.listdir(download_dir):
      if file.endswith(".pdf"):
+         if "-" in file:
+             print file
+             source = os.path.join(download_dir, file)
+             destination = os.path.join(download_dir, file.replace("-","_"))
+             os.rename(source,destination)
+             file = file.replace("-","_")
          pdf_locl_path=os.path.join(download_dir, file)
          print "found pdf file: " + pdf_locl_path
          kthextract.main([pdf_locl_path,document_type])

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 #
-# ./list_submissions course_id
-# also outputs an xlsx file of the form: submissions-course_id.xlsx
+# ./list_studentList_assignment.py course_id assignment_id
 #
 # based upon insert-column.py
 # 
@@ -11,13 +10,9 @@
 #
 
 import csv, requests, time
-from pprint import pprint
 import optparse
-import sys
 
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+
 
 import os,sys
 import time
@@ -30,7 +25,6 @@ from lxml import html
 import json
 
 # Use Python Pandas to create XLSX files
-import pandas as pd
 
 #############################
 ###### EDIT THIS STUFF ######
@@ -143,7 +137,7 @@ def list_custom_column_entries(course_id, column_number):
        # i.e., when the response is split into pieces - each returning only some of the list of modules
        # see "Handling Pagination" - Discussion created by tyler.clair@usu.edu on Apr 27, 2015, https://community.canvaslms.com/thread/1500
        while r.links['current']['url'] != r.links['last']['url']:  
-              r = requests.get(r.links['next']['url'], headers=header)  
+              r = requests.get(r.links['next']['url'], headers=header)
               page_response = r.json()  
               for p_response in page_response:  
                      entries_found_thus_far.append(p_response)
@@ -177,7 +171,7 @@ def list_custom_columns(course_id):
        # i.e., when the response is split into pieces - each returning only some of the list of modules
        # see "Handling Pagination" - Discussion created by tyler.clair@usu.edu on Apr 27, 2015, https://community.canvaslms.com/thread/1500
        while r.links['current']['url'] != r.links['last']['url']:  
-              r = requests.get(r.links['next']['url'], headers=header)  
+              r = requests.get(r.links['next']['url'], headers=header)
               page_response = r.json()  
               for p_response in page_response:  
                      columns_found_thus_far.append(p_response)
