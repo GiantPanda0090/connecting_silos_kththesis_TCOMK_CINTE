@@ -797,6 +797,8 @@ def main(argv=None):
         #
         # output.close()
         #
+        if not os.path.exists('../../../../output/parse_result/'):
+            os.makedirs('../../../../output/parse_result/')
         directiory="cache"
         pdffile=args[0]
 

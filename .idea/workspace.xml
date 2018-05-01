@@ -4,7 +4,44 @@
     <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="611" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="" />
+    <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/author_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/author_1_aftername.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/author_1_frontname.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/heading.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/introduction(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/method(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/subtitle.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/title.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:11:58.087615_11:11:58.087637/toc(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/author_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/author_1_aftername.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/author_1_frontname.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/heading.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/introduction(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/method(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/subtitle.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/title.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZAINAB ABBAS_2018-05-01 11:15:45.423748_11:15:45.423770/toc(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/abstract(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/author_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/author_1_aftername.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/author_1_frontname.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/heading.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/introduction(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/method(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:11:59.832043_11:11:59.832063/title.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/abstract(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/author_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/author_1_aftername.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/author_1_frontname.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/heading.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/introduction(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/method(en).txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/parse_result/_ZOHREH ALAEI_2018-05-01 11:15:47.102323_11:15:47.102344/title.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="809" column="0" lean-forward="false" selection-start-line="809" selection-start-column="0" selection-end-line="809" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="799" column="37" lean-forward="false" selection-start-line="799" selection-start-column="37" selection-end-line="799" selection-end-column="37" />
               <folding>
                 <element signature="e#1163#1177#0" expanded="true" />
               </folding>
@@ -93,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="112" column="16" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="16" />
+            <state relative-caret-position="423">
+              <caret line="119" column="43" lean-forward="false" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
               <folding>
                 <element signature="e#349#364#0" expanded="true" />
               </folding>
@@ -116,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mean_font_size</find>
       <find>median_font_size</find>
       <find>sw</find>
       <find>output_blocks_on_page</find>
@@ -143,9 +179,10 @@
       <find>shutil</find>
       <find>source_dir</find>
       <find>author</find>
-      <find>source</find>
       <find>cache</find>
       <find>re</find>
+      <find>source</find>
+      <find>parse_result</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,8 +213,8 @@
         <option value="$PROJECT_DIR$/src/Canvas/canvas/list_studentList_assignment.py" />
         <option value="$PROJECT_DIR$/src/Canvas/unit_test/test_library/list_studentList_assignment.py" />
         <option value="$PROJECT_DIR$/src/Canvas/unit_test/U_2.py" />
-        <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
         <option value="$PROJECT_DIR$/src/start.py" />
+        <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
       </list>
     </option>
   </component>
@@ -847,16 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="809" column="0" lean-forward="false" selection-start-line="809" selection-start-column="0" selection-end-line="809" selection-end-column="0" />
-          <folding>
-            <element signature="e#1163#1177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Canvas/unit_test/U_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="824">
@@ -869,10 +896,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="112" column="16" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="16" />
+        <state relative-caret-position="423">
+          <caret line="119" column="43" lean-forward="false" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
           <folding>
             <element signature="e#349#364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="799" column="37" lean-forward="false" selection-start-line="799" selection-start-column="37" selection-end-line="799" selection-end-column="37" />
+          <folding>
+            <element signature="e#1163#1177#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -39,7 +39,7 @@ Thumbs.db
 # Development/test file #
 #########################
 #src/test.sh
-output/parse_result/*.txt
+output/parse_result
 Source
 
 
