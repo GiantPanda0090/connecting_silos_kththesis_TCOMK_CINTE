@@ -1,0 +1,110 @@
+<p>Energy harvesting or energy scavenging is a process of generating electricity from</p> 
+
+<p>ambient environment through various sources of energy. The development of energy</p> 
+
+<p>harvesting from natural sources has received a great deal of interest in the industrial</p> 
+
+<p>world and research communities over the past few decades. Nowadays electronic</p> 
+
+<p>devices use wireless data transmission to function. A lot of devices are desired to be</p> 
+
+<p>wireless and self-powered to make everyday life easier and also to use natural</p> 
+
+<p>ambient sources to have a green world and clean from fuel based energy. Supplying</p> 
+
+<p>power for these devices may proceed from batteries or some other wireless power or</p> 
+
+<p>energy suppliers. But energy suppliers or batteries have some disadvantages such as</p> 
+
+<p>replacement, discharging and other maintenance costs. For example, in many areas</p> 
+
+<p>that devices are controlled by remotes, continuous charging methods aren’t possible.</p> 
+
+<p>So some methods must be used to keep the batteries charged. To resolve such</p> 
+
+<p>problem, we need to work on different ideas to provide the required energy. Energy</p> 
+
+<p>harvesting can be the most efficient way to provide the energy from the ambient</p> 
+
+<p>environment. It can help to utilize the energy for future use. Energy harvesting</p> 
+
+<p>hierarchy can be categorized as shown in figure 1. As it can be seen in the picture</p> 
+
+<p>there are several ways to extract energy from ambient sources. Among them motion is</p> 
+
+<p>one of sources which includes piezoelectric material as one of the ways to generated</p> 
+
+<p>power.</p> 
+
+<p>9</p> 
+
+<p>Figure 1. Hierarchy of main energy harvesting technologies. (Adapted from[1])</p> 
+
+<p>The vibration (motion) based energy harvesting is most prominent way to generate</p> 
+
+<p>electricity from the environment. Because generating the vibration or using the</p> 
+
+<p>natural vibration is almost easy to achieve. The three mechanisms that can convert</p> 
+
+<p>vibration energy into electricity are electromagnetic, electrostatic and piezoelectric</p> 
+
+<p>transductions. Piezoelectric transduction is the most effective technique compared to</p> 
+
+<p>other two transductions mechanisms because piezoelectric materials offer higher</p> 
+
+<p>power densities and ease of applications. Also they are more sensible and advisable</p> 
+
+<p>for micro electro mechanical systems (MEMS) implementation. Advantages of using</p> 
+
+<p>piezoelectric materials in energy harvesting are ease of application, high power</p> 
+
+<p>density, no requirement of input voltage and relatively mature fabrication techniques</p> 
+
+<p>at micro- and macro-scales[1]. As it is clear in the following picture which shows the</p> 
+
+<p>power density of different materials how vs. voltage, piezoelectric material has the</p> 
+
+<p>most power density in comparison to other materials. This difference in the power</p> 
+
+<p>density makes the piezoelectric material superior to the other materials for a desired</p> 
+
+<p>power.</p> 
+
+<p>10</p> 
+
+<p>Figure2. Power density vs. voltage of different materials. [Adapted from 2]</p> 
+
+<p>Generally, when working with piezoelectric materials, three primary steps are</p> 
+
+<p>involved: (1) trapping the mechanical stress from the ambient source, (2) converting</p> 
+
+<p>the mechanical stress into electrical energy and (3) processing and storing the</p> 
+
+<p>produced power for the later uses. Therefore, in modeling piezoelectric energy</p> 
+
+<p>harvesters these steps have to be considered. Modeling is an important approach to</p> 
+
+<p>forecast their function. However, despite the fact that the power density of the</p> 
+
+<p>piezoelectric material is larger than the other materials, still the generated power is in</p> 
+
+<p>micro scale. Thus, for using such materials in self powered devices their output power</p> 
+
+<p>has to be enhanced. There are different ways to enhance the output power. Using</p> 
+
+<p>different piezoelectric materials, piezoelectric mechanical configuration and the</p> 
+
+<p>electrical circuit will enhance the power and enable us for a better self powered and</p> 
+
+<p>wireless systems. In this paper we will look at how these approaches can increase the</p> 
+
+<p>output power. The following figure shows the main three steps in the energy</p> 
+
+<p>conversion of piezoelectric materials. Each step will be looked separately</p> 
+
+<p>11</p> 
+
+<p>Figure 3: Process of the piezoelectric power generation.</p> 
+
+<p>12</p> 
+

@@ -1,0 +1,88 @@
+<p>1.1 Problem Statement</p> 
+
+<p>Almost every data can be represented in the form of entities and relationships between them. Graphs can be used to represent such entities and relations in the form of vertices and edges. Nowadays, the graphs are increasing in size. For example, the Web graph having 4.75 billion indexed pages [25] and Facebook having 1.65 billion monthly active users [26]. Therefore, it is inecient to process huge graphs that contain billions of edges and vertices, or even more, on a single machine because of the limited memory and computation power. A way to solve this is to partition the graph across multiple machines and use distributed graph processing algorithms.</p> 
+
+<p>Google’s Pregel [1] based on Bulk Synchronous Parallel (BSP) model [2] and vertex centric approach was introduced for large-scale graph processing; it supports iterative computations which are required by many graph processing algorithms. Other frameworks for distributed graph computation like Apache Giraph [3] and PEGASUS [5] also emerged. These systems use a hash partitioner, that computes the hash of the vertex ID (a unique number to identify the vertex) and uses it for splitting the graph among dierent partitions, which usually ends up in randomly divided vertices. This partitioning method does not take into account the graph structure, so it has large chances of placing the neighboring vertices in dierent partitions. Therefore, in case where the neighboring vertices need to communicate with each other, this placement can cause an increase in the communication cost if the vertices are placed in dierent partitions. Hence, this gives the motivation for creating better partitioning methods.</p> 
+
+<p>Graph partitioning can be done using two techniques. One of this technique is vertex partitioning. It refers to dividing the vertices across dierent partitions, which might result in placing two neighboring vertices, having an edge between them, into dierent partitions. This edge between two partitions is called an edge-cut, as shown in Figure 1.1(a). The Hash partitioner discussed in the previous paragraph, might result in a large number of edge-cuts due to the fact that it does not take into account</p> 
+
+<p>1 Introduction</p> 
+
+<p>the graph structure, which results in increase of the communication cost across the partitions. Hence, a better approach is needed. Another relatively new technique is known as edge partitioning, which instead of the vertices, divides the edges in to dierent partitions. As a result, if a vertex appears in more than one partition, then this forms a vertex-cut, as shown in Figure 1.1(b).</p> 
+
+<p>(a) Vertex Partitioning and Edge-Cut (b) Edge Partitioning and Vertex-Cut</p> 
+
+<p>Figure 1.1: Dierent Partitioning Techniques</p> 
+
+<p>Good graph partitioners have dierent objectives like balancing the load across the partitions and reducing the edge or vertex-cut. However, handling dynamic graphs is a challenge. Dynamic graphs are important as most of the social media graphs like Facebook and Twitter are dynamic, which means they are continuously updated. For example, when a user makes new friends and removes some friends on Facebook, the user actions trigger dierent events. A new approach known as streaming graph partitioning [6] can work with dynamic graphs, which includes reading a vertex or an edge of the whole graph one by one and assigning it to the partitions on-the-ﬂy without knowing the whole state of the graph. Dierent streaming graph partitioning heuristics have recently been developed. Some of the popular ones are: Fennel [7], HDRF [8] and PowerGraph Greedy Algorithm [9].</p> 
+
+<p>Our work aims to, ﬁrstly, perform a detailed survey of streaming graph partitioners, secondly, implement some of the streaming graph partitioners and measure their partitioning quality. Lastly, based on the qualities of these partitioners, identify new partitioning functions that can have a better partitioning quality and performance than the former. Furthermore, study the partitioning functions for the eect of their partitioning on dierent graph stream algorithms. We implemented our work using</p> 
+
+<p>4</p> 
+
+<p>1.2 Objective</p> 
+
+<p>the Graph stream processing framework [10], which is build on top of Apache Flink [11].</p> 
+
+<p>1.2 Objective</p> 
+
+<p>The objectives of this thesis are as follows:</p> 
+
+<p>• To conduct a study of dierent streaming graph partitioning algorithms.</p> 
+
+<p>• To implement and compare dierent streaming graph partitioning algorithms using the Apache Flink graph streaming API [10].</p> 
+
+<p>• To improve the current partitioning techniques.</p> 
+
+<p>• To perform experimental analysis for dierent partitioning techniques and measure their eect on graph stream approximations.</p> 
+
+<p>1.3 Contribution</p> 
+
+<p>The main contributions of this thesis are as follows:</p> 
+
+<p>• We performed a detailed literature study of dierent streaming graph partition- ing algorithms. The summary of these algorithms, along with their comparison tables, is given in section 2.4 of this thesis.</p> 
+
+<p>• To the best of our knowledge, some ecient streaming graph partitioning algorithms include: Linear Greedy [6], Fennel [7], Least Cost Incremental [12] and a variation of Least Cost Incremental [12]. We implemented them and tested them for veriﬁcation purpose.</p> 
+
+<p>• We propose new partitioning function based on the degrees of vertices. The degree of a vertex is a global parameter, which is not known beforehand. Therefore, we use the evolving degree, which keeps updating as we process the vertices one-by-one, for partitioning.</p> 
+
+<p>• We evaluate the partitioning heuristics based on dierent metrics like the execution time, load balancing and the vertex-cut or the edge-cut. In addition to that, we analyse how the partitioning step improves the performance of graph stream processing algorithms.</p> 
+
+<p>• Our work is an open source contribution to the Flink Graph Streaming reposi- tory [10].</p> 
+
+<p>5</p> 
+
+<p>1 Introduction</p> 
+
+<p>1.4 Methodology</p> 
+
+<p>This section summarises the scientiﬁc research method involved in our thesis work. We used the resources available to us during the whole process. We have brieﬂy explained the observation, analysis, hypothesis, design, development and testing phases. Our research is based on empirical and mathematical methods to avoid subjectivity in the whole process.</p> 
+
+<p>1.4.1 Observation and Requirements Gathering</p> 
+
+<p>Our work is based on observation and experiment. During the literature review phase, we studied dierent algorithms for graph partitioning. This gave us an idea of what has been done so far for graph partitioning. Streaming graph partitioning is a quite new technique, therefore all the work done for it is recent. To the extent of our knowledge, we chose the most recent and ecient partitioning algorithms for implementation. Certain algorithms are based on mathematical models that require a deductive logic for the proof. Moreover, we also observed and tested the current partitioning approach for graph streams used by dierent Graph processing APIs in order to ﬁnd out how we can improve it. This observation and testing helped us ﬁnding the problem. Our approach is based on both reason and research.</p> 
+
+<p>1.4.2 Design and Development</p> 
+
+<p>The literature study and testing, lead us to the design phase of the project. For the proof of concept, we implemented the existing streaming graph partitioning algorithms and compared them. The major challenge we faced was that there was no open source code for these partitioning algorithms. Therefore, we had to design methods and propose dierent data structures for implementing them. Firstly, we implemented them in Java for single-threaded implementation, and secondly, we ported them to the Apache Flink Graph streaming API for multi-threaded implementation. As a result, we came up with our own custom partitioner, having certain properties of the existing ones.</p> 
+
+<p>1.4.3 Testing and Evaluation</p> 
+
+<p>We performed our experiments with all the available resources, which include: the online available resources mentioned in the bibliography section, an open source Apache Flink API [11], and the cluster machines from our department. Furthermore, to achieve ecient results during the experiments, an isolated environment is main- tained. Latest versions of the processing engine i.e Apache Flink is used for creating and running our tests to keep everything up-to-date. All the data set information is</p> 
+
+<p>6</p> 
+
+<p>1.5 Structure of Thesis</p> 
+
+<p>included in the thesis for reproducibility. The input data sets used are generated from a very recent release of the Apache Flink Gelly API [11]. version: 1.1.</p> 
+
+<p>1.5 Structure of Thesis</p> 
+
+<p>After the Introduction in section 1, section 2 is about Graph partitioning, which explains dierent partitioning approaches and PowerLaw graphs [9]. In this section we discuss in detail dierent partitioning algorithms implemented in the thesis. This section includes the theoretical explanation and mathematical models of these partitioning algorithms along with their comparison.</p> 
+
+<p>Section 3 contains the literature review and background work. This section gives a good overview of streaming models and graph processing models along with references to the related work. Moreover, it also contains a detailed topic about Apache Flink explaining Gelly and the Flink Streaming API. Our Implementation details for porting these algorithms to Flink are discussed in section 4.</p> 
+
+<p>The experimental setup, tests, input data and output results are presented in section 5. Lastly, the conclusion of the thesis is presented in section 6, this also includes the future work.</p> 
+
+<p>7</p> 
+

@@ -4,27 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" line="611" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Canvas/unit_test/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Canvas/unit_test/config.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Canvas/unit_test/test_library/config.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Canvas/unit_test/test_library/list_studentList_assignment.py" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Source/liqi_11185_890332_test_document-1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Source/liqi_11185_890333_analyze.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ffdriver/geckodriver" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/parse_result/cache/fake_document for git" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/__init__.py" afterPath="$PROJECT_DIR$/src/Canvas/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/canvas/__init__.py" afterPath="$PROJECT_DIR$/src/Canvas/canvas/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/canvas/geckodriver.log" afterPath="$PROJECT_DIR$/src/Canvas/canvas/geckodriver.log" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/canvas/list_studentList_assignment.py" afterPath="$PROJECT_DIR$/src/Canvas/canvas/list_studentList_assignment.py" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/canvas/log.txt" afterPath="$PROJECT_DIR$/src/Canvas/canvas/log.txt" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/unit_test/U_2.py" afterPath="$PROJECT_DIR$/src/Canvas/unit_test/U_2.py" />
-      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
-      <change beforePath="$PROJECT_DIR$/src/start.py" afterPath="$PROJECT_DIR$/src/start.py" />
-      <change beforePath="$PROJECT_DIR$/start.sh" afterPath="$PROJECT_DIR$/start.sh" />
-    </list>
+    <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,8 +96,8 @@
       <file leaf-file-name="start.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+            <state relative-caret-position="297">
+              <caret line="112" column="16" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="16" />
               <folding>
                 <element signature="e#349#364#0" expanded="true" />
               </folding>
@@ -889,8 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        <state relative-caret-position="297">
+          <caret line="112" column="16" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="16" />
           <folding>
             <element signature="e#349#364#0" expanded="true" />
           </folding>
