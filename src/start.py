@@ -33,7 +33,7 @@ import zipfile
 import shutil
 import tarfile
 
-
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__)) # This is your Project Root
 
 #dynamic download geckodriver depends on OS
 print "Dowloading geckodriver for selenium automation base on Operatiing system "
@@ -110,7 +110,7 @@ def main(argv=None):
 
     print 'Automating firefox module'
 
-    download_dir = os.getcwd()+"/../../../Source"
+    download_dir = ROOT_DIR+"/Source"
     shutil.rmtree(download_dir)
     os.makedirs(download_dir)    #clean up the source
 
@@ -196,6 +196,8 @@ def main(argv=None):
              file = file.replace("-","_")
          pdf_locl_path=os.path.join(download_dir, file)
          print "found pdf file: " + pdf_locl_path
+
+
          kthextract.main([pdf_locl_path,document_type])
     print 'Done with parse module'
     print 'Whole process done'
