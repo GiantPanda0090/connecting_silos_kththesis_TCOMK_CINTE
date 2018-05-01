@@ -30,13 +30,27 @@ import tarfile
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))+"/.."  # This is your Project Root
 
-# dynamic download geckodriver depends on OS
+# dynamic download geckodriver and pdf2xml depends on OS
 print "Dowloading geckodriver for selenium automation base on Operatiing system "
 print "Operating System:  " + platform.system()
+shutil.rmtree(ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/current/")
+os.makedirs(ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/current/")  # clean up the current for pdf2xml
 if platform.system() == "Linux":
     url = "https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz"
+    src= ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/pdftoxml.linux64.exe.1.2_7"
+    print src
+    dst= ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/current/pdf2xml_osfit"
+    print dst
+    shutil.copyfile(src, dst)
+    os.chmod(ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/current/pdf2xml_osfit", 0755)
+
 if platform.system() == "Darwin":
     url = "https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-macos.tar.gz"
+    src = ROOT_DIR + "/src/parse/kth_extract/pdfssa4met/pdf2xml/pdftoxml_osx"
+    dst = ROOT_DIR + "/src/parse/kth_extract/pdfssa4met/pdf2xml/current/pdf2xml_osfit"
+    shutil.copyfile(src, dst)
+    os.chmod(ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/current/pdf2xml_osfit", 0755)
+
 
 response = urllib2.urlopen(url)
 html = response.read()

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34dd8561-ec24-441c-ab7b-5c77a5df573b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Canvas/canvas/geckodriver.log" afterPath="$PROJECT_DIR$/src/Canvas/canvas/geckodriver.log" />
       <change beforePath="$PROJECT_DIR$/src/Canvas/canvas/log.txt" afterPath="$PROJECT_DIR$/src/Canvas/canvas/log.txt" />
+      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/config.py" afterPath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/config.py" />
+      <change beforePath="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/pdftoxml.linux64.exe.1.2_7" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/start _thesis.py" afterPath="$PROJECT_DIR$/src/start _thesis.py" />
       <change beforePath="$PROJECT_DIR$/src/start.py" afterPath="$PROJECT_DIR$/src/start.py" />
       <change beforePath="$PROJECT_DIR$/src/start_proporsal.py" afterPath="$PROJECT_DIR$/src/start_proporsal.py" />
@@ -99,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+            <state relative-caret-position="887">
+              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
               <folding>
                 <element signature="e#344#359#0" expanded="true" />
               </folding>
@@ -111,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start_proporsal.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="start_proporsal.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/start_proporsal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+            <state relative-caret-position="882">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="e#344#359#0" expanded="true" />
               </folding>
@@ -127,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/src/start _thesis.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="887">
-              <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
               <folding>
                 <element signature="e#344#359#0" expanded="true" />
               </folding>
@@ -207,9 +210,9 @@
         <option value="$PROJECT_DIR$/src/Canvas/unit_test/test_library/list_studentList_assignment.py" />
         <option value="$PROJECT_DIR$/src/Canvas/unit_test/U_2.py" />
         <option value="$PROJECT_DIR$/src/parse/kth_extract/pdfssa4met/kthextract.py" />
-        <option value="$PROJECT_DIR$/src/start_proporsal.py" />
-        <option value="$PROJECT_DIR$/src/start _thesis.py" />
         <option value="$PROJECT_DIR$/src/start.py" />
+        <option value="$PROJECT_DIR$/src/start _thesis.py" />
+        <option value="$PROJECT_DIR$/src/start_proporsal.py" />
       </list>
     </option>
   </component>
@@ -881,10 +884,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/start_proporsal.py">
+    <entry file="file://$PROJECT_DIR$/src/start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+        <state relative-caret-position="887">
+          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
           <folding>
             <element signature="e#344#359#0" expanded="true" />
           </folding>
@@ -894,17 +897,17 @@
     <entry file="file://$PROJECT_DIR$/src/start _thesis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="887">
-          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
           <folding>
             <element signature="e#344#359#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/start.py">
+    <entry file="file://$PROJECT_DIR$/src/start_proporsal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+        <state relative-caret-position="882">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#344#359#0" expanded="true" />
           </folding>
