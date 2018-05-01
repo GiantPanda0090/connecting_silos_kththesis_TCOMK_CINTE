@@ -1,7 +1,5 @@
 #!/bin/bash
-#install all plugin
+#start the project
 
-sudo apt-get install python3-pandas
-sudo apt-get install python3-lxml
 
 

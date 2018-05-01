@@ -38,4 +38,12 @@ Thumbs.db
 
 # Development/test file #
 #########################
-src/test.sh
+#src/test.sh
+output/parse_result/*.txt
+Source
+
+
+
+#Geckodriver #
+##############
+ffdriver
