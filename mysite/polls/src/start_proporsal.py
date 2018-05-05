@@ -22,6 +22,8 @@ import platform
 import urllib2
 
 from parse.kth_extract.pdfssa4met import kthextract
+from pyvirtualdisplay import Display
+
 import sys, getopt
 import os
 import zipfile
@@ -59,6 +61,9 @@ response = urllib2.urlopen(url)
 html = response.read()
 print "downloading " + url
 
+display = Display(visible=0, size=(800, 600))
+display.start()
+
 # Open our local file for writing
 with open("../ffdriver/geckodriver_linux.tar.gz", "wb") as local_file:
     local_file.write(html)
@@ -82,10 +87,6 @@ pdf_path = 'https://kth.instructure.com/courses/2139/assignments/24565/submissio
 def main(course_id,assignment_id,username,password):
     global my_id
     my_id = uuid.uuid1()
-    argv = sys.argv[1:]
-
-    opts, args = getopt.getopt(argv, "ht",
-                               ["help", "test", "noxml", "highlight", "title", "author", "verbose", "caps"])
 
     document_type = 1  # 0 is thesis 1 is proporsal
 
@@ -105,7 +106,7 @@ def main(course_id,assignment_id,username,password):
     print "Current directory: " + path
     print "jumping to canvas module path"
     os.chdir(path)
-    os.chdir('Canvas/canvas')
+    os.chdir(path+'Canvas/canvas')
     print "Current directory: " + os.getcwd()
     print 'Preperation for canvas module done'
     message = "python3 list_submissions.py " + str(args[0]) + " " + str(args[1])
@@ -140,7 +141,7 @@ def main(course_id,assignment_id,username,password):
     firefox_capabilities['marionette'] = True
     # firefox_capabilities['binary'] = 'tools/firefox/firefox-bin'
     print 'Logging in KTH'
-    browser = webdriver.Firefox(capabilities=firefox_capabilities, firefox_options=opts, firefox_profile=profile)
+    browser = webdriver.Firefox(capabilities=firefox_capabilities, firefox_profile=profile)
     browser.get("https://kth.instructure.com/")
     time.sleep(3)
 
