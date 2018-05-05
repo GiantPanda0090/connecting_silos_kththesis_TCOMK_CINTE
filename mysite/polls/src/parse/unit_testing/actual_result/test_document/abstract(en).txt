@@ -1,0 +1,42 @@
+<p>Piezoelectric energy harvesting has been around for almost a decade to generate</p> 
+
+<p>power from the ambient vibrations. Although the generated power is very small, but</p> 
+
+<p>there are several ways to increase and enhance the generated power. This project</p> 
+
+<p>presents different methods of optimizing the output power by changing the structural</p> 
+
+<p>configuration of the energy harvesters, selection of piezoelectric material and circuit</p> 
+
+<p>interface of these harvesters. To understand the different steps of the enhancement,</p> 
+
+<p>the process of energy conversion by piezoelectric material has been first looked at.</p> 
+
+<p>Different groups of piezoelectric material were studied to see what kind of materials</p> 
+
+<p>have the ability of increasing the generated power. As mechanical configuration of the</p> 
+
+<p>energy harvesters has a significant effect on the output voltage, their configuration</p> 
+
+<p>such as Cantilever beam type, Cymbal type and Circular diaphragms has been</p> 
+
+<p>described and compared. After the power generated in the piezoelectric crystal , the</p> 
+
+<p>current is sent to through an interface circuit to get rectified and regulated. This circuit</p> 
+
+<p>can be modified to increase the power as well. There are several types of circuits that</p> 
+
+<p>can increase the output voltage significantly. Synchronized Switch Harvesting (SSH)</p> 
+
+<p>techniques, Synchronous Electric Charge Extraction technique and voltage doubler</p> 
+
+<p>are such examples. These techniques have been also studied and compared.</p> 
+
+<p>Because of the outgrowing industry of piezoelectric energy harvesting in Medical</p> 
+
+<p>field, their function and their progress has also been reviewed.</p> 
+
+<p>5</p> 
+
+<p>6</p> 
+

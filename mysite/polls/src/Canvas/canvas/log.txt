@@ -1,0 +1,1473 @@
+Tue Apr 17 21:33:28 2018
+Tue Apr 17 21:33:28 2018
+
+--DONE--
+
+
+Tue Apr 17 21:34:48 2018
+Tue Apr 17 21:34:49 2018
+
+--DONE--
+
+
+Wed Apr 18 11:30:42 2018
+Wed Apr 18 11:30:42 2018
+
+--DONE--
+
+
+Wed Apr 18 11:32:33 2018
+Wed Apr 18 11:32:33 2018
+
+--DONE--
+
+
+Wed Apr 18 11:35:19 2018
+Wed Apr 18 11:35:19 2018
+
+--DONE--
+
+
+Wed Apr 18 11:39:24 2018
+Wed Apr 18 11:39:24 2018
+
+--DONE--
+
+
+Wed Apr 18 11:43:56 2018
+result of getting submissions: {"errors":[{"message":"The specified resource does not exist."}],"error_report_id":2968861}
+Wed Apr 18 11:43:56 2018
+
+--DONE--
+
+
+Wed Apr 18 11:44:22 2018
+result of getting submissions: {"errors":[{"message":"The specified resource does not exist."}],"error_report_id":2968862}
+Wed Apr 18 11:44:22 2018
+
+--DONE--
+
+
+Wed Apr 18 11:49:05 2018
+result of getting submissions: [{"id":1530338,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":23497,"user_id":11185,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/23497/submissions/11185?preview=1\u0026version=0"},{"id":1558245,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":23497,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/23497/submissions/73031?preview=1\u0026version=0"},{"id":1559127,"body":null,"url":null,"grade":null,"score":null,"submitted_at":"2018-04-14T18:46:19Z","assignment_id":24563,"user_id":11185,"submission_type":"online_upload","workflow_state":"submitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":1,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions/11185?preview=1\u0026version=1","attachments":[{"id":890327,"uuid":"ubUjN1ftgdfqjBcXHGkKv33XafqI7b6cXMUMYUAZ","folder_id":184774,"display_name":"test_document2.pdf","filename":"test_document2.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890327/download?download_frd=1\u0026verifier=ubUjN1ftgdfqjBcXHGkKv33XafqI7b6cXMUMYUAZ","size":2053483,"created_at":"2018-04-14T18:46:17Z","updated_at":"2018-04-14T18:46:20Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:46:17Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890327,%22type%22:%22canvadoc%22%7D\u0026hmac=01488edf1093f2bf900ce5270f48ea5ac70c7531"}]},{"id":1559128,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24563,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions/73031?preview=1\u0026version=0"},{"id":1559129,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24564,"user_id":11185,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24564/submissions/11185?preview=1\u0026version=0"},{"id":1559130,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24564,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24564/submissions/73031?preview=1\u0026version=0"},{"id":1559131,"body":null,"url":null,"grade":null,"score":null,"submitted_at":"2018-04-14T18:50:01Z","assignment_id":24565,"user_id":11185,"submission_type":"online_upload","workflow_state":"submitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":2,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?preview=1\u0026version=2","attachments":[{"id":890332,"uuid":"9WDoAqPAqlsiXumIT7nh3Zweq1pMbeRQeG2E12sn","folder_id":184774,"display_name":"test_document-1.pdf","filename":"test_document.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890332/download?download_frd=1\u0026verifier=9WDoAqPAqlsiXumIT7nh3Zweq1pMbeRQeG2E12sn","size":2693692,"created_at":"2018-04-14T18:49:57Z","updated_at":"2018-04-14T18:50:02Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:49:57Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890332,%22type%22:%22canvadoc%22%7D\u0026hmac=7b717f13e301010254718d6f4471a737b024a10b"},{"id":890333,"uuid":"4akdgcDxsQJkJymUUgAmJhEPN3A7HAbyrukGpexS","folder_id":184774,"display_name":"analyze.pdf","filename":"test_document2.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890333/download?download_frd=1\u0026verifier=4akdgcDxsQJkJymUUgAmJhEPN3A7HAbyrukGpexS","size":2053483,"created_at":"2018-04-14T18:49:59Z","updated_at":"2018-04-14T18:50:02Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:49:59Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890333,%22type%22:%22canvadoc%22%7D\u0026hmac=ca48a7ffb872f6407f3a68eca292f8050e2fca0d"}]},{"id":1559132,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24565,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24565/submissions/73031?preview=1\u0026version=0"},{"id":1559133,"body":null,"url":null,"grade":null,"score":null,"submitted_at":"2018-04-14T18:46:45Z","assignment_id":24566,"user_id":11185,"submission_type":"online_upload","workflow_state":"submitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":1,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24566/submissions/11185?preview=1\u0026version=1","attachments":[{"id":890328,"uuid":"x0J9E5qbc63TUTidLTY65wr4htImJ86mq0ce2toe","folder_id":184774,"display_name":"test_document3.pdf","filename":"test_document3.pdf","content-type":"application/pdf","url":"https://kth.instructure.com/files/890328/download?download_frd=1\u0026verifier=x0J9E5qbc63TUTidLTY65wr4htImJ86mq0ce2toe","size":1285795,"created_at":"2018-04-14T18:46:43Z","updated_at":"2018-04-14T18:46:45Z","unlock_at":null,"locked":false,"hidden":false,"lock_at":null,"hidden_for_user":false,"thumbnail_url":null,"modified_at":"2018-04-14T18:46:43Z","mime_class":"pdf","media_entry_id":null,"locked_for_user":false,"preview_url":"/api/v1/canvadoc_session?blob=%7B%22moderated_grading_whitelist%22:null,%22enable_annotations%22:true,%22user_id%22:87790000000011159,%22attachment_id%22:890328,%22type%22:%22canvadoc%22%7D\u0026hmac=771f02b599688c885f3d093218b7e566892fa33b"}]},{"id":1559134,"body":null,"url":null,"grade":null,"score":null,"submitted_at":null,"assignment_id":24566,"user_id":73031,"submission_type":null,"workflow_state":"unsubmitted","grade_matches_current_submission":true,"graded_at":null,"grader_id":null,"attempt":null,"cached_due_date":null,"excused":null,"late_policy_status":null,"points_deducted":null,"grading_period_id":null,"late":false,"missing":false,"seconds_late":0,"entered_grade":null,"entered_score":null,"preview_url":"https://kth.instructure.com/courses/2139/assignments/24566/submissions/73031?preview=1\u0026version=0"}]
+Wed Apr 18 11:49:06 2018
+
+--DONE--
+
+
+Wed Apr 18 20:44:31 2018
+Wed Apr 18 20:44:31 2018
+
+--DONE--
+
+
+Wed Apr 18 20:45:02 2018
+Wed Apr 18 20:45:44 2018
+Wed Apr 18 20:55:01 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 20:57:21 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:00:21 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:06:41 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:07:38 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:17:57 2018
+result of getting submissions: {"id":24563,"description":"","due_at":null,"unlock_at":null,"lock_at":null,"points_possible":0.0,"grading_type":"points","assignment_group_id":2221,"grading_standard_id":null,"created_at":"2018-04-12T16:04:25Z","updated_at":"2018-04-14T18:46:19Z","peer_reviews":false,"automatic_peer_reviews":false,"position":1,"grade_group_students_individually":false,"anonymous_peer_reviews":false,"group_category_id":null,"post_to_sis":false,"moderated_grading":false,"omit_from_final_grade":false,"intra_group_peer_reviews":false,"anonymous_instructor_annotations":false,"secure_params":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsdGlfYXNzaWdubWVudF9pZCI6IjVlYzA3NDgxLWRkYmItNDQyNS1hYTI1LWE5YWQwN2FjNjA3OSJ9.ocwDYH9IN2A9ARNi86GCjWWjOiMxDdGwyzSBIk0GTJo","course_id":2139,"name":"Connecting Silos-Bachelor project- test assignment ","submission_types":["online_url","online_upload"],"has_submitted_submissions":true,"due_date_required":false,"max_name_length":255,"in_closed_grading_period":false,"is_quiz_assignment":false,"muted":false,"html_url":"https://kth.instructure.com/courses/2139/assignments/24563","has_overrides":false,"needs_grading_count":1,"integration_id":null,"integration_data":{},"allowed_extensions":["pdf"],"published":true,"unpublishable":false,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://kth.instructure.com/courses/2139/assignments/24563/submissions?zip=1"}
+Wed Apr 18 21:22:34 2018
+Wed Apr 18 21:22:54 2018
+Wed Apr 18 21:23:05 2018
+Wed Apr 18 21:23:45 2018
+Wed Apr 18 21:25:14 2018
+Wed Apr 18 21:27:07 2018
+Wed Apr 18 21:27:35 2018
+Wed Apr 18 21:28:01 2018
+Wed Apr 18 21:30:25 2018
+Wed Apr 18 21:34:12 2018
+Wed Apr 18 21:36:49 2018
+Wed Apr 18 21:58:33 2018
+Wed Apr 18 21:58:42 2018
+Wed Apr 18 21:58:44 2018
+
+--DONE--
+
+
+Wed Apr 18 21:59:23 2018
+Wed Apr 18 21:59:25 2018
+
+--DONE--
+
+
+Wed Apr 18 22:04:42 2018
+Wed Apr 18 22:04:44 2018
+
+--DONE--
+
+
+Wed Apr 18 22:05:46 2018
+Wed Apr 18 22:05:48 2018
+
+--DONE--
+
+
+Wed Apr 18 22:08:26 2018
+Wed Apr 18 22:08:28 2018
+
+--DONE--
+
+
+Wed Apr 18 22:15:23 2018
+Wed Apr 18 22:15:24 2018
+
+--DONE--
+
+
+Thu Apr 19 08:02:36 2018
+Thu Apr 19 08:02:37 2018
+
+--DONE--
+
+
+Thu Apr 19 08:05:36 2018
+Thu Apr 19 08:05:37 2018
+
+--DONE--
+
+
+Thu Apr 19 08:06:27 2018
+Thu Apr 19 08:06:28 2018
+
+--DONE--
+
+
+Thu Apr 19 08:10:27 2018
+Thu Apr 19 08:10:28 2018
+
+--DONE--
+
+
+Thu Apr 19 08:10:32 2018
+Thu Apr 19 08:10:34 2018
+
+--DONE--
+
+
+Thu Apr 19 08:13:05 2018
+Thu Apr 19 08:13:46 2018
+Thu Apr 19 08:13:53 2018
+Thu Apr 19 18:52:17 2018
+Thu Apr 19 18:52:19 2018
+
+--DONE--
+
+
+Thu Apr 19 18:52:54 2018
+Thu Apr 19 18:52:56 2018
+
+--DONE--
+
+
+Thu Apr 19 18:53:32 2018
+Thu Apr 19 18:53:35 2018
+
+--DONE--
+
+
+Thu Apr 19 18:58:22 2018
+Thu Apr 19 18:59:16 2018
+Thu Apr 19 18:59:19 2018
+
+--DONE--
+
+
+Thu Apr 19 19:01:55 2018
+Thu Apr 19 19:01:57 2018
+
+--DONE--
+
+
+Thu Apr 19 19:02:14 2018
+Thu Apr 19 19:02:16 2018
+
+--DONE--
+
+
+Thu Apr 19 19:03:49 2018
+Thu Apr 19 19:03:51 2018
+
+--DONE--
+
+
+Thu Apr 19 19:04:30 2018
+Thu Apr 19 19:04:32 2018
+
+--DONE--
+
+
+Thu Apr 19 19:13:34 2018
+Thu Apr 19 19:13:36 2018
+
+--DONE--
+
+
+Thu Apr 19 19:20:02 2018
+Thu Apr 19 19:20:09 2018
+
+--DONE--
+
+
+Thu Apr 19 19:21:32 2018
+Thu Apr 19 19:21:34 2018
+
+--DONE--
+
+
+Thu Apr 19 19:22:07 2018
+Thu Apr 19 19:22:08 2018
+
+--DONE--
+
+
+Thu Apr 19 19:23:27 2018
+Thu Apr 19 19:23:30 2018
+
+--DONE--
+
+
+Thu Apr 19 19:32:03 2018
+Thu Apr 19 19:32:05 2018
+
+--DONE--
+
+
+Thu Apr 19 19:33:01 2018
+Thu Apr 19 19:33:03 2018
+
+--DONE--
+
+
+Thu Apr 19 19:37:08 2018
+Thu Apr 19 19:37:09 2018
+
+--DONE--
+
+
+Thu Apr 19 19:38:50 2018
+Thu Apr 19 19:38:51 2018
+
+--DONE--
+
+
+Thu Apr 19 19:39:39 2018
+Thu Apr 19 19:39:40 2018
+
+--DONE--
+
+
+Thu Apr 19 19:40:37 2018
+Thu Apr 19 19:40:38 2018
+
+--DONE--
+
+
+Thu Apr 19 19:42:22 2018
+Thu Apr 19 19:42:23 2018
+
+--DONE--
+
+
+Thu Apr 19 19:45:09 2018
+Thu Apr 19 19:45:10 2018
+
+--DONE--
+
+
+Thu Apr 19 19:46:14 2018
+Thu Apr 19 19:46:16 2018
+
+--DONE--
+
+
+Thu Apr 19 20:00:11 2018
+Thu Apr 19 20:00:14 2018
+
+--DONE--
+
+
+Thu Apr 19 20:00:42 2018
+Thu Apr 19 20:00:44 2018
+
+--DONE--
+
+
+Thu Apr 19 20:21:39 2018
+Thu Apr 19 20:25:29 2018
+Thu Apr 19 20:34:58 2018
+Thu Apr 19 20:36:13 2018
+Thu Apr 19 20:36:51 2018
+Thu Apr 19 20:39:18 2018
+Thu Apr 19 20:40:05 2018
+Thu Apr 19 20:40:38 2018
+Thu Apr 19 20:41:25 2018
+Thu Apr 19 20:41:59 2018
+Thu Apr 19 20:42:25 2018
+Thu Apr 19 20:42:59 2018
+Thu Apr 19 20:43:45 2018
+Thu Apr 19 20:44:03 2018
+
+--DONE--
+
+
+Thu Apr 19 20:44:51 2018
+Thu Apr 19 20:47:17 2018
+Thu Apr 19 20:47:34 2018
+
+--DONE--
+
+
+Thu Apr 19 20:50:15 2018
+Thu Apr 19 20:50:31 2018
+
+--DONE--
+
+
+Thu Apr 19 20:51:59 2018
+Thu Apr 19 20:52:15 2018
+
+--DONE--
+
+
+Thu Apr 19 21:09:52 2018
+Thu Apr 19 21:10:08 2018
+
+--DONE--
+
+
+Thu Apr 19 21:18:59 2018
+Thu Apr 19 21:19:17 2018
+
+--DONE--
+
+
+Thu Apr 19 21:19:43 2018
+Thu Apr 19 21:19:59 2018
+
+--DONE--
+
+
+Thu Apr 19 21:23:35 2018
+Thu Apr 19 21:23:50 2018
+
+--DONE--
+
+
+Thu Apr 19 21:27:13 2018
+Thu Apr 19 21:27:23 2018
+
+--DONE--
+
+
+Thu Apr 19 21:28:53 2018
+Thu Apr 19 21:29:04 2018
+
+--DONE--
+
+
+Thu Apr 19 21:32:04 2018
+Thu Apr 19 21:32:14 2018
+
+--DONE--
+
+
+Thu Apr 19 21:34:38 2018
+Thu Apr 19 21:34:49 2018
+
+--DONE--
+
+
+Thu Apr 19 21:36:06 2018
+Thu Apr 19 21:36:36 2018
+Thu Apr 19 21:36:50 2018
+
+--DONE--
+
+
+Thu Apr 19 21:43:14 2018
+Thu Apr 19 21:45:18 2018
+Thu Apr 19 21:47:44 2018
+Thu Apr 19 21:47:56 2018
+Thu Apr 19 21:51:22 2018
+Thu Apr 19 21:53:21 2018
+Thu Apr 19 21:54:39 2018
+Thu Apr 19 22:02:51 2018
+Thu Apr 19 22:04:39 2018
+Thu Apr 19 22:05:26 2018
+Thu Apr 19 22:07:01 2018
+Thu Apr 19 22:09:10 2018
+Thu Apr 19 22:11:05 2018
+Thu Apr 19 22:11:46 2018
+Thu Apr 19 22:12:02 2018
+
+--DONE--
+
+
+Thu Apr 19 22:19:01 2018
+Thu Apr 19 22:19:41 2018
+Thu Apr 19 22:19:57 2018
+Thu Apr 19 22:20:42 2018
+Thu Apr 19 22:21:01 2018
+
+--DONE--
+
+
+Thu Apr 19 22:21:26 2018
+Thu Apr 19 22:22:25 2018
+Thu Apr 19 22:22:42 2018
+
+--DONE--
+
+
+Thu Apr 19 22:23:34 2018
+Thu Apr 19 22:23:46 2018
+
+--DONE--
+
+
+Thu Apr 19 22:36:30 2018
+Thu Apr 19 23:06:19 2018
+Thu Apr 19 23:08:23 2018
+Thu Apr 19 23:08:23 2018
+
+--DONE--
+
+
+Thu Apr 19 23:10:32 2018
+Thu Apr 19 23:10:33 2018
+
+--DONE--
+
+
+Thu Apr 19 23:11:00 2018
+Thu Apr 19 23:11:01 2018
+
+--DONE--
+
+
+Thu Apr 19 23:14:12 2018
+Thu Apr 19 23:14:13 2018
+
+--DONE--
+
+
+Thu Apr 19 23:14:44 2018
+Thu Apr 19 23:14:44 2018
+
+--DONE--
+
+
+Thu Apr 19 23:17:56 2018
+Thu Apr 19 23:17:56 2018
+
+--DONE--
+
+
+Thu Apr 19 23:18:38 2018
+Thu Apr 19 23:18:39 2018
+
+--DONE--
+
+
+Thu Apr 19 23:20:23 2018
+Thu Apr 19 23:20:23 2018
+
+--DONE--
+
+
+Thu Apr 19 23:24:58 2018
+Thu Apr 19 23:24:59 2018
+
+--DONE--
+
+
+Thu Apr 19 23:25:32 2018
+Thu Apr 19 23:25:32 2018
+
+--DONE--
+
+
+Thu Apr 19 23:28:33 2018
+Thu Apr 19 23:28:34 2018
+
+--DONE--
+
+
+Thu Apr 19 23:29:01 2018
+Thu Apr 19 23:29:02 2018
+
+--DONE--
+
+
+Thu Apr 19 23:32:34 2018
+Thu Apr 19 23:32:35 2018
+
+--DONE--
+
+
+Thu Apr 19 23:34:10 2018
+Thu Apr 19 23:34:11 2018
+
+--DONE--
+
+
+Thu Apr 19 23:34:48 2018
+Thu Apr 19 23:34:48 2018
+
+--DONE--
+
+
+Thu Apr 19 23:35:36 2018
+Thu Apr 19 23:35:36 2018
+
+--DONE--
+
+
+Thu Apr 19 23:44:34 2018
+Thu Apr 19 23:44:34 2018
+
+--DONE--
+
+
+Thu Apr 19 23:52:37 2018
+Thu Apr 19 23:52:38 2018
+
+--DONE--
+
+
+Thu Apr 19 23:53:53 2018
+Thu Apr 19 23:53:53 2018
+
+--DONE--
+
+
+Fri Apr 20 07:35:02 2018
+Fri Apr 20 07:35:02 2018
+
+--DONE--
+
+
+Fri Apr 20 07:41:47 2018
+Fri Apr 20 07:41:47 2018
+
+--DONE--
+
+
+Fri Apr 20 08:01:41 2018
+Fri Apr 20 08:01:42 2018
+
+--DONE--
+
+
+Fri Apr 20 08:02:56 2018
+Fri Apr 20 08:02:56 2018
+
+--DONE--
+
+
+Fri Apr 20 08:09:02 2018
+Fri Apr 20 08:09:03 2018
+
+--DONE--
+
+
+Fri Apr 20 08:09:31 2018
+Fri Apr 20 08:09:31 2018
+
+--DONE--
+
+
+Fri Apr 20 08:12:36 2018
+Fri Apr 20 08:12:36 2018
+
+--DONE--
+
+
+Fri Apr 20 08:15:23 2018
+Fri Apr 20 08:15:24 2018
+
+--DONE--
+
+
+Fri Apr 20 08:21:21 2018
+Fri Apr 20 08:21:21 2018
+
+--DONE--
+
+
+Fri Apr 20 08:22:21 2018
+Fri Apr 20 08:22:22 2018
+
+--DONE--
+
+
+Fri Apr 20 08:36:44 2018
+Fri Apr 20 08:36:45 2018
+
+--DONE--
+
+
+Fri Apr 20 08:40:20 2018
+Fri Apr 20 08:40:20 2018
+
+--DONE--
+
+
+Fri Apr 20 08:42:31 2018
+Fri Apr 20 08:42:31 2018
+
+--DONE--
+
+
+Fri Apr 20 08:46:54 2018
+Fri Apr 20 08:46:54 2018
+
+--DONE--
+
+
+Fri Apr 20 08:49:21 2018
+Fri Apr 20 08:49:21 2018
+
+--DONE--
+
+
+Fri Apr 20 08:49:46 2018
+Fri Apr 20 08:49:46 2018
+
+--DONE--
+
+
+Fri Apr 20 08:50:09 2018
+Fri Apr 20 08:50:09 2018
+
+--DONE--
+
+
+Fri Apr 20 08:51:43 2018
+Fri Apr 20 08:51:44 2018
+
+--DONE--
+
+
+Fri Apr 20 08:54:04 2018
+Fri Apr 20 08:54:04 2018
+
+--DONE--
+
+
+Fri Apr 20 08:56:55 2018
+Fri Apr 20 08:56:56 2018
+
+--DONE--
+
+
+Fri Apr 20 08:59:34 2018
+Fri Apr 20 08:59:35 2018
+
+--DONE--
+
+
+Fri Apr 20 09:01:38 2018
+Fri Apr 20 09:01:39 2018
+
+--DONE--
+
+
+Fri Apr 20 09:11:45 2018
+Fri Apr 20 09:11:46 2018
+
+--DONE--
+
+
+Fri Apr 20 09:12:54 2018
+Fri Apr 20 09:12:55 2018
+
+--DONE--
+
+
+Fri Apr 20 09:23:07 2018
+Fri Apr 20 09:23:08 2018
+
+--DONE--
+
+
+Fri Apr 20 09:29:54 2018
+Fri Apr 20 09:29:54 2018
+
+--DONE--
+
+
+Fri Apr 20 09:30:20 2018
+Fri Apr 20 09:30:21 2018
+
+--DONE--
+
+
+Fri Apr 20 09:33:18 2018
+Fri Apr 20 09:33:19 2018
+
+--DONE--
+
+
+Fri Apr 20 09:35:32 2018
+Fri Apr 20 09:35:32 2018
+
+--DONE--
+
+
+Fri Apr 20 09:37:35 2018
+Fri Apr 20 09:37:36 2018
+
+--DONE--
+
+
+Fri Apr 20 09:39:39 2018
+Fri Apr 20 09:39:39 2018
+
+--DONE--
+
+
+Fri Apr 20 09:44:33 2018
+Fri Apr 20 09:44:34 2018
+
+--DONE--
+
+
+Wed Apr 25 10:25:04 2018
+Wed Apr 25 10:25:04 2018
+
+--DONE--
+
+
+Wed Apr 25 10:27:18 2018
+Wed Apr 25 10:27:18 2018
+
+--DONE--
+
+
+Wed Apr 25 10:47:21 2018
+Wed Apr 25 10:47:22 2018
+
+--DONE--
+
+
+Wed Apr 25 10:52:01 2018
+Wed Apr 25 10:52:01 2018
+
+--DONE--
+
+
+Wed Apr 25 10:55:01 2018
+Wed Apr 25 10:55:01 2018
+
+--DONE--
+
+
+Wed Apr 25 11:17:04 2018
+Wed Apr 25 11:17:04 2018
+
+--DONE--
+
+
+Wed Apr 25 11:18:14 2018
+Wed Apr 25 11:18:15 2018
+
+--DONE--
+
+
+Wed Apr 25 11:19:24 2018
+Wed Apr 25 11:19:25 2018
+
+--DONE--
+
+
+Sun Apr 29 16:50:56 2018
+Sun Apr 29 16:50:57 2018
+
+--DONE--
+
+
+Sun Apr 29 16:51:21 2018
+Sun Apr 29 16:51:21 2018
+
+--DONE--
+
+
+Sun Apr 29 16:55:20 2018
+Sun Apr 29 16:55:21 2018
+
+--DONE--
+
+
+Sun Apr 29 16:56:16 2018
+Sun Apr 29 16:56:17 2018
+
+--DONE--
+
+
+Sun Apr 29 16:57:38 2018
+Sun Apr 29 16:57:39 2018
+
+--DONE--
+
+
+Sun Apr 29 17:05:08 2018
+Sun Apr 29 17:05:09 2018
+
+--DONE--
+
+
+Sun Apr 29 17:07:21 2018
+Sun Apr 29 17:07:22 2018
+
+--DONE--
+
+
+Sun Apr 29 17:08:44 2018
+Sun Apr 29 17:08:45 2018
+
+--DONE--
+
+
+Sun Apr 29 19:28:38 2018
+Sun Apr 29 19:28:38 2018
+
+--DONE--
+
+
+Sun Apr 29 19:29:30 2018
+Sun Apr 29 19:29:30 2018
+
+--DONE--
+
+
+Sun Apr 29 19:32:34 2018
+Sun Apr 29 19:32:35 2018
+
+--DONE--
+
+
+Sun Apr 29 19:32:44 2018
+Sun Apr 29 19:32:45 2018
+
+--DONE--
+
+
+Sun Apr 29 19:35:12 2018
+Sun Apr 29 19:35:13 2018
+
+--DONE--
+
+
+Sun Apr 29 19:36:40 2018
+Sun Apr 29 19:36:40 2018
+
+--DONE--
+
+
+Sun Apr 29 19:36:54 2018
+Sun Apr 29 19:36:54 2018
+
+--DONE--
+
+
+Sun Apr 29 19:39:38 2018
+Sun Apr 29 19:39:39 2018
+
+--DONE--
+
+
+Sun Apr 29 19:40:06 2018
+Sun Apr 29 19:40:07 2018
+
+--DONE--
+
+
+Mon Apr 30 13:28:08 2018
+Mon Apr 30 13:28:08 2018
+
+--DONE--
+
+
+Mon Apr 30 13:30:23 2018
+Mon Apr 30 13:30:23 2018
+
+--DONE--
+
+
+Mon Apr 30 13:44:33 2018
+Mon Apr 30 13:44:36 2018
+
+--DONE--
+
+
+Mon Apr 30 13:45:14 2018
+Mon Apr 30 13:45:15 2018
+
+--DONE--
+
+
+Mon Apr 30 13:57:05 2018
+Mon Apr 30 13:57:06 2018
+
+--DONE--
+
+
+Mon Apr 30 13:57:13 2018
+Mon Apr 30 13:57:13 2018
+
+--DONE--
+
+
+Mon Apr 30 13:57:53 2018
+Mon Apr 30 13:57:56 2018
+
+--DONE--
+
+
+Mon Apr 30 14:35:04 2018
+Mon Apr 30 14:35:49 2018
+Mon Apr 30 14:40:27 2018
+Mon Apr 30 14:41:21 2018
+Mon Apr 30 14:41:52 2018
+Mon Apr 30 15:00:23 2018
+Mon Apr 30 15:04:14 2018
+Mon Apr 30 15:04:39 2018
+Mon Apr 30 15:05:19 2018
+Mon Apr 30 15:06:57 2018
+Mon Apr 30 15:06:58 2018
+
+--DONE--
+
+
+Mon Apr 30 15:08:34 2018
+Mon Apr 30 15:08:35 2018
+
+--DONE--
+
+
+Mon Apr 30 15:51:49 2018
+Mon Apr 30 15:53:53 2018
+Mon Apr 30 15:53:55 2018
+
+--DONE--
+
+
+Mon Apr 30 15:55:26 2018
+Mon Apr 30 15:55:27 2018
+
+--DONE--
+
+
+Mon Apr 30 15:58:29 2018
+Mon Apr 30 15:58:31 2018
+
+--DONE--
+
+
+Mon Apr 30 15:58:50 2018
+Mon Apr 30 15:58:51 2018
+
+--DONE--
+
+
+Mon Apr 30 15:59:52 2018
+Mon Apr 30 15:59:54 2018
+
+--DONE--
+
+
+Mon Apr 30 16:03:35 2018
+Mon Apr 30 16:03:37 2018
+
+--DONE--
+
+
+Mon Apr 30 16:05:05 2018
+Mon Apr 30 16:05:07 2018
+
+--DONE--
+
+
+Mon Apr 30 17:59:16 2018
+Mon Apr 30 17:59:16 2018
+
+--DONE--
+
+
+Mon Apr 30 18:00:39 2018
+Mon Apr 30 18:00:39 2018
+
+--DONE--
+
+
+Mon Apr 30 18:03:14 2018
+Mon Apr 30 18:03:15 2018
+
+--DONE--
+
+
+Mon Apr 30 18:05:14 2018
+Mon Apr 30 18:05:14 2018
+
+--DONE--
+
+
+Tue May  1 00:00:10 2018
+Tue May  1 00:00:11 2018
+
+--DONE--
+
+
+Tue May  1 00:00:51 2018
+Tue May  1 00:00:52 2018
+
+--DONE--
+
+
+Tue May  1 00:03:02 2018
+Tue May  1 00:03:03 2018
+
+--DONE--
+
+
+Tue May  1 09:41:00 2018
+Tue May  1 09:41:01 2018
+
+--DONE--
+
+
+Tue May  1 09:42:24 2018
+Tue May  1 09:42:24 2018
+
+--DONE--
+
+
+Tue May  1 09:43:24 2018
+Tue May  1 09:43:24 2018
+
+--DONE--
+
+
+Tue May  1 09:45:43 2018
+Tue May  1 09:45:43 2018
+
+--DONE--
+
+
+Tue May  1 09:49:55 2018
+Tue May  1 09:49:56 2018
+
+--DONE--
+
+
+Tue May  1 09:50:35 2018
+Tue May  1 09:50:36 2018
+
+--DONE--
+
+
+Tue May  1 09:51:25 2018
+Tue May  1 09:51:26 2018
+
+--DONE--
+
+
+Tue May  1 09:53:02 2018
+Tue May  1 09:53:03 2018
+
+--DONE--
+
+
+Tue May  1 09:59:08 2018
+Tue May  1 09:59:08 2018
+
+--DONE--
+
+
+Tue May  1 09:59:57 2018
+Tue May  1 09:59:57 2018
+
+--DONE--
+
+
+Tue May  1 10:00:37 2018
+Tue May  1 10:00:38 2018
+
+--DONE--
+
+
+Tue May  1 10:05:35 2018
+Tue May  1 10:05:35 2018
+
+--DONE--
+
+
+Tue May  1 10:06:21 2018
+Tue May  1 10:06:22 2018
+
+--DONE--
+
+
+Tue May  1 10:08:00 2018
+Tue May  1 10:08:01 2018
+
+--DONE--
+
+
+Tue May  1 10:08:49 2018
+Tue May  1 10:08:49 2018
+
+--DONE--
+
+
+Tue May  1 10:10:17 2018
+Tue May  1 10:10:18 2018
+
+--DONE--
+
+
+Tue May  1 10:25:38 2018
+Tue May  1 10:25:39 2018
+
+--DONE--
+
+
+Tue May  1 10:40:26 2018
+Tue May  1 10:40:27 2018
+
+--DONE--
+
+
+Tue May  1 10:42:28 2018
+Tue May  1 10:42:28 2018
+
+--DONE--
+
+
+Tue May  1 10:44:28 2018
+Tue May  1 10:44:29 2018
+
+--DONE--
+
+
+Tue May  1 10:54:01 2018
+Tue May  1 10:54:02 2018
+
+--DONE--
+
+
+Tue May  1 10:54:49 2018
+Tue May  1 10:54:50 2018
+
+--DONE--
+
+
+Tue May  1 11:10:22 2018
+Tue May  1 11:10:23 2018
+
+--DONE--
+
+
+Tue May  1 11:11:34 2018
+Tue May  1 11:11:34 2018
+
+--DONE--
+
+
+Tue May  1 11:15:22 2018
+Tue May  1 11:15:22 2018
+
+--DONE--
+
+
+Tue May  1 11:24:17 2018
+Tue May  1 11:24:18 2018
+
+--DONE--
+
+
+Tue May  1 11:35:53 2018
+Tue May  1 11:35:54 2018
+
+--DONE--
+
+
+Tue May  1 11:40:07 2018
+Tue May  1 11:40:07 2018
+
+--DONE--
+
+
+Tue May  1 11:41:01 2018
+Tue May  1 11:41:01 2018
+
+--DONE--
+
+
+Tue May  1 11:41:22 2018
+Tue May  1 11:41:22 2018
+
+--DONE--
+
+
+Tue May  1 11:41:42 2018
+Tue May  1 11:41:42 2018
+
+--DONE--
+
+
+Tue May  1 13:02:39 2018
+Tue May  1 13:02:39 2018
+
+--DONE--
+
+
+Tue May  1 13:03:37 2018
+Tue May  1 13:03:38 2018
+
+--DONE--
+
+
+Tue May  1 13:08:20 2018
+Tue May  1 13:08:21 2018
+
+--DONE--
+
+
+Tue May  1 13:14:15 2018
+Tue May  1 13:14:15 2018
+
+--DONE--
+
+
+Tue May  1 13:24:22 2018
+Tue May  1 13:24:22 2018
+
+--DONE--
+
+
+Tue May  1 14:48:43 2018
+Tue May  1 14:48:44 2018
+
+--DONE--
+
+
+Tue May  1 14:50:43 2018
+Tue May  1 14:50:43 2018
+
+--DONE--
+
+
+Tue May  1 16:14:34 2018
+Tue May  1 16:14:35 2018
+
+--DONE--
+
+
+Tue May  1 16:14:39 2018
+Tue May  1 16:14:39 2018
+
+--DONE--
+
+
+Tue May  1 16:14:43 2018
+Tue May  1 16:14:43 2018
+
+--DONE--
+
+
+Tue May  1 16:14:47 2018
+Tue May  1 16:14:47 2018
+
+--DONE--
+
+
+Tue May  1 16:14:51 2018
+Tue May  1 16:14:52 2018
+
+--DONE--
+
+
+Tue May  1 16:14:55 2018
+Tue May  1 16:14:56 2018
+
+--DONE--
+
+
+Tue May  1 16:15:46 2018
+Tue May  1 16:15:46 2018
+
+--DONE--
+
+
+Tue May  1 16:15:50 2018
+Tue May  1 16:15:50 2018
+
+--DONE--
+
+
+Tue May  1 16:15:54 2018
+Tue May  1 16:15:55 2018
+
+--DONE--
+
+
+Tue May  1 16:15:58 2018
+Tue May  1 16:15:59 2018
+
+--DONE--
+
+
+Tue May  1 16:16:02 2018
+Tue May  1 16:16:03 2018
+
+--DONE--
+
+
+Tue May  1 16:16:07 2018
+Tue May  1 16:16:07 2018
+
+--DONE--
+
+
+Thu May  3 21:14:46 2018
+Thu May  3 21:14:47 2018
+
+--DONE--
+
+
+Thu May  3 21:15:46 2018
+Thu May  3 21:15:47 2018
+
+--DONE--
+
+
+Thu May  3 21:16:54 2018
+Thu May  3 21:16:55 2018
+
+--DONE--
+
+
+Thu May  3 21:18:24 2018
+Thu May  3 21:18:24 2018
+
+--DONE--
+
+
+Thu May  3 21:19:22 2018
+Thu May  3 21:19:23 2018
+
+--DONE--
+
+
+Thu May  3 21:25:40 2018
+Thu May  3 21:25:41 2018
+
+--DONE--
+
+
+Thu May  3 21:41:24 2018
+Thu May  3 21:41:25 2018
+
+--DONE--
+
+
+Thu May  3 21:47:53 2018
+Thu May  3 21:47:53 2018
+
+--DONE--
+
+
+Thu May  3 21:50:08 2018
+Thu May  3 21:50:08 2018
+
+--DONE--
+
+
+Thu May  3 21:51:09 2018
+Thu May  3 21:51:10 2018
+
+--DONE--
+
+
+Thu May  3 21:53:28 2018
+Thu May  3 21:53:29 2018
+
+--DONE--
+
+
+Fri May  4 09:58:47 2018
+Fri May  4 10:04:56 2018
+Fri May  4 10:54:00 2018
+Fri May  4 10:54:01 2018
+
+--DONE--
+
+
+Fri May  4 10:56:21 2018
+Fri May  4 10:56:21 2018
+
+--DONE--
+
+
+Fri May  4 11:07:01 2018
+Fri May  4 11:07:01 2018
+
+--DONE--
+
+
+Fri May  4 11:18:39 2018
+Fri May  4 11:20:01 2018
+Fri May  4 11:23:39 2018
+Fri May  4 11:23:40 2018
+
+--DONE--
+
+
+Fri May  4 11:34:53 2018
+Fri May  4 11:34:53 2018
+
+--DONE--
+
+
+Fri May  4 11:43:49 2018
+Fri May  4 11:43:49 2018
+
+--DONE--
+
+
+Fri May  4 11:52:49 2018
+Fri May  4 11:52:50 2018
+
+--DONE--
+
+
+Fri May  4 11:56:57 2018
+Fri May  4 12:05:00 2018
+Fri May  4 12:05:01 2018
+
+--DONE--
+
+
+Fri May  4 12:06:22 2018
+Fri May  4 12:06:22 2018
+
+--DONE--
+
+
+Fri May  4 12:15:29 2018
+Fri May  4 12:15:29 2018
+
+--DONE--
+
+

@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>script-KTHID_to_last_firstname_list_py</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Script&nbsp;KTHID_to_last_firstname_list_py
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="script-KTHID_to_last_firstname_list_py-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="script-KTHID_to_last_firstname_list_py-module.html">Script script-KTHID_to_last_firstname_list_py</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python2.6</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># ./KTHID-to-last-firstname-list.py list_of_KTHIDs</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"># outputs a CSV file with columns: KTHID,Last_name,First_name</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># G. Q. Maguire Jr.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment"># 2016.12.26</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">csv</tt><tt class="py-op">,</tt> <tt class="py-name">requests</tt><tt class="py-op">,</tt> <tt class="py-name">time</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">pprint</tt> <tt class="py-keyword">import</tt> <tt class="py-name">pprint</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">optparse</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">io</tt> <tt class="py-keyword">import</tt> <tt class="py-name">StringIO</tt><tt class="py-op">,</tt> <tt class="py-name">BytesIO</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable augment_list_of_students_in_course_with_group.log_file=augment_list_of_students_in_course_with_group-module.html#log_file,Variable augument_gradebook.log_file=augument_gradebook-module.html#log_file,Variable augument_list_students_in_course.log_file=augument_list_students_in_course-module.html#log_file,Variable ccreate.log_file=ccreate-module.html#log_file,Variable cdel.log_file=cdel-module.html#log_file,Variable cget.log_file=cget-module.html#log_file,Variable cgetall.log_file=cgetall-module.html#log_file,Variable compute_list_of_KTH_play_URLs_on_pages_in_course.log_file=compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#log_file,Variable compute_list_of_KTH_play_URLs_on_pages_in_course3.log_file=compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#log_file,Variable compute_list_of_URLs_in_text_on_pages_in_course.log_file=compute_list_of_URLs_in_text_on_pages_in_course-module.html#log_file,Variable compute_list_of_URLs_on_pages_in_course.log_file=compute_list_of_URLs_on_pages_in_course-module.html#log_file,Variable compute_list_of_word_on_pages_in_course.log_file=compute_list_of_word_on_pages_in_course-module.html#log_file,Variable compute_stats_for_pages_in_course.log_file=compute_stats_for_pages_in_course-module.html#log_file,Variable cput.log_file=cput-module.html#log_file,Variable create_sections_in_course.log_file=create_sections_in_course-module.html#log_file,Variable delete_page.log_file=delete_page-module.html#log_file,Variable delete_section_by_id.log_file=delete_section_by_id-module.html#log_file,Variable export_gradebook.log_file=export_gradebook-module.html#log_file,Variable extract_text_from_pages_in_course.log_file=extract_text_from_pages_in_course-module.html#log_file,Variable insert_appointment.log_file=insert_appointment-module.html#log_file,Variable insert_appointment_by_group.log_file=insert_appointment_by_group-module.html#log_file,Variable insert_formula_questions.log_file=insert_formula_questions-module.html#log_file,Variable insert_page2.log_file=insert_page2-module.html#log_file,Variable insert_quiz_from_spreadsheet.log_file=insert_quiz_from_spreadsheet-module.html#log_file,Variable list_course_analytics.log_file=list_course_analytics-module.html#log_file,Variable list_groups_in_course.log_file=list_groups_in_course-module.html#log_file,Variable list_groups_in_course2.log_file=list_groups_in_course2-module.html#log_file,Variable list_my_appointments.log_file=list_my_appointments-module.html#log_file,Variable list_pages.log_file=list_pages-module.html#log_file,Variable list_quizzes.log_file=list_quizzes-module.html#log_file,Variable list_sections_in_course.log_file=list_sections_in_course-module.html#log_file,Variable list_students_and_observers_in_course.log_file=list_students_and_observers_in_course-module.html#log_file,Variable list_students_in_course.log_file=list_students_in_course-module.html#log_file,Variable list_submissions.log_file=list_submissions-module.html#log_file,Variable list_users_in_course.log_file=list_users_in_course-module.html#log_file,Variable list_users_in_course_with_students_email.log_file=list_users_in_course_with_students_email-module.html#log_file,Variable list_your_courses.log_file=list_your_courses-module.html#log_file,Variable list_your_courses2.log_file=list_your_courses2-module.html#log_file,Variable make_appointment.log_file=make_appointment-module.html#log_file,Variable mine_for_urls_in_page.log_file=mine_for_urls_in_page-module.html#log_file,Variable place_students_in_sections_in_course.log_file=place_students_in_sections_in_course-module.html#log_file,Variable script-KTHID_to_last_firstname_list_py.log_file=script-KTHID_to_last_firstname_list_py-module.html#log_file,Variable script-assign_assessor_as_peer_reviewer_py.log_file=script-assign_assessor_as_peer_reviewer_py-module.html#log_file,Variable script-cgetall_group_pages_py.log_file=script-cgetall_group_pages_py-module.html#log_file,Variable script-copy_peer_reviewer_assignments_py.log_file=script-copy_peer_reviewer_assignments_py-module.html#log_file,Variable script-custom_column_visibility_py.log_file=script-custom_column_visibility_py-module.html#log_file,Variable script-delete_all_course_announcements_py.log_file=script-delete_all_course_announcements_py-module.html#log_file,Variable script-delete_custom_column_py.log_file=script-delete_custom_column_py-module.html#log_file,Variable script-export_course_announcements_py.log_file=script-export_course_announcements_py-module.html#log_file,Variable script-export_gradebook_with_score_py.log_file=script-export_gradebook_with_score_py-module.html#log_file,Variable script-export_list_of_all_accounts_py.log_file=script-export_list_of_all_accounts_py-module.html#log_file,Variable script-export_list_of_all_courses_py.log_file=script-export_list_of_all_courses_py-module.html#log_file,Variable script-export_list_of_all_courses_with_account_info_py.log_file=script-export_list_of_all_courses_with_account_info_py-module.html#log_file,Variable script-insert_column_py.log_file=script-insert_column_py-module.html#log_file,Variable script-insert_custom_columns_from_spreadsheet_py.log_file=script-insert_custom_columns_from_spreadsheet_py-module.html#log_file,Variable script-insert_custom_columns_from_spreadsheet_with_dates_py.log_file=script-insert_custom_columns_from_spreadsheet_with_dates_py-module.html#log_file,Variable script-list_all_custom_column_entries_py.log_file=script-list_all_custom_column_entries_py-module.html#log_file,Variable script-list_assignments_py.log_file=script-list_assignments_py-module.html#log_file,Variable script-list_course_announcements_py.log_file=script-list_course_announcements_py-module.html#log_file,Variable script-list_course_discussion_topics_py.log_file=script-list_course_discussion_topics_py-module.html#log_file,Variable script-list_custom_column_entries_py.log_file=script-list_custom_column_entries_py-module.html#log_file,Variable script-list_custom_columns_py.log_file=script-list_custom_columns_py-module.html#log_file,Variable script-list_external_tools_for_course_py.log_file=script-list_external_tools_for_course_py-module.html#log_file,Variable script-list_files_py.log_file=script-list_files_py-module.html#log_file,Variable script-list_gradebook_history_feed_py.log_file=script-list_gradebook_history_feed_py-module.html#log_file,Variable script-list_modules_py.log_file=script-list_modules_py-module.html#log_file,Variable script-list_peer_reviewing_assignments_py.log_file=script-list_peer_reviewing_assignments_py-module.html#log_file,Variable script-make_quiz_from_assignment_py.log_file=script-make_quiz_from_assignment_py-module.html#log_file,Variable script-modify_external_tool_entry_py.log_file=script-modify_external_tool_entry_py-module.html#log_file,Variable script-users_in_course_improved2_py.log_file=script-users_in_course_improved2_py-module.html#log_file,Variable script-users_in_course_improved_py.log_file=script-users_in_course_improved_py-module.html#log_file,Variable script-users_in_course_py.log_file=script-users_in_course_py-module.html#log_file,Variable update_page_example1.log_file=update_page_example1-module.html#log_file"><a title="augment_list_of_students_in_course_with_group.log_file
+augument_gradebook.log_file
+augument_list_students_in_course.log_file
+ccreate.log_file
+cdel.log_file
+cget.log_file
+cgetall.log_file
+compute_list_of_KTH_play_URLs_on_pages_in_course.log_file
+compute_list_of_KTH_play_URLs_on_pages_in_course3.log_file
+compute_list_of_URLs_in_text_on_pages_in_course.log_file
+compute_list_of_URLs_on_pages_in_course.log_file
+compute_list_of_word_on_pages_in_course.log_file
+compute_stats_for_pages_in_course.log_file
+cput.log_file
+create_sections_in_course.log_file
+delete_page.log_file
+delete_section_by_id.log_file
+export_gradebook.log_file
+extract_text_from_pages_in_course.log_file
+insert_appointment.log_file
+insert_appointment_by_group.log_file
+insert_formula_questions.log_file
+insert_page2.log_file
+insert_quiz_from_spreadsheet.log_file
+list_course_analytics.log_file
+list_groups_in_course.log_file
+list_groups_in_course2.log_file
+list_my_appointments.log_file
+list_pages.log_file
+list_quizzes.log_file
+list_sections_in_course.log_file
+list_students_and_observers_in_course.log_file
+list_students_in_course.log_file
+list_submissions.log_file
+list_users_in_course.log_file
+list_users_in_course_with_students_email.log_file
+list_your_courses.log_file
+list_your_courses2.log_file
+make_appointment.log_file
+mine_for_urls_in_page.log_file
+place_students_in_sections_in_course.log_file
+script-KTHID_to_last_firstname_list_py.log_file
+script-assign_assessor_as_peer_reviewer_py.log_file
+script-cgetall_group_pages_py.log_file
+script-copy_peer_reviewer_assignments_py.log_file
+script-custom_column_visibility_py.log_file
+script-delete_all_course_announcements_py.log_file
+script-delete_custom_column_py.log_file
+script-export_course_announcements_py.log_file
+script-export_gradebook_with_score_py.log_file
+script-export_list_of_all_accounts_py.log_file
+script-export_list_of_all_courses_py.log_file
+script-export_list_of_all_courses_with_account_info_py.log_file
+script-insert_column_py.log_file
+script-insert_custom_columns_from_spreadsheet_py.log_file
+script-insert_custom_columns_from_spreadsheet_with_dates_py.log_file
+script-list_all_custom_column_entries_py.log_file
+script-list_assignments_py.log_file
+script-list_course_announcements_py.log_file
+script-list_course_discussion_topics_py.log_file
+script-list_custom_column_entries_py.log_file
+script-list_custom_columns_py.log_file
+script-list_external_tools_for_course_py.log_file
+script-list_files_py.log_file
+script-list_gradebook_history_feed_py.log_file
+script-list_modules_py.log_file
+script-list_peer_reviewing_assignments_py.log_file
+script-make_quiz_from_assignment_py.log_file
+script-modify_external_tool_entry_py.log_file
+script-users_in_course_improved2_py.log_file
+script-users_in_course_improved_py.log_file
+script-users_in_course_py.log_file
+update_page_example1.log_file" class="py-name" href="#" onclick="return doclink('link-0', 'log_file', 'link-0');">log_file</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'log.txt'</tt> <tt class="py-comment"># a log file. it will log things</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="write_to_log"></a><div id="write_to_log-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="write_to_log-toggle" onclick="return toggle('write_to_log');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="script-KTHID_to_last_firstname_list_py-module.html#write_to_log">write_to_log</a><tt class="py-op">(</tt><tt class="py-param">message</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="write_to_log-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="write_to_log-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">       <tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt id="link-1" class="py-name"><a title="augment_list_of_students_in_course_with_group.log_file
+augument_gradebook.log_file
+augument_list_students_in_course.log_file
+ccreate.log_file
+cdel.log_file
+cget.log_file
+cgetall.log_file
+compute_list_of_KTH_play_URLs_on_pages_in_course.log_file
+compute_list_of_KTH_play_URLs_on_pages_in_course3.log_file
+compute_list_of_URLs_in_text_on_pages_in_course.log_file
+compute_list_of_URLs_on_pages_in_course.log_file
+compute_list_of_word_on_pages_in_course.log_file
+compute_stats_for_pages_in_course.log_file
+cput.log_file
+create_sections_in_course.log_file
+delete_page.log_file
+delete_section_by_id.log_file
+export_gradebook.log_file
+extract_text_from_pages_in_course.log_file
+insert_appointment.log_file
+insert_appointment_by_group.log_file
+insert_formula_questions.log_file
+insert_page2.log_file
+insert_quiz_from_spreadsheet.log_file
+list_course_analytics.log_file
+list_groups_in_course.log_file
+list_groups_in_course2.log_file
+list_my_appointments.log_file
+list_pages.log_file
+list_quizzes.log_file
+list_sections_in_course.log_file
+list_students_and_observers_in_course.log_file
+list_students_in_course.log_file
+list_submissions.log_file
+list_users_in_course.log_file
+list_users_in_course_with_students_email.log_file
+list_your_courses.log_file
+list_your_courses2.log_file
+make_appointment.log_file
+mine_for_urls_in_page.log_file
+place_students_in_sections_in_course.log_file
+script-KTHID_to_last_firstname_list_py.log_file
+script-assign_assessor_as_peer_reviewer_py.log_file
+script-cgetall_group_pages_py.log_file
+script-copy_peer_reviewer_assignments_py.log_file
+script-custom_column_visibility_py.log_file
+script-delete_all_course_announcements_py.log_file
+script-delete_custom_column_py.log_file
+script-export_course_announcements_py.log_file
+script-export_gradebook_with_score_py.log_file
+script-export_list_of_all_accounts_py.log_file
+script-export_list_of_all_courses_py.log_file
+script-export_list_of_all_courses_with_account_info_py.log_file
+script-insert_column_py.log_file
+script-insert_custom_columns_from_spreadsheet_py.log_file
+script-insert_custom_columns_from_spreadsheet_with_dates_py.log_file
+script-list_all_custom_column_entries_py.log_file
+script-list_assignments_py.log_file
+script-list_course_announcements_py.log_file
+script-list_course_discussion_topics_py.log_file
+script-list_custom_column_entries_py.log_file
+script-list_custom_columns_py.log_file
+script-list_external_tools_for_course_py.log_file
+script-list_files_py.log_file
+script-list_gradebook_history_feed_py.log_file
+script-list_modules_py.log_file
+script-list_peer_reviewing_assignments_py.log_file
+script-make_quiz_from_assignment_py.log_file
+script-modify_external_tool_entry_py.log_file
+script-users_in_course_improved2_py.log_file
+script-users_in_course_improved_py.log_file
+script-users_in_course_py.log_file
+update_page_example1.log_file" class="py-name" href="#" onclick="return doclink('link-1', 'log_file', 'link-0');">log_file</a></tt><tt class="py-op">,</tt> <tt class="py-string">'a'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">log</tt><tt class="py-op">:</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">              <tt class="py-name">log</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-name">message</tt> <tt class="py-op">+</tt> <tt class="py-string">"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">              <tt class="py-name">pprint</tt><tt class="py-op">(</tt><tt class="py-name">message</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">commands</tt> <tt class="py-keyword">import</tt> <tt class="py-name">getoutput</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">base64</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="gqm_extract"></a><div id="gqm_extract-def"><a name="L31"></a><tt class="py-lineno"> 31</tt> <a class="py-toggle" href="#" id="gqm_extract-toggle" onclick="return toggle('gqm_extract');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="script-KTHID_to_last_firstname_list_py-module.html#gqm_extract">gqm_extract</a><tt class="py-op">(</tt><tt class="py-param">key</tt><tt class="py-op">,</tt> <tt class="py-param">ldap_response</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="gqm_extract-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="gqm_extract-expanded"><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">       <tt class="py-name">lines</tt><tt class="py-op">=</tt><tt class="py-name">ldap_response</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">'\n'</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">       <tt class="py-keyword">for</tt> <tt class="py-name">l</tt> <tt class="py-keyword">in</tt> <tt class="py-name">lines</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">              <tt class="py-name">wl</tt><tt class="py-op">=</tt><tt class="py-name">l</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">"\r"</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">              <tt class="py-comment"># check for base64 encoded name (indicated by a key with two colons)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">              <tt class="py-name">keyb64</tt><tt class="py-op">=</tt><tt class="py-name">key</tt><tt class="py-op">+</tt><tt class="py-string">':'</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">              <tt class="py-keyword">if</tt> <tt class="py-name">wl</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-name">keyb64</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">                     <tt class="py-keyword">return</tt> <tt class="py-name">base64</tt><tt class="py-op">.</tt><tt class="py-name">b64decode</tt><tt class="py-op">(</tt><tt class="py-name">wl</tt><tt class="py-op">[</tt><tt class="py-name">wl</tt><tt class="py-op">.</tt><tt class="py-name">find</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-number">2</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">              <tt class="py-keyword">if</tt> <tt class="py-name">wl</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                     <tt class="py-keyword">return</tt> <tt class="py-name">wl</tt><tt class="py-op">[</tt><tt class="py-name">wl</tt><tt class="py-op">.</tt><tt class="py-name">find</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="lookup_names"></a><div id="lookup_names-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="lookup_names-toggle" onclick="return toggle('lookup_names');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="script-KTHID_to_last_firstname_list_py-module.html#lookup_names">lookup_names</a><tt class="py-op">(</tt><tt class="py-param">list_of_names_file</tt><tt class="py-op">,</tt> <tt class="py-param">augmented_list_of_names_file</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="lookup_names-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="lookup_names-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">augmented_list_of_names_file</tt><tt class="py-op">,</tt> <tt class="py-string">'w'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">outfile</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-comment">#with open(list_of_names_file, 'r', encoding='utf-8') as infile:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">list_of_names_file</tt><tt class="py-op">,</tt> <tt class="py-string">'r'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">infile</tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">            <tt id="link-2" class="py-name" targets="Variable augment_list_of_students_in_course_with_group.header=augment_list_of_students_in_course_with_group-module.html#header,Variable ccreate.header=ccreate-module.html#header,Variable cdel.header=cdel-module.html#header,Variable cget.header=cget-module.html#header,Variable cgetall.header=cgetall-module.html#header,Variable compute_list_of_KTH_play_URLs_on_pages_in_course.header=compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#header,Variable compute_list_of_KTH_play_URLs_on_pages_in_course3.header=compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#header,Variable compute_list_of_URLs_in_text_on_pages_in_course.header=compute_list_of_URLs_in_text_on_pages_in_course-module.html#header,Variable compute_list_of_URLs_on_pages_in_course.header=compute_list_of_URLs_on_pages_in_course-module.html#header,Variable compute_list_of_word_on_pages_in_course.header=compute_list_of_word_on_pages_in_course-module.html#header,Variable compute_stats_for_pages_in_course.header=compute_stats_for_pages_in_course-module.html#header,Variable cput.header=cput-module.html#header,Variable create_sections_in_course.header=create_sections_in_course-module.html#header,Variable delete_page.header=delete_page-module.html#header,Variable delete_section_by_id.header=delete_section_by_id-module.html#header,Variable export_gradebook.header=export_gradebook-module.html#header,Variable extract_text_from_pages_in_course.header=extract_text_from_pages_in_course-module.html#header,Variable insert_appointment.header=insert_appointment-module.html#header,Variable insert_appointment_by_group.header=insert_appointment_by_group-module.html#header,Variable insert_formula_questions.header=insert_formula_questions-module.html#header,Variable insert_page2.header=insert_page2-module.html#header,Variable insert_quiz_from_spreadsheet.header=insert_quiz_from_spreadsheet-module.html#header,Variable list_course_analytics.header=list_course_analytics-module.html#header,Variable list_groups_in_course.header=list_groups_in_course-module.html#header,Variable list_groups_in_course2.header=list_groups_in_course2-module.html#header,Variable list_my_appointments.header=list_my_appointments-module.html#header,Variable list_pages.header=list_pages-module.html#header,Variable list_quizzes.header=list_quizzes-module.html#header,Variable list_sections_in_course.header=list_sections_in_course-module.html#header,Variable list_students_and_observers_in_course.header=list_students_and_observers_in_course-module.html#header,Variable list_students_in_course.header=list_students_in_course-module.html#header,Variable list_submissions.header=list_submissions-module.html#header,Variable list_users_in_course.header=list_users_in_course-module.html#header,Variable list_users_in_course_with_students_email.header=list_users_in_course_with_students_email-module.html#header,Variable list_your_courses.header=list_your_courses-module.html#header,Variable list_your_courses2.header=list_your_courses2-module.html#header,Variable make_appointment.header=make_appointment-module.html#header,Variable mine_for_urls_in_page.header=mine_for_urls_in_page-module.html#header,Variable place_students_in_sections_in_course.header=place_students_in_sections_in_course-module.html#header,Variable script-assign_assessor_as_peer_reviewer_py.header=script-assign_assessor_as_peer_reviewer_py-module.html#header,Variable script-cgetall_group_pages_py.header=script-cgetall_group_pages_py-module.html#header,Variable script-copy_peer_reviewer_assignments_py.header=script-copy_peer_reviewer_assignments_py-module.html#header,Variable script-custom_column_visibility_py.header=script-custom_column_visibility_py-module.html#header,Variable script-delete_all_course_announcements_py.header=script-delete_all_course_announcements_py-module.html#header,Variable script-delete_custom_column_py.header=script-delete_custom_column_py-module.html#header,Variable script-export_course_announcements_py.header=script-export_course_announcements_py-module.html#header,Variable script-export_gradebook_with_score_py.header=script-export_gradebook_with_score_py-module.html#header,Variable script-export_list_of_all_accounts_py.header=script-export_list_of_all_accounts_py-module.html#header,Variable script-export_list_of_all_courses_py.header=script-export_list_of_all_courses_py-module.html#header,Variable script-export_list_of_all_courses_with_account_info_py.header=script-export_list_of_all_courses_with_account_info_py-module.html#header,Variable script-insert_column_py.header=script-insert_column_py-module.html#header,Variable script-insert_custom_columns_from_spreadsheet_py.header=script-insert_custom_columns_from_spreadsheet_py-module.html#header,Variable script-insert_custom_columns_from_spreadsheet_with_dates_py.header=script-insert_custom_columns_from_spreadsheet_with_dates_py-module.html#header,Variable script-list_all_custom_column_entries_py.header=script-list_all_custom_column_entries_py-module.html#header,Variable script-list_assignments_py.header=script-list_assignments_py-module.html#header,Variable script-list_course_announcements_py.header=script-list_course_announcements_py-module.html#header,Variable script-list_course_discussion_topics_py.header=script-list_course_discussion_topics_py-module.html#header,Variable script-list_custom_column_entries_py.header=script-list_custom_column_entries_py-module.html#header,Variable script-list_custom_columns_py.header=script-list_custom_columns_py-module.html#header,Variable script-list_external_tools_for_course_py.header=script-list_external_tools_for_course_py-module.html#header,Variable script-list_files_py.header=script-list_files_py-module.html#header,Variable script-list_gradebook_history_feed_py.header=script-list_gradebook_history_feed_py-module.html#header,Variable script-list_modules_py.header=script-list_modules_py-module.html#header,Variable script-list_peer_reviewing_assignments_py.header=script-list_peer_reviewing_assignments_py-module.html#header,Variable script-make_quiz_from_assignment_py.header=script-make_quiz_from_assignment_py-module.html#header,Variable script-modify_external_tool_entry_py.header=script-modify_external_tool_entry_py-module.html#header,Variable script-users_in_course_improved2_py.header=script-users_in_course_improved2_py-module.html#header,Variable script-users_in_course_improved_py.header=script-users_in_course_improved_py-module.html#header,Variable script-users_in_course_py.header=script-users_in_course_py-module.html#header,Variable update_page_example1.header=update_page_example1-module.html#header"><a title="augment_list_of_students_in_course_with_group.header
+ccreate.header
+cdel.header
+cget.header
+cgetall.header
+compute_list_of_KTH_play_URLs_on_pages_in_course.header
+compute_list_of_KTH_play_URLs_on_pages_in_course3.header
+compute_list_of_URLs_in_text_on_pages_in_course.header
+compute_list_of_URLs_on_pages_in_course.header
+compute_list_of_word_on_pages_in_course.header
+compute_stats_for_pages_in_course.header
+cput.header
+create_sections_in_course.header
+delete_page.header
+delete_section_by_id.header
+export_gradebook.header
+extract_text_from_pages_in_course.header
+insert_appointment.header
+insert_appointment_by_group.header
+insert_formula_questions.header
+insert_page2.header
+insert_quiz_from_spreadsheet.header
+list_course_analytics.header
+list_groups_in_course.header
+list_groups_in_course2.header
+list_my_appointments.header
+list_pages.header
+list_quizzes.header
+list_sections_in_course.header
+list_students_and_observers_in_course.header
+list_students_in_course.header
+list_submissions.header
+list_users_in_course.header
+list_users_in_course_with_students_email.header
+list_your_courses.header
+list_your_courses2.header
+make_appointment.header
+mine_for_urls_in_page.header
+place_students_in_sections_in_course.header
+script-assign_assessor_as_peer_reviewer_py.header
+script-cgetall_group_pages_py.header
+script-copy_peer_reviewer_assignments_py.header
+script-custom_column_visibility_py.header
+script-delete_all_course_announcements_py.header
+script-delete_custom_column_py.header
+script-export_course_announcements_py.header
+script-export_gradebook_with_score_py.header
+script-export_list_of_all_accounts_py.header
+script-export_list_of_all_courses_py.header
+script-export_list_of_all_courses_with_account_info_py.header
+script-insert_column_py.header
+script-insert_custom_columns_from_spreadsheet_py.header
+script-insert_custom_columns_from_spreadsheet_with_dates_py.header
+script-list_all_custom_column_entries_py.header
+script-list_assignments_py.header
+script-list_course_announcements_py.header
+script-list_course_discussion_topics_py.header
+script-list_custom_column_entries_py.header
+script-list_custom_columns_py.header
+script-list_external_tools_for_course_py.header
+script-list_files_py.header
+script-list_gradebook_history_feed_py.header
+script-list_modules_py.header
+script-list_peer_reviewing_assignments_py.header
+script-make_quiz_from_assignment_py.header
+script-modify_external_tool_entry_py.header
+script-users_in_course_improved2_py.header
+script-users_in_course_improved_py.header
+script-users_in_course_py.header
+update_page_example1.header" class="py-name" href="#" onclick="return doclink('link-2', 'header', 'link-2');">header</a></tt><tt class="py-op">=</tt><tt class="py-string">'KTHID,Last_name,First_name\n'</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">            <tt class="py-name">outfile</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt id="link-3" class="py-name"><a title="augment_list_of_students_in_course_with_group.header
+ccreate.header
+cdel.header
+cget.header
+cgetall.header
+compute_list_of_KTH_play_URLs_on_pages_in_course.header
+compute_list_of_KTH_play_URLs_on_pages_in_course3.header
+compute_list_of_URLs_in_text_on_pages_in_course.header
+compute_list_of_URLs_on_pages_in_course.header
+compute_list_of_word_on_pages_in_course.header
+compute_stats_for_pages_in_course.header
+cput.header
+create_sections_in_course.header
+delete_page.header
+delete_section_by_id.header
+export_gradebook.header
+extract_text_from_pages_in_course.header
+insert_appointment.header
+insert_appointment_by_group.header
+insert_formula_questions.header
+insert_page2.header
+insert_quiz_from_spreadsheet.header
+list_course_analytics.header
+list_groups_in_course.header
+list_groups_in_course2.header
+list_my_appointments.header
+list_pages.header
+list_quizzes.header
+list_sections_in_course.header
+list_students_and_observers_in_course.header
+list_students_in_course.header
+list_submissions.header
+list_users_in_course.header
+list_users_in_course_with_students_email.header
+list_your_courses.header
+list_your_courses2.header
+make_appointment.header
+mine_for_urls_in_page.header
+place_students_in_sections_in_course.header
+script-assign_assessor_as_peer_reviewer_py.header
+script-cgetall_group_pages_py.header
+script-copy_peer_reviewer_assignments_py.header
+script-custom_column_visibility_py.header
+script-delete_all_course_announcements_py.header
+script-delete_custom_column_py.header
+script-export_course_announcements_py.header
+script-export_gradebook_with_score_py.header
+script-export_list_of_all_accounts_py.header
+script-export_list_of_all_courses_py.header
+script-export_list_of_all_courses_with_account_info_py.header
+script-insert_column_py.header
+script-insert_custom_columns_from_spreadsheet_py.header
+script-insert_custom_columns_from_spreadsheet_with_dates_py.header
+script-list_all_custom_column_entries_py.header
+script-list_assignments_py.header
+script-list_course_announcements_py.header
+script-list_course_discussion_topics_py.header
+script-list_custom_column_entries_py.header
+script-list_custom_columns_py.header
+script-list_external_tools_for_course_py.header
+script-list_files_py.header
+script-list_gradebook_history_feed_py.header
+script-list_modules_py.header
+script-list_peer_reviewing_assignments_py.header
+script-make_quiz_from_assignment_py.header
+script-modify_external_tool_entry_py.header
+script-users_in_course_improved2_py.header
+script-users_in_course_improved_py.header
+script-users_in_course_py.header
+update_page_example1.header" class="py-name" href="#" onclick="return doclink('link-3', 'header', 'link-2');">header</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">infile</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt class="py-name">line2</tt><tt class="py-op">=</tt><tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                <tt class="py-name">line3</tt><tt class="py-op">=</tt><tt class="py-name">line2</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">"\r"</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                <tt class="py-name">cmdline</tt><tt class="py-op">=</tt><tt class="py-string">'ldapsearch -x  -H ldaps://ldap-master.sys.kth.se -b ou=Addressbook,dc=kth,dc=se ugKthid='</tt><tt class="py-op">+</tt><tt class="py-name">line3</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">Verbose_Flag</tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                       <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">'cmdline: '</tt><tt class="py-op">,</tt> <tt class="py-name">cmdline</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">getoutput</tt><tt class="py-op">(</tt><tt class="py-name">cmdline</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                <tt class="py-comment">#parse result for:</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                <tt class="py-comment">#  givenName: </tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                <tt class="py-comment">#  sn: </tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                <tt class="py-name">last_name</tt><tt class="py-op">=</tt><tt id="link-4" class="py-name" targets="Function script-KTHID_to_last_firstname_list_py.gqm_extract()=script-KTHID_to_last_firstname_list_py-module.html#gqm_extract"><a title="script-KTHID_to_last_firstname_list_py.gqm_extract" class="py-name" href="#" onclick="return doclink('link-4', 'gqm_extract', 'link-4');">gqm_extract</a></tt><tt class="py-op">(</tt><tt class="py-string">'sn:'</tt><tt class="py-op">,</tt> <tt class="py-name">result</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                <tt class="py-name">first_name</tt><tt class="py-op">=</tt><tt id="link-5" class="py-name"><a title="script-KTHID_to_last_firstname_list_py.gqm_extract" class="py-name" href="#" onclick="return doclink('link-5', 'gqm_extract', 'link-4');">gqm_extract</a></tt><tt class="py-op">(</tt><tt class="py-string">'givenName:'</tt><tt class="py-op">,</tt> <tt class="py-name">result</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                <tt class="py-name">output_line</tt><tt class="py-op">=</tt><tt class="py-name">line3</tt><tt class="py-op">+</tt><tt class="py-string">','</tt><tt class="py-op">+</tt><tt class="py-name">last_name</tt><tt class="py-op">+</tt><tt class="py-string">','</tt><tt class="py-op">+</tt><tt class="py-name">first_name</tt><tt class="py-op">+</tt><tt class="py-string">'\n'</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">Verbose_Flag</tt><tt class="py-op">:</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                       <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-name">result</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-name">outfile</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-name">output_line</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="main"></a><div id="main-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="main-toggle" onclick="return toggle('main');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="script-KTHID_to_last_firstname_list_py-module.html#main">main</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="main-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="main-expanded"><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">       <tt class="py-keyword">global</tt> <tt class="py-name">Verbose_Flag</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">       <tt class="py-name">parser</tt> <tt class="py-op">=</tt> <tt class="py-name">optparse</tt><tt class="py-op">.</tt><tt class="py-name">OptionParser</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">       <tt class="py-name">parser</tt><tt class="py-op">.</tt><tt class="py-name">add_option</tt><tt class="py-op">(</tt><tt class="py-string">'-v'</tt><tt class="py-op">,</tt> <tt class="py-string">'--verbose'</tt><tt class="py-op">,</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                         <tt class="py-name">dest</tt><tt class="py-op">=</tt><tt class="py-string">"verbose"</tt><tt class="py-op">,</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                         <tt class="py-name">default</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                         <tt class="py-name">action</tt><tt class="py-op">=</tt><tt class="py-string">"store_true"</tt><tt class="py-op">,</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                         <tt class="py-name">help</tt><tt class="py-op">=</tt><tt class="py-string">"Print lots of output to stdout"</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">       <tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">       <tt class="py-name">options</tt><tt class="py-op">,</tt> <tt class="py-name">remainder</tt> <tt class="py-op">=</tt> <tt class="py-name">parser</tt><tt class="py-op">.</tt><tt class="py-name">parse_args</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">       <tt class="py-name">Verbose_Flag</tt><tt class="py-op">=</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">verbose</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">       <tt class="py-keyword">if</tt> <tt class="py-name">Verbose_Flag</tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">              <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">'ARGV      :'</tt><tt class="py-op">,</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">argv</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">              <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">'VERBOSE   :'</tt><tt class="py-op">,</tt> <tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">verbose</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">              <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">'REMAINING :'</tt><tt class="py-op">,</tt> <tt class="py-name">remainder</tt><tt class="py-op">)</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">       <tt class="py-comment"># add time stamp to log file</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">       <tt class="py-name">log_time</tt> <tt class="py-op">=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">asctime</tt><tt class="py-op">(</tt><tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">localtime</tt><tt class="py-op">(</tt><tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">time</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">       <tt id="link-6" class="py-name" targets="Function augment_list_of_students_in_course_with_group.write_to_log()=augment_list_of_students_in_course_with_group-module.html#write_to_log,Function augument_gradebook.write_to_log()=augument_gradebook-module.html#write_to_log,Function augument_list_students_in_course.write_to_log()=augument_list_students_in_course-module.html#write_to_log,Function ccreate.write_to_log()=ccreate-module.html#write_to_log,Function cdel.write_to_log()=cdel-module.html#write_to_log,Function cget.write_to_log()=cget-module.html#write_to_log,Function cgetall.write_to_log()=cgetall-module.html#write_to_log,Function compute_list_of_KTH_play_URLs_on_pages_in_course.write_to_log()=compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#write_to_log,Function compute_list_of_KTH_play_URLs_on_pages_in_course3.write_to_log()=compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#write_to_log,Function compute_list_of_URLs_in_text_on_pages_in_course.write_to_log()=compute_list_of_URLs_in_text_on_pages_in_course-module.html#write_to_log,Function compute_list_of_URLs_on_pages_in_course.write_to_log()=compute_list_of_URLs_on_pages_in_course-module.html#write_to_log,Function compute_list_of_word_on_pages_in_course.write_to_log()=compute_list_of_word_on_pages_in_course-module.html#write_to_log,Function compute_stats_for_pages_in_course.write_to_log()=compute_stats_for_pages_in_course-module.html#write_to_log,Function cput.write_to_log()=cput-module.html#write_to_log,Function create_sections_in_course.write_to_log()=create_sections_in_course-module.html#write_to_log,Function delete_page.write_to_log()=delete_page-module.html#write_to_log,Function delete_section_by_id.write_to_log()=delete_section_by_id-module.html#write_to_log,Function export_gradebook.write_to_log()=export_gradebook-module.html#write_to_log,Function extract_text_from_pages_in_course.write_to_log()=extract_text_from_pages_in_course-module.html#write_to_log,Function insert_appointment.write_to_log()=insert_appointment-module.html#write_to_log,Function insert_appointment_by_group.write_to_log()=insert_appointment_by_group-module.html#write_to_log,Function insert_formula_questions.write_to_log()=insert_formula_questions-module.html#write_to_log,Function insert_page2.write_to_log()=insert_page2-module.html#write_to_log,Function insert_quiz_from_spreadsheet.write_to_log()=insert_quiz_from_spreadsheet-module.html#write_to_log,Function list_course_analytics.write_to_log()=list_course_analytics-module.html#write_to_log,Function list_groups_in_course.write_to_log()=list_groups_in_course-module.html#write_to_log,Function list_groups_in_course2.write_to_log()=list_groups_in_course2-module.html#write_to_log,Function list_my_appointments.write_to_log()=list_my_appointments-module.html#write_to_log,Function list_pages.write_to_log()=list_pages-module.html#write_to_log,Function list_quizzes.write_to_log()=list_quizzes-module.html#write_to_log,Function list_sections_in_course.write_to_log()=list_sections_in_course-module.html#write_to_log,Function list_students_and_observers_in_course.write_to_log()=list_students_and_observers_in_course-module.html#write_to_log,Function list_students_in_course.write_to_log()=list_students_in_course-module.html#write_to_log,Function list_submissions.write_to_log()=list_submissions-module.html#write_to_log,Function list_users_in_course.write_to_log()=list_users_in_course-module.html#write_to_log,Function list_users_in_course_with_students_email.write_to_log()=list_users_in_course_with_students_email-module.html#write_to_log,Function list_your_courses.write_to_log()=list_your_courses-module.html#write_to_log,Function list_your_courses2.write_to_log()=list_your_courses2-module.html#write_to_log,Function make_appointment.write_to_log()=make_appointment-module.html#write_to_log,Function mine_for_urls_in_page.write_to_log()=mine_for_urls_in_page-module.html#write_to_log,Function place_students_in_sections_in_course.write_to_log()=place_students_in_sections_in_course-module.html#write_to_log,Function script-KTHID_to_last_firstname_list_py.write_to_log()=script-KTHID_to_last_firstname_list_py-module.html#write_to_log,Function script-assign_assessor_as_peer_reviewer_py.write_to_log()=script-assign_assessor_as_peer_reviewer_py-module.html#write_to_log,Function script-cgetall_group_pages_py.write_to_log()=script-cgetall_group_pages_py-module.html#write_to_log,Function script-copy_peer_reviewer_assignments_py.write_to_log()=script-copy_peer_reviewer_assignments_py-module.html#write_to_log,Function script-custom_column_visibility_py.write_to_log()=script-custom_column_visibility_py-module.html#write_to_log,Function script-delete_all_course_announcements_py.write_to_log()=script-delete_all_course_announcements_py-module.html#write_to_log,Function script-delete_custom_column_py.write_to_log()=script-delete_custom_column_py-module.html#write_to_log,Function script-export_course_announcements_py.write_to_log()=script-export_course_announcements_py-module.html#write_to_log,Function script-export_gradebook_with_score_py.write_to_log()=script-export_gradebook_with_score_py-module.html#write_to_log,Function script-export_list_of_all_accounts_py.write_to_log()=script-export_list_of_all_accounts_py-module.html#write_to_log,Function script-export_list_of_all_courses_py.write_to_log()=script-export_list_of_all_courses_py-module.html#write_to_log,Function script-export_list_of_all_courses_with_account_info_py.write_to_log()=script-export_list_of_all_courses_with_account_info_py-module.html#write_to_log,Function script-insert_column_py.write_to_log()=script-insert_column_py-module.html#write_to_log,Function script-insert_custom_columns_from_spreadsheet_py.write_to_log()=script-insert_custom_columns_from_spreadsheet_py-module.html#write_to_log,Function script-insert_custom_columns_from_spreadsheet_with_dates_py.write_to_log()=script-insert_custom_columns_from_spreadsheet_with_dates_py-module.html#write_to_log,Function script-list_all_custom_column_entries_py.write_to_log()=script-list_all_custom_column_entries_py-module.html#write_to_log,Function script-list_assignments_py.write_to_log()=script-list_assignments_py-module.html#write_to_log,Function script-list_course_announcements_py.write_to_log()=script-list_course_announcements_py-module.html#write_to_log,Function script-list_course_discussion_topics_py.write_to_log()=script-list_course_discussion_topics_py-module.html#write_to_log,Function script-list_custom_column_entries_py.write_to_log()=script-list_custom_column_entries_py-module.html#write_to_log,Function script-list_custom_columns_py.write_to_log()=script-list_custom_columns_py-module.html#write_to_log,Function script-list_external_tools_for_course_py.write_to_log()=script-list_external_tools_for_course_py-module.html#write_to_log,Function script-list_files_py.write_to_log()=script-list_files_py-module.html#write_to_log,Function script-list_gradebook_history_feed_py.write_to_log()=script-list_gradebook_history_feed_py-module.html#write_to_log,Function script-list_modules_py.write_to_log()=script-list_modules_py-module.html#write_to_log,Function script-list_peer_reviewing_assignments_py.write_to_log()=script-list_peer_reviewing_assignments_py-module.html#write_to_log,Function script-make_quiz_from_assignment_py.write_to_log()=script-make_quiz_from_assignment_py-module.html#write_to_log,Function script-modify_external_tool_entry_py.write_to_log()=script-modify_external_tool_entry_py-module.html#write_to_log,Function script-users_in_course_improved2_py.write_to_log()=script-users_in_course_improved2_py-module.html#write_to_log,Function script-users_in_course_improved_py.write_to_log()=script-users_in_course_improved_py-module.html#write_to_log,Function script-users_in_course_py.write_to_log()=script-users_in_course_py-module.html#write_to_log,Function update_page_example1.write_to_log()=update_page_example1-module.html#write_to_log"><a title="augment_list_of_students_in_course_with_group.write_to_log
+augument_gradebook.write_to_log
+augument_list_students_in_course.write_to_log
+ccreate.write_to_log
+cdel.write_to_log
+cget.write_to_log
+cgetall.write_to_log
+compute_list_of_KTH_play_URLs_on_pages_in_course.write_to_log
+compute_list_of_KTH_play_URLs_on_pages_in_course3.write_to_log
+compute_list_of_URLs_in_text_on_pages_in_course.write_to_log
+compute_list_of_URLs_on_pages_in_course.write_to_log
+compute_list_of_word_on_pages_in_course.write_to_log
+compute_stats_for_pages_in_course.write_to_log
+cput.write_to_log
+create_sections_in_course.write_to_log
+delete_page.write_to_log
+delete_section_by_id.write_to_log
+export_gradebook.write_to_log
+extract_text_from_pages_in_course.write_to_log
+insert_appointment.write_to_log
+insert_appointment_by_group.write_to_log
+insert_formula_questions.write_to_log
+insert_page2.write_to_log
+insert_quiz_from_spreadsheet.write_to_log
+list_course_analytics.write_to_log
+list_groups_in_course.write_to_log
+list_groups_in_course2.write_to_log
+list_my_appointments.write_to_log
+list_pages.write_to_log
+list_quizzes.write_to_log
+list_sections_in_course.write_to_log
+list_students_and_observers_in_course.write_to_log
+list_students_in_course.write_to_log
+list_submissions.write_to_log
+list_users_in_course.write_to_log
+list_users_in_course_with_students_email.write_to_log
+list_your_courses.write_to_log
+list_your_courses2.write_to_log
+make_appointment.write_to_log
+mine_for_urls_in_page.write_to_log
+place_students_in_sections_in_course.write_to_log
+script-KTHID_to_last_firstname_list_py.write_to_log
+script-assign_assessor_as_peer_reviewer_py.write_to_log
+script-cgetall_group_pages_py.write_to_log
+script-copy_peer_reviewer_assignments_py.write_to_log
+script-custom_column_visibility_py.write_to_log
+script-delete_all_course_announcements_py.write_to_log
+script-delete_custom_column_py.write_to_log
+script-export_course_announcements_py.write_to_log
+script-export_gradebook_with_score_py.write_to_log
+script-export_list_of_all_accounts_py.write_to_log
+script-export_list_of_all_courses_py.write_to_log
+script-export_list_of_all_courses_with_account_info_py.write_to_log
+script-insert_column_py.write_to_log
+script-insert_custom_columns_from_spreadsheet_py.write_to_log
+script-insert_custom_columns_from_spreadsheet_with_dates_py.write_to_log
+script-list_all_custom_column_entries_py.write_to_log
+script-list_assignments_py.write_to_log
+script-list_course_announcements_py.write_to_log
+script-list_course_discussion_topics_py.write_to_log
+script-list_custom_column_entries_py.write_to_log
+script-list_custom_columns_py.write_to_log
+script-list_external_tools_for_course_py.write_to_log
+script-list_files_py.write_to_log
+script-list_gradebook_history_feed_py.write_to_log
+script-list_modules_py.write_to_log
+script-list_peer_reviewing_assignments_py.write_to_log
+script-make_quiz_from_assignment_py.write_to_log
+script-modify_external_tool_entry_py.write_to_log
+script-users_in_course_improved2_py.write_to_log
+script-users_in_course_improved_py.write_to_log
+script-users_in_course_py.write_to_log
+update_page_example1.write_to_log" class="py-name" href="#" onclick="return doclink('link-6', 'write_to_log', 'link-6');">write_to_log</a></tt><tt class="py-op">(</tt><tt class="py-name">log_time</tt><tt class="py-op">)</tt>    </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">       <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">remainder</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">              <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">"Insuffient arguments\n must provide list_of_KTHIDs filename\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">       <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">              <tt class="py-name">list_of_KTHIDs_file_name</tt><tt class="py-op">=</tt><tt class="py-name">remainder</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">              <tt class="py-name">augmented_list_of_names_file</tt><tt class="py-op">=</tt><tt class="py-name">list_of_KTHIDs_file_name</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-string">'-augmented'</tt><tt class="py-op">+</tt><tt class="py-string">'.csv'</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">              <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">'list_of_KTHIDs_file_name: '</tt><tt class="py-op">,</tt> <tt class="py-name">list_of_KTHIDs_file_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">              <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">'augmented_list_of_names_file: '</tt><tt class="py-op">,</tt> <tt class="py-name">augmented_list_of_names_file</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">              <tt id="link-7" class="py-name" targets="Function script-KTHID_to_last_firstname_list_py.lookup_names()=script-KTHID_to_last_firstname_list_py-module.html#lookup_names"><a title="script-KTHID_to_last_firstname_list_py.lookup_names" class="py-name" href="#" onclick="return doclink('link-7', 'lookup_names', 'link-7');">lookup_names</a></tt><tt class="py-op">(</tt><tt class="py-name">list_of_KTHIDs_file_name</tt><tt class="py-op">,</tt> <tt class="py-name">augmented_list_of_names_file</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">       <tt class="py-comment"># add time stamp to log file</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">       <tt class="py-name">log_time</tt> <tt class="py-op">=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">asctime</tt><tt class="py-op">(</tt><tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">localtime</tt><tt class="py-op">(</tt><tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">time</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">       <tt id="link-8" class="py-name"><a title="augment_list_of_students_in_course_with_group.write_to_log
+augument_gradebook.write_to_log
+augument_list_students_in_course.write_to_log
+ccreate.write_to_log
+cdel.write_to_log
+cget.write_to_log
+cgetall.write_to_log
+compute_list_of_KTH_play_URLs_on_pages_in_course.write_to_log
+compute_list_of_KTH_play_URLs_on_pages_in_course3.write_to_log
+compute_list_of_URLs_in_text_on_pages_in_course.write_to_log
+compute_list_of_URLs_on_pages_in_course.write_to_log
+compute_list_of_word_on_pages_in_course.write_to_log
+compute_stats_for_pages_in_course.write_to_log
+cput.write_to_log
+create_sections_in_course.write_to_log
+delete_page.write_to_log
+delete_section_by_id.write_to_log
+export_gradebook.write_to_log
+extract_text_from_pages_in_course.write_to_log
+insert_appointment.write_to_log
+insert_appointment_by_group.write_to_log
+insert_formula_questions.write_to_log
+insert_page2.write_to_log
+insert_quiz_from_spreadsheet.write_to_log
+list_course_analytics.write_to_log
+list_groups_in_course.write_to_log
+list_groups_in_course2.write_to_log
+list_my_appointments.write_to_log
+list_pages.write_to_log
+list_quizzes.write_to_log
+list_sections_in_course.write_to_log
+list_students_and_observers_in_course.write_to_log
+list_students_in_course.write_to_log
+list_submissions.write_to_log
+list_users_in_course.write_to_log
+list_users_in_course_with_students_email.write_to_log
+list_your_courses.write_to_log
+list_your_courses2.write_to_log
+make_appointment.write_to_log
+mine_for_urls_in_page.write_to_log
+place_students_in_sections_in_course.write_to_log
+script-KTHID_to_last_firstname_list_py.write_to_log
+script-assign_assessor_as_peer_reviewer_py.write_to_log
+script-cgetall_group_pages_py.write_to_log
+script-copy_peer_reviewer_assignments_py.write_to_log
+script-custom_column_visibility_py.write_to_log
+script-delete_all_course_announcements_py.write_to_log
+script-delete_custom_column_py.write_to_log
+script-export_course_announcements_py.write_to_log
+script-export_gradebook_with_score_py.write_to_log
+script-export_list_of_all_accounts_py.write_to_log
+script-export_list_of_all_courses_py.write_to_log
+script-export_list_of_all_courses_with_account_info_py.write_to_log
+script-insert_column_py.write_to_log
+script-insert_custom_columns_from_spreadsheet_py.write_to_log
+script-insert_custom_columns_from_spreadsheet_with_dates_py.write_to_log
+script-list_all_custom_column_entries_py.write_to_log
+script-list_assignments_py.write_to_log
+script-list_course_announcements_py.write_to_log
+script-list_course_discussion_topics_py.write_to_log
+script-list_custom_column_entries_py.write_to_log
+script-list_custom_columns_py.write_to_log
+script-list_external_tools_for_course_py.write_to_log
+script-list_files_py.write_to_log
+script-list_gradebook_history_feed_py.write_to_log
+script-list_modules_py.write_to_log
+script-list_peer_reviewing_assignments_py.write_to_log
+script-make_quiz_from_assignment_py.write_to_log
+script-modify_external_tool_entry_py.write_to_log
+script-users_in_course_improved2_py.write_to_log
+script-users_in_course_improved_py.write_to_log
+script-users_in_course_py.write_to_log
+update_page_example1.write_to_log" class="py-name" href="#" onclick="return doclink('link-8', 'write_to_log', 'link-6');">write_to_log</a></tt><tt class="py-op">(</tt><tt class="py-name">log_time</tt><tt class="py-op">)</tt>    </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">       <tt id="link-9" class="py-name"><a title="augment_list_of_students_in_course_with_group.write_to_log
+augument_gradebook.write_to_log
+augument_list_students_in_course.write_to_log
+ccreate.write_to_log
+cdel.write_to_log
+cget.write_to_log
+cgetall.write_to_log
+compute_list_of_KTH_play_URLs_on_pages_in_course.write_to_log
+compute_list_of_KTH_play_URLs_on_pages_in_course3.write_to_log
+compute_list_of_URLs_in_text_on_pages_in_course.write_to_log
+compute_list_of_URLs_on_pages_in_course.write_to_log
+compute_list_of_word_on_pages_in_course.write_to_log
+compute_stats_for_pages_in_course.write_to_log
+cput.write_to_log
+create_sections_in_course.write_to_log
+delete_page.write_to_log
+delete_section_by_id.write_to_log
+export_gradebook.write_to_log
+extract_text_from_pages_in_course.write_to_log
+insert_appointment.write_to_log
+insert_appointment_by_group.write_to_log
+insert_formula_questions.write_to_log
+insert_page2.write_to_log
+insert_quiz_from_spreadsheet.write_to_log
+list_course_analytics.write_to_log
+list_groups_in_course.write_to_log
+list_groups_in_course2.write_to_log
+list_my_appointments.write_to_log
+list_pages.write_to_log
+list_quizzes.write_to_log
+list_sections_in_course.write_to_log
+list_students_and_observers_in_course.write_to_log
+list_students_in_course.write_to_log
+list_submissions.write_to_log
+list_users_in_course.write_to_log
+list_users_in_course_with_students_email.write_to_log
+list_your_courses.write_to_log
+list_your_courses2.write_to_log
+make_appointment.write_to_log
+mine_for_urls_in_page.write_to_log
+place_students_in_sections_in_course.write_to_log
+script-KTHID_to_last_firstname_list_py.write_to_log
+script-assign_assessor_as_peer_reviewer_py.write_to_log
+script-cgetall_group_pages_py.write_to_log
+script-copy_peer_reviewer_assignments_py.write_to_log
+script-custom_column_visibility_py.write_to_log
+script-delete_all_course_announcements_py.write_to_log
+script-delete_custom_column_py.write_to_log
+script-export_course_announcements_py.write_to_log
+script-export_gradebook_with_score_py.write_to_log
+script-export_list_of_all_accounts_py.write_to_log
+script-export_list_of_all_courses_py.write_to_log
+script-export_list_of_all_courses_with_account_info_py.write_to_log
+script-insert_column_py.write_to_log
+script-insert_custom_columns_from_spreadsheet_py.write_to_log
+script-insert_custom_columns_from_spreadsheet_with_dates_py.write_to_log
+script-list_all_custom_column_entries_py.write_to_log
+script-list_assignments_py.write_to_log
+script-list_course_announcements_py.write_to_log
+script-list_course_discussion_topics_py.write_to_log
+script-list_custom_column_entries_py.write_to_log
+script-list_custom_columns_py.write_to_log
+script-list_external_tools_for_course_py.write_to_log
+script-list_files_py.write_to_log
+script-list_gradebook_history_feed_py.write_to_log
+script-list_modules_py.write_to_log
+script-list_peer_reviewing_assignments_py.write_to_log
+script-make_quiz_from_assignment_py.write_to_log
+script-modify_external_tool_entry_py.write_to_log
+script-users_in_course_improved2_py.write_to_log
+script-users_in_course_improved_py.write_to_log
+script-users_in_course_py.write_to_log
+update_page_example1.write_to_log" class="py-name" href="#" onclick="return doclink('link-9', 'write_to_log', 'link-6');">write_to_log</a></tt><tt class="py-op">(</tt><tt class="py-string">"\n--DONE--\n\n"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">"__main__"</tt><tt class="py-op">:</tt> <tt id="link-10" class="py-name" targets="Function augment_list_of_students_in_course_with_group.main()=augment_list_of_students_in_course_with_group-module.html#main,Function augument_gradebook.main()=augument_gradebook-module.html#main,Function augument_list_students_in_course.main()=augument_list_students_in_course-module.html#main,Function ccreate.main()=ccreate-module.html#main,Function cdel.main()=cdel-module.html#main,Function cget.main()=cget-module.html#main,Function cgetall.main()=cgetall-module.html#main,Function compute_list_of_KTH_play_URLs_on_pages_in_course.main()=compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#main,Function compute_list_of_KTH_play_URLs_on_pages_in_course3.main()=compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#main,Function compute_list_of_URLs_in_text_on_pages_in_course.main()=compute_list_of_URLs_in_text_on_pages_in_course-module.html#main,Function compute_list_of_URLs_on_pages_in_course.main()=compute_list_of_URLs_on_pages_in_course-module.html#main,Function compute_list_of_word_on_pages_in_course.main()=compute_list_of_word_on_pages_in_course-module.html#main,Function compute_stats_for_pages_in_course.main()=compute_stats_for_pages_in_course-module.html#main,Function cput.main()=cput-module.html#main,Function create_sections_in_course.main()=create_sections_in_course-module.html#main,Function delete_page.main()=delete_page-module.html#main,Function delete_section_by_id.main()=delete_section_by_id-module.html#main,Function export_gradebook.main()=export_gradebook-module.html#main,Function extract_text_from_pages_in_course.main()=extract_text_from_pages_in_course-module.html#main,Function insert_appointment.main()=insert_appointment-module.html#main,Function insert_appointment_by_group.main()=insert_appointment_by_group-module.html#main,Function insert_formula_questions.main()=insert_formula_questions-module.html#main,Function insert_page2.main()=insert_page2-module.html#main,Function insert_quiz_from_spreadsheet.main()=insert_quiz_from_spreadsheet-module.html#main,Function list_course_analytics.main()=list_course_analytics-module.html#main,Function list_groups_in_course.main()=list_groups_in_course-module.html#main,Function list_groups_in_course2.main()=list_groups_in_course2-module.html#main,Function list_my_appointments.main()=list_my_appointments-module.html#main,Function list_pages.main()=list_pages-module.html#main,Function list_quizzes.main()=list_quizzes-module.html#main,Function list_sections_in_course.main()=list_sections_in_course-module.html#main,Function list_students_and_observers_in_course.main()=list_students_and_observers_in_course-module.html#main,Function list_students_in_course.main()=list_students_in_course-module.html#main,Function list_submissions.main()=list_submissions-module.html#main,Function list_users_in_course.main()=list_users_in_course-module.html#main,Function list_users_in_course_with_students_email.main()=list_users_in_course_with_students_email-module.html#main,Function list_your_courses.main()=list_your_courses-module.html#main,Function list_your_courses2.main()=list_your_courses2-module.html#main,Function make_appointment.main()=make_appointment-module.html#main,Function mine_for_urls_in_page.main()=mine_for_urls_in_page-module.html#main,Function place_students_in_sections_in_course.main()=place_students_in_sections_in_course-module.html#main,Function script-KTHID_to_last_firstname_list_py.main()=script-KTHID_to_last_firstname_list_py-module.html#main,Function script-assign_assessor_as_peer_reviewer_py.main()=script-assign_assessor_as_peer_reviewer_py-module.html#main,Function script-cgetall_group_pages_py.main()=script-cgetall_group_pages_py-module.html#main,Function script-copy_peer_reviewer_assignments_py.main()=script-copy_peer_reviewer_assignments_py-module.html#main,Function script-custom_column_visibility_py.main()=script-custom_column_visibility_py-module.html#main,Function script-delete_all_course_announcements_py.main()=script-delete_all_course_announcements_py-module.html#main,Function script-delete_custom_column_py.main()=script-delete_custom_column_py-module.html#main,Function script-export_course_announcements_py.main()=script-export_course_announcements_py-module.html#main,Function script-export_gradebook_with_score_py.main()=script-export_gradebook_with_score_py-module.html#main,Function script-export_list_of_all_accounts_py.main()=script-export_list_of_all_accounts_py-module.html#main,Function script-export_list_of_all_courses_py.main()=script-export_list_of_all_courses_py-module.html#main,Function script-export_list_of_all_courses_with_account_info_py.main()=script-export_list_of_all_courses_with_account_info_py-module.html#main,Function script-insert_column_py.main()=script-insert_column_py-module.html#main,Function script-insert_custom_columns_from_spreadsheet_py.main()=script-insert_custom_columns_from_spreadsheet_py-module.html#main,Function script-insert_custom_columns_from_spreadsheet_with_dates_py.main()=script-insert_custom_columns_from_spreadsheet_with_dates_py-module.html#main,Function script-list_all_custom_column_entries_py.main()=script-list_all_custom_column_entries_py-module.html#main,Function script-list_assignments_py.main()=script-list_assignments_py-module.html#main,Function script-list_course_announcements_py.main()=script-list_course_announcements_py-module.html#main,Function script-list_course_discussion_topics_py.main()=script-list_course_discussion_topics_py-module.html#main,Function script-list_custom_column_entries_py.main()=script-list_custom_column_entries_py-module.html#main,Function script-list_custom_columns_py.main()=script-list_custom_columns_py-module.html#main,Function script-list_external_tools_for_course_py.main()=script-list_external_tools_for_course_py-module.html#main,Function script-list_files_py.main()=script-list_files_py-module.html#main,Function script-list_gradebook_history_feed_py.main()=script-list_gradebook_history_feed_py-module.html#main,Function script-list_modules_py.main()=script-list_modules_py-module.html#main,Function script-list_peer_reviewing_assignments_py.main()=script-list_peer_reviewing_assignments_py-module.html#main,Function script-make_quiz_from_assignment_py.main()=script-make_quiz_from_assignment_py-module.html#main,Function script-modify_external_tool_entry_py.main()=script-modify_external_tool_entry_py-module.html#main,Function script-users_in_course_improved2_py.main()=script-users_in_course_improved2_py-module.html#main,Function script-users_in_course_improved_py.main()=script-users_in_course_improved_py-module.html#main,Function script-users_in_course_py.main()=script-users_in_course_py-module.html#main,Function update_page_example1.main()=update_page_example1-module.html#main"><a title="augment_list_of_students_in_course_with_group.main
+augument_gradebook.main
+augument_list_students_in_course.main
+ccreate.main
+cdel.main
+cget.main
+cgetall.main
+compute_list_of_KTH_play_URLs_on_pages_in_course.main
+compute_list_of_KTH_play_URLs_on_pages_in_course3.main
+compute_list_of_URLs_in_text_on_pages_in_course.main
+compute_list_of_URLs_on_pages_in_course.main
+compute_list_of_word_on_pages_in_course.main
+compute_stats_for_pages_in_course.main
+cput.main
+create_sections_in_course.main
+delete_page.main
+delete_section_by_id.main
+export_gradebook.main
+extract_text_from_pages_in_course.main
+insert_appointment.main
+insert_appointment_by_group.main
+insert_formula_questions.main
+insert_page2.main
+insert_quiz_from_spreadsheet.main
+list_course_analytics.main
+list_groups_in_course.main
+list_groups_in_course2.main
+list_my_appointments.main
+list_pages.main
+list_quizzes.main
+list_sections_in_course.main
+list_students_and_observers_in_course.main
+list_students_in_course.main
+list_submissions.main
+list_users_in_course.main
+list_users_in_course_with_students_email.main
+list_your_courses.main
+list_your_courses2.main
+make_appointment.main
+mine_for_urls_in_page.main
+place_students_in_sections_in_course.main
+script-KTHID_to_last_firstname_list_py.main
+script-assign_assessor_as_peer_reviewer_py.main
+script-cgetall_group_pages_py.main
+script-copy_peer_reviewer_assignments_py.main
+script-custom_column_visibility_py.main
+script-delete_all_course_announcements_py.main
+script-delete_custom_column_py.main
+script-export_course_announcements_py.main
+script-export_gradebook_with_score_py.main
+script-export_list_of_all_accounts_py.main
+script-export_list_of_all_courses_py.main
+script-export_list_of_all_courses_with_account_info_py.main
+script-insert_column_py.main
+script-insert_custom_columns_from_spreadsheet_py.main
+script-insert_custom_columns_from_spreadsheet_with_dates_py.main
+script-list_all_custom_column_entries_py.main
+script-list_assignments_py.main
+script-list_course_announcements_py.main
+script-list_course_discussion_topics_py.main
+script-list_custom_column_entries_py.main
+script-list_custom_columns_py.main
+script-list_external_tools_for_course_py.main
+script-list_files_py.main
+script-list_gradebook_history_feed_py.main
+script-list_modules_py.main
+script-list_peer_reviewing_assignments_py.main
+script-make_quiz_from_assignment_py.main
+script-modify_external_tool_entry_py.main
+script-users_in_course_improved2_py.main
+script-users_in_course_improved_py.main
+script-users_in_course_py.main
+update_page_example1.main" class="py-name" href="#" onclick="return doclink('link-10', 'main', 'link-10');">main</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 17 21:14:50 2018
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<p>Write an abstract with the following components:</p> 
+
+<p>• What is the topic area? (optional) Introduces the subject area for the project.</p> 
+
+<p>• Short problem statement</p> 
+
+<p>• Why was this problem worth a Master’s thesis project? (i.e., why is the problem both significant and of a suitable degree of difficulty for a Master’s thesis project? Why has no one else solved it yet?)</p> 
+
+<p>• How did you solve the problem? What was your method/insight?</p> 
+
+<p>• Results/Conclusions/Consequences/Impact: What are your key results/conclusions? What will others do based upon your results? What can be done now that you have finished - that could not be done before your thesis project was completed?</p> 
+
+<p>As the era of digitalization dawns, the need to integrate separate silos into a synchronized connected system is becoming of ever greater significance. This thesis focuses on the Canvas Learning Management System (LMS) and the Digitala vetenskapliga arkive (DiVA) as examples of separate silos.</p> 
+
+<p>The thesis presents several methods of automating document handling associated with a degree project. It exploits the fact that students will submit their thesis to their examiner via Canvas. Canvas is the LMS platform used by students to submit all their coursework. When the examiner approves the thesis it will be archived in DiVA and optionally published via DiVA. DiVA is an institutional repository used for research publications and student theses.</p> 
+
+<p>When manually archiving and publishing student theses via DiVA several fields need to be filled in. These fields is provide meta data for the thesis itself. The content of these fields (author, title, keywords, abstract, …) can be used when searching via the DiVA portal. While it might not seem like a massive task to enter this meta data for an individual thesis; however, given the number of theses that are submitted every year, this process takes a significant amount of time and effort. Moreover, it is important to enter this data correctly – which is difficult when manually doing this task. Therefore, this thesis project seeks to automate this process for future theses.</p> 
+
+<p>The solution that presented in this thesis will parse PDF documents and use other information from the LMS in order to automatically generate a cover for the thesis and fill in the required DiVA meta data. This data will also be inserted into a calendar system to provide an</p> 
+
+<p>announcement for the student’s thesis presentation. Moreover, the data will be checked for correctness and consistency.</p> 
+
+<p>Manually filling in DiVA fields in order to publish theses has been a quite demanding and time-consuming process. Thus, there is often a delay before a thesis is published via DiVA. Therefore, this thesis project’s goal is to provide KTH with an automated means to handle thesis archiving and publication via DiVA, while doing so faster, more efficiently, and with fewer errors.</p> 
+
+<p>Keywords</p> 
+
+<p>5-6 keywords</p> 
+

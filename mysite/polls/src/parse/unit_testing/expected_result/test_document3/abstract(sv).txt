@@ -1,0 +1,16 @@
+<p>Eftersom den digitaliserade eran förbättras, blir behovet av att integrera separata silor i ett synkroniserat anslutet system allt viktigare. Denna thesis kommer att fokusera på Canvas Learning Management System och Digitala vetenskapliga arkive (DiVA) Portal som de separata silorna.</p> 
+
+<p>Under hela denna thesisrapporten presenteras metoder för att automatisera Canvas beträffande publicering av inlämnad thesis till. Canvas är för närvarande den plattform som används av Kungliga Tekniska högskolan (KTH) där studenter lämnar in allt sitt kursarbete från små volymer till stora volymer som t.ex. thesisrapporter. DiVA är en institutionell förvaringsplats som används för</p> 
+
+<p>thesisrapporter. Därför måste flera fält fyllas i när man publicerar thesisrapporter från Canvas till DiVA manuellt.</p> 
+
+<p>Att fylla i DiVA-fält för att publicera thesisrapporter kanske inte verka som en stor uppgift om det bara fanns några få antal thesisrapporter. Men med tanke på det stora antalet thesisrapporter som varje år skickas till Canvas, kommer denna process att ta en betydande tid och mankraft som inte ska underskattas. Därför kommer detta bachelorsprojekt att fokusera på att ta itu med detta problem för framtida dessa inlägg.</p> 
+
+<p>Lösningen som presenteras i hela denna rapport kommer att bestå av metoder för att analysera Portable Document Format (PDF) -dokument och skapa ett omslag med hjälp av den analyserade informationen och fylla i de önskade DiVA-fälten automatiskt. Dessa data kommer också att införas i ett kalendersystem och kommer att kontrolleras både automatiskt och manuellt, för korrekthet och konsistens.</p> 
+
+<p>Manuell fyllning av DiVA-fält för att publicera thesisrapporter har varit en ganska krävande och tidsbesparande process för KTH under de senaste åren, där ingen automatisering för denna process tillhandahölls. Detta har lett till att en uppsättning av thesisrapporter som väntar på att publiceras på DiVA och inte tillräckligt med tid för att någon anställd tar ansvar för att ta hand om problemet. Därför kommer det här projektet att kunna utrusta KTH:s personal med ett automatiskt publiceringssystem, vilket ger effektivitet till thesisrapporternas publikation i DiVA.</p> 
+
+<p>Nyckelord</p> 
+
+<p>5-6 nyckelord</p> 
+

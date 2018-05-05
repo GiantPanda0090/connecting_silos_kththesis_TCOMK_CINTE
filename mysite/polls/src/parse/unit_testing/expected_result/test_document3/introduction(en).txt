@@ -1,0 +1,152 @@
+<p>This chapter describes the specific problem that this thesis addresses, the context of the problem, the goals of this thesis project, and outlines the structure of the thesis.</p> 
+
+<p>In order to achieve efficiency, it is desirable to automate routine tasks that are demanding with respect to time and effort when done manually. This thesis presents the design, implementation, and evaluation of an automation solution applied to processing some elements of degree projects. The aim is to provide increased efficiency, increased accuracy, and reduce the time and effort needed by all involved. Note that the goal is with respect to everyone who is involved with the process, thus it includes the students who author the thesis, the faculty (as an examiner), and administrative staff.</p> 
+
+<p>Give a general introduction to the area. (Remember to use appropriate references in this and all other sections.)</p> 
+
+<p>1.1 Background</p> 
+
+<p>Present the background for the area. Set the context for your project – so that your reader can understand both your project and this thesis. (Give detailed background information in Chapter 2 - together with related work.)</p> 
+
+<p>Sometimes it is useful to insert a system diagram here so that the reader knows what are the different elements and their relationship to each other. This also introduces the names/terms/… that you are going to use throughout your thesis (be consistent). This figure will also help you later delimit what you are going to do and what others have done or will do.</p> 
+
+<p>Canvas is a learning management system (LMS) used by many schools and institutions, for assignments and coursework. One of the main purposes of Canvas is for the teachers to create coursework/assignments, and for students to submit their work and receive a grade. It is quite well organized and automated when it comes to handling student submissions. It is also useful when it comes to its automation regarding organizing the assignments consistently concerning their priority. DiVA is a publishing system for research and student theses. More detailed information about the Canvas LMS and DiVA portal will be provided in Sections 2.3 and 2.4 (respectively).</p> 
+
+<p>KTH Royal Institute of Technology (here after simply KTH) uses DiVA as an archive for student theses and publishes approved student theses that have been submitted via Canvas to DiVA. However, to doing so, specific meta data has to be entered into DiVA. Currently, this meta</p> 
+
+<p>data is entered via fields presented using a web interface to the DiVA Portal. These fields need to be filled in with information about the thesis (title, abstracts, keywords, number of pages, etc.), the student, the examiner, advisers, the defense, etc. The thesis is uploaded to DiVA for archiving and optionally the full text of the thesis is published via DiVA. This entire process is currently being done manually. This requires a significant amount of time (roughly an hour per thesis) and effort for staff members to enter the meta data and thesis into DiVA. Moreover, before a thesis can be uploaded to DiVA it has to be assigned a report number, the cover made, and attached to the thesis.</p> 
+
+<p>Currently, automation is lacking when it comes to connecting Canvas to other digital platforms, such as Digitala vetenskapliga arkive (DiVA) .</p> 
+
+<p>1.2 Problem</p> 
+
+<p>Longer problem statement</p> 
+
+<p>If possible, end this section with a question as a problem statement.</p> 
+
+<p>If the number of theses that are submitted were few, the time that the process of entering the theses into DiVA takes would be insignificant. However, considering the number of these that are submitted is high (see Table 1 -1 and Table 1 -2), thus some problems arise regarding the efficiency of the complete process. It is worth mentioning that, especially towards the end of every academic year, many students are submitting their thesis or dissertation. Therefore, not only are there a large number of theses to enter into DiVA, but the work is very concentrate in a small part of the year.</p> 
+
+<p>Table 1-1: Number of degree project reports in DiVA for all of KTH</p> 
+
+<p>Yea r</p> 
+
+<p>Total number</p> 
+
+<p>Full-text in DiVA</p> 
+
+<p>Full-text not available in DiVA</p> 
+
+<p>201 7</p> 
+
+<p>2287 2053 234</p> 
+
+<p>201 6</p> 
+
+<p>2376 2182 194</p> 
+
+<p>201 5</p> 
+
+<p>2601 2316 285</p> 
+
+<p>201 4</p> 
+
+<p>2384 2050 334</p> 
+
+<p>201 3</p> 
+
+<p>2356 2035 321</p> 
+
+<p>201 2</p> 
+
+<p>2500 1873 627</p> 
+
+<p>201 1</p> 
+
+<p>2282 1640 642</p> 
+
+<p>201 0</p> 
+
+<p>504 486 38</p> 
+
+<p>3</p> 
+
+<p>Table 1-2: In 2017, School of Electrical Engineering and Computer Science (EECS) had 697 theses (24 without full text)</p> 
+
+<p>Organisation Number</p> 
+
+<p>School of Computer Science and Communication (CSC) 338</p> 
+
+<p>School of Information and Communication Technology (ICT)</p> 
+
+<p>154</p> 
+
+<p>School of Electrical Engineering (EES) 47</p> 
+
+<p>Electric Power and Energy Systems 30</p> 
+
+<p>Automatic Control 29</p> 
+
+<p>Media Technology and Interaction Design, MID 18</p> 
+
+<p>Information Science and Engineering 17</p> 
+
+<p>Electromagnetic Engineering 14</p> 
+
+<p>Space and Plasma Physics 10</p> 
+
+<p>Robotics, perception and learning, RPL 10</p> 
+
+<p>Manually extracting the meta information required by DiVA for each thesis is quite repetitive, demanding, and takes an unnecessarily large amount of time. This work can take months, whereas automating it would only require a press of a button by the examiner when approving the thesis and take only a matter of seconds for a computer to complete the process. Therefore, the main problem that this thesis project will try to solve is “How can approved student theses submitted via Canvas be automatically entered into DiVA?”.</p> 
+
+<p>1.3 Purpose</p> 
+
+<p>State the purpose of your thesis and the purpose of your degree project.</p> 
+
+<p>Describe who benefits and how they benefit if you achieve your goals. Include anticipated ethical, sustainability, social issues, etc. related to your project. (Return to these in your reflections in Section 3.4.)</p> 
+
+<p>The purpose of this bachelor degree project is to design, implement, and evaluate a system to automate the entry of an approved thesis into DiVA. The project that will also try to automate the event-creation to announce student’s oral presentation as the requirements are quite</p> 
+
+<p>similar regarding parsing data from a submitted document and filling in fields to create an event in the university’s Calendar system. Thus, the repetitive task of extracting information from theses submitted via Canvas and using this information enter the theses into DiVA as well as creating Calendar events will be done automatically as soon as the appropriate button is pushed (by the responsible person).</p> 
+
+<p>The solutions to use for this automation will be thoroughly presented and described in sufficient detail for others to utilize. The methods used for solving the problem will be evaluated and compared to existing methods (if any). The algorithm developed for the automation will be presented. A number of tests will be carried out to demonstrate the correctness and consistency of the result of the algorithm. Moreover, an estimate of the time saved with the introduction of this automation will be made. This saved time can be used for other tasks that actually require human interaction (for example, better supporting the advising of students).</p> 
+
+<p>1.4 Goals</p> 
+
+<p>State the goal/goals of this degree project.</p> 
+
+<p>In addition to presenting the goal(s), you might also state what the deliverables and results of the project are.</p> 
+
+<p>The goal of this degree project is to automate the processing of taking a thesis submitted via Canvas and entering it into DiVA or as a Calendar event in the case of oral presentations. This has been divided into the following two sub-goals:</p> 
+
+<p>1. Once an examiner has schedule an oral presentation, the extension to Canvas will automatically extract the relevant information needed to create a Calendar event for a given degree project presentation based upon the submitted beta draft and the time and place of the presentation. 2. Once an examiner has approved a thesis submitted via Canvas the relevant information will be extracted from the thesis itself and combined with other data that is available in Canvas to automate the full process of publishing theses via DiVA.</p> 
+
+<p>Achieving the above subgoals should provide greater efficiency that the current manual process for theses publication and oral presentation event creation.</p> 
+
+<p>1.5 Research Methodology</p> 
+
+<p>Introduce your choice of methodology/methodologies and method/methods – and the reason why you chose them. Contrast them with and explain why you did not choose other methodologies or</p> 
+
+<p>5</p> 
+
+<p>methods. (The details of the actual methodology and method you have chosen will be given in Chapter Error: Reference source not found. Note that in Chapter 3, the focus could be research strategies, data collection, data analysis, and quality assurance.)</p> 
+
+<p>In this section you should present your philosophical assumption(s), research method(s), and research approach(es).</p> 
+
+<p>The research method that this thesis will use is qualitative research. Qualitative research means the research is primarily exploratory research [1]. The qualitative research that is carried out for this thesis project will focus on understanding the reason, opinions, and motivation [1] for the structure of the data inside a Portable Document Format (PDF) file and the methods to insert and extract data, to and from the Canvas LMS. In particular, we need to know how to parse a PDF document in order to extract the relevant data (such as title, abstracts, and keywords). This action will be followed by generation of a cover for the thesis, as well as combining the front and back covers with the thesis. Eventually, research will be carried out to check that the data automatically entered into DiVA based upon the extracted information is correctness and consistent. This correctness and consistency will be compared to previously data manually entered into DiVA.</p> 
+
+<p>This thesis project is generally based upon parsing information from documents and inserting the extracted data into the relevant fields of records in other systems, hence it is about connecting what are today separate silos. The details of this parsing and extracting will be described later in the thesis.</p> 
+
+<p>An implementation choice is which programming language will be used and what algorithm is best to extract the data from the relevant source. In this context, best can be evaluated in terms of efficiency – but it remains to be defined as to whether this is with respect to development efficiency or run-time efficiency (as we do not yet know how much time it will take to do the desired parsing and processing of the data).</p> 
+
+<p>The code provided by previous work (described in Chapter 2) is written in python, hence it would be simpler to implement the algorithm for this project if it too were written in python. Python is an interpreted high-level programming language for general-purpose programming [2]. How the algorithm is implemented will also depend on the Canvas Application Programming Interface (API) and how we will interact with DiVA.</p> 
+
+<p>1.6 Delimitations</p> 
+
+<p>Describe the boundary/limits of your thesis project and what you are explicitly not going to do. This will help you bound your efforts – as you have clearly defined what is out of the scope of this thesis project. Explain the delimitations. These are all the things that could affect the study if they were examined and included in the degree project.</p> 
+
+<p>1.7 Structure of the thesis</p> 
+
+<p>Chapter 2 presents relevant background information about xxx. Chapter 3 presents the methodology and method used to solve the problem. …</p> 
+
+<p>7</p> 
+

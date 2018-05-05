@@ -1,0 +1,18 @@
+<heading>Connecting Silos</heading> 
+
+<subtitle>Automation System for Thesis Processing in Canvas and Diva</subtitle> 
+
+<author>QI LI;Shiva BESHARAT POUR</author> 
+
+<heading>K T H R O YA L I N S T I T U T E O F T E C H N O L O G Y</heading> 
+
+<heading>E l e c t r i c a l E n g i n e e r i n g a n d C o m p u t e r S c i e n c e</heading> 
+
+<heading>Abstract</heading> 
+
+<heading>5-6 keywords</heading> 
+
+<heading>Sammanfattning</heading> 
+
+<heading>5-6 nyckelord</heading> 
+
