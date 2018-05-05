@@ -84,17 +84,24 @@ running_path = "kthextract.py"
 pdf_path = 'https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332'
 
 
-def main(course_id,assignment_id,username,password):
+def main(course_id,assignment_id,username,password,document_type):
     global my_id
     my_id = uuid.uuid1()
 
-    document_type = 1  # 0 is thesis 1 is proporsal
+    shutil.rmtree(ROOT_DIR+"/output/parse_result")
+    os.makedirs(ROOT_DIR+"/output/parse_result")
+    print (ROOT_DIR+"/output/parse_result")
+    os.makedirs(ROOT_DIR+"/output/parse_result/cache")
+
+
 
     args=[]
     args.append(course_id)
     args.append(assignment_id)
     args.append(username)
     args.append(password)
+    args.append(document_type)    # 0 is thesis 1 is proporsal
+
 
     # backup solution. leave it here. if we dont use this in the end, we delete it
     # command = "python" + " " + running_path + " " + pdf_path + " " + document_type + " " + student_name
@@ -105,8 +112,9 @@ def main(course_id,assignment_id,username,password):
     path = os.getcwd()
     print "Current directory: " + path
     print "jumping to canvas module path"
-    os.chdir(path)
-    os.chdir(path+'Canvas/canvas')
+    path =ROOT_DIR
+    os.chdir(path+"/src")
+    os.chdir('Canvas/canvas')
     print "Current directory: " + os.getcwd()
     print 'Preperation for canvas module done'
     message = "python3 list_submissions.py " + str(args[0]) + " " + str(args[1])
@@ -137,11 +145,11 @@ def main(course_id,assignment_id,username,password):
 
     option.profile = profile
 
-    firefox_capabilities = DesiredCapabilities.FIREFOX
-    firefox_capabilities['marionette'] = True
+    #firefox_capabilities = DesiredCapabilities.FIREFOX
+    #firefox_capabilities['marionette'] = True
     # firefox_capabilities['binary'] = 'tools/firefox/firefox-bin'
     print 'Logging in KTH'
-    browser = webdriver.Firefox(capabilities=firefox_capabilities, firefox_profile=profile)
+    browser = webdriver.Firefox(firefox_profile=profile)
     browser.get("https://kth.instructure.com/")
     time.sleep(3)
 
@@ -183,6 +191,7 @@ def main(course_id,assignment_id,username,password):
     print 'Preperation for parse module start'
     path = os.getcwd()
     print path
+    path =ROOT_DIR
     os.chdir(path)
     os.chdir('src/parse/kth_extract/pdfssa4met')
     print os.getcwd()
@@ -199,10 +208,10 @@ def main(course_id,assignment_id,username,password):
             pdf_locl_path = os.path.join(download_dir, file)
             print "found pdf file: " + pdf_locl_path
 
-            kthextract.main([pdf_locl_path, document_type])
+            dir=kthextract.main([pdf_locl_path, args[4]])
     print 'Done with parse module'
     print 'Whole process done'
-    return"Success execute session: "+str(my_id)
+    print "Success execute session: "+str(my_id)
 
     # os.system(command)
 

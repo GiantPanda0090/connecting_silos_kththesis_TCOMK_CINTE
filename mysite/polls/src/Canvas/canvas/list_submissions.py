@@ -15,17 +15,11 @@ from pprint import pprint
 import optparse
 import sys
 
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+
 
 import os,sys
 import time
 
-
-from io import StringIO, BytesIO
-
-from lxml import html
 
 import json
 
@@ -46,7 +40,6 @@ with open('config.json') as json_data_file:
        baseUrl="https://"+configuration["canvas"]["host"]+"/api/v1/courses/"
 
 modules_csv = 'modules.csv' # name of file storing module names
-log_file = 'log.txt' # a log file. it will log things
 header = {'Authorization' : 'Bearer ' + access_token}
 payload = {}
 
@@ -55,11 +48,7 @@ payload = {}
 ## ONLY update the code below if you are experimenting with other API calls ##
 ##############################################################################
 
-def write_to_log(message):
 
-       with open(log_file, 'a') as log:
-              log.write(message + "\n")
-              #pprint(message)
 
 def list_submissions(course_id,assignment_id):
        submissions_found_thus_far=[]
@@ -72,8 +61,6 @@ def list_submissions(course_id,assignment_id):
 
        extra_parameters={'student_ids[]': 'all'}
        r = requests.get(url, params=extra_parameters, headers = header)
-       if Verbose_Flag:
-              write_to_log("result of getting submissions: " + r.text)
 
        if r.status_code == requests.codes.ok:
               page_response=r.json()
@@ -109,8 +96,6 @@ def list_custom_column_entries(course_id, column_number):
               print("url: " + url)
 
        r = requests.get(url, headers = header)
-       if Verbose_Flag:
-              write_to_log("result of getting custom_gradebook_columns: " + r.text)
 
        if r.status_code == requests.codes.ok:
               page_response=r.json()
@@ -144,8 +129,6 @@ def list_custom_columns(course_id):
               print("url: " + url)
 
        r = requests.get(url, headers = header)
-       if Verbose_Flag:
-              write_to_log("result of getting custom_gradebook_columns: " + r.text)
 
        if r.status_code == requests.codes.ok:
               page_response=r.json()
@@ -184,9 +167,7 @@ def insert_column_name(course_id, column_name):
        print("url: " + url)
     payload={'column[title]': column_name}
     r = requests.post(url, headers = header, data=payload)
-    write_to_log("result of post creating custom column: " + r.text)
     if r.status_code == requests.codes.ok:
-       write_to_log("result of inserting the item into the module: " + r.text)
        if r.status_code == requests.codes.ok:
            page_response=r.json()
            print("inserted column")
@@ -215,7 +196,6 @@ def main():
 
        # add time stamp to log file
        log_time = str(time.asctime(time.localtime(time.time())))
-       write_to_log(log_time)   
        if (len(remainder) < 2):
               print("Insuffient arguments\n must provide course_id abd assignment id\n")
        else:
@@ -293,8 +273,6 @@ def main():
 
        # add time stamp to log file
        log_time = str(time.asctime(time.localtime(time.time())))
-       write_to_log(log_time)   
-       write_to_log("\n--DONE--\n\n")
 
 if __name__ == "__main__": main()
 

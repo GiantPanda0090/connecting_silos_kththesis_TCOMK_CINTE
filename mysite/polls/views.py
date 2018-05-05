@@ -5,17 +5,18 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
 from django.contrib import messages
-
+import io
 
 from .models import Question
 import os
-root =os.getcwd()
-os.chdir(os.getcwd()+'/polls/src')
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))  # This is your Project Root
+os.chdir(ROOT_DIR+'/src')
 from src import start_proporsal
 import os
 import sys
 import thread
 
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))  # This is your Project Root
 
 
 # Create your views here.
@@ -58,29 +59,55 @@ def index(request):
     #/home/lqschool/git/Connecting_Silo/mysite/polls/index.html
     #/home/lqschool/git/Connecting_Silo/mysite/polls/index.html
     if request.method == 'POST':
-
-        messages.success(request, 'Form submission successful')
         data_list = []  # We will insert all the inputs in this array
         for key in request.POST:
             data_list.append(request.POST[key])
+            #[u'assignmentid', u'password', u'courseid', u'document_id', u'username', u'G5IUnO5gs50vs5X48A2jvXv1pJQbVNKVW3wRLbEds3I51uWboteHfkEZ2Q3mDvI9']
+
         course_id=data_list[2]
         assignment_id=data_list[0]
         username=data_list[4]
-        password=data_list[3]
+        password=data_list[1]
+        document_type=data_list[3]
+        print data_list
         # try:
         #     thread.start_new_thread(process(request), ("Thread-2", 4,))
         # except:
         #     print "process are not started"
-        print "data_list" + str(len(data_list))
+        #print "data_list" + str(len(data_list))
 
-        start_proporsal.main(course_id, assignment_id, username, password)
+        start_proporsal.main(course_id, assignment_id, username, password,document_type)
+
+        os.chdir(ROOT_DIR+"/output/parse_result")
+        output_str_toweb=""
+        file_list = os.listdir(os.getcwd())
+        for dir in file_list:
+            # print os.getcwd()
+
+            if dir != "cache":
+                os.chdir(os.getcwd() + "/" + dir)
+                output_str_toweb = output_str_toweb + "\n\n" + dir + ":\n"
+
+                for root, dirs, files in os.walk("."):#per folder
+                    current_author_group=[]
+                    for filename in files:
+                        if filename!="heading.txt":
+                            output = io.open(os.getcwd()+"/"+filename,'r', encoding="utf-8")
+                            output_str_toweb=output_str_toweb+"\n"+filename+"\n"+output.read()
+                            output.close()
+                    os.chdir("../")
+                    output_str_toweb=output_str_toweb+ \
+                                 "\n\n"
+
+        os.chdir(ROOT_DIR)
         context = {
             'Course_id': course_id,
             'Assignment_id': assignment_id,
             'Username': username,
             'Password': password,
+            'Output': output_str_toweb,
 
-          }
+        }
         return HttpResponse(template_2.render(context, request))
     context = {
 
