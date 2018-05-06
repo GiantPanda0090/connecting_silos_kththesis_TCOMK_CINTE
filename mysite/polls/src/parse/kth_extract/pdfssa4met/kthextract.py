@@ -352,13 +352,11 @@ def hasNumbers(inputString):
 #scan the PDF file for headers
 def pdf2heads(opts, args,document):
     global Verbose_flag
-    global test_flag
     xmltag = True
     highlight = False
     titleonly = False
     authonly = False
     Verbose_flag = False
-    test_flag =False
     global look_for_all_caps_headings
     look_for_all_caps_headings = False
     global automatic_rerunning
@@ -405,8 +403,6 @@ def pdf2heads(opts, args,document):
             titleonly = True
         elif (o == '--author'):
             authonly = True
-        elif (o == '--unittest'):
-            test_flag = True
         elif (o == '--verbose'):
             Verbose_flag = True
             print "Verbose_flag is on"
@@ -760,8 +756,6 @@ def main(argv=None):
     global automatic_rerunning
     global Found_Introduction
     global directiory
-    global test_flag
-    test_flag=False
 
     if argv is None:
 #argv=flag
@@ -770,7 +764,7 @@ def main(argv=None):
     try:
         try:
 #opts pdf address
-            opts, args = getopt.getopt(argv, "ht", ["help", "test","unittest", "noxml", "highlight", "title", "author", "verbose", "caps"])
+            opts, args = getopt.getopt(argv, "ht", ["help", "test", "noxml", "highlight", "title", "author", "verbose", "caps"])
         except getopt.error as msg:
             raise UsageError(msg)
         for o, a in opts:
@@ -779,9 +773,6 @@ def main(argv=None):
                 sys.stdout.write(__doc__)
                 sys.stdout.flush()
                 return 0
-            if (o in ['--unittest']):
-                test_flag = True
-
             #pdf2heads has ability to update:
             #global automatic_rerunning
             #global Found_abstract
@@ -822,13 +813,7 @@ def main(argv=None):
         pdf2heads(opts, [pdffile], args[1])
 
         source =  os.listdir(source_dir+"/")
-        pdffile_name=pdffile.split(".")
-        destination_test = "../../unit_testing/actual_result/" + pdffile_name[0]+"/"
         destination = "../../../../output/parse_result/" + author+"_"+str(datetime.now())+"_"+str(datetime.now().time())+"/"
-        if test_flag==True:
-            destination=destination_test
-            print "unittest flag triggered. destination for output become:"
-            print destination_test
 
         if not os.path.exists(destination):
             os.makedirs(destination)

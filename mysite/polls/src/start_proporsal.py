@@ -27,13 +27,10 @@ import os
 import zipfile
 import shutil
 import tarfile
-import uuid
-
-
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))+"/.."  # This is your Project Root
 
-# dynamic download geckodriver and pdf2xml based on OS
+# dynamic download geckodriver and pdf2xml depends on OS
 print "Dowloading geckodriver for selenium automation base on Operatiing system "
 print "Operating System:  " + platform.system()
 shutil.rmtree(ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/current/")
@@ -79,21 +76,13 @@ running_path = "kthextract.py"
 pdf_path = 'https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332'
 
 
-def main(course_id,assignment_id,username,password):
-    global my_id
-    my_id = uuid.uuid1()
+def main(argv=None):
     argv = sys.argv[1:]
 
     opts, args = getopt.getopt(argv, "ht",
                                ["help", "test", "noxml", "highlight", "title", "author", "verbose", "caps"])
 
-    document_type = 1  # 0 is thesis 1 is proporsal
-
-    args=[]
-    args.append(course_id)
-    args.append(assignment_id)
-    args.append(username)
-    args.append(password)
+    document_type = 0  # 0 is thesis 1 is proporsal
 
     # backup solution. leave it here. if we dont use this in the end, we delete it
     # command = "python" + " " + running_path + " " + pdf_path + " " + document_type + " " + student_name
@@ -108,7 +97,7 @@ def main(course_id,assignment_id,username,password):
     os.chdir('Canvas/canvas')
     print "Current directory: " + os.getcwd()
     print 'Preperation for canvas module done'
-    message = "python3 list_submissions.py " + str(args[0]) + " " + str(args[1])
+    message = "python3 list_submissions.py " + args[0] + " " + args[1]
     sub = subprocess.Popen(message, stdout=subprocess.PIPE, shell=True)
 
     (pdf_path, error) = sub.communicate()
@@ -201,7 +190,6 @@ def main(course_id,assignment_id,username,password):
             kthextract.main([pdf_locl_path, document_type])
     print 'Done with parse module'
     print 'Whole process done'
-    return"Success execute session: "+str(my_id)
 
     # os.system(command)
 

@@ -35,6 +35,7 @@ def main(link,document_type):
         print("invalid document_type")
         print("Document type can either be 0 or 1")
         print("Expected input: 0 is thesis, 1 is proporsal")
+        sys.exit()
     Expected_url_formate=Expected_kth_canvas+"courses/"+str(Expected_kth_canvas_thesis_course_id)+"/assignments/"+str(Expected_assignment_id)+"/submissions?zip=1"
 
 
@@ -57,11 +58,10 @@ def main(link,document_type):
         print("Test Case U.1 Failed")
         print("Expected: " + Expected_url_formate)
         print ("Actual: "+ link)
+        sys.exit()
 
 
 
-if __name__ == '__main__':
-        main()
 
 
 

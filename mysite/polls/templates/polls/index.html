@@ -1,3 +1,9 @@
+
+<p>Connecting Silo Project Demo Page</p>
+<p>Description:<br />The alpha test program is only design for the the proporsal of the thesis.<br />Please input the field below and press OK<br />Process might take a while after pressed OK butten. Please be patient</p>
+<p> Please fill in the form in the result page to let us know how you think of the program</p>
+
+
 <form action="." method="post">
     {% csrf_token %}
 
@@ -9,6 +15,8 @@
     <input id="username" type="text" name="username_field" placeholder="KTH.SE Log in Username"><br />
      <label for="password">KTHID Password: </label>
     <input id="password" type="text" name="password_field" placeholder="KTH.SE Log in Password"><br />
+    <label for="document_type">Documentation Type : </label>
+    <input id="document_type" type="int" name="document_field" placeholder="0 for Thesis and 1 for Proporsal"><br />
 
     <input type="submit" value="OK" class="default" />
 </form>
