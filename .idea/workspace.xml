@@ -76,14 +76,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start_proporsal.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="start_proporsal.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/polls/src/start_proporsal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-              <folding>
-                <element signature="e#344#359#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="92" column="15" lean-forward="false" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kthextract.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/polls/src/parse/kth_extract/pdfssa4met/kthextract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="842" column="32" lean-forward="false" selection-start-line="842" selection-start-column="32" selection-end-line="842" selection-end-column="32" />
+            <state relative-caret-position="866">
+              <caret line="851" column="32" lean-forward="false" selection-start-line="851" selection-start-column="32" selection-end-line="851" selection-end-column="32" />
               <folding>
                 <element signature="e#1163#1177#0" expanded="true" />
               </folding>
@@ -446,6 +444,137 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mysite/polls/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/parse/unit_testing/U_8_9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/Canvas/unit_test/U_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/Canvas/unit_test/U_2_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="51" column="40" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/templates/polls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="108" lean-forward="false" selection-start-line="18" selection-start-column="108" selection-end-line="18" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/templates/polls/process.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/Canvas/canvas/list_submissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1775">
+          <caret line="216" column="44" lean-forward="false" selection-start-line="216" selection-start-column="44" selection-end-line="216" selection-end-column="44" />
+          <folding>
+            <element signature="e#193#219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/Canvas/canvas/assign-assessor-as-peer-reviewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="109" column="9" lean-forward="false" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/templates/polls/done.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/parse/kth_extract/pdfssa4met/kthextract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="817" column="32" lean-forward="false" selection-start-line="817" selection-start-column="32" selection-end-line="817" selection-end-column="32" />
+          <folding>
+            <element signature="e#1163#1177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/polls/src/start_proporsal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="84" column="15" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/polls/templates/polls/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -468,7 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -492,9 +620,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3582">
           <caret line="210" column="54" lean-forward="false" selection-start-line="210" selection-start-column="54" selection-end-line="210" selection-end-column="54" />
-          <folding>
-            <element signature="e#344#359#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,11 +801,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/polls/src/start_proporsal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <element signature="e#344#359#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="322">
+          <caret line="92" column="15" lean-forward="false" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -694,8 +817,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/polls/src/parse/kth_extract/pdfssa4met/kthextract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="842" column="32" lean-forward="false" selection-start-line="842" selection-start-column="32" selection-end-line="842" selection-end-column="32" />
+        <state relative-caret-position="866">
+          <caret line="851" column="32" lean-forward="false" selection-start-line="851" selection-start-column="32" selection-end-line="851" selection-end-column="32" />
           <folding>
             <element signature="e#1163#1177#0" expanded="true" />
           </folding>
