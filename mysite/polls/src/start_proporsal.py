@@ -86,15 +86,7 @@ pdf_path = 'https://kth.instructure.com/courses/2139/assignments/24565/submissio
 
 def main(course_id,assignment_id,username,password,document_type):
     global my_id
-    my_id = uuid.uuid1()
-
-    shutil.rmtree(ROOT_DIR+"/output/parse_result")
-    os.makedirs(ROOT_DIR+"/output/parse_result")
-    print (ROOT_DIR+"/output/parse_result")
-    os.makedirs(ROOT_DIR+"/output/parse_result/cache")
-
-
-
+    session_id = uuid.uuid1()
     args=[]
     args.append(course_id)
     args.append(assignment_id)
@@ -197,6 +189,7 @@ def main(course_id,assignment_id,username,password,document_type):
     print os.getcwd()
     print 'Preperation for the parse module done'
 
+    processed_folder=[]
     for file in os.listdir(download_dir):
         if file.endswith(".pdf"):
             if "-" in file:
@@ -209,9 +202,10 @@ def main(course_id,assignment_id,username,password,document_type):
             print "found pdf file: " + pdf_locl_path
 
             dir=kthextract.main([pdf_locl_path, args[4]])
+            processed_folder.append(dir)
     print 'Done with parse module'
     print 'Whole process done'
-    print "Success execute session: "+str(my_id)
+    return processed_folder
 
     # os.system(command)
 

@@ -51,6 +51,7 @@ from utils import UsageError, ConfigError, mean, median
 from pdf2xml import pdf2etree
 import shutil
 from datetime import datetime
+import uuid
 
 # text to filter out from the output
 text_to_filter = {
@@ -836,8 +837,13 @@ def main(argv=None):
 
         source =  os.listdir(source_dir+"/")
         pdffile_name=pdffile.split(".")
+
+        global my_id
+        my_id = uuid.uuid1()
+        out_dir_name=author+"_"+str(my_id)+"_"+str(datetime.now())
+
         destination_test = "../../unit_testing/actual_result/" + pdffile_name[0]+"/"
-        destination = "../../../../output/parse_result/" + author+"_"+str(datetime.now())+"/"
+        destination = "../../../../output/parse_result/" +out_dir_name+"/"
         if test_flag==True:
             destination=destination_test
             print_log( "unittest flag triggered. destination for output become:")
@@ -853,7 +859,7 @@ def main(argv=None):
                 print_log( source_dir+"/"+files)
                 #if not os.path.exists(destination+files):
                 shutil.move(source_dir+"/"+files, destination)
-        return destination
+        return out_dir_name
         #if not Found_abstract:
          #   print "Automatically running the program again with the option --caps"
           #  automatic_rerunning=True

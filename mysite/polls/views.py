@@ -76,27 +76,27 @@ def index(request):
         #     print "process are not started"
         #print "data_list" + str(len(data_list))
 
-        start_proporsal.main(course_id, assignment_id, username, password,document_type)
+        session_folder_list=start_proporsal.main(course_id, assignment_id, username, password,document_type)
 
         os.chdir(ROOT_DIR+"/output/parse_result")
         output_str_toweb=""
         file_list = os.listdir(os.getcwd())
-        for dir in file_list:
+        for dir in session_folder_list:
             # print os.getcwd()
 
             if dir != "cache":
                 os.chdir(os.getcwd() + "/" + dir)
-                output_str_toweb = output_str_toweb + "\n\n" + dir + ":\n"
+                output_str_toweb = output_str_toweb + "\n\n" + "Session: "+dir + ":\n"
 
                 for root, dirs, files in os.walk("."):#per folder
                     current_author_group=[]
                     for filename in files:
-                        if filename!="heading.txt":
+                        if filename!="heading.txt":#filename filter
                             output = io.open(os.getcwd()+"/"+filename,'r', encoding="utf-8")
                             output_str_toweb=output_str_toweb+"\n"+filename+"\n"+output.read()
                             output.close()
                     os.chdir("../")
-                    output_str_toweb=output_str_toweb+ \
+                    output_str_toweb=output_str_toweb+ "END OF SESSION"+\
                                  "\n\n"
 
         os.chdir(ROOT_DIR)
