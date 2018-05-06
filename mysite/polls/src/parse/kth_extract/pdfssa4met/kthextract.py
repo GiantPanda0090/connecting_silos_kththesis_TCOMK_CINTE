@@ -51,7 +51,6 @@ from utils import UsageError, ConfigError, mean, median
 from pdf2xml import pdf2etree
 import shutil
 from datetime import datetime
-import uuid
 
 # text to filter out from the output
 text_to_filter = {
@@ -78,14 +77,12 @@ Verbose_flag = False
 Found_abstract = False
 Found_Sammanfattning = False
 automatic_rerunning=False
-log_path ='log.txt'
-def print_log(message):
-    with open(log_path, 'w') as f:
-        print message, "\n"  # print tag information to certain file
-        print >> f, message, "\n"  # print tag information to certain file
+
 def filter_headings(h1):
     global Verbose_flag
     if h1 in text_to_filter:
+        if Verbose_flag:
+            print "excluding h1=" + h1
         return ""
     else:
         return h1
@@ -93,8 +90,8 @@ def filter_headings(h1):
 def output_text_on_block_on_page(a_page_node, starting_block, page_number, filename):
         page_txts = []
         next_page_tag = True
-        print_log ("output_blocks_on_page = " + str(page_number))
-        print_log ("starting_block=" + str(starting_block))
+        print "output_blocks_on_page = " + str(page_number)
+        print "starting_block=" + str(starting_block)
         local_block_number = 0
         next_block_tag =True
         st_list =["<Author>","<Address_line1>","<Address_line2>","<Email>","<PhoneNumber>","<Other_info>"]
@@ -116,7 +113,7 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                         ".//TOKEN[@font-size > {0} and @bold = 'yes']".format(mean_font_size,main_font_color))
                 else:
                     check_headers_1 = block_node.xpath(".//TOKEN[(@font-size > {0}) and (@bold = 'yes') ]".format(mean_font_size * 1.05))
-                print_log ("mean font size is detected as: " + str(mean_font_size * 1.05))
+                print "mean font size is detected as: " + str(mean_font_size * 1.05)
 
                 check_headers_txt_1 = ' '.join(
                     [etree.tostring(el, method='text', encoding="UTF-8") for el in check_headers_1])
@@ -132,22 +129,22 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                 # print "check header: " + check_headers_txt
                   headers = text_node.xpath(".//TOKEN[@font-size > {0} ]".format(9))
                   page_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in headers])
-                  print_log("page txt is: "+ page_txt)
+                  print "page txt is: "+ page_txt
 
                   #font text debug
                   font=text_node.xpath(".//TOKEN[@font-name = dejavusans]")
                   font_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in font])
-                  print_log( font_txt)
+                  print font_txt
                   if len(check_headers_txt_1): #check title to skip
-                      print_log( "check header: " + check_headers_txt_1)
-                      print_log( "page text: " + page_txt)
-                      if (check_headers_txt_1 == page_txt):
-                            print_log( "time to leave!!!!!!!!!!!!!!!!!!!!!!!!!")
+                         print "check header: " + check_headers_txt_1
+                         print "page text: " + page_txt
+                         if (check_headers_txt_1 == page_txt):
+                            print "time to leave!!!!!!!!!!!!!!!!!!!!!!!!!"
                             next_block_tag = False
                             break
                   if len(page_txt):
                     # print page_txt
-                    print_log( page_txt)
+                    print page_txt
                     save_path= None
                     local_text_number = local_text_number + 1
                     if (local_text_number>5):
@@ -160,15 +157,11 @@ def output_text_on_block_on_page(a_page_node, starting_block, page_number, filen
                         save_path= '../../../../output/parse_result/'+directiory+'/author_'+str(author_count)+'_frontname'+'.txt'
                         txt = "<FrontName>" + name_split[0] + "</FrontName>"
                         with open(save_path, 'w') as f:
-                            print txt, "\n"  # print tag information to certain file
-
                             print >> f, txt, "\n"  # print tag information to certain file
                         save_path = '../../../../output/parse_result/'+directiory+'/author_' + str(
                             author_count) + '_aftername' + '.txt'
                         txt = "<AfterName>" + name_split[1] + "</AfterName>"
                         with open(save_path, 'w') as f:
-                            print txt, "\n"  # print tag information to certain file
-
                             print >> f, txt, "\n"  # print tag information to certain file
 
                         save_path = '../../../../output/parse_result/'+directiory+'/author_' + str(
@@ -231,8 +224,8 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
    page_txts=[]
    next_page_tag=True
    while next_page_tag: #per page
-    print_log( "output_blocks_on_page = " + str(page_number))
-    print_log( "starting_block=" + str(starting_block))
+    print "output_blocks_on_page = " + str(page_number)
+    print "starting_block=" + str(starting_block)
     local_block_number=0
     #print a_page_node
     for block_node in a_page_node.xpath('.//BLOCK'): #all the blocks in a page
@@ -246,7 +239,7 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
             check_headers = block_node.xpath(".//TOKEN[@font-size > {0} or @bold = 'yes' ]".format(mean_font_size))
         else:
             check_headers = block_node.xpath(".//TOKEN[@font-size > {0} and @bold = 'yes' ]".format(mean_font_size * 1.07))
-        print_log( "mean front size is detected as: " + str(mean_font_size * 1.07))
+        print "mean front size is detected as: " + str(mean_font_size * 1.07)
         check_headers_txt =' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in check_headers])
         #print "check header: " + check_headers_txt
 
@@ -256,19 +249,19 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
 
        
         if len(check_headers_txt):
-           print_log( "check header: " + check_headers_txt)
-           print_log( "page text: " + page_txt)
-           print_log( "check standard: " + str(chapter) + ".")
-           print_log( chapter)
+           print "check header: " + check_headers_txt
+           print "page text: " + page_txt
+           print "check standard: " + str(chapter) + "."
+           print chapter
            if (check_headers_txt == page_txt and check_headers_txt.find(str(chapter) + ".") < 0 ):
-               print_log( "time to leave!!!!!!!!!!!!!!!!!!!!!!!!!")
+               print "time to leave!!!!!!!!!!!!!!!!!!!!!!!!!"
                next_page_tag = False
                break
 
         
         if len(page_txt):
              org_split=[]
-             print_log( "page_txt not empty")
+             print "page_txt not empty"
 
              if page_txt.find( "Organization:")>=0:
                 print "Orgnization (en): Found"
@@ -276,9 +269,9 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
 
                 count = 0
                 for txt in org_split:
-                    print_log( "txt is: " + txt)
+                    print "txt is: " + txt
                     if txt.find(":") >= 0:
-                        print_log( "found!!!!! :")
+                        print "found!!!!! :"
                         while count > 0:
                             del org_split[count]
                             count -= 1
@@ -295,9 +288,9 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
 
                 count = 0
                 for txt in org_split:
-                    print_log( "txt is: " + txt)
+                    print "txt is: " + txt
                     if txt.find(":") >= 0:
-                        print_log( "found!!!!! :")
+                        print "found!!!!! :"
                         while count > 0:
                             del org_split[count]
                             count -= 1
@@ -312,9 +305,9 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
                 org_split = page_txt.split();
                 count = 0
                 for txt in org_split:
-                    print_log( "txt is: "+txt)
+                    print "txt is: "+txt
                     if txt.find(":") >=0:
-                        print_log( "found!!!!! :")
+                        print "found!!!!! :"
                         while count>0:
                             del org_split[count]
                             count-=1
@@ -337,10 +330,8 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
                 # text append
 
               with open(save_path, 'w') as f:
-                        print prt_str  # print tag information to certain file #print page_txt
-
                         print >> f, prt_str  # print tag information to certain file #print page_txt
-             print_log( "appending: " + "{0}{1}{2}".format(st, page_txt, et))
+             print "appending: " + "{0}{1}{2}".format(st, page_txt, et)
              page_txts.append("{0}{1}{2}".format(st, page_txt, et))#text append
     if (next_page_tag):
         #ready for next page
@@ -352,8 +343,6 @@ def output_blocks_on_page(a_page_node, starting_block, page_number,filename,chap
     with open(filename, 'w') as f:
         for txt in page_txts:
             #sys.stdout.writelines([txt, '\n'])#print append text #txt is per line
-            print txt+ "\n"  # print tag information to certain file
-
             print >> f,txt, "\n"   # Python 2.x
 
 #reference https://stackoverflow.com/questions/19859282/check-if-a-string-contains-a-number
@@ -363,13 +352,11 @@ def hasNumbers(inputString):
 #scan the PDF file for headers
 def pdf2heads(opts, args,document):
     global Verbose_flag
-    global test_flag
     xmltag = True
     highlight = False
     titleonly = False
     authonly = False
     Verbose_flag = False
-    test_flag =False
     global look_for_all_caps_headings
     look_for_all_caps_headings = False
     global automatic_rerunning
@@ -416,8 +403,6 @@ def pdf2heads(opts, args,document):
             titleonly = True
         elif (o == '--author'):
             authonly = True
-        elif (o == '--unittest'):
-            test_flag = True
         elif (o == '--verbose'):
             Verbose_flag = True
             print "Verbose_flag is on"
@@ -460,7 +445,6 @@ def pdf2heads(opts, args,document):
                  title_path = '../../../../output/parse_result/'+directiory+'/title.txt'
                  txt = "<Title>" + title_head_txt + "</Title>"
                  with open(title_path, 'w') as f:
-                     print txt+ "\n"  # print tag information to certain file
                      print >> f, txt, "\n"  # print tag information to certain file
                  title_node=trial_title_node
                  next_block=block+1
@@ -472,7 +456,7 @@ def pdf2heads(opts, args,document):
     # WRONG SECOND PAGE IS TABLE OF CONTENt.
     page = 1
     block = next_block
-    print_log( "next block is:  " +str(block))
+    print "next block is:  " +str(block)
     subtitle_node = None
     while (page < 2):
         try:
@@ -498,8 +482,6 @@ def pdf2heads(opts, args,document):
                  print "Title: found since title is project proporsal, replace subtitle as title"
               txt = "<Subtitle>" + subtitle_head_txt + "</Subtitle>"
               with open(subtitle_path, 'w') as f:
-                print txt+ "\n"  # print tag information to certain file
-
                 print >> f, txt, "\n"  # print tag information to certain file
               subtitle_node=trial_subtitle_node
               next_block=block+1
@@ -528,10 +510,12 @@ def pdf2heads(opts, args,document):
 
 # the author's name(s) is(are) assumed to be smaller than title   bigger than   degree project...
             auth_headers = trial_auth_node.xpath(".//TOKEN[@font-size < {0}  and @font-size > {1}]".format(20,11))
+
+            print auth_headers
             if Verbose_flag:
                 print "auth_headers:"
                 print auth_headers
-            print_log( document_type)
+            print document_type
             auth_head_txt = ' '.join([etree.tostring(el, method='text', encoding="UTF-8") for el in auth_headers])
             auth_list=auth_head_txt.split(";")
 
@@ -659,7 +643,7 @@ def pdf2heads(opts, args,document):
 
                 # model for proposal
             if (int(document_type) == 1):
-             print_log( "first content check: "+head_txt)
+             print "first content check: "+head_txt
              if head_txt.find("Authors") >= 0 or head_txt.find("Author") >= 0:
                         if not Found_Author:  # if the abstract has not been found yet
                             print "Authors(en): OVERIDE "
@@ -677,7 +661,7 @@ def pdf2heads(opts, args,document):
                           Found_org = True
 
              if head_txt.find("Keywords") >= 0 or head_txt.find("Keyword") >= 0:
-                 print_log( "I should be herer!!!!!")
+                 print "I should be herer!!!!!"
                  if not Found_key:  # if the abstract has not been found yet
                           print "Keywords(en): found"
                           output_blocks_on_page(page_node, block_number, page, key_path, 0)
@@ -764,8 +748,6 @@ def pdf2heads(opts, args,document):
         for txt in head_txts:#print all append text
             #sys.stdout.writelines([txt, '\n'])
             #reference https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python
-            print txt + "\n"  # print tag information to certain file
-
             print >> f, txt, "\n"  # print tag information to certain file
 
 def main(argv=None):
@@ -774,8 +756,6 @@ def main(argv=None):
     global automatic_rerunning
     global Found_Introduction
     global directiory
-    global test_flag
-    test_flag=False
 
     if argv is None:
 #argv=flag
@@ -784,7 +764,7 @@ def main(argv=None):
     try:
         try:
 #opts pdf address
-            opts, args = getopt.getopt(argv, "ht", ["help", "test","unittest", "noxml", "highlight", "title", "author", "verbose", "caps"])
+            opts, args = getopt.getopt(argv, "ht", ["help", "test", "noxml", "highlight", "title", "author", "verbose", "caps"])
         except getopt.error as msg:
             raise UsageError(msg)
         for o, a in opts:
@@ -793,9 +773,6 @@ def main(argv=None):
                 sys.stdout.write(__doc__)
                 sys.stdout.flush()
                 return 0
-            if (o in ['--unittest']):
-                test_flag = True
-
             #pdf2heads has ability to update:
             #global automatic_rerunning
             #global Found_abstract
@@ -836,18 +813,7 @@ def main(argv=None):
         pdf2heads(opts, [pdffile], args[1])
 
         source =  os.listdir(source_dir+"/")
-        pdffile_name=pdffile.split(".")
-
-        global my_id
-        my_id = uuid.uuid1()
-        out_dir_name=author+"_"+str(my_id)+"_"+str(datetime.now())
-
-        destination_test = "../../unit_testing/actual_result/" + pdffile_name[0]+"/"
-        destination = "../../../../output/parse_result/" +out_dir_name+"/"
-        if test_flag==True:
-            destination=destination_test
-            print_log( "unittest flag triggered. destination for output become:")
-            print_log( destination_test)
+        destination = "../../../../output/parse_result/" + author+"_"+str(datetime.now())+"_"+str(datetime.now().time())+"/"
 
         if not os.path.exists(destination):
             os.makedirs(destination)
@@ -855,11 +821,10 @@ def main(argv=None):
         for files in source:
 
             if files.endswith(".txt"):
-                print_log( "ready to move: ")
-                print_log( source_dir+"/"+files)
+                print "ready to move: "
+                print source_dir+"/"+files
                 #if not os.path.exists(destination+files):
                 shutil.move(source_dir+"/"+files, destination)
-        return out_dir_name
         #if not Found_abstract:
          #   print "Automatically running the program again with the option --caps"
           #  automatic_rerunning=True

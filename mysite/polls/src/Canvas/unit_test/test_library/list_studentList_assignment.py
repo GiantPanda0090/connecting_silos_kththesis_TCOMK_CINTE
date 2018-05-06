@@ -90,8 +90,7 @@ def list_submissions(course_id,assignment_id):
                r = requests.get(url, params=extra_parameters, headers = header)
                profil=r.json()
                if user_id == profil['id']:
-                     out_list.append(profil['name'])
-                     #out_list.append("shivabp") #testing the accuracy of unit test case U_2
+                     out_list.append([user_id,profil['name'],profil['login_id']])
                else:
                       print ("Error Report:")
                       print("Expected user id is different from the user id that grab from canvas at index: " +str(i))
