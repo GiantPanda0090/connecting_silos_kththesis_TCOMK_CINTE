@@ -22,15 +22,20 @@ import platform
 import urllib2
 
 from parse.kth_extract.pdfssa4met import kthextract
+from pyvirtualdisplay import Display
+
 import sys, getopt
 import os
 import zipfile
 import shutil
 import tarfile
+import uuid
+
+
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))+"/.."  # This is your Project Root
 
-# dynamic download geckodriver and pdf2xml depends on OS
+# dynamic download geckodriver and pdf2xml based on OS
 print "Dowloading geckodriver for selenium automation base on Operatiing system "
 print "Operating System:  " + platform.system()
 shutil.rmtree(ROOT_DIR+"/src/parse/kth_extract/pdfssa4met/pdf2xml/current/")
@@ -56,6 +61,9 @@ response = urllib2.urlopen(url)
 html = response.read()
 print "downloading " + url
 
+display = Display(visible=0, size=(800, 600))
+display.start()
+
 # Open our local file for writing
 with open("../ffdriver/geckodriver_linux.tar.gz", "wb") as local_file:
     local_file.write(html)
@@ -76,13 +84,16 @@ running_path = "kthextract.py"
 pdf_path = 'https://kth.instructure.com/courses/2139/assignments/24565/submissions/11185?download=890332'
 
 
-def main(argv=None):
-    argv = sys.argv[1:]
+def main(course_id,assignment_id,username,password,document_type):
+    global my_id
+    session_id = uuid.uuid1()
+    args=[]
+    args.append(course_id)
+    args.append(assignment_id)
+    args.append(username)
+    args.append(password)
+    args.append(document_type)    # 0 is thesis 1 is proporsal
 
-    opts, args = getopt.getopt(argv, "ht",
-                               ["help", "test", "noxml", "highlight", "title", "author", "verbose", "caps"])
-
-    document_type = 0  # 0 is thesis 1 is proporsal
 
     # backup solution. leave it here. if we dont use this in the end, we delete it
     # command = "python" + " " + running_path + " " + pdf_path + " " + document_type + " " + student_name
@@ -93,11 +104,12 @@ def main(argv=None):
     path = os.getcwd()
     print "Current directory: " + path
     print "jumping to canvas module path"
-    os.chdir(path)
+    path =ROOT_DIR
+    os.chdir(path+"/src")
     os.chdir('Canvas/canvas')
     print "Current directory: " + os.getcwd()
     print 'Preperation for canvas module done'
-    message = "python3 list_submissions.py " + args[0] + " " + args[1]
+    message = "python3 list_submissions.py " + str(args[0]) + " " + str(args[1])
     sub = subprocess.Popen(message, stdout=subprocess.PIPE, shell=True)
 
     (pdf_path, error) = sub.communicate()
@@ -125,11 +137,11 @@ def main(argv=None):
 
     option.profile = profile
 
-    firefox_capabilities = DesiredCapabilities.FIREFOX
-    firefox_capabilities['marionette'] = True
+    #firefox_capabilities = DesiredCapabilities.FIREFOX
+    #firefox_capabilities['marionette'] = True
     # firefox_capabilities['binary'] = 'tools/firefox/firefox-bin'
     print 'Logging in KTH'
-    browser = webdriver.Firefox(capabilities=firefox_capabilities, firefox_options=opts, firefox_profile=profile)
+    browser = webdriver.Firefox(firefox_profile=profile)
     browser.get("https://kth.instructure.com/")
     time.sleep(3)
 
@@ -171,11 +183,13 @@ def main(argv=None):
     print 'Preperation for parse module start'
     path = os.getcwd()
     print path
+    path =ROOT_DIR
     os.chdir(path)
     os.chdir('src/parse/kth_extract/pdfssa4met')
     print os.getcwd()
     print 'Preperation for the parse module done'
 
+    processed_folder=[]
     for file in os.listdir(download_dir):
         if file.endswith(".pdf"):
             if "-" in file:
@@ -187,9 +201,11 @@ def main(argv=None):
             pdf_locl_path = os.path.join(download_dir, file)
             print "found pdf file: " + pdf_locl_path
 
-            kthextract.main([pdf_locl_path, document_type])
+            dir=kthextract.main([pdf_locl_path, args[4]])
+            processed_folder.append(dir)
     print 'Done with parse module'
     print 'Whole process done'
+    return processed_folder
 
     # os.system(command)
 

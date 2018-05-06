@@ -79,7 +79,7 @@ def main(argv=None):
     opts, args = getopt.getopt(argv, "ht",
                                ["help", "test", "noxml", "highlight", "title", "author", "verbose", "caps"])
 
-    document_type = 0  # 0 is thesis 1 is proporsal
+    document_type = 1  # 0 is thesis 1 is proporsal
 
     # backup solution. leave it here. if we dont use this in the end, we delete it
     # command = "python" + " " + running_path + " " + pdf_path + " " + document_type + " " + student_name
