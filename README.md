@@ -2,6 +2,9 @@
  Automation System for Thesis Processing in Canvas and Diva<br /><br />
  KTH CINTE and TCOMK Thesis Project 2018 4th Semester<br />
  
+ ![Build Status](https://travis-ci.org/GiantPanda0090/connecting_silos_kththesis_TCOMK_CINTE.svg?branch=master)
+
+ 
  Author:<br /> 
  Qi Li, Shiva Besharat Pour<br /><br />
  Examinar:<br />
