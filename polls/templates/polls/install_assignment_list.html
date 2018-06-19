@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose assignment_list</title>
+</head>
+<body>
+<form action="install_2" method="post">
+    {% csrf_token %}
+
+    <input type="checkbox" name="courseid" value={{Course_id}} checked onclick="return false;"/> Current selected course id {{Course_id}}<br>
+    <br />
+
+
+    <td>Please Choose the Proporsal Assignment :<br /> </td>
+
+        <table border="0">
+
+   {% for assignment in Course_List_Proporsal %}
+
+<tr>
+    <th></th>
+<th>Assignment ID</th>
+<th>Assignment Name</th>
+    <th>Assignment Link</th>
+</tr>
+            <tr>
+
+ <td>  <input type="radio" name=proporsal_choice value={{assignment.0}}></td>
+    <td> {{ assignment.0}} </td>
+    <td> {{ assignment.1}} </td>
+    <td> {{ assignment.2}} </td>
+
+</tr>
+
+       {% endfor %}
+</table>
+<br />
+    <br />
+
+
+<td>Please Choose the Thesis Assignment :<br /> </td>
+
+        <table border="0">
+    {% for assignment in Course_List_Thesis %}
+
+<tr>
+    <th></th>
+<th>Assignment ID</th>
+<th>Assignment Name</th>
+    <th>Assignment Link</th>
+</tr>
+            <tr>
+
+ <td>  <input type="radio" name=thesis_choice value={{assignment.0}}></td>
+    <td> {{ assignment.0}} </td>
+    <td> {{ assignment.1}} </td>
+    <td> {{ assignment.2}} </td>
+
+</tr>
+
+       {% endfor %}
+</table>
+<br />
+    <br />
+
+    <td>Please Choose the Beta Draft Assignment :<br /> </td>
+
+        <table border="0">
+    {% for assignment in Beta_draft_list %}
+
+<tr>
+    <th></th>
+<th>Assignment ID</th>
+<th>Assignment Name</th>
+    <th>Assignment Link</th>
+</tr>
+            <tr>
+
+ <td>  <input type="radio" name=beta_choice value={{assignment.0}}></td>
+    <td> {{ assignment.0}} </td>
+    <td> {{ assignment.1}} </td>
+    <td> {{ assignment.2}} </td>
+
+</tr>
+
+       {% endfor %}
+</table>
+
+      <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

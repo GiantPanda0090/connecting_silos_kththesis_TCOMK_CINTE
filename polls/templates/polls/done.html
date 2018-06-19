@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+</head>
+<body>
+     <p>Information Obtain Process Done</p>
+
+     <p>Current Session is info:<br /></p>
+        <p>Session ID: {{Session_id}}</p>
+
+     <br />
+
+
+     <p>Polopoly Oral Presentation Time Booking:</p>
+     <p><font color="red">Please confirm the Output result below before booking a time slot for the student</font></p>
+
+     <form action="generate_polopoly_json" method="post">
+    {% csrf_token %}
+      <table border="0">
+          <tr>
+              <th style="padding:0 5px 0 5px;"></th>
+    <th style="padding:0 5px 0 5px;"></th>
+</tr>
+
+<tr>
+    <td> <center><label for="work_807"> Primary Web Address:</label></center></td>
+   <td> <center> <input id="work_807" type="int" name="work_807"></center></td>
+    </tr>
+
+        <tr>
+         <td> <center> <label for="work_809"> Heading:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name="work_809" id="work_809">{{Heading}}</textarea></center></td>
+        </tr>
+
+          <tr>
+          <td> <center> <label for="work_813"> Lead:</label></center></td>
+          <td> <center> <textarea rows="0" cols="0" name="work_813" id="work_813">{{Level}}</textarea></center></td>
+                      </tr>
+<tr>
+        <td> <center> <label for="work_820"> Start time for the calendar event * :</label></center></td>
+        <td> <center> <input type="text" name="work_820" id="work_820" ></center></td>
+                          </tr>
+        <tr>
+
+        <td> <center> <label for="work_821"> All day * :</label></center></td>
+       <td> <center>  <input type="checkbox" name="work_821" id="work_821"></center></td>
+        </tr>
+
+            <tr>
+
+       <td> <center>   <label for="work_824"> End time* :</label></center></td>
+       <td> <center>   <select name="work_824" id="work_824"><br />
+	    <option value="none" selected="selected">No Date</option>
+           <option value="date">Select Date</option><br /></select></center></td>
+                        </tr>
+            <tr>
+        <td> <center>  <label for="work_826"> +/- Days:</label></center></td>
+       <td> <center>  <textarea rows="0" cols="0" name="work_827" id="work_826"></textarea></center></td>
+            </tr>
+                       <tr>
+
+          <td> <center>   <label for="work_827"> Time:</label></center></td>
+          <td> <center>  <textarea rows="0" cols="0" name="work_827" id="work_827"></textarea>   </center></td>
+            </tr>
+
+                                 <tr>
+        <td> <center>  <label for="work_829"> Location:</label> </center></td>
+        <td> <center>  <textarea rows="0" cols="0" name="work_829" id="work_829"></textarea> </center></td>
+                                                 </tr>
+                                 <tr>
+
+         <td> <center> <label for="work_831"> Lecturer:</label></center></td>
+        <td> <center>  <textarea rows="0" cols="0" name="work_831" id="work_831">{{Lecturer}}</textarea></center></td>
+                                                 </tr>
+                                           <tr>
+         <td> <center><label for="work_834"> Abstract of the thesis:</label></center></td>
+         <td> <center><textarea rows="0" cols="0" name="work_834" id="work_834">{{Body}}</textarea></center></td>
+           </tr>
+
+                                                     <tr>
+         <td> <center> <label for="work_840"> Contact for calendar event:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name="work_840" id="work_840">{{Contact}}</textarea></center></td>
+                                                                    </tr>
+                                                     <tr>
+
+        <td> <center> <label for="work_857">Content manager:</label></center></td>
+        <td> <center> <textarea rows="0" cols="0" name="work_857" id="work_857">{{Manager}}</textarea></center></td>
+                                                          </tr>
+           <tr>
+         <td> <center>  <label for="work_894">Short title for menus</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name="work_894" id="work_894">{{TOC}}</textarea><br /></center></td>
+                                                          </tr>
+
+           <tr>
+
+   <td> <center> <input type="submit" value="OK" class="default" /></center></td>
+                <td> <center></center></td>
+           </tr>
+      </table>
+</form>
+
+
+
+
+
+        <p>Returned result:</p>
+
+        <a target="_blank" href="https://kth.instructure.com/courses/2139/gradebook">Link to Canvas Gradebook that store followin output data</a>
+               <br />
+
+
+        <li><p>Output:</p></li>
+
+              <table border="0">
+                    <tr>
+              <th style="padding:0 5px 0 5px;"></th>
+    <th style="padding:0 5px 0 5px;"></th>
+</tr>
+        {% for title in Title %}
+                            <form action="update_database" method="post">
+                                    {% csrf_token %}
+
+                                    <input type="hidden" name="user_session_id" value={{title.5}} checked onclick="return false;"/> <br>
+                                <input type="hidden" name="session_id_session" value={{Session_id}} checked onclick="return false;"/> <br>
+
+
+
+                  <p>{{title.0}}: {{title.1}}</p>
+                                    <p>{{title.2}}: {{title.3}}</p>
+
+                                    <p>{{title.4}}: {{title.5}}</p>
+
+                                    <p>{{title.6}}: {{title.7}}</p>
+                                <p>Folder name: {{title.8}}</p>
+
+
+<tr>
+                                    <td>
+    <p>EXAMINAR INFO:</p>
+        </td>
+  <td>
+        </td>
+    </tr>
+        {% for content in Examinar_info %}
+
+
+        <tr>
+         <td> <center> <label for={{content.0}}> {{content.0}}:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name={{content.0}} id={{content.0}}>{{content.1}}</textarea></center></td>
+        </tr>
+       {% endfor %}
+
+        <tr>
+
+                                     <td>
+    <p>SUPERVISOR INFO:</p>
+        </td>
+  <td>
+        </td>
+                    </tr>
+
+        {% for content_1 in Supervisor_info %}
+
+
+        <tr>
+         <td> <center> <label for={{content_1.0}}> {{content_1.0}}:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name={{content_1.0}} id={{content_1.0}}>{{content_1.1}}</textarea></center></td>
+        </tr>
+       {% endfor %}
+
+        <tr>
+
+                       <td>
+    <p>STUDENT INFO:</p>
+        </td>
+  <td>
+        </td>'        </tr>
+
+        {% for content_2 in Student_info %}
+
+
+        <tr>
+         <td> <center> <label for={{content_2.0}}> {{content_2.0}}:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name={{content_2.0}} id={{content_2.0}}>{{content_2.1}}</textarea></center></td>
+        </tr>
+       {% endfor %}
+
+
+        <input type="hidden" name="stage" value=1 checked onclick="return false;"/> <br>
+
+         <td> <center> <input type="submit" value="OK" class="default" /></center></td>
+
+                                          </form>
+
+                         {% endfor %}
+
+         </table>
+
+
+
+</body>
+</html>

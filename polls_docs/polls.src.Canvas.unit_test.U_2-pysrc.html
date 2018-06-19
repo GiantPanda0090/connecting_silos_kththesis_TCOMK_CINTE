@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>polls.src.Canvas.unit_test.U_2</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="polls-module.html">Package&nbsp;polls</a> ::
+        <a href="polls.src-module.html">Package&nbsp;src</a> ::
+        <a href="polls.src.Canvas-module.html">Package&nbsp;Canvas</a> ::
+        <a href="polls.src.Canvas.unit_test-module.html">Package&nbsp;unit_test</a> ::
+        Module&nbsp;U_2
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="polls.src.Canvas.unit_test.U_2-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="polls.src.Canvas.unit_test.U_2-module.html">Module polls.src.Canvas.unit_test.U_2</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt><tt class="py-op">,</tt><tt class="py-name">sys</tt><tt class="py-op">,</tt><tt class="py-name">glob</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">subprocess</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module polls.src.Canvas.unit_test.config=polls.src.Canvas.unit_test.config-module.html,Module polls.src.config=polls.src.config-module.html,Module polls.src.parse.kth_extract.pdfssa4met.config=polls.src.parse.kth_extract.pdfssa4met.config-module.html"><a title="polls.src.Canvas.unit_test.config
+polls.src.config
+polls.src.parse.kth_extract.pdfssa4met.config" class="py-name" href="#" onclick="return doclink('link-0', 'config', 'link-0');">config</a></tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment">#initialize test enviorment</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable polls.src.Canvas.unit_test.U_1.Expected_kth_canvas=polls.src.Canvas.unit_test.U_1-module.html#Expected_kth_canvas,Variable polls.src.Canvas.unit_test.U_2.Expected_kth_canvas=polls.src.Canvas.unit_test.U_2-module.html#Expected_kth_canvas,Variable polls.src.Canvas.unit_test.U_2_4.Expected_kth_canvas=polls.src.Canvas.unit_test.U_2_4-module.html#Expected_kth_canvas,Variable polls.src.Canvas.unit_test.U_5.Expected_kth_canvas=polls.src.Canvas.unit_test.U_5-module.html#Expected_kth_canvas"><a title="polls.src.Canvas.unit_test.U_1.Expected_kth_canvas
+polls.src.Canvas.unit_test.U_2.Expected_kth_canvas
+polls.src.Canvas.unit_test.U_2_4.Expected_kth_canvas
+polls.src.Canvas.unit_test.U_5.Expected_kth_canvas" class="py-name" href="#" onclick="return doclink('link-1', 'Expected_kth_canvas', 'link-1');">Expected_kth_canvas</a></tt><tt class="py-op">=</tt> <tt id="link-2" class="py-name"><a title="polls.src.Canvas.unit_test.config
+polls.src.config
+polls.src.parse.kth_extract.pdfssa4met.config" class="py-name" href="#" onclick="return doclink('link-2', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Variable polls.src.Canvas.unit_test.config.kth_canvas=polls.src.Canvas.unit_test.config-module.html#kth_canvas"><a title="polls.src.Canvas.unit_test.config.kth_canvas" class="py-name" href="#" onclick="return doclink('link-3', 'kth_canvas', 'link-3');">kth_canvas</a></tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">#course_id 2139(sandbox)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable polls.src.Canvas.unit_test.U_1.Expected_kth_canvas_thesis_course_id=polls.src.Canvas.unit_test.U_1-module.html#Expected_kth_canvas_thesis_course_id,Variable polls.src.Canvas.unit_test.U_2.Expected_kth_canvas_thesis_course_id=polls.src.Canvas.unit_test.U_2-module.html#Expected_kth_canvas_thesis_course_id,Variable polls.src.Canvas.unit_test.U_2_4.Expected_kth_canvas_thesis_course_id=polls.src.Canvas.unit_test.U_2_4-module.html#Expected_kth_canvas_thesis_course_id,Variable polls.src.Canvas.unit_test.U_5.Expected_kth_canvas_thesis_course_id=polls.src.Canvas.unit_test.U_5-module.html#Expected_kth_canvas_thesis_course_id"><a title="polls.src.Canvas.unit_test.U_1.Expected_kth_canvas_thesis_course_id
+polls.src.Canvas.unit_test.U_2.Expected_kth_canvas_thesis_course_id
+polls.src.Canvas.unit_test.U_2_4.Expected_kth_canvas_thesis_course_id
+polls.src.Canvas.unit_test.U_5.Expected_kth_canvas_thesis_course_id" class="py-name" href="#" onclick="return doclink('link-4', 'Expected_kth_canvas_thesis_course_id', 'link-4');">Expected_kth_canvas_thesis_course_id</a></tt> <tt class="py-op">=</tt> <tt id="link-5" class="py-name"><a title="polls.src.Canvas.unit_test.config
+polls.src.config
+polls.src.parse.kth_extract.pdfssa4met.config" class="py-name" href="#" onclick="return doclink('link-5', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Variable polls.src.Canvas.unit_test.config.thesis_course_id=polls.src.Canvas.unit_test.config-module.html#thesis_course_id"><a title="polls.src.Canvas.unit_test.config.thesis_course_id" class="py-name" href="#" onclick="return doclink('link-6', 'thesis_course_id', 'link-6');">thesis_course_id</a></tt> <tt class="py-comment">#sandbox</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-comment">#assignment_id 24565 testing 1; 24566 testing 2 ; 24567 testing 3;</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable polls.src.Canvas.unit_test.U_1.Expcted_proporsal_assignment_id=polls.src.Canvas.unit_test.U_1-module.html#Expcted_proporsal_assignment_id,Variable polls.src.Canvas.unit_test.U_2.Expcted_proporsal_assignment_id=polls.src.Canvas.unit_test.U_2-module.html#Expcted_proporsal_assignment_id,Variable polls.src.Canvas.unit_test.U_5.Expcted_proporsal_assignment_id=polls.src.Canvas.unit_test.U_5-module.html#Expcted_proporsal_assignment_id"><a title="polls.src.Canvas.unit_test.U_1.Expcted_proporsal_assignment_id
+polls.src.Canvas.unit_test.U_2.Expcted_proporsal_assignment_id
+polls.src.Canvas.unit_test.U_5.Expcted_proporsal_assignment_id" class="py-name" href="#" onclick="return doclink('link-7', 'Expcted_proporsal_assignment_id', 'link-7');">Expcted_proporsal_assignment_id</a></tt><tt class="py-op">=</tt><tt id="link-8" class="py-name"><a title="polls.src.Canvas.unit_test.config
+polls.src.config
+polls.src.parse.kth_extract.pdfssa4met.config" class="py-name" href="#" onclick="return doclink('link-8', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Variable polls.src.Canvas.unit_test.config.proporsal_assignment_id=polls.src.Canvas.unit_test.config-module.html#proporsal_assignment_id"><a title="polls.src.Canvas.unit_test.config.proporsal_assignment_id" class="py-name" href="#" onclick="return doclink('link-9', 'proporsal_assignment_id', 'link-9');">proporsal_assignment_id</a></tt> <tt class="py-comment">#test_1</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable polls.src.Canvas.unit_test.U_1.Expected_thesis_assignment_id=polls.src.Canvas.unit_test.U_1-module.html#Expected_thesis_assignment_id,Variable polls.src.Canvas.unit_test.U_2.Expected_thesis_assignment_id=polls.src.Canvas.unit_test.U_2-module.html#Expected_thesis_assignment_id,Variable polls.src.Canvas.unit_test.U_5.Expected_thesis_assignment_id=polls.src.Canvas.unit_test.U_5-module.html#Expected_thesis_assignment_id"><a title="polls.src.Canvas.unit_test.U_1.Expected_thesis_assignment_id
+polls.src.Canvas.unit_test.U_2.Expected_thesis_assignment_id
+polls.src.Canvas.unit_test.U_5.Expected_thesis_assignment_id" class="py-name" href="#" onclick="return doclink('link-10', 'Expected_thesis_assignment_id', 'link-10');">Expected_thesis_assignment_id</a></tt><tt class="py-op">=</tt><tt id="link-11" class="py-name"><a title="polls.src.Canvas.unit_test.config
+polls.src.config
+polls.src.parse.kth_extract.pdfssa4met.config" class="py-name" href="#" onclick="return doclink('link-11', 'config', 'link-0');">config</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Variable polls.src.Canvas.unit_test.config.Thesis_assignment_id=polls.src.Canvas.unit_test.config-module.html#Thesis_assignment_id"><a title="polls.src.Canvas.unit_test.config.Thesis_assignment_id" class="py-name" href="#" onclick="return doclink('link-12', 'Thesis_assignment_id', 'link-12');">Thesis_assignment_id</a></tt> <tt class="py-comment">#test_2</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="main"></a><div id="main-def"><a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="main-toggle" onclick="return toggle('main');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="polls.src.Canvas.unit_test.U_2-module.html#main">main</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="main-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="main-expanded"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt class="py-string">"test_library"</tt><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">    <tt class="py-name">python_param</tt><tt class="py-op">=</tt> <tt class="py-string">'import list_studentList_assignment; list_studentList_assignment.main(%s,%s)'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="polls.src.Canvas.unit_test.U_1.Expected_kth_canvas_thesis_course_id
+polls.src.Canvas.unit_test.U_2.Expected_kth_canvas_thesis_course_id
+polls.src.Canvas.unit_test.U_2_4.Expected_kth_canvas_thesis_course_id
+polls.src.Canvas.unit_test.U_5.Expected_kth_canvas_thesis_course_id" class="py-name" href="#" onclick="return doclink('link-13', 'Expected_kth_canvas_thesis_course_id', 'link-4');">Expected_kth_canvas_thesis_course_id</a></tt><tt class="py-op">,</tt><tt id="link-14" class="py-name"><a title="polls.src.Canvas.unit_test.U_1.Expcted_proporsal_assignment_id
+polls.src.Canvas.unit_test.U_2.Expcted_proporsal_assignment_id
+polls.src.Canvas.unit_test.U_5.Expcted_proporsal_assignment_id" class="py-name" href="#" onclick="return doclink('link-14', 'Expcted_proporsal_assignment_id', 'link-7');">Expcted_proporsal_assignment_id</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">    <tt class="py-name">message</tt> <tt class="py-op">=</tt> <tt class="py-string">"python3 -c "</tt><tt class="py-op">+</tt><tt class="py-string">"'"</tt> <tt class="py-op">+</tt>  <tt class="py-name">python_param</tt><tt class="py-op">+</tt><tt class="py-string">"'"</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">    <tt class="py-comment">#print (message)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">    <tt class="py-name">sub</tt><tt class="py-op">=</tt> <tt class="py-name">subprocess</tt><tt class="py-op">.</tt><tt class="py-name">Popen</tt><tt class="py-op">(</tt><tt class="py-name">message</tt><tt class="py-op">,</tt> <tt class="py-name">stdout</tt><tt class="py-op">=</tt><tt class="py-name">subprocess</tt><tt class="py-op">.</tt><tt class="py-name">PIPE</tt><tt class="py-op">,</tt> <tt class="py-name">shell</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-name">student_list_canvas</tt><tt class="py-op">,</tt> <tt class="py-name">error</tt><tt class="py-op">)</tt> <tt class="py-op">=</tt> <tt class="py-name">sub</tt><tt class="py-op">.</tt><tt class="py-name">communicate</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">    <tt class="py-comment">#print student_list_canvas</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">+</tt> <tt class="py-string">"/../../../../output/parse_result/"</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-name">file_list</tt><tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">listdir</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-name">student_list_canvas</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-name">acutal_nameList</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">dir</tt> <tt class="py-keyword">in</tt> <tt class="py-name">file_list</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">        <tt class="py-comment">#print os.getcwd()</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-string">"/"</tt><tt class="py-op">+</tt><tt class="py-name">dir</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">root</tt><tt class="py-op">,</tt> <tt class="py-name">dirs</tt><tt class="py-op">,</tt> <tt class="py-name">files</tt> <tt class="py-keyword">in</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">walk</tt><tt class="py-op">(</tt><tt class="py-string">"."</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">filename</tt> <tt class="py-keyword">in</tt> <tt class="py-name">files</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">            <tt class="py-comment">#print filename</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">filename</tt><tt class="py-op">==</tt><tt class="py-string">"author_1.txt"</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                    <tt class="py-name">author_1</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">filename</tt><tt class="py-op">,</tt><tt class="py-string">'r'</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">                    <tt class="py-name">acutal_nameList</tt><tt class="py-op">.</tt><tt class="py-name">append</tt> <tt class="py-op">(</tt><tt class="py-name">author_1</tt><tt class="py-op">.</tt><tt class="py-name">read</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">'&gt;'</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">'&lt;'</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">                    <tt class="py-name">author_1</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">filename</tt> <tt class="py-op">==</tt> <tt class="py-string">"author_2.txt"</tt><tt class="py-op">:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">                        <tt class="py-name">author_2</tt> <tt class="py-op">=</tt> <tt class="py-name">files</tt><tt class="py-op">.</tt><tt class="py-name">read</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">                        <tt class="py-name">acutal_nameList</tt><tt class="py-op">.</tt><tt class="py-name">append</tt> <tt class="py-op">(</tt><tt class="py-name">author_2</tt><tt class="py-op">.</tt><tt class="py-name">read</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">'&gt;'</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">'&lt;'</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">                        <tt class="py-name">author_2</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">            <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt class="py-string">'../'</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-name">acutal_nameList</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">student_list_canvas</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt id="link-15" class="py-name" targets="Function polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.main()=polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group-module.html#main,Function polls.src.Canvas.canvas.augument_gradebook.main()=polls.src.Canvas.canvas.augument_gradebook-module.html#main,Function polls.src.Canvas.canvas.augument_list_students_in_course.main()=polls.src.Canvas.canvas.augument_list_students_in_course-module.html#main,Function polls.src.Canvas.canvas.ccreate.main()=polls.src.Canvas.canvas.ccreate-module.html#main,Function polls.src.Canvas.canvas.cdel.main()=polls.src.Canvas.canvas.cdel-module.html#main,Function polls.src.Canvas.canvas.cget.main()=polls.src.Canvas.canvas.cget-module.html#main,Function polls.src.Canvas.canvas.cgetall.main()=polls.src.Canvas.canvas.cgetall-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.main()=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_stats_for_pages_in_course.main()=polls.src.Canvas.canvas.compute_stats_for_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.cput.main()=polls.src.Canvas.canvas.cput-module.html#main,Function polls.src.Canvas.canvas.create_proposal_gradebook_columns.main()=polls.src.Canvas.canvas.create_proposal_gradebook_columns-module.html#main,Function polls.src.Canvas.canvas.create_sections_in_course.main()=polls.src.Canvas.canvas.create_sections_in_course-module.html#main,Function polls.src.Canvas.canvas.custom_column_data.main()=polls.src.Canvas.canvas.custom_column_data-module.html#main,Function polls.src.Canvas.canvas.delete_custom_column.main()=polls.src.Canvas.canvas.delete_custom_column-module.html#main,Function polls.src.Canvas.canvas.delete_page.main()=polls.src.Canvas.canvas.delete_page-module.html#main,Function polls.src.Canvas.canvas.delete_section_by_id.main()=polls.src.Canvas.canvas.delete_section_by_id-module.html#main,Function polls.src.Canvas.canvas.export_gradebook.main()=polls.src.Canvas.canvas.export_gradebook-module.html#main,Function polls.src.Canvas.canvas.extract_text_from_pages_in_course.main()=polls.src.Canvas.canvas.extract_text_from_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.fill_proposal_gradebook_columns.main()=polls.src.Canvas.canvas.fill_proposal_gradebook_columns-module.html#main,Function polls.src.Canvas.canvas.get_file.main()=polls.src.Canvas.canvas.get_file-module.html#main,Function polls.src.Canvas.canvas.get_submission.main()=polls.src.Canvas.canvas.get_submission-module.html#main,Function polls.src.Canvas.canvas.get_submission_as_file.main()=polls.src.Canvas.canvas.get_submission_as_file-module.html#main,Function polls.src.Canvas.canvas.insert_appointment.main()=polls.src.Canvas.canvas.insert_appointment-module.html#main,Function polls.src.Canvas.canvas.insert_appointment_by_group.main()=polls.src.Canvas.canvas.insert_appointment_by_group-module.html#main,Function polls.src.Canvas.canvas.insert_formula_questions.main()=polls.src.Canvas.canvas.insert_formula_questions-module.html#main,Function polls.src.Canvas.canvas.insert_page2.main()=polls.src.Canvas.canvas.insert_page2-module.html#main,Function polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.main()=polls.src.Canvas.canvas.insert_quiz_from_spreadsheet-module.html#main,Function polls.src.Canvas.canvas.list_course_analytics.main()=polls.src.Canvas.canvas.list_course_analytics-module.html#main,Function polls.src.Canvas.canvas.list_groups_in_course.main()=polls.src.Canvas.canvas.list_groups_in_course-module.html#main,Function polls.src.Canvas.canvas.list_groups_in_course2.main()=polls.src.Canvas.canvas.list_groups_in_course2-module.html#main,Function polls.src.Canvas.canvas.list_my_appointments.main()=polls.src.Canvas.canvas.list_my_appointments-module.html#main,Function polls.src.Canvas.canvas.list_pages.main()=polls.src.Canvas.canvas.list_pages-module.html#main,Function polls.src.Canvas.canvas.list_quizzes.main()=polls.src.Canvas.canvas.list_quizzes-module.html#main,Function polls.src.Canvas.canvas.list_sections_in_course.main()=polls.src.Canvas.canvas.list_sections_in_course-module.html#main,Function polls.src.Canvas.canvas.list_studentList_assignment.main()=polls.src.Canvas.canvas.list_studentList_assignment-module.html#main,Function polls.src.Canvas.canvas.list_students_and_observers_in_course.main()=polls.src.Canvas.canvas.list_students_and_observers_in_course-module.html#main,Function polls.src.Canvas.canvas.list_students_in_course.main()=polls.src.Canvas.canvas.list_students_in_course-module.html#main,Function polls.src.Canvas.canvas.list_users_in_course.main()=polls.src.Canvas.canvas.list_users_in_course-module.html#main,Function polls.src.Canvas.canvas.list_users_in_course_with_students_email.main()=polls.src.Canvas.canvas.list_users_in_course_with_students_email-module.html#main,Function polls.src.Canvas.canvas.list_your_courses.main()=polls.src.Canvas.canvas.list_your_courses-module.html#main,Function polls.src.Canvas.canvas.list_your_courses2.main()=polls.src.Canvas.canvas.list_your_courses2-module.html#main,Function polls.src.Canvas.canvas.make_appointment.main()=polls.src.Canvas.canvas.make_appointment-module.html#main,Function polls.src.Canvas.canvas.mine_for_urls_in_page.main()=polls.src.Canvas.canvas.mine_for_urls_in_page-module.html#main,Function polls.src.Canvas.canvas.place_students_in_sections_in_course.main()=polls.src.Canvas.canvas.place_students_in_sections_in_course-module.html#main,Function polls.src.Canvas.canvas.test.main()=polls.src.Canvas.canvas.test-module.html#main,Function polls.src.Canvas.canvas.update_page_example1.main()=polls.src.Canvas.canvas.update_page_example1-module.html#main,Function polls.src.Canvas.unit_test.U_1.main()=polls.src.Canvas.unit_test.U_1-module.html#main,Function polls.src.Canvas.unit_test.U_2.main()=polls.src.Canvas.unit_test.U_2-module.html#main,Function polls.src.Canvas.unit_test.U_2_4.main()=polls.src.Canvas.unit_test.U_2_4-module.html#main,Function polls.src.Canvas.unit_test.U_5.main()=polls.src.Canvas.unit_test.U_5-module.html#main,Function polls.src.mods.xmlGenerator.main()=polls.src.mods.xmlGenerator-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.headings.main()=polls.src.parse.kth_extract.pdfssa4met.headings-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.kthextract.main()=polls.src.parse.kth_extract.pdfssa4met.kthextract-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.references.main()=polls.src.parse.kth_extract.pdfssa4met.references-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.socialtags.main()=polls.src.parse.kth_extract.pdfssa4met.socialtags-module.html#main,Function polls.src.start.main()=polls.src.start-module.html#main,Function polls.src.start_proporsal.main()=polls.src.start_proporsal-module.html#main"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.main
+polls.src.Canvas.canvas.augument_gradebook.main
+polls.src.Canvas.canvas.augument_list_students_in_course.main
+polls.src.Canvas.canvas.ccreate.main
+polls.src.Canvas.canvas.cdel.main
+polls.src.Canvas.canvas.cget.main
+polls.src.Canvas.canvas.cgetall.main
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.main
+polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_stats_for_pages_in_course.main
+polls.src.Canvas.canvas.cput.main
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.main
+polls.src.Canvas.canvas.create_sections_in_course.main
+polls.src.Canvas.canvas.custom_column_data.main
+polls.src.Canvas.canvas.delete_custom_column.main
+polls.src.Canvas.canvas.delete_page.main
+polls.src.Canvas.canvas.delete_section_by_id.main
+polls.src.Canvas.canvas.export_gradebook.main
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.main
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.main
+polls.src.Canvas.canvas.get_file.main
+polls.src.Canvas.canvas.get_submission.main
+polls.src.Canvas.canvas.get_submission_as_file.main
+polls.src.Canvas.canvas.insert_appointment.main
+polls.src.Canvas.canvas.insert_appointment_by_group.main
+polls.src.Canvas.canvas.insert_formula_questions.main
+polls.src.Canvas.canvas.insert_page2.main
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.main
+polls.src.Canvas.canvas.list_course_analytics.main
+polls.src.Canvas.canvas.list_groups_in_course.main
+polls.src.Canvas.canvas.list_groups_in_course2.main
+polls.src.Canvas.canvas.list_my_appointments.main
+polls.src.Canvas.canvas.list_pages.main
+polls.src.Canvas.canvas.list_quizzes.main
+polls.src.Canvas.canvas.list_sections_in_course.main
+polls.src.Canvas.canvas.list_studentList_assignment.main
+polls.src.Canvas.canvas.list_students_and_observers_in_course.main
+polls.src.Canvas.canvas.list_students_in_course.main
+polls.src.Canvas.canvas.list_users_in_course.main
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.main
+polls.src.Canvas.canvas.list_your_courses.main
+polls.src.Canvas.canvas.list_your_courses2.main
+polls.src.Canvas.canvas.make_appointment.main
+polls.src.Canvas.canvas.mine_for_urls_in_page.main
+polls.src.Canvas.canvas.place_students_in_sections_in_course.main
+polls.src.Canvas.canvas.test.main
+polls.src.Canvas.canvas.update_page_example1.main
+polls.src.Canvas.unit_test.U_1.main
+polls.src.Canvas.unit_test.U_2.main
+polls.src.Canvas.unit_test.U_2_4.main
+polls.src.Canvas.unit_test.U_5.main
+polls.src.mods.xmlGenerator.main
+polls.src.parse.kth_extract.pdfssa4met.headings.main
+polls.src.parse.kth_extract.pdfssa4met.kthextract.main
+polls.src.parse.kth_extract.pdfssa4met.references.main
+polls.src.parse.kth_extract.pdfssa4met.socialtags.main
+polls.src.start.main
+polls.src.start_proporsal.main" class="py-name" href="#" onclick="return doclink('link-15', 'main', 'link-15');">main</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun 19 07:34:21 2018
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

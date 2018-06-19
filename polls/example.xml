@@ -1,0 +1,207 @@
+<modsCollection xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+    <mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="3.2"
+          xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+
+
+        <genre authority="diva" type="publicationTypeCode">studentThesis</genre>
+        <genre authority="diva" type="publicationType" lang="eng">Student thesis</genre>
+        <genre authority="diva" type="publicationType" lang="swe">Studentuppsats (Examensarbete)</genre>
+        <genre authority="diva" type="publicationType" lang="nor">Oppgave</genre>
+        <genre authority="kev" type="publicationType" lang="eng">book</genre>
+
+
+        <name type="personal" authority="kth" xlink:href="u1y5qvqr">
+            <namePart type="family">Hagernäs</namePart>
+            <namePart type="given">Patrik</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+            </role>
+            <affiliation>KTH, Radio Systems Laboratory (RS Lab)</affiliation>
+            <affiliation>CCS</affiliation>
+        </name>
+        <name type="corporate">
+            <namePart>CCS</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">oth</roleTerm>
+            </role>
+            <description>Research Group</description>
+        </name>
+        <name type="personal" authority="kth" xlink:href="u1d13i2c">
+            <namePart type="family">Maguire Jr.</namePart>
+            <namePart type="given">Gerald Q.</namePart>
+            <namePart type="termsOfAddress">professor</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">ths</roleTerm>
+            </role>
+            <affiliation>KTH, Radio Systems Laboratory (RS Lab)</affiliation>
+            <description>orcid.org=0000-0002-6066-746X</description>
+        </name>
+        <name type="personal">
+            <namePart type="family">Welin</namePart>
+            <namePart type="given">Annikki</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">ths</roleTerm>
+            </role>
+            <affiliation>Ericsson</affiliation>
+        </name>
+        <name type="personal">
+            <namePart type="family">Thyni</namePart>
+            <namePart type="given">Tomas</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">ths</roleTerm>
+            </role>
+            <affiliation>Ericsson</affiliation>
+        </name>
+        <name type="personal" authority="kth" xlink:href="u1d13i2c">
+            <namePart type="family">Maguire Jr.</namePart>
+            <namePart type="given">Gerald Q.</namePart>
+            <namePart type="termsOfAddress">professor</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">mon</roleTerm>
+            </role>
+            <affiliation>KTH, Radio Systems Laboratory (RS Lab)</affiliation>
+            <description>orcid.org=0000-0002-6066-746X</description>
+        </name>
+        <name type="corporate" authority="kth" xlink:href="13053">
+            <namePart>KTH</namePart>
+            <namePart>Skolan för informations- och kommunikationsteknik (ICT)</namePart>
+            <namePart>Kommunikationssystem, CoS</namePart>
+            <namePart>Radio Systems Laboratory (RS Lab)</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+            </role>
+        </name>
+        <titleInfo lang="eng">
+            <title>5G user satisfaction enabled by FASP</title>
+            <subTitle>Evaluating the performance of Aspera's FASP</subTitle>
+        </titleInfo>
+        <language>
+            <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </language>
+        <originInfo>
+            <dateIssued>2015</dateIssued>
+            <dateOther type="defence">2015-08-25T13:00:00</dateOther>
+            <dateOther type="academicTerm"></dateOther>
+            <dateOther type="availableFrom">2015-08-27T16:45:00</dateOther>
+        </originInfo>
+        <physicalDescription>
+            <form authority="marcform">electronic</form>
+            <extent>xiii,40</extent>
+        </physicalDescription>
+        <identifier type="uri">http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-172760</identifier>
+        <typeOfResource>text</typeOfResource>
+        <relatedItem type="series">
+            <titleInfo>
+                <title>TRITA-ICT-EX</title>
+            </titleInfo>
+            <identifier type="local">5952</identifier>
+            <identifier type="issue number">2015:199</identifier>
+        </relatedItem>
+        <subject lang="eng">
+            <topic>TCP</topic>
+        </subject>
+        <subject lang="eng">
+            <topic>5G</topic>
+        </subject>
+        <subject lang="eng">
+            <topic>emulated radio access network</topic>
+        </subject>
+        <subject lang="eng">
+            <topic>handover</topic>
+        </subject>
+        <subject lang="eng">
+            <topic>FASP</topic>
+        </subject>
+        <subject lang="eng">
+            <topic>CUBIC TCP</topic>
+        </subject>
+        <subject lang="eng">
+            <topic>packet loss</topic>
+        </subject>
+        <subject lang="swe">
+            <topic>TCP</topic>
+        </subject>
+        <subject lang="swe">
+            <topic>5G</topic>
+        </subject>
+        <subject lang="swe">
+            <topic>överlämningar</topic>
+        </subject>
+        <subject lang="swe">
+            <topic>FASP</topic>
+        </subject>
+        <subject lang="swe">
+            <topic>CUBIC TCP</topic>
+        </subject>
+        <subject lang="swe">
+            <topic>tappade paket</topic>
+        </subject>
+        <subject lang="swe">
+            <topic>radioaccessnät</topic>
+        </subject>
+        <subject lang="eng" authority="hsv" xlink:href="20203">
+            <topic>Engineering and Technology</topic>
+            <topic>Electrical Engineering, Electronic Engineering, Information Engineering</topic>
+            <topic>Communication Systems</topic>
+        </subject>
+        <subject lang="swe" authority="hsv" xlink:href="20203">
+            <topic>Teknik och teknologier</topic>
+            <topic>Elektroteknik och elektronik</topic>
+            <topic>Kommunikationssystem</topic>
+        </subject>
+        <abstract lang="eng">&lt;p&gt;With Ericsson’s goal to have optimal user experience at 5G’s 2020 release, it is
+            very important to optimize transport protocols and techniques to manage the increasing amount of data
+            traffic. Additionally, it will be important to manage handovers between very high speed 5G networks and
+            older networks. Today most of the traffic is video on demand and the amount of this kind of traffic is
+            expected to increase. Moreover, the current amount of data traffic will increase by an order of magnitude
+            over the next few years. This thesis focuses on radio access networks and the difficulties they face in
+            delivering high speed data traffic.&lt;/p&gt;&lt;p&gt;This thesis analyzes one of the most used TCP
+            protocols, CUBIC, as well as a new transport protocol developed by Aspera, called the Fast and Secure
+            Protocol. Aspera’s FASP is a new transport protocol that promises full link utilization. FASP is built upon
+            UDP and uses advanced round trip time measurements and queuing delay to detect the available bandwidth
+            between two communicating hosts.&lt;/p&gt;&lt;p&gt;This thesis project also provides methods to realize
+            experiments to assess the limitations of transport protocols. These experiments are conducted in an
+            environment that resembles the upcoming 5G radio access network. Results have shown that both delay and
+            packet loss affect TCP more than we expected and that high packet loss is devastating. In contrast, Aspera’s
+            FASP is very resistant to both delay and packet loss. These results and analysis provide a foundation upon
+            which others can build.&lt;/p&gt;
+        </abstract>
+        <abstract lang="swe">&lt;p&gt;Med Ericssons mål att ha optimal användarupplevelse vid släppet av 5G år 2020 är
+            det oerhört viktigt att optimera transportprotokoll och tekniker för att hantera den ökande mängden
+            datatrafik. En annan viktig aspekt kan vara att hantera överlämningar mellan 5G nätverk och äldre
+            radionätverk. Idag är den största trafiken streamad video och prognoser visar att den sortens trafik bara
+            kommer att öka. Prognoserna visar också att all trafik kommer att öka mångfaldigt de närmaste åren. Denna
+            thesis kommer att fokusera på svårigheterna just inom radionätverk.&lt;/p&gt;&lt;p&gt;Denna thesis kommer
+            att analysera ett av vårt mest använda transportprotokoll CUBIC TCP, den kommer också att analysera ett helt
+            nytt transportprotokoll utvecklat av Aspera, Fast and Secure Protocol. Aspera lovar fullt utnyttjande av den
+            mellanliggande länken. FASP är byggt ovanpå UDP och använder avancerade tur- och returtidsmätningar för att
+            använda all outnyttjad bandbredd.&lt;/p&gt;&lt;p&gt;Denna thesis visar även hur man kan göra experiment för
+            att hitta begränsningar i transportprotokoll. Alla dessa experiment kommer utförs i en miljö som efterliknar
+            det nya 5G-nätverket. Resultatet visar att både förlora paket tillsammans med en hög fördröjning påverkar
+            mycket mer än väntat och att frekvent förlora paket är förödande för TCP. Asperas FASP är i motsats mycket
+            tålig mot både paketförlust och hög fördröjning. Detta resultat och denna analys lägger en grund var andra
+            kan arbeta vidare.&lt;/p&gt;
+        </abstract>
+        <note type="level" lang="swe">Självständigt arbete på avancerad nivå (masterexamen)</note>
+        <note type="universityCredits" lang="swe">20 poäng / 30 hp</note>
+        <language objectPart="defence">
+            <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </language>
+        <note type="venue">Seminar room Grimeton, Isafjordsgatan 22, Kista</note>
+        <location>
+            <url displayLabel="fulltext" note="free" access="raw object">
+                http://kth.diva-portal.org/smash/get/diva2:849244/FULLTEXT01.pdf
+            </url>
+        </location>
+        <recordInfo>
+            <recordOrigin>u1d13i2c</recordOrigin>
+            <recordContentSource>kth</recordContentSource>
+            <recordCreationDate>2015-08-27</recordCreationDate>
+            <recordChangeDate>2015-08-28</recordChangeDate>
+            <recordIdentifier>diva2:849244</recordIdentifier>
+        </recordInfo>
+    </mods>
+</modsCollection>
+

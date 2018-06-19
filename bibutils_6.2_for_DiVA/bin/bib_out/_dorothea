@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{ANDERSSON, DOROTHEA}
+and {AHLSTRAND, REBECCA}",
+title="SIMULATION OF INDUSTRIAL CONTROL SYSTEM FIELD DEVICES FOR CYBER SECURITY: Key areas to consider when entering a market by co-creating digital HR-tools",
+abstract="society, not least when it comes to controlling and protecting critical infrastructure such as power grids and water supply. There is a need to test these systems for vulnerabilities, but it is often difficult if not impossible to do so in operational real time systems since they have been shown to be sensitive even to disturbances caused by benign diagnostic tools. This thesis explores how ICS field devices can be simulated in order to fool potential antagonists, and how they can be used in virtualized ICS for cyber security research. 8 different field devices were simulated using the honeypot daemon Honeyd, and a generally applicable simulation methodology was developed. It was also explored how these simulations can be further developed in order to function like real field devices in virtualized environments."
+}
+

@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{AHMADI-DJAM, ADRIAN}
+and {BELFRAGE, SEAN}",
+title="Forecasting Non-Maturing Liabilities: A Study on Strategic Opportunities as a Necessity for a Traditional Swedish Bank in the Payment Industry",
+abstract="With ever increasing regulatory pressure financial institutions are required to carefully monitor their liquidity risk. This Master thesis focuses on asserting the appropriateness of time series models for forecasting deposit volumes by using data from one undisclosed financial institution. Holt-Winters, Stochastic Factor, ARIMA and ARIMAX models are considered with the latter being the one with best out-of-sample performance. The ARIMAX model is appropriate for forecasting deposit volumes on a 3 to 6 month horizon with seasonality accounted for through monthly dummy variables. Explanatory variables such as market volatility and interest rates do improve model accuracy but vastly increases complexity due to the simulations needed for forecasting."
+}
+

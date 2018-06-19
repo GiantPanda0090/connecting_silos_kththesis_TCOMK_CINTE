@@ -1,0 +1,709 @@
+maguire@birkv:~/Working/Exjobs/pdfssa4met> find .. -type f -name 15*cover.pdf -exec ./kthextract.py {} \; -print
+<Title>Internet of Things</Title>
+<Subtitle>Internet of Things</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Internet of Things (IoT) is a concept that encompasses various objects and methods of communication to exchange information. Today IoT is more a descriptive term of a vision that everything should be connected to the internet. IoT will be fundamental in the future because the concept opens up opportunities for new services and new innovations. All objects will be connected and able to communicate with each other, while they operate in unprotected environments. This later aspect leads to major security challenges.</p>
+<p>Today, IoT is in great need of standardization and clear architectures that describe how this technology should be implemented and how IoT devices interact with each other in a secure manner. The security challenges are rooted in the technology and how information is acquired and manipulated by this technology. This thesis provides an introduction to what the IoT is and how it can be used as well as some of the threats that IoT may face in regards to information security. In addition, the thesis provides the reader with some suggestions about how to potentially solve the fundamental need for authentication and secure communications. The solutions presented are based on both contemporary solutions and technologies that are under development for the future. Contemporary solutions are based on security protocols such as IPSec and DTLS. These protocols are being used in an environment that extends across the Internet and into a 6LoWPAN network. The proposed authentication solution has been developed based on a public key infrastructure and trust models for certificate management.</p>
+<p>As future work, the thesis presents several research areas where this thesis can be used as a basis. These specialization areas include further analysis of vulnerabilities and an implementation of the proposed solutions.</p>
+<p>Keywords:</p>
+<p>Internet of Things, IoT, information security, identification, authentication, secure communication</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Internet of Things (IoT) är ett koncept som omfattar olika objekt och kommunikationsmetoder för utbyte av information. Idag är IoT mer en beskrivande term av den framtidsvision som finns att allting ska vara uppkopplat på internet. IoT kommer vara fundamentalt i framtiden eftersom konceptet öppnar upp möjligheter för nya tjänster samt nya innovationer. Då alla objekt ska vara uppkopplade och kunna kommunicera med varandra samtidigt som de skall kunna operera i oskyddade miljöer, bidrar detta till stora säkerhetsutmaningar.</p>
+<p>Dagens IoT är i stort behov av standardisering och klara strukturer för hur tekniken ska implementeras samt samverka med varandra på ett säkert sätt. Utmaningarna ligger i att säkra tekniken samt informationen som tekinken bidrar med. Denna rapport ger en introduktion till vad IoT är och hur det kan användas samt vilka hot som IoT kan möta i avseende till informationssäkerhet. Utöver detta så förser rapporten läsaren med förslag om hur man eventuellt kan lösa de fundamentala behoven av autentisering och säker kommunikation. Lösningarna som läggs fram är baserade på både nutida lösningar och teknik som är under utveckling inför framtiden. Nutida lösningar är baserade på säkerhetsprotokoll som IPsec och DTLS som används i en miljö som sträcker över internet och in i ett 6LoWPAN nätverk. Den autentiseringslösning som tagits fram grundar sig på PKI och förtroendemodeller för certifikathantering.</p>
+<p>För framtida arbete presenteras flertalet vidare fördjupningsområden där denna rapport kan användas som grund. Dessa fördjupningsområden inkluderar vidare analys av sårbarheter och implementation av de lösningar som tagits fram.</p>
+<p>Nyckelord:</p>
+<p>Internet of Things, IoT, informationssäkerhet, identifiering, autentisering, säker kommunikation</p>
+<heading>Internet of Things</heading>
+<heading>Exploring and Securing a Future Concept</heading>
+<heading>CRISTIAN BUDE and ANDREAS KERVEFORS BERGSTRAND</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Internet of Things</heading>
+<subtitle>Exploring and Securing a Future Concept</subtitle>
+<author>Cristian Bude and Andreas Kervefors Bergstrand</author>
+<heading>2015-06-15</heading>
+<heading>Bachelor’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Industrial adviser Emma Andersdotter and Johan Thulin</heading>
+../150615-Cristian_Bude_Andreas_Kervefors_Bergstrand-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Improving the Quality of Web Content through Automated Metrics</Title>
+<Subtitle>Improving the Quality of Web Content through Automated Metrics</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Today many organizations make a great deal of content available via a web interface. For this project the main scope will be the public web of KTH Royal Institute of Technology. KTH has lots of data available online. The problem that occurs is that the people who write this content do not get feedback about what they post. The idea of this project is to change that and by giving the responsible person(s) feedback about their content.</p>
+<p>The main goal of the project is keeping track of changes of web pages. For example, each course has its own content and information pages - which can be changed by the person(s) responsible for the course. When pages are available in two languages and changes are made to one of them the logical expectation would be that the other language has to be changed as well. However, in the current system there is no systematic way that this change occurs or that someone would be reminded when only one version changed. Similarly for other content pages, although these might not be in multiple languages it would be interesting to see how often a page is updated and to notify the responsible person(s) that a certain page has not been updated in quite some time.</p>
+<p>A secondary goal of this project is to provide a proof of concept implementation of a tool that can automatically access web page in KTH Social (a locally developed web service) – thus enabling users to write code that can access, modify, and annotate web pages. Such a tool could be used to compute readability scores for each page and then annotate the page with this score.</p>
+<p>The code that was implemented for this project accomplished both goals. Some suggestions are made for how this process can be improved and how alternatively this processing could be done by working directly on the databases used to produce dynamic content.</p>
+<p>Keywords</p>
+<p>web crawling, readability</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>I dagens läge lägger många organisationer upp stora mängder material på webben. Detta projekt tittar främst på det offentliga webgränssnittet för KTH.</p>
+<p>KTH har stora mängder data tillgängligt online. Ett problem är att användare som redigerar och lägger upp denna data inte får återkoppling på den. Iden bakom detta projekt är att ge dessa användare återkoppling om deras material.</p>
+<p>Det slutgiltiga målet i detta projekt är att hålla koll på förändring i websidor. Till exempel kurshemsidorna på KTH som har sin egen information och innehåll och kan ändras av kursansvarige. När websidor är tillgängliga i mer än ett språk och det sker en förändring i ena språkets version förväntar man sig att informationen ska ändras på de andra språken också. I det nuvarande systemet finns det dock inget systematiskt sätt som detta ändras på och den ansvarige blir inte påmind att endast den ena ändrats. Man kan tänka sig något liknande för andra typer av innehåll. Till exempel kan det vara intressant att se hur ofta en sida uppdateras och påminna den ansvarige när en sida inte blivit uppdaterad på ett tag.</p>
+<p>Ett sekundärt mål med detta projekt är att visa upp ett verktyg som kan nå websidor på KTH Social och möjliggöra ändrandet av websidor med kod. Ett sådant verktyg kan användas för att beräkna “läsbarhetspoäng” (readability points) för varje websida och sedan kommentera sidan med denna poäng.</p>
+<p>Den implementerade koden för detta projekt uppnådde båda dessa mål. Några förslag har formulerats för hur denna process kan förbättras till exempel genom att arbeta direkt i databaserna för att producera dynamiskt material.</p>
+<p>Nyckelord</p>
+<p>webbsökning, läsbarhet</p>
+<heading>Improving the Quality of Web Content through Automated Metrics</heading>
+<heading>An attempt to process course pages at the kth.se website</heading>
+<heading>JENS BAETENS</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Improving the Quality of Web Content through Automated Metrics</heading>
+<subtitle>An attempt to process course pages at the kth.se website</subtitle>
+<author>Jens Baetens</author>
+<heading>2015-06-08</heading>
+<heading>IK2553 Project Report</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+../150606-Jens_Baetens-project-report-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</Title>
+<Subtitle>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>During the recent years, a new area called Cloud Networked Robotics (CNR) has evolved from conventional robotics, thanks to the increasing availability of cheap robot systems and steady improvements in the area of cloud computing. Cloud networked robots refers to robots with the ability to offload computation heavy modules to a cloud, in order to make use of storage, scalable computation power, and other functionalities enabled by a cloud such as shared knowledge between robots on a global level. However, these cloud robots face a problem with reachability and QoS of crucial modules that are offloaded to the cloud, when operating in unstable network environments. Under such conditions, the robots might lose the connection to the cloud at any moment; in worst case, leaving the robots “brain-dead”.</p>
+<p>This thesis project proposes a machine learning-based network aware framework for a cloud robot, that can choose the most efficient module placement based on location, task, and the network condition. The proposed solution was implemented upon a cloud robot prototype based on the TurtleBot 2 robot development kit, running Robot Operating System (ROS). A continuous experiment was conducted where the cloud robot was ordered to execute a simple task in the laboratory corridor under various network conditions. The proposed solution was evaluated by comparing the results from the continuous experiment with measurements taken from the same robot, with all modules placed locally, doing the same task.</p>
+<p>The results show that the proposed framework can potentially decrease the battery consumption by 10% while improving the efficiency of the task by 2.4 seconds (2.8%). However, there is an inherent bottleneck in the proposed solution where each new robot would need 2 months to accumulate enough data for the training set, in order to show good performance. The proposed solution can potentially benefit the area of CNR if connected and integrated with a shared-knowledge platform which can enable new robots to skip the training phase, by downloading the existing knowledge from the cloud.</p>
+<p>Keywords</p>
+<p>CNR, ROS, network awareness, cloud, open-source, TurtleBot.</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Under de senaste åren har ett nytt forskningsområde kallat Cloud Networked Robotics (CNR) växt fram inom den konventionella robottekniken, tack vare den ökade tillgången på billiga robotsystem och stadiga framsteg inom området cloud computing. Molnrobotar syftar på robotar med förmågan att flytta resurstunga moduler till ett moln för att ta del av lagringskapaciteten, den skalbara processorkraften och andra tjänster som ett moln kan tillhandahålla, t.ex. en kunskapsdatabas för robotar över hela världen. Det finns dock ett problem med dessa sorters robotar gällande nåbarhet och QoS för kritiska moduler placerade på ett moln, när dessa robotar verkar i instabila nätverksmiljöer. I ett sådant scenario kan robotarna när som helst förlora anslutningen till molnet, vilket i värsta fall lämnar robotarna hjärndöda.</p>
+<p>Den här rapporten föreslår en maskininlärningsbaserad nätverksmedveten ramverkslösning för en molnrobot, som kan välja de mest effektiva modulplaceringarna baserat på robotens position, den givna uppgiften och de rådande nätverksförhållanderna. Ramverkslösningen implementerades på en molnrobotsprototyp, baserad på ett robot development kit kallat TurtleBot 2, som använder sig av ett middleware som heter Robot Operating System (ROS). Ett fortskridande experiment utfördes där molnroboten fick i uppgift att utföra ett enkelt uppdrag i laboratoriets korridor, under varierande nätverksförhållanden. Ramverkslösningen utvärderades genom att jämföra resultaten från det fortskridrande experimentet med mätningar som gjordes med samma robot som utförde samma uppgift, fast med alla moduler placerade lokalt på roboten.</p>
+<p>Resultaten visar att den föreslagna ramverkslösningen kan potentiellt minska batterikonsumptionen med 10%, samtidigt som tiden för att utföra en uppgift kan minskas med 2.4 sekunder (2.8%). Däremot uppstår en flaskhals i framtagna lösningen där varje ny robot kräver 2 månader för att samla ihop nog med data för att maskinilärningsalgoritmen ska visa bra prestanda. Den förlsagna lösningen kan dock vara fördelaktig för CNR om man integrerar den med en kunskapsdatabas för robotar, som kan möjliggöra för varje ny robot att kringå den 2 månader långa träningsperioden, genom att ladda ner existerande kunskap från molnet.</p>
+<p>Nyckelord</p>
+<p>CNR, ROS, nätverksmedvetenhet, moln, öppen källkod, TurtleBot.</p>
+<heading>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</heading>
+<heading>A machine learning-based approach</heading>
+<heading>FREDRIK HANS NORDLUND</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Enabling Network-Aware Cloud Networked Robots with Robot Operating System</heading>
+<subtitle>A machine learning-based approach</subtitle>
+<author>Fredrik Hans Nordlund</author>
+<heading>2015-03-02</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Academic adviser in Japan Shinji Shimojo</heading>
+../150222-Fredrik_Nordlund-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Using Six Sigma Methodology to improve the performance of the Shipment Test</Title>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Competition and lead-time pressure motivates us to find new and better ways of continuously improving the output of our work. The emphasis on improvement in both efficiency and quality has become more and more significant in daily activities. The performance of Ericsson’s AXE/APZ products during shipment test phase is one such activity and is the focus of this thesis project. One of the essential principles of shipment testing is to ensure that the test campaigns finish on time. Over the last several decades companies have spent large amounts of time and money on improving test quality and efficiency. Unfortunately, the results have not always been as good as expected. It seems that it is very difficult to improve shipment testing performance using traditional test management methods.</p>
+<p>Motorola introduced Six Sigma in 1986 and achieved 5.4 Sigma level which help them saved 2.2 Billion dollars during the first six years. From Statistic aspect, it means only 3.4 defects per million opportunities. The Six Sigma methodology has been applied as a management philosophy focused on improving efficiency and performance during the shipment test period.</p>
+<p>This thesis gives an introduction to the Six Sigma approach, including the concepts of Six Sigma, its history, development, and methodology. More specifically the author uses the Define, Measure, Analyze, Improve, and Control (DMAIC) approach to evaluate the performance of Ericsson’s AXE/APZ Shipment Testing. This project goal was defined: Compare with the performance of 08AXE shipment test which 87% of test campaigns (2.68 sigma level) were finished on time, 3 sigma level in 09AXE shipment test which means 93%of the test campaigns will be finished on time has to be achieved. The thesis measured the 08AXE shipment test performance and analyzed the lead time of test campaigns, found the root causes such as poor documents quality from the legacy project, lack of test resources, no system impact analysis. The thesis also provided a set of proposals for improvements and control of the improved process in order to ensure sustainable improved performance results. Finally 93% test campaigns were finished on time in 09AXE and project goal was fulfilled.</p>
+<p>Keywords</p>
+<p>Six Sigma, quality, performance, AXE</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Konkurrens och ledtid tryck motiverar oss att hitta nya och bättre vägar att kontinuerligt förbättra resultatet av vårt arbete. Betoningen av förbättring av både effektivitet och kvalité har blivit allt mer signifikant i våra dagliga aktiviteter. Prestationen av Ericssons AXE/APZ produkter under sändningens test fas är en sådan aktivitet och det är där fokusen på detta tes projekt ligger. En av de grundläggande principerna av sändnings test är att se till att test kampanjer avslutat i tid. Under de senaste årtionden har företag spenderat stora summor tid och pengar att förbättra test kvalité och effektivitet. Tyvärr har resultaten inte vart så bra som förväntat. Det ser ut så att det är mycket svårt att förbättra sändnings test prestationen när du använder traditionella test förvaltningsmetoder. Six Sigma metodik har blivit tillämpad som en ledningsfilosofi fokuserad på att förbättra effektivitet och prestation under test exekverings perioden.</p>
+<p>Denna tes ger en introduktion till Six Sigma tillvägagångssättet, inklusive konceptet från Sig Sigma, dess historia, utveckling och metodik. Mer specifikt använder vi Define, Measure, Analyze, Improve och Control (DMAIC) tillvägagångssätt för att utvärdera prestationen av Ericssons AXE/APZ sändnings testning. Denna process kräver definitionen av prestationsmålet, mätningar av nuvarande prestanda och analys av data för att hitta rötterna till orsakerna av problemen. Resultatet av denna definition, mätning och analys var en rad förslag till förbättringar och kontroll av den förbättrade processen för att säkerhetsställa hållbara förbättrade prestations resultat.</p>
+<p>Nyckelord</p>
+<p>Six Sigma, kvalitet, Prestanda, AXE</p>
+<heading>Using Six Sigma Methodology to improve the performance of the Shipment Test</heading>
+<heading>YANG BIN</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Using Six Sigma Methodology to improve the performance of the Shipment Test</heading>
+<author>Yang Bin</author>
+<heading>binyang@kth.se</heading>
+<heading>2015-06-26</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.examiner’s name</heading>
+<heading>Industrial adviser Bogumila Rutkowska</heading>
+../150626-Yang_Bin-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Design and implementation of LTE-A and 5G kernel algorithms on SIMD vector processor</Title>
+Abstract:
+output_blocks_on_page = 5
+starting_block=2
+<p>With the wide spread of wireless technology, the time for 4G has arrived, and 5G will appear not so far in the future. However, no matter whether it is 4G or 5G, low latency is a mandatory requirement for baseband processing at base stations for modern cellular standards. In particular, in a future 5G wireless system, with massive MIMO and ultra-dense cells, the demand for low round trip latency between the mobile device and the base station requires a baseband processing delay of 1 ms. This is 10 percentage of today’s LTE-A round trip latency, while at the same time massive MIMO requires large-scale matrix computations. This is especially true for channel estimation and MIMO detection at the base station. Therefore, it is essential to ensure low latency for the user data traffic.</p>
+<p>In this master’s thesis, LTE/LTE-A uplink physical layer processing is examined, especially the process of channel estimation and MIMO detection. In order to analyze this processing we compare two conventional algorithms’ performance and complexity for channel estimation and MIMO detection. The key aspect which affects the algorithms’ speed is identified as the need for “massive complex matrix inversion”. A parallel coding scheme is proposed to implement a matrix inversion kernel algorithm on a single instruction multiple data stream (SIMD) vector processor.</p>
+<p>The major contribution of this thesis is implementation and evaluation of a parallel massive complex matrix inversion algorithm. Two aspects have been addressed: the selection of the algorithm to perform this matrix computation and the implementation of a highly parallel version of this algorithm.</p>
+<p>Keywords: channel estimation, MIMO detection, massive complex matrix inversion, SIMD</p>
+Sammanfattning:
+output_blocks_on_page = 7
+starting_block=2
+<p>Med den breda spridningen av trådlös teknik, har tiden för 4G kommit, och 5G kommer inom en överskådlig framtid. Men oavsett om det gäller 4G eller 5G, låg latens är ett obligatoriskt krav för basbandsbehandling vid basstationer för moderna mobila standarder. I synnerhet i ett framtida trådlöst 5G-system, med massiva MIMO och ultratäta celler, behövs en basbandsbehandling fördröjning på 1 ms för att klara efterfrågan på en låg rundresa latens mellan den mobila enheten och basstationen. Detta är 10 procent av dagens LTE-E rundresa latens, medan massiva MIMO samtidigt kräver storskaliga matrisberäkningar. Detta är särskilt viktigt för kanaluppskattning och MIMO- detektion vid basstationen. Därför är det viktigt att se till att det är låg latens för användardatatrafik.</p>
+<p>I detta examensarbete, skall LTE/LTE-A upplänk fysiska lagret bearbetning undersökas, och då särskilt processen för kanaluppskattning och MIMO-detektion. För att analysera denna processing jämför vi två konventionella algoritmers prestationer och komplexitet för kanaluppskattning och MIMO-detektion. Den viktigaste aspekten som påverkar algoritmernas hastighet identifieras som behovet av "massiva komplex matrisinversion". Ett parallellt kodningsschema föreslås för att implementera en "matrisinversion kernel-algoritmen" på singelinstruktion multidataström (SIMD) vektorprocessor.</p>
+<p>Det största bidraget med denna avhandling är genomförande och utvärdering av en parallell massiva komplex matrisinversion kernel-algoritmen. Två aspekter har tagits upp: valet av algoritm för att utföra denna matrisberäkning och implementationen av en högst parallell version av denna algoritm.</p>
+<p>Nyckelord: kanaluppskattning, MIMO-detektion, massiva komplex matrisinversion, SIMD</p>
+<heading>Design and implementation of LTE-A and 5G kernel algorithms on SIMD vector processor</heading>
+<heading>JIABING GUO</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Design and implementation of LTE-A and 5G kernel algorithms on SIMD vector processor</heading>
+<heading>Jiabing Guo</heading>
+<heading>Jiabing@kth.se</heading>
+<heading>2015.01.30</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner & Academic supervisor</heading>
+<heading>Gerald Q. Maguire Jr.</heading>
+<heading>Industrial supervisor Dake Liu, BIT China</heading>
+../150130-Jiabing_Gao-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Sanitization of embedded network devices</Title>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Embedded devices such as routers, switches, and firewalls commonly have sensitive information stored on them such as passwords, cryptographic keys, and information about the network around them and services that these device(s) provide. When disposing of or reselling this equipment in the secondary market it is crucial to erase this sensitive information. However, there is an important question that must be asked: Do the erase commands and routines offered by the device manufacturers actually erase the sensitive data?</p>
+<p>This thesis investigates methods and tools to determine the completeness of this erasure in some common network devices. These methods are used on a sample of networking equipment found to still contain sensitive information after being erased according to vendor recommendations. A computer program was developed to show how this information can be removed.</p>
+<p>The information in this document is useful for equipment owners, brokers and others looking to remarket their current equipment; all of whom want to minimize the risk of leaking sensitive data to other parties.</p>
+<p>Keywords</p>
+<p>Network device, router, switch, sanitization, forensics, flash, EEPROM, configuration erase, rommon. NVRAM, JTAG, programmer, RS-232, terminal, marker probability in data</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Nätverksutrustning såsom routrar, switchar och brandväggar har ofta känslig information lagrad internt, som lösenord, kryptografiska nycklar, information om nätverket runt dem samt tjänster de tillhandahåller. Om denna utrustning ska säljas på andrahandsmarkanden eller på annat sätt byta ägare är det viktigt att all känslig information raderas. Men kan man lita på att raderings rutiner och metoder som tillhandahålls av tillverkaren verkligen raderar känslig data?</p>
+<p>Denna avhandling undersöker lämpliga verktyg och metoder för att granska vilken information som minnen i inbyggda system innehåller. Dessa metoder testas praktiskt på några system som visar sig ha kvar känslig information efter att de raderats enligt tillverkarens rekommendationer. Ett datorprogram som demonstrerar hur denna information kan undersökas och raderas finns med som en del av avhandlingen.</p>
+<p>Informationen i detta dokument är användbar för ägare av datakomutrustning, mäklare av sådana samt andra som vill minimera risken för att läcka känslig information vid återförsäljning av sin begagnade utrustning.</p>
+<p>Nyckelord</p>
+<p>Nätverksutrustning, router, switch informations sanering, flash, EEPROM, radera konfigurationer, rommon, NVRAM, JTAG, programmerare, RS-232 terminal, markör sannolikhet i data</p>
+<heading>Sanitization of embedded network devices</heading>
+<heading>Investigation of vendor’s factory reset procedures</heading>
+<heading>MAGNUS LARSSON</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Sanitization of embedded network devices</heading>
+<author>Investigation of vendor’s factory reset procedures</author>
+<heading>Magnus Larsson magnus@stril.com</heading>
+<heading>2015-05-07</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic Adviser Gerald Q. Maguire Jr.</heading>
+../150507-Magnus_Larsson-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Cloud-Based Alerting System for IP-Telephony</Title>
+<Subtitle>Cloud-Based Alerting System for IP-Telephony</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>An increasing number of people in Sweden are having problems with their hearing ability. The three major tools to aid hearing-impaired and deaf individuals are: hearing aids, special telephony, and alerting systems. Both hearing aids and telephony have seen a huge technical development. Hearing aids have gone from huge ponderous devices to small delicate in-ear devices. Simple text telephones have evolved into total conversation telephones with audio, video, and text all operating in real-time. Although smart lamps and other alerting services not specifically made for hearing- impaired individuals do exist, the development of alerting system is unsatisfactory. The gap in technology is a huge problem and integration between modern products and alerting systems is getting harder. This thesis explores how to close this gap. The result of this thesis project is a prototype that provides the missing technological link between an alerting systems and modern smart devices. An eventual product should support all kinds of services, but the prototype is limited to solving the problem of connecting an alerting system to a modern total conversation telephones. The prototype was evaluated and based on the evaluation data a timeline was created. An overall positive response towards the product exists and the timeline had adding more third party services (such as Skype and FaceTime) as a high priority. The complete timeline as well as adding Signal Initiation Protocol support is left as future work.</p>
+<p>Keywords</p>
+<p>Cloud-Based services, alerting system, IP-telephony</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>I Sverige har antalet personer med hörselskada ökat de senaste åren. För att hjälpa de med hörselproblem finns det tre viktiga hjälpmedel: hörapparater, special telefoner och varseblivningssystem. Stora teknologiska framsteg har skett för både hörapparater och special telefoner. Hörapparater har gått från stora otympliga apparater till små nätta anordningar som man har i örat. Enkla texttelefoner är idag komplexa system som stödjer både video, ljud och text i realtid. Även fast smarta lampor och andra varseblivningsprodukter existerar så är utveckling för varseblivning speciellt gjorda hörselskadade och döva undermåliga. Gapet som skapats mellan moderna varseblivningsprodukter och varseblivning som hjälpmedel växer sig allt större. Denna rapport ska undersöka detta gap. Resultatet av detta projekt är en prototyp som tillhandahåller den teknologin som ska länka modern varseblivning och varseblivning som hjälpmedel. Den tänkta produkten kan användas för många olika tjänster men i detta projekt är den begränsad till total konversations telefoner. Prototypen har blivit utvärderad och en tidslinje, baserad på utvädringen, har skapats. Tidslinjen ska beskriva kommande tjänster och enheter som skall kunna användas tillsammans med prototypen. Det visar sig att den skapade prototypen blev positivt mottagen och att tjänster som Skype och Facetime skulle ha hög prioritering på tidslinjen.</p>
+<p>Nyckelord</p>
+<p>Molnbaserade tjänster, varseblivning, IP-telefoni</p>
+<heading>Cloud-Based Alerting System for IP-Telephony</heading>
+<heading>A prototype development</heading>
+<heading>PER-JOHAN SIMON JAKOBSSON</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Cloud-Based Alerting System for IP-Telephony</heading>
+<subtitle>A prototype development</subtitle>
+<author>Per-Johan Simon Jakobsson</author>
+<heading>2015-07-19</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Industrial adviser Christer Ulfsparre</heading>
+../150719-Simon_Jakobsson-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Distributed denial of service attacks</Title>
+<Subtitle>Distributed denial of service attacks</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Distributed Denial of Service attacks is a problem that constantly threatens companies that rely on the internet for major parts of their business. A successful DDoS attack that manages to penetrate a company’s network can lead to devastating damages in the form of lost income, reduced productivity, increase in costs, and damage to the company’s image and reputation.</p>
+<p>The different DDoS attacks are many and of different character and often Offer different parts of the network, which makes it very difficult to defend against. It is also very clear that DDoS attacks are increasing in both numbers and size every year. From our experiments we have proven that anyone with little knowledge and limited resources can perform DDoS attacks that will make a website unavailable. This fact should cause companies that base their business on the internet, aware that they are likely to someday be subject to a DDoS attack.</p>
+<p>From our research we have found a variety of different DDoS solutions on the market that promise to offer protection. Many of which claim to protect against all different types of DDoS attacks. In practice it is impossible to find something that guarantees 100% safety. According to earlier research in the field, there are many different ways of protecting a network against DDoS attacks, e.g. via Software Defined Networking, Hop-Count Filtering, or Kill-bots.</p>
+<p>Our own tests show that a virtual firewall can offer protection against DDoS attacks on a low scale, but that such a solution has a number of weaknesses. If the firewall does protect the website, the attacker could instead shift to attacking the firewall itself.</p>
+<p>Our research also shows that the most common motives behind DDoS attacks are criminal purposes. Criminals use DDoS attacks to earn money by offering directed DDoS attacks against websites or by trying to blackmail companies into paying a fee for not being attacked.</p>
+<p>We have also seen that the economic consequence of DDoS attacks are devastating if not handled with a sufficiently fast response. After investigating the e-commerce company CDON.com we learned that they could potentially lose roughly 36 410 SEK per minute when a DDoS attack is underway against them.</p>
+<p>In today’s business climate it is important for companies to be able to rely on the internet for their activity and for customers to have easy access to the company’s products and services. However, companies’ websites are being attacked and thus these companies need an explicit plan of how to mitigate such attacks.</p>
+<p>Keywords</p>
+<p>DDoS, Zombie, Botnet, Botmaster, Spoofing</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Distributed Denial of Service (DDoS) attacker är ett problem som ständigt hotar företag, som förlitar sig till internet för centrala delar av sin verksamhet. En DDoS-attack som lyckas penetrerar ett företags nätverk kan medföra förödande skador i form av förlorade intäkter, minskad produktivitet, ökade kostnader samt skada på företagets rykte/varumärke.</p>
+<p>DDoS-attackerna är många och av olika karaktär, som attackerar olika delar av ett företags nätverk, vilket leder till att det är svårt att effektivt skydda sig mot DDoS-attacker. Det står också klart att DDoS-attacker ökar både till antalet och storleksmässigt för varje år som går. Utifrån våra egna experiment har vi kunnat bevisa att vem som helst med små medel och begränsade kunskaper kan utföra en DDoS-attack som sänker en webbsida. Ett faktum som gör att alla företag vars verksamhet är baserad på internet bör räkna med att de någon gång bli utsatta för en DDoS-attack.</p>
+<p>Utifrån våra undersökningar kan vi se att det finns en uppsjö av olika DDoS-skydd på marknaden, skydd som hanterar några problem som DDoS-attacker medför, men det finns inga kompletta skydd som kan garantera 100 % säkerhet. Utifrån tidigare forskning på området framgår det att det finns många olika sätt att skydda sig mot DDoS-attacker, t.ex. genom Software Defined Networks, Hop-Count Filtering eller Kill-bots.</p>
+<p>Våra egna tester visar på att en virtuell brandvägg kan vara ett sätt att skydda sig mot DDoS- attacker, men testerna visar också att en sådan lösning inte heller är säker då man kan förstöra åtkomsten till webbsidan genom att överbelasta brandväggen.</p>
+<p>Undersökningen visar också att ett av de vanligaste motiven bakom DDoS-attacker är kriminella ändamål. Kriminella som använder DDoS-attacker för att tjäna pengar genom att erbjuda riktade DDoS-attacker mot websidor eller genom försök att utpressa till betalning med DDoS- attacker som ett hot.</p>
+<p>Vi har kommit fram till att de ekonomiska konsekvenserna av DDoS-attacker kan vara ödestigna för företag om det inte hanteras i tid. Genom våra egna beräkningar har vi visat att e- handelsföretaget CDON.com riskerar att förlora ca 36 415,90 kr per minut som en DDoS-attack pågår mot företaget.</p>
+<p>Anledningen till av vi valt att ägnad denna uppsats åt DDoS-problemet, är den skrämmande ökningen av DDoS-attacker som man kan se sker årligen. Attackerna blir flera, de ökar storleksmässigt och de blir allt mer sofistikerade. Attackerna utförs också tillsynes omotiverat i vissa fall, men också välplanerade attacker utförs för att skada företag ekonomiskt.</p>
+<p>I dagens företagsklimat är det viktigt att företaget har möjlighet att använda sig av internet för att driva verksamheten och göra det enkelt för kunder att ta del av företagets produkter/tjänster. Att företags webbsidor blir utslagen på grund av en DDoS-attacker är idag en verklighet, och en tydlig plan för att hur man ska hantera en sådan incident bör finns på plats inom företag.</p>
+<p>Nyckelord</p>
+<p>DDoS, Zombie, Botnet, Botmaster, Spoofing</p>
+<heading>Distributed denial of service attacks</heading>
+<heading>Protection, Mitigation, and Economic Consequences</heading>
+<heading>MARTIN EKLUND and PATRIK STÅHLBERG</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Distributed denial of service attacks</heading>
+<subtitle>Protection, Mitigation, and Economic Consequences</subtitle>
+<author>Martin Eklund and Patrik Ståhlberg</author>
+<heading>2015-07-14</heading>
+<heading>Bachelor’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Industrial adviser Björn Fredriksson (Nordea)</heading>
+../150713-Martin_Eklund_and_Patrik_Ståhlberg-with-cover.pdf
+----------------------------------------------------------------------
+<Title>Automating Interactions with Web Services</Title>
+<Subtitle>Automating Interactions with Web Services</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Today we use an obsolete way of handling information regarding which student and/or teacher is attending which class/lab/seminar, attendance is written down on a piece of paper and collected so that an administrator can manually enter this information to some data processing system.</p>
+<p>This method is far from optimal and demands a lot of time and resources from administrators, teachers, and students. Correct gathering of attendance is important since it is required for specific parts of some courses. We propose to automate the collection of this attendance data, thus enabling students and teachers to simply swipe their NFC-enabled KTH access card in order to enter their name on an attendance list. This will be achieved by creating an application that adds a student to an attendance list by reading information using a NFC/RFID reader and mapping the card’s UID to a KTHID (a locally unique identifier used within the university) using a database. The resulting attendance list should be formatted in such a fashion that it can easily be uploaded to systems such as KTH Social and Daisy. Ideally these systems will be extended so that instructors/teachers can use this attendance list to automatically create the appropriate entries in these systems to record the student’s participation in the indicated activity – in the process avoiding a lot of manual labor and improving the accuracy of the process.</p>
+<p>An additional problem is that there is currently no unified system that connects the KTH access card database (BRAVIDA) to the KTH LDAP database (which stores information about KTH students, faculty, and staff). This means that each student’s access card UID must manually be added to a database together with the student’s KTHID. However, once this database entry has been made, we can then map from a card number to a KTHID (or the reverse).</p>
+<p>The purpose behind and expected result of this thesis is a functional prototype of an application that creates an attendance list by reading data from the student or teacher’s access cards using a NFC reader. This will hopefully stimulate further digitalization in KTH and also encourage more courses to utilize such access card based attendance lists. The result should be less manual effort by students, faculty, and staff, as well as more accurate and timely filing of attendance information for courses.</p>
+<p>Keywords</p>
+<p>student attendance, application, access card, NFC reader, prototype</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>I dagsläget använder vi en föråldrad metod för att hantera information kring vilken student och/eller instruktör som närvarar vid vilken föreläsning/laboration/seminarie, närvaron skrivs ner på en bit papper som samlas ihop och skickas till en administratör som sedan manuellt får mata in den här informationen i de olika databehandlingssystemen.</p>
+<p>Denna metod är långtifrån optimal och kräver en massa tid och resurser från administratörer, lärare och elever. Att den insamlade informationen är korrekt är viktig eftersom den är ett krav vid vissa kurser. Vårt förslag är att insamlingen av närvaroinformation automatiseras, genom att studenter och lärare enkelt kan dra sina KTH access kort för att mata in sitt namn på en närvarolista. Detta kommer att genomföras genom utvecklandet av en applikation som lägger till en student i närvarolistan genom att läsa av kort genom en NFC/RFID läsare och mappning av kortens UID till ett KTH användarnamn (användarnamnet är unikt inom KTH) med hjälp av en databas. Närvarolistan som genereras som ett resultat av programmets körning skall vara formaterad på ett sådant sätt att den enkelt kan laddas upp till system som KTH Social och Daisy. Idealt skall applikationen vidareutvecklas så att instruktörer/lärare kan använda närvarolistan till att automatiskt lägga till rätt post i de systemen för att lagra information om studentens närvaro vid en viss aktivitet - med mål att undvika mycket manuell inmatning samt öka noggrannheten kring processen.</p>
+<p>Ett ytterligare problem är att det i nuläget inte finns något system som kopplar KTH:s databas för accesskort (BRAVIDA) till KTH LDAP databasen (som lagrar information om KTH studenter, fakultet och personal). Detta betyder att varje användares accesskorts UID måste läggas till i en databas manuellt tillsammans med studentens KTH användarnamn. Emellertid är det så att när posten väl är inlagd i databasen, så kan vi mappa mellan accesskorts UID till KTHID(eller motsatsen).</p>
+<p>Detta examensarbete har resulterat i en fungerande prototyp av en applikation som skapar närvarolistor genom att läsa av data från studenter och lärares accesskort med hjälp av en NFC läsare. Detta kommer förhoppningsvis att stimulera ökad digitalisering inom KTH och dessutom motivera fler kursansvariga att använda accesskortsbaserade listor. Resultatet bör förhoppningsvis bli mindre manuellt arbete för studenter, fakultet och övrig personal samt mera precis och snabbare insamling av närvaroinformation.</p>
+<p>Nyckelord</p>
+<p>studentnärvaro, applikation, accesskort, NFC-läsare, prototyp</p>
+<heading>Automating Interactions with Web Services</heading>
+<heading>NFC based attendance software in Java</heading>
+<heading>CARL JOHANSSON & SOREN KAVOSI</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Automating Interactions with Web Services</heading>
+<subtitle>NFC based attendance software in Java</subtitle>
+<author>Carl Johansson & Soren Kavosi</author>
+<heading>2015-06-02</heading>
+<heading>Bachelor’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+../150602-Carl_Johansson_and_Soren_Kavosi-with-cover.pdf
+----------------------------------------------------------------------
+<Title>USB dongles for mobile broadband</Title>
+<Subtitle>USB dongles for mobile broadband</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Today a growing number of people need to work on laptops with wireless Internet connection. There are two common wireless Internet access solutions: wireless local area network (WLAN) via hotspot, and high speed wide area cellular network via mobile broadband device such as 3G/4G Universal Serial Bus (USB) dongle. USB dongle was the pioneer product in 3G/4G market, and it is still a popular device in many countries. Mobile broadband can offer both high speed access and mobility. Technically mobile broadband allows Internet connection as long as your mobile transceiver can access your cellular network operator’s network. However, in practice the data rates experienced by a user via mobile broadband are not comparable to the data rates that are available via WLAN. Moreover, mobile broadband has been implemented according to multiple different standards. Hence, in order to provide a user with locally optimal service requires that user must make use of heterogeneous networks. Furthermore, the variety of networks gets increasing due to the emergence of various 4G networks.</p>
+<p>The aim of this thesis is to explore how heterogeneous networks could be exploited to provide a user of a laptop computer with locally optimal service, while hiding the complexity of this heterogeneous service. The research focuses on the implications of integrating multiple network interfaces into a single USB dongle. Our research shows that multi-mode USB dongle is still needed in market, though there are competitions from smartphones and mobile WiFi devices. We point out that the PPP (Point to Point Protocol) based USB dongle should update to Ethernet USB protocols such as RNDIS (Remote Network Driver Interface Specification) or USB CDC (Communications Device Class) protocols. Furthermore, we suggest a USB dongle should be able to work as a WLAN access point to share Internet with other mobile devices, and it should also work as a WLAN client which can join other hotspots. If hotspot operators can authenticate USB dongles by SIM cards, then users can easily access a great number of hotspots belong to these operators.</p>
+<p>Keywords</p>
+<p>Data communications, USB, WLAN, 3G, 4G</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Mer än någonsin behöver människan arbeta med bärbara datorer med anslutning till trådlöst Internet. Det finns två vanliga trådlösa Internet-anslutningar: trådlöst lokalt nätverk (WLAN på engelska) via en hotspot, eller höghastighets mobilnät via mobilt bredband som 3G/4G Universal Serial Bus (USB) dongel. USB dongeln var pionjär produkten inom 3G/4G marknaden, och den är fortfarande en populär enhet i många länder. Mobilt bredband kan erbjuda både tillgång till höga hastighet och bra mobilitet. Mobilt bredband tillåter, rent tekniskt, användaren hålla en Internet- anslutning så länge mobilen har tillgång till mobilnätets operatörsnät. Men i praktiken är datahastigheterna, som användaren upplever ha via det mobila bredbandet, inte jämförbar med de datahastigheter som är tillgängliga via WLAN. Dessutom har mobilt bredband implementerats enligt flera olika standarder. Således, för att förutse en användare med en optimal lokal tjänst, krävs det att användaren måste använda heterogena nätverk. Dessutom blir olika nätverk allt större på grund av uppkomsten av olika 4G-nät.</p>
+<p>Syftet med denna avhandling är att undersöka hur heterogena nätverk skulle kunna utnyttjas för att förutse en laptop användare med optimal lokal nätverksservice, samtidigt dölja komplexiteten för användaren om den heterogena tjänsten. Forskningen fokuserar på konsekvenserna av att integrera flera nätverksgränssnitt till en enda USB-dongel. Vår forskning visar att det fortfarande behövs en multi-mode USB dongel på marknaden, dock existerar det konkurrens från smartphones och mobila WiFi-enheter. Vi påpekar även i avhandlingen att PPP (Point-to-Point Protocol) baserade USB dongeln bör uppdateras till Ethernet USB-protokoll, såsom RNDIS (Remote Network Driver Interface Specification) eller USB CDC (Communications Device Class) protokoll. Vidare föreslår vi att en USB- dongel bör kunna fungera som en kopplingspunkt för att dela Internet med andra mobila enheter, och att den också bör fungera som en WLAN-klient som kan ansluta sig till andra hotspots. Om hotspot operatörer kan autentisera USB-donglar genom SIM-kort, så kan användarna enkelt få tillgång till ett stort antal hotspots som tillhör dessa operatörer.</p>
+<p>Nyckelord</p>
+<p>Datakommunication, USB, WLAN, 3G, 4G</p>
+<heading>USB dongles for mobile broadband</heading>
+<heading>Data communications for laptop computers</heading>
+<heading>LIU ENFEI</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>USB dongles for mobile broadband</heading>
+<subtitle>Data communications for laptop computers</subtitle>
+<author>Liu Enfei</author>
+<heading>2015-06-24</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+../150623-Enfei_Liu-with-cover.pdf
+----------------------------------------------------------------------
+<Title>SCTP and Diameter Parameters for High Availability in LTE Roaming</Title>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Today mobile network operators utilize IP Packet exchange (IPX) carriers to interconnect their networks with other operators. Mobile network operators are free to choose one IPX carrier for their data traffic and another for their control traffic. This thesis examines the case of control traffic, specifically Stream Control Transmission Protocol (SCTP) carrying Diameter protocol traffic arising from users roaming from their home Long Term Evolution (LTE) network to another operator’s LTE network.</p>
+<p>The thesis project aims to identify a set of SCTP parameter configurations that can provide improved application/service level availability between two Diameter nodes in different network connectivity environments, specifically for IPX carriers who are Diameter service providers. These service providers provide Diameter connectivity for their customers who are mobile network operators. These mobile network operators in turn provide LTE roaming services to their customers.</p>
+<p>Unfortunately, applying the ‘One size fits all’ configuration recommendations given in the SCTP documentation is unsuitable for different network environments. In addition, the amount of Diameter signaling traffic is growing at a very rapid rate. Therefore, it is valuable to identify suitable parameter selection criteria for Diameter service providers to ensure 100% Diameter connectivity reliability for their customers. In this thesis project, author investigated how tuning SCTP parameter values affect Diameter message transmission in terms of Round Trip Delay and identified its determining parameters for packet loss recovery performance. Both IPX carriers and mobile network operators may use these values as reference when attempting to ensure high availability of Diameter transmissions under reliable, semi-reliable, and unreliable network transport conditions.</p>
+<p>Keywords: SCTP, Diameter, IPX, LTE Roaming, Seagull, RTD, RTO, Retransmission, DEA</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Mobilnätsoperatörer använder sig av IP Packet exchange (IPX) tjänstetillhandahållare för att koppla ihop sina nät med andra operatörers nät. Mobilnätsoperatörer kan fritt välja en IPX tjänstetillhandahållare för sin datatrafik och en annan för sin kontrolltrafik. Denna uppsats undersöker fallet för kontrolltrafik, specifikt Stream Control Transmission Protocol (SCTP) kommunikationsprotokoll för Diameter protocol-trafik vid användares roaming från sitt Long Term Evolution (LTE)-hemmanät till en annan operatörs LTE-nät.</p>
+<p>Examensarbetet avser etablera en uppsättning av SCTP-parameterkonfigurationer som ger förbättrad applikations-/tjänstetillgänglighetsnivå mellan två Diameter-noder i olika nätmiljöer, särskilt för IPX tjänstetillhandahållare som är Diameter tjänstetillhandahållare. Dessa tjänstetillhandahållare erbjuder Diameter-konnektivitet till sina kunder, som är mobilnätsoperatörer. Dessa mobilnätsoperatörer tillhandahåller i sin tur LTE-roamingtjänster till sina kunder.</p>
+<p>Tyvärr är det olämpligt att tillämpa de enhetliga konfigurationsrekommendationer, som ges i SCTP- och Diameter-protokollens dokumentation, i olika nätmiljöer. Samtidigt ökar Diameter-signaleringstrafiken mycket snabbt. Därför är det värdefullt att identifiera lämpliga parameterkriterier för Diameter-tjänstetillhandahållare att säkerställa 100% tillförlitlig Diameter-tillgänglighet för sina kunder. I detta examensarbete har författaren undersökt hur trimning av SCTP-parametervärden påverkar Diameter- meddelandeöverföring vad avser överföringstiden tur- och retur, och identifierat de avgörande parametrarna för återställande av paketförluster. Både IPX tjänstetillhandahållare och mobilnätsoperatörer kan använda dessa värden som referens för att åstadkomma hög tillgänglighet för Diameter-överföring vid tillförlitliga, halvtillförlitliga och otillförlitliga nättransportförutsättningar.</p>
+<p>Nyckelord: SCTP, Diameter, IPX, LTE roaming, Seagull, RTD, RTO, omsändning, DEA</p>
+<heading>SCTP and Diameter Parameters for High Availability in LTE Roaming</heading>
+<heading>XUE LIN XIONG</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>SCTP and Diameter Parameters for High Availability in LTE Roaming</heading>
+<author>Xue Lin Xiong</author>
+<heading>2015-03-31</heading>
+<heading>Master’s Thesis</heading>
+<heading>Examiner and Academic adviser Gerald Q. Maguire Jr.</heading>
+<heading>Industrial advisers</heading>
+<heading>Tuomo Muuttoranta, Jori Hämäläinen, and Mikael Eklund</heading>
+../150330-Xue_Lin_Xiong-with-color-cover.pdf
+----------------------------------------------------------------------
+<Title>Automatic Log Analysis System Integration</Title>
+<Subtitle>Automatic Log Analysis System Integration</Subtitle>
+Abstract:
+output_blocks_on_page = 3
+starting_block=2
+<p>Ericsson is one of the world's largest providers of communications technology and services. Reliable networks are important to deliver services that live up to customers' expectations. Tests are frequently run on Ericsson's systems in order to identify stability problems in their networks. These tests are not always completely reliable. The logs produced by these tests are gathered and analyzed to identify abnormal system behavior, especially abnormal behavior that the tests might not have caught. To automate this analysis process, a machine learning system, called the Awesome Automatic Log Analysis Application (AALAA), is used at Ericsson's Continuous Integration Infrastructure (CII)-department to identify problems within the large logs produced by automated Radio Base Station test loops and processes. AALAA is currently operable in two versions using different distributed cluster computing platforms: Apache Spark and Apache Hadoop. However, it needs improvements in its machine-to-machine communication to make this process more convenient to use. In this thesis, message communication has successfully been implemented in the AALAA system. The result is a message bus deployed in RabbitMQ that is able to successfully initiate model training and abnormal log identification through requests, and to handle a continuous flow of result updates from AALAA.</p>
+<p>Keywords</p>
+<p>Big Data, Machine learning, Message passing, Machine-to-machine communication</p>
+Sammanfattning:
+output_blocks_on_page = 5
+starting_block=2
+<p>Ericsson är en av världens största leverantörer av kommunikationsteknologi och tjänster. Tillförlitliga nätverk är viktigt att tillhandahålla för att kunna leverera tjänster som lever upp till kundernas förväntningar. Tester körs därför ofta i Ericssons system med syfte att identifiera stabilitetsproblem som kan uppstå i nätverken. Dessa tester är inte alltid helt tillförlitliga, producerade testloggar samlas därför in och analyseras för att kunna identifiera onormalt beteende som testerna inte lyckats hitta. För att automatisera denna analysprocess har ett maskininlärningssystem utvecklats, Awesome Automatic Log Analysis Application (AALAA). Detta system används i Ericssons Continuous Integration Infrastructure (CII)-avdelning för att identifiera problem i stora loggar som producerats av automatiserade Radio Base Station tester. AALAA är för närvarande funktionellt i två olika versioner av distribuerad klusterberäkning, Apache Spark och Apache Hadoop, men behöver förbättringar i sin maskin-till-maskin-kommunikation för att göra dem enklare och effektivare att använda. I denna avhandling har meddelandekommunikation implementerats som kan kommunicera med flera olika moduler i AALAA. Resultatet är en meddelandebuss implementerad i RabbitMQ som kan initiera träning av modeller och identifiering av onormala loggar på begäran, samt hantera ett kontinuerligt flöde av resultatuppdateringar från pågående beräkningar.</p>
+<p>Nyckelord</p>
+<p>Big Data, Maskininlärning, Meddelandesändning, Maskin-till-maskin kommunikation</p>
+<heading>Automatic Log Analysis System Integration</heading>
+<heading>Message Bus Integration in a Machine Learning Environment</heading>
+<heading>CARL SVENSSON</heading>
+<heading>K T H R O Y A L I N S T IT U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Automatic Log Analysis System Integration</heading>
+<subtitle>Message Bus Integration in a Machine Learning Environment</subtitle>
+<author>Carl Svensson</author>
+<heading>2015-06-08</heading>
+<heading>Bachelor’s thesis</heading>
+<heading>Industrial advisor: Weixi Li</heading>
+<heading>Examiner and academic advisor: Gerald Q. Maguire Jr.</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+<heading>Acknowledgments</heading>
+<heading>Table of contents</heading>
+<heading>Abstract ....................................................................................... i</heading>
+<heading>3.7 Evaluation framework ............................................................... 12</heading>
+<heading>4 Implementation .................................................................. 13</heading>
+<heading>4.1 Software design ......................................................................... 13 4.1.1 Design of the AALAA system .......................................... 13 4.1.2 Design of the Message Bus ............................................ 16</heading>
+<heading>4.2 Software implementation .......................................................... 19 4.2.1 AALAA Core implementation .......................................... 19 4.2.2 AALAA Client implementation ......................................... 20</heading>
+<heading>5 Analysis .............................................................................. 21</heading>
+<heading>5.1 Major results .............................................................................. 21 5.2 Reliability Analysis .................................................................... 23 5.3 Validity Analysis ........................................................................ 23 5.4 Discussion ................................................................................. 24</heading>
+<heading>6 Conclusions and Future work .......................................... 25</heading>
+<heading>6.1 Conclusions ............................................................................... 25 6.2 Limitations ................................................................................. 26 6.3 Future work ................................................................................ 26 6.4 Reflections ................................................................................. 26</heading>
+<heading>References ............................................................................... 27</heading>
+<heading>List of Figures</heading>
+<heading>Figure 2-1: Overview of the AALAA Core [3] ....................................................... 6 Figure 2-2: Simple example of how messages can be routed through RabbitMQ [16] .................................................................................... 7 Figure 4-1: Planned architechture of the AALAA system ................................... 15 Figure 4-2: Example of a request message sent to the AALAA Core .................. 18 Figure 4-3: Example of a progression update message sent from the AALAA Core ...................................................................................... 18 Figure 4-4: More detailed overview of the implemented message bus including flow of events .................................................................... 18 Figure 5-1: Time to initiate request in AALAA core based on message size .................................................................................................... 22</heading>
+<heading>List of Tables</heading>
+<heading>Table 3-1: Hardware specifications of the used test bed ................................... 11 Table 5-1: Time to initiate request in AALAA core based on message size. 95% confidence level applied. ................................................... 21 Table 5-2: Difference checks for a predict action between the old and new Spark cores ............................................................................... 22 Table 5-3: Difference checks for a predict action between the old and new Hadoop core ............................................................................. 23</heading>
+<heading>List of acronyms and abbreviations</heading>
+<heading>1 Introduction</heading>
+<heading>1.1 Background</heading>
+<heading>1.2 Problem definition</heading>
+<heading>1.3 Purpose</heading>
+<heading>1.4 Goals</heading>
+<heading>1.5 Choice of methodology</heading>
+<heading>1.6 Delimitations</heading>
+<heading>not no</heading>
+<heading>1.7 Structure of the thesis</heading>
+<heading>Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6</heading>
+<heading>2 Background</heading>
+<heading>2.1 Awesome Automatic Log Analysis Application (AALAA)</heading>
+<heading>known,</heading>
+<heading>known</heading>
+<heading>Feature extraction</heading>
+<heading>2. Feature transformation –</heading>
+<heading>3. Learning a model –</heading>
+<heading>2.2 RabbitMQ</heading>
+<heading>Figure 2-1: Overview of the AALAA Core [3]</heading>
+<heading>Figure 2-2: Simple example of how messages can be routed through RabbitMQ [16]</heading>
+<heading>2.3 Related work</heading>
+<heading>3 Methodology</heading>
+<heading>3.1 Research Process</heading>
+<heading>Problem identification and motivation</heading>
+<heading>Objectives of the solution</heading>
+<heading>3. Design and development –</heading>
+<heading>4. Demonstration –</heading>
+<heading>5. Evaluation –</heading>
+<heading>Communication –</heading>
+<heading>3.2 Research Paradigm</heading>
+<heading>3.3 Data Collection</heading>
+<heading>±</heading>
+<heading>3.4 Experimental design</heading>
+<heading>Table 3-1: Hardware specifications of the used test bed</heading>
+<heading>Machine CPU Memory OS</heading>
+<heading>Master node</heading>
+<heading>32 GB</heading>
+<heading>Slave node 1</heading>
+<heading>16 GB</heading>
+<heading>Slave node 2</heading>
+<heading>16 GB</heading>
+<heading>3.5 Assessing reliability and validity of the data collected</heading>
+<heading>3.6 Planned Data Analysis</heading>
+<heading>3.7 Evaluation framework</heading>
+<heading>4 Implementation</heading>
+<heading>4.1 Software design</heading>
+<heading>4.1.1.1 AALAA Core</heading>
+<heading>4.1.1.2 AALAA Client</heading>
+<heading>4.1.1.3 Message Bus Controllers</heading>
+<heading>Figure 4-1: Planned architechture of the AALAA system</heading>
+<heading>4.1.2.1 Message Bus structure</heading>
+<heading>4.1.2.2 Message format</heading>
+<heading>Figure 4-2: Example of a request message sent to the AALAA Core</heading>
+<heading>Figure 4-3: Example of a progression update message sent from the AALAA Core</heading>
+<heading>Figure 4-4: More detailed overview of the implemented message bus including flow of events</heading>
+<heading>4.2 Software implementation</heading>
+<heading>5 Analysis</heading>
+<heading>5.1 Major results</heading>
+<heading>Table 5-1: Time to initiate request in AALAA core based on message size. 95% confidence level applied.</heading>
+<heading>Number of log paths in message (N)</heading>
+<heading>Size of log paths (85 bytes per path)</heading>
+<heading>Number of tests performed</heading>
+<heading>Average time spent (ms)</heading>
+<heading>1 85 B 100 0.8097 ± 0.04 ms</heading>
+<heading>10 850 B 100 0.9133 ± 0.04 ms</heading>
+<heading>100 8500 B 100 1.2402 ± 0.06 ms</heading>
+<heading>1000 85000 B 100 2.2354 ± 0.1 ms</heading>
+<heading>10000 850000 B 100 12.058 ± 0.59 ms</heading>
+<heading>Table 5-2: Difference checks for a predict action between the old and new Spark cores</heading>
+<heading>Test case Total logs processed</heading>
+<heading>Abnormal logs old AALAA</heading>
+<heading>Abnormal logs new AALAA</heading>
+<heading>Log name comparison</heading>
+<heading>1-Spark</heading>
+<heading>1236 176 176</heading>
+<heading>2- Spark</heading>
+<heading>1497 49 49</heading>
+<heading>3- Spark</heading>
+<heading>1403 31 31</heading>
+<heading>Average time spent (ms)</heading>
+<heading>Size of log paths (85 bytes per path)</heading>
+<heading>Average time spent (ms)</heading>
+<heading>Figure 5-1: Time to initiate request in AALAA core based on message size</heading>
+<heading>Table 5-3: Difference checks for a predict action between the old and new Hadoop core</heading>
+<heading>Test case Total logs processed</heading>
+<heading>Abnormal logs old AALAA</heading>
+<heading>Abnormal logs new AALAA</heading>
+<heading>Log name comparison</heading>
+<heading>1-Hadoop</heading>
+<heading>19</heading>
+<heading>2-Hadoop</heading>
+<heading>29</heading>
+<heading>3-Hadoop</heading>
+<heading>9</heading>
+<heading>5.2 Reliability Analysis</heading>
+<heading>5.3 Validity Analysis</heading>
+<heading>5.4 Discussion</heading>
+<heading>6 Conclusions and Future work</heading>
+<heading>6.1 Conclusions</heading>
+<heading>6.2 Limitations</heading>
+<heading>6.3 Future work</heading>
+<heading>6.4 Reflections</heading>
+<heading>References</heading>
+<heading>[1] O. Kwon, N. Lee, and B. Shin, “Data quality management, data usage experience and acquisition intention of big data analytics,” Int. J. Inf. Manag., vol. 34, no. 3, pp. 387– 394, Jun. 2014. [2] “This is Ericsson - this-is-ericsson.pdf.” [Online]. Available: http://www.ericsson.com/res/thecompany/docs/this-is-ericsson.pdf. [Accessed: 25- Mar-2015] [3] Weixi Li, “Automatic Log Analysis using Machine Learning: Awesome Automatic Log Analysis version 2.0”, Master's thesis, Uppsala Universitet, Department of Information Technology, Report number IT 13 080, November 2013, [Online]. Available: http://uu.diva-portal.org/smash/get/diva2:667650/FULLTEXT01.pdf. [4] “IBM - What is MapReduce.” [Online]. Available: http://www- 01.ibm.com/software/data/infosphere/hadoop/mapreduce/. [Accessed: 19-May-2015] [5] “Apache Spark - Lightning-Fast Cluster Computing.” [Online]. Available: https://spark.apache.org/. [Accessed: 19-May-2015] [6] R. S. Xin, J. Rosen, M. Zaharia, M. J. Franklin, S. Shenker, and I. Stoica, “Shark: SQL and Rich Analytics at Scale,” in Proceedings of the 2013 ACM SIGMOD International Conference on Management of Data, New York, NY, USA, 2013, pp. 13–24 [Online]. Available: http://doi.acm.org/10.1145/2463676.2465288. [Accessed: 25-Mar-2015] [7] Georgios Koutsoumpakis, “Spark-based Application for Abnormal Log Detection.”, Master's thesis, Uppsala Universitet, Department of Information Technology, Report number IT 14 057, September 2014, [Online]. Available: http://uu.diva- portal.org/smash/get/diva2:751988/FULLTEXT01.pdf. [8] G. L. Geerts, “A design science research methodology and its application to accounting information systems research.”, International Journal of Accounting Information Systems, vol.12, no.2, pp. 142-151, June 2011. DOI: 10.1016/j.accinf.2011.02.004, [Online]. Available: http://www.sciencedirect.com.focus.lib.kth.se/science/article/pii/S146708951100020 0. [Accessed: 14-May-2015] [9] “What is the Agile Software Development Methodology?” [Online]. Available: http://agilemethodology.org/. [Accessed: 19-May-2015] [10] “Waterfall Model.” [Online]. Available: http://www.waterfall-model.com/. [Accessed: 19-May-2015] [11] Jaakko Hollmen, “Self-Organizing Map (SOM).”, Mar 8 13:44:34 EET 1996, [Online]. Available: http://users.ics.aalto.fi/jhollmen/dippa/node9.html. [Accessed: 19-May- 2015] [12] “Cross Validation.” [Online]. Available: http://www.cs.cmu.edu/~schneide/tut5/node42.html. [Accessed: 19-May-2015] [13] “RabbitMQ - What can RabbitMQ do for you?” [Online]. Available: https://www.rabbitmq.com/features.html. [Accessed: 08-May-2015] [14] “What is message broker? - Definition from WhatIs.com.” [Online]. Available: http://whatis.techtarget.com/definition/message-broker. [Accessed: 19-May-2015] [15] “An Advanced Message Queuing Protocol (AMQP) Walkthrough,” DigitalOcean. [Online]. Available: https://www.digitalocean.com/community/tutorials/an-advanced- message-queuing-protocol-amqp-walkthrough. [Accessed: 10-Apr-2015] [16] “RabbitMQ - AMQP 0-9-1 Model Explained.” [Online]. Available: https://www.rabbitmq.com/tutorials/amqp-concepts.html. [Accessed: 10-Apr-2015] [17] S. Torstendahl, “Open Telecom Platform.”, Ericsson Review No. 1, 1997, pp. 14-23, [Online]. Available: http://www.erlang.se/publications/ericsson_review_otp_1997012.pdf. [Accessed: 19- May-2015] [18] “Using Erlang for an Open Telecommunications Platform.” [Online]. Available: http://www.methodsandtools.com/archive/erlang.php. [Accessed: 16-Apr-2015]</heading>
+<heading>[19] J. L. Fernandes, I. C. Lopes, J. J. P. C. Rodrigues, and S. Ullah, “Performance evaluation of RESTful web services and AMQP protocol,” in Ubiquitous and Future Networks (ICUFN), 2013 Fifth International Conference on, 2013, pp. 810–815. [20] S. Dawar, S. Van der Meer, E. Fallon, J. Keeney, and T. Bennett, “Building a Scalable Event Processing System with Messaging and Policies – Test and Evaluation of RabbitMQ and Drools Expert ” in proceedings of the 2013 Information Technology and Telecommunications conference (IT&T) 2013, [Online]. Available: http://www.researchgate.net/publication/255723410_Building_a_Scalable_Event_Pr ocessing_System_with_Messaging_and_Policies__Test_and_Evaluation_of_Rabbit MQ_and_Drools_Expert. [Accessed: 21-May-2015] [21] K. Peffers, T. Tuunanen, C. E. Gengler, M. Rossi, W. Hui, V. Virtanen, and J. Bragge, “The Design Science Research Process: A Model for Producing and Presenting Information Systems Research,” in In: 1st International Conference on Design Science in Information Systems and Technology (DESRIST, 2006, pp. 83–106. [22] “Maven – Welcome to Apache Maven.” [Online]. Available: https://maven.apache.org/. [Accessed: 30-May-2015] [23] “Learn | The Scala Programming Language.” [Online]. Available: http://www.scala- lang.org/documentation/. [Accessed: 30-May-2015] [24] “RabbitMQ » Blog Archive » RabbitMQ Performance Measurements, part 2 - Messaging that just works.” [Online]. Available: https://www.rabbitmq.com/blog/2012/04/25/rabbitmq-performance-measurements- part-2/. [Accessed: 17-May-2015]</heading>
+<heading>www.kth.se www.kth.se</heading>
+../150608-Carl_Svensson-with-cover.pdf
+<Title>Seamless Speaker Recognition</Title>
+Abstract:
+output_blocks_on_page = 4
+starting_block=1
+<p>In a technologically advanced society, the average person manages dozens of accounts for e-mail, social networks, e-banking, and other electronic services. As the number of these accounts increases, the need for automatic user identiﬁcation becomes more essential. Biometrics have long been used to identify people and are the most common (if not the only) method to achieve this task.</p>
+<p>Over the past few years, smartphones have become frequently used gadgets. These devices have built-in microphones and are commonly used by a single user or a small set of users, such as a couple or a family. This thesis uses a smartphone’s microphone to capture user’s speech and identify him/her. Existing speaker recognition systems typically prompt the user to provide long voice samples in order to provide accurate results. This results in a poor user experience and discourages users who do not have the patience to go through such a process. The main idea behind the speaker recognition approach presented in this thesis is to provide a seamless user experience where the recording of the user’s voice takes place in the background.</p>
+<p>An Android application is developed which silently collects voices samples and performs speaker recognition without requiring extensive user interaction. Two variants of the proposed tool have been developed and are described in depth in this thesis. The open source framework Recognito is used to perform the speaker recognition task. The analysis of Recognito showed that it is not capable of achieving high accuracy especially when the voice samples contain background noise. Finally, the comparison between the two architectures showed that they do not differ signiﬁcantly in terms of performance.</p>
+<p>Keywords: speaker recognition, user authentication, seamless operation, biometrics, standalone, client-server, Android.</p>
+<p>i</p>
+Sammanfattning:
+output_blocks_on_page = 6
+starting_block=1
+<p>I ett teknologiskt avancerat samh¨ alle s˚ a hanterar den genomsnittliga personen dussintals konton f¨ or e-post, sociala n¨ atverk, internetbanker, och andra elektroniska tj¨ anster. Allt eftersom antalet konton ¨ okar, blir behovet av automatisk identiﬁering av anv¨ andaren mer v¨ asentlig. Biometri har l¨ ange anv¨ ants f¨ or att identiﬁera personer och ¨ ar den vanligaste (om inte den enda) metoden f¨ or att utf¨ ora denna uppgift.</p>
+<p>Smartphones har under de senaste ˚ aren blivit allt mer vanligt f¨ orekommande, de ger anv¨ andaren tillg˚ ang till de ﬂesta av sina konton och, i viss m˚ an, ¨ aven personiﬁering av enheterna baserat p˚ a deras proﬁler p˚ a sociala n¨ atverk. Dessa enheter har inbyggda mikrofoner och anv¨ ands ofta av en enskild anv¨ andare eller en liten grupp av anv¨ andare, till exempel ett par eller en familj. Denna avhandling anv¨ ander mikrofonen i en smartphone f¨ or att spela in anv¨ andarens tal och identiﬁera honom/henne. Beﬁntliga l¨ osningar f¨ or talarigenk¨ anning ber vanligtvis anv¨ andaren om att ge l˚ anga r¨ ostprover f¨ or att kunna ge korrekta resultat. Detta resulterar i en d˚ alig anv¨ andarupplevelse och avskr¨ acker anv¨ andare som inte har t˚ alamod att g˚ a igenom en s˚ adan process. Huvudtanken bakom den strategi f¨ or talarigenk¨ anningen som presenteras i denna avhandling ¨ ar att ge en s¨ oml¨ os anv¨ andarupplevelse d¨ ar inspelningen av anv¨ andarens r¨ ost sker i bakgrunden.</p>
+<p>En Android-applikation har utvecklats som, utan att m¨ arkas, samlar in r¨ ostprover och utf¨ or talarigenk¨ anning p˚ a dessa utan att kr¨ ava omfattande interaktion av anv¨ andaren. Tv˚ a varianter av verktyget har utvecklats och dessa beskrivs ing˚ aende i denna avhandling. ¨ Open source-ramverket Recognito anv¨ ands f¨ or att utf¨ ora talarigenk¨ anningen. Analysen av Recognito visade att det inte klarar av att uppn˚ a tillr¨ ackligt h¨ og noggrannhet, speciellt n¨ ar r¨ ostproverna inneh˚ aller bakgrundsbrus. Dessutom visade j¨ amf¨ orelsen mellan de tv˚ a arkitekturerna att de inte skiljer sig n¨ amnv¨ art i fr˚ aga om prestanda.</p>
+<p>Nyckelord: talarigenk¨ anning, anv¨ andarautentisering, s¨ oml¨ os drift, biometri, frist˚ aende, klient-server, Android.</p>
+<p>iii</p>
+<heading>Seamless Speaker Recognition</heading>
+<heading>ANARGYROS CHATZARAS and GEORGIOS SAVVIDIS</heading>
+<heading>K T H R O Y A L I N S T I T U T E O F T E C H N O L O G Y</heading>
+<heading>I N F O R M A T I O N A N D C O M M U N I C A T I O N T E C H N O L O G Y</heading>
+<heading>Seamless speaker recognition</heading>
+<heading>Abstract</heading>
+<heading>Sammanfattning</heading>
+<heading>Acknowledgements</heading>
+<heading>Contents</heading>
+<heading>1 Introduction 1.1 Overview 1.2 Problem deﬁnition 1.3 Goals 1.4 Scope 1.5 Target groups 1.6 Structure</heading>
+<heading>2 Background 2.1 Uniqueness of human voice 2.2 Identiﬁcation, authentication and authorization 2.3 Speech recognition and speaker recognition 2.4 Speaker recognition process 2.5 Speaker recognition types 2.6 Voice features 2.6.1 Feature extraction techniques 2.6.1.1 Linear Predictive Coding (LPC) 2.6.1.2 Mel Frequency Cepstral Coefﬁcients (MFCC) 2.6.2 User models 2.7 Android and device identiﬁcation 2.8 Related work 2.8.1 VoiceXML and speaker recognition 2.8.2 Recognito 2.8.2.1 Feature extraction process 2.8.2.2 Training phase 2.8.2.3 Recognition phase 2.8.3 Other speaker recognition systems</heading>
+<heading>3 Method</heading>
+<heading>4 A seamless speaker recognition mechanism 4.1 Restrictions and assumptions 4.1.1 Audio recordings 4.1.2 Energy consumption 4.1.3 User experience 4.2 Seamless speaker recognition architectures 4.2.1 Client-server architecture 4.2.2 Standalone architecture 4.2.3 Architecture comparison</heading>
+<heading>5 Analysis 5.1 Performance evaluation 5.1.1 Performance without background noise 5.1.2 Performance with background noise 5.1.3 Performance against imposters 5.2 Evaluation of speciﬁc usage scenarios 5.2.1 Performance without background noise 5.2.2 Performance with background noise 5.2.3 Performance against imposters 5.3 Evaluation of the proposed architectures</heading>
+<heading>6 Conclusions and future work 6.1 Challenges 6.2 Conclusions 6.3 Future work 6.4 Required reﬂections</heading>
+<heading>Bibliography</heading>
+<heading>A Recognito A.1 WavReader.java</heading>
+<heading>List of Figures</heading>
+<heading>2.1 Example of a VoiceXML document 2.2 Recognito’s likelihood ratio</heading>
+<heading>4.1 Main application ﬂow 4.2 Client-server communication 4.3 Example of authorised users per device</heading>
+<heading>5.1 Correct match rate for alternative 1 5.2 Correct match rate density for alternative 1 5.3 Total number of erroneous recognitions for alternative 1 5.4 Correct match rate for alternative 2 5.5 Correct match rate density for alternative 2 5.6 Total number of erroneous recognitions for alternative 2 5.7 Correct non-match for alternative 1 5.8 Correct non-match rate density for alternative 1 5.9 Correct non-match rate for alternative 2 5.10 Correct non-match rate density for alternative 2 5.11 Correct match rate of speciﬁc usage scenarios 5.12 Percentage of errors by type 5.13 Correct non-match rate of speciﬁc usage scenarios 5.14 Computation delay comparison</heading>
+<heading>List of Tables</heading>
+<heading>2.1 Speaker recognition accuracy metrics</heading>
+<heading>4.1 Voice samples format 4.2 Application states</heading>
+<heading>5.1 Voice samples per user 5.2 Number of users per scenario 5.3 Technical speciﬁcations</heading>
+<heading>List of Acronyms and Abbreviations</heading>
+<heading>Chapter 1</heading>
+<heading>Introduction</heading>
+<heading>1.1 Overview</heading>
+<heading>2].</heading>
+<heading>1.2 Problem deﬁnition</heading>
+<heading>1.3 Goals</heading>
+<heading>1.4 Scope</heading>
+<heading>1.5 Target groups</heading>
+<heading>1.6 Structure</heading>
+<heading>2 3 4 5, 6</heading>
+<heading>Chapter 2</heading>
+<heading>Background</heading>
+<heading>2.1 Uniqueness of human voice</heading>
+<heading>2.2 Identiﬁcation, authentication and authorization</heading>
+<heading>2.3 Speech recognition and speaker recognition</heading>
+<heading>2.4 Speaker recognition process</heading>
+<heading>5]:</heading>
+<heading>2.5 Speaker recognition types</heading>
+<heading>5]:</heading>
+<heading>2.6 Voice features</heading>
+<heading>2.6.1 Feature extraction techniques</heading>
+<heading>2.6.2 User models</heading>
+<heading>2.7 Android and device identiﬁcation</heading>
+<heading>2.8 Related work</heading>
+<heading>2.1</heading>
+<heading>2.8.1 VoiceXML and speaker recognition</heading>
+<heading>2.1</heading>
+<heading>2.4. 26].</heading>
+<heading>28].</heading>
+<heading>2.8.2 Recognito</heading>
+<heading>2.6.1.1.</heading>
+<heading>2.2.</heading>
+<heading>2.8.3 Other speaker recognition systems</heading>
+<heading>Chapter 3</heading>
+<heading>Method</heading>
+<heading>4.</heading>
+<heading>Chapter 4</heading>
+<heading>A seamless speaker recognition mechanism</heading>
+<heading>2.8.2.</heading>
+<heading>4.1 Restrictions and assumptions</heading>
+<heading>4.1.1 Audio recordings</heading>
+<heading>4.1.</heading>
+<heading>4.1.2 Energy consumption</heading>
+<heading>4.2 4.1</heading>
+<heading>4.2.1),</heading>
+<heading>4.1.3 User experience</heading>
+<heading>2.8.2</heading>
+<heading>4.2 Seamless speaker recognition architectures</heading>
+<heading>4.2.1 Client-server architecture</heading>
+<heading>4.2. 4.2</heading>
+<heading>4.1.1, 2.8.2.1</heading>
+<heading>2.7) 4.3</heading>
+<heading>4.2.2 Standalone architecture</heading>
+<heading>4.1</heading>
+<heading>4.2.3 Architecture comparison</heading>
+<heading>5.</heading>
+<heading>4.1,</heading>
+<heading>Chapter 5</heading>
+<heading>Analysis</heading>
+<heading>4,</heading>
+<heading>5.1 Performance evaluation</heading>
+<heading>2.8: 5.1,</heading>
+<heading>2.8.2.3,</heading>
+<heading>5.2</heading>
+<heading>4.1.</heading>
+<heading>5.1.1 Performance without background noise</heading>
+<heading>5.1 5.2. 5.2</heading>
+<heading>5.3</heading>
+<heading>5.4 5.5</heading>
+<heading>5.6</heading>
+<heading>5.1.2 Performance with background noise</heading>
+<heading>5.1.1</heading>
+<heading>5.1.1.</heading>
+<heading>5.1.3 Performance against imposters</heading>
+<heading>5.1.1 5.1.2</heading>
+<heading>5.7 5.8</heading>
+<heading>5.9 5.10</heading>
+<heading>5.2 Evaluation of speciﬁc usage scenarios</heading>
+<heading>5.1</heading>
+<heading>5.1 5.1.</heading>
+<heading>5.2.1 Performance without background noise</heading>
+<heading>5.1.1.</heading>
+<heading>5.11 5.12</heading>
+<heading>5.2.2 Performance with background noise</heading>
+<heading>5.1.2,</heading>
+<heading>5.1.2.</heading>
+<heading>5.2.3 Performance against imposters</heading>
+<heading>5.1.3.</heading>
+<heading>5.13</heading>
+<heading>5.3 Evaluation of the proposed architectures</heading>
+<heading>5.3</heading>
+<heading>4,</heading>
+<heading>5.14</heading>
+<heading>Chapter 6</heading>
+<heading>Conclusions and future work</heading>
+<heading>6.1 Challenges</heading>
+<heading>A.1.</heading>
+<heading>6.2 Conclusions</heading>
+<heading>2.8.2,</heading>
+<heading>6.3 Future work</heading>
+<heading>6.4 Required reﬂections</heading>
+<heading>Bibliography</heading>
+<heading>http://electronics.howstuffworks.com/smartphone.htm</heading>
+<heading>http://cellphones.about.com/od/smartphonebasics/a/ what is smart.htm</heading>
+<heading>http://www.yumpu.com/en/document/view/3230127/ speaker-recognition-in-a-handheld-computer-skolan-for-</heading>
+<heading>http://www.fbi.gov/about-us/cjis/ﬁngerprints biometrics/biometric-center-of-excellence/ﬁles/speaker-recognition.pdf</heading>
+<heading>http://www.behaviosec.com/wp-content/uploads/2012/01/ BehavioSec-Behaviometrics.pdf</heading>
+<heading>http://199.203.243.203/objects/manuals/9.2.0/User Identiﬁcation and Authentication.pdf</heading>
+<heading>http: //www.nist.gov/itl/iad/mig/upload/NIST SRE12 evalplan-v17-r1.pdf</heading>
+<heading>http://www.sciencedirect.com/science/article/pii/ S0167639309001289</heading>
+<heading>http://arxiv.org/abs/ 1305.1145</heading>
+<heading>http://link.springer.com/referenceworkentry/10.1007/ 978-0-387-73003-5 196</heading>
+<heading>http://www.sciencedirect.com/science/article/pii/S0167865597000731</heading>
+<heading>http://asp.eurasipjournals.com/content/2004/4/101962/abstract</heading>
+<heading>https://gitorious.org/android-user-auth</heading>
+<heading>http://www.webcitation.org/5wk7sIvVb</heading>
+<heading>http://doi.acm.org/10.1145/2212776.2212450</heading>
+<heading>http://android-developers.blogspot.se/2011/03/ identifying-app-installations.html</heading>
+<heading>http://www.w3.org/TR/2004/ REC-voicexml20-20040316/</heading>
+<heading>https://cafe.bevocal. com/docs/veriﬁcation/index.html?content=overview.html</heading>
+<heading>http://www.w3.org/Voice/voice-implementations.html</heading>
+<heading>http://pic.dhe.ibm.com/infocenter/wvsoem/v6r1m1/topic/com. ibm.websphere.wvs.doc/wvs/wvs sv.pdf</heading>
+<heading>http://www-01.ibm.com/software/voice/</heading>
+<heading>https: //github.com/amaurycrickx/recognito</heading>
+<heading>http://link.springer.com/chapter/ 10.1007/978-3-642-25867-1 6</heading>
+<heading>http://mistral.univ-avignon.fr/ index en.html</heading>
+<heading>https://code.google.com/p/jstk/</heading>
+<heading>http://cmusphinx.sourceforge.net/wiki/tutorialsphinx4/doc/Sphinx4-faq. html#speaker identiﬁcation</heading>
+<heading>http://code.google.com/p/voiceid/</heading>
+<heading>https://pypi.python.org/pypi/bob.spear</heading>
+<heading>http://www.cvaieee.org/html/resp citizen/ responsible citizenship.html</heading>
+<heading>http://developer.android.com/reference/android/media/AudioRecord.html</heading>
+<heading>http://developer.android.com/reference/android/media/MediaRecorder.html</heading>
+<heading>http://www.diva-portal.org/smash/get/diva2:699823/FULLTEXT02</heading>
+<heading>http://opensignal.com/reports/2014/android-fragmentation/</heading>
+<heading>http: //www.ted.com/</heading>
+<heading>http://www.google.com/insidesearch/features/voicesearch/</heading>
+<heading>http://developer.android.com/reference/android/speech/ RecognitionListener.html</heading>
+<heading>http://developer.android.com/reference/android/speech/ RecognizerIntent.html</heading>
+<heading>https://code.google. com/p/android/issues/detail?id=76130&q=Speech%20RecognizerIntent. EXTRA SPEECH INPUT COMPLETE SILENCE LENGTH MILLIS& colspec=ID%20Type%20Status%20Owner%20Summary%20Stars</heading>
+<heading>https://source.android.com/devices/tech/dalvik/dalvik-bytecode.html</heading>
+<heading>http://developer.android.com/reference/packages.html</heading>
+<heading>http://developer.android.com/training/articles/perf-anr.html</heading>
+<heading>http://www.android.com/ wear/</heading>
+<heading>http://www2.law.ed.ac.uk/ahrc/script-ed/vol4-3/hornung.asp</heading>
+<heading>http://dx.doi.org/10.1147/sj.403.0614</heading>
+<heading>Appendix A</heading>
+<heading>Recognito</heading>
+<heading>A.1 WavReader.java</heading>
+<heading>www.kth.se</heading>
+../150120-Anargyros_Chatzaras_and_Georgios_Savvidis-with-cover.pdf
+
+  C-c C-c
+maguire@birkv:~/Working/Exjobs/pdfssa4met> Traceback (most recent call last):
+  File "./kthextract.py", line 284, in <module>
+    sys.exit(main())
+  File "./kthextract.py", line 272, in main
+    pdf2heads(opts, args)
+  File "./kthextract.py", line 87, in pdf2heads
+    tree = pdf2etree(args)
+  File "/u2/home/maguire/Working/Exjobs/pdfssa4met/pdf2xml.py", line 41, in pdf2etree
+    commands.getoutput(cmdline)
+  File "/usr/lib64/python2.7/commands.py", line 50, in getoutput
+    return getstatusoutput(cmd)[1]
+  File "/usr/lib64/python2.7/commands.py", line 60, in getstatusoutput
+    text = pipe.read()
+KeyboardInterrupt  C-c C-c
+maguire@birkv:~/Working/Exjobs/pdfssa4met> 

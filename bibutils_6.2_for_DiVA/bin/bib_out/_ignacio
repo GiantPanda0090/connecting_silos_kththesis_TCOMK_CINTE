@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{AMAYA, IGNACIO}
+and {ARAYA, CRISTIAN}",
+title="Fraud detection in online payments using Spark ML: Master thesis performed in collaboration with Qliro AB",
+abstract="Frauds in online payments cause billions of dollars in losses every year. To reduce them, traditional fraud detection systems can be enhanced with the latest advances in machine learning, which usually require distributed computing frameworks to handle the big size of the available data. Previous academic work has failed to address fraud detection in real-world environments. To ﬁll this gap, this thesis focuses on building a fraud detection classiﬁer on Spark ML using real-world payment data. Class imbalance and non-stationarity reduced the performance of our models, so experiments to tackle those problems were performed. Our best results were achieved by applying undersampling and oversampling on the training data to reduce the class imbalance. Updating the model regularly to use the latest data also helped diminishing the negative effects of non-stationarity. A ﬁnal machine learning model that leverages all our ﬁndings has been deployed at Qliro, an important online payments provider in the Nordics. This model periodically sends suspicious purchase orders for review to fraud investigators, enabling them to catch frauds that were missed before. i"
+}
+

@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{ANDERSSON, ULRIKA}
+and {FRISK, GUSTAV}",
+title="Effect of depth cues on visual search in a web-based environment: Futures studies through the lens of feminist epistemologies",
+abstract="In recent years, 3D graphics has become more available for web development with low-level access to graphics hardware and increased power of web browsers. With core browsing tasks for users being to quickly scan a website and find what they are looking for, can 3D graphics -- or depth cues -- be used to facilitate these tasks? Therefore, the main focus of this work was to examine user performance on websites in terms of visual attention. Previous research on the use of 3D graphics in web design and other graphical interfaces has yielded mixed results, but some suggest depth cues might be used to segment a visual scene and improve visual attention. In this work, the main question asked was: How do depth cues affect visual search in a web-based environment? To examine the question, a user study was conducted where participants performed a visual search task on four different web-based prototypes with varying depth cues. The findings suggest depth cues might have a negative effect by increasing reaction time, but certain cues can improve task completion (hit rate) in text- rich web environments. It is further elaborated that it might be useful to look at the problem from a more holistic perspective, also emphasizing other factors such as visual complexity and prototypicality of websites."
+}
+

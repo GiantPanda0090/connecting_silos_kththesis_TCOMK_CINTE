@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+</head>
+<body>
+     <p>Information Obtain Process Done</p>
+
+     <p>Current Session is info:<br /></p>
+        <p>Session ID: {{Session_id}}</p>
+
+     <br />
+
+
+
+
+
+        <p>Returned result:</p>
+
+        <a target="_blank" href="https://kth.instructure.com/courses/2139/gradebook">Link to Canvas Gradebook that store followin output data</a>
+               <br />
+
+
+        <li><p>Output:</p></li>
+
+              <table border="0">
+                    <tr>
+              <th style="padding:0 5px 0 5px;"></th>
+    <th style="padding:0 5px 0 5px;"></th>
+</tr>
+        {% for title in Title %}
+                            <form action="update_database" method="post">
+                                    {% csrf_token %}
+
+                                    <input type="hidden" name="user_session_id" value={{title.5}} checked onclick="return false;"/> <br>
+                                <input type="hidden" name="session_id_session" value={{Session_id}} checked onclick="return false;"/> <br>
+
+
+
+                  <p>{{title.0}}: {{title.1}}</p>
+                                    <p>{{title.2}}: {{title.3}}</p>
+
+                                    <p>{{title.4}}: {{title.5}}</p>
+
+                                    <p>{{title.6}}: {{title.7}}</p>
+                                <p>Folder name: {{title.8}}</p>
+
+<tr>
+                                    <td>
+    <p>EXAMINAR INFO:</p>
+        </td>
+  <td>
+        </td>
+    </tr>
+        {% for content in Examinar_info %}
+
+
+        <tr>
+         <td> <center> <label for={{content.0}}> {{content.0}}:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name={{content.0}} id={{content.0}}>{{content.1}}</textarea></center></td>
+        </tr>
+       {% endfor %}
+
+        <tr>
+
+                                     <td>
+    <p>SUPERVISOR INFO:</p>
+        </td>
+  <td>
+        </td>
+                    </tr>
+
+        {% for content_1 in Supervisor_info %}
+
+
+        <tr>
+         <td> <center> <label for={{content_1.0}}> {{content_1.0}}:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name={{content_1.0}} id={{content_1.0}}>{{content_1.1}}</textarea></center></td>
+        </tr>
+       {% endfor %}
+
+        <tr>
+
+                       <td>
+    <p>STUDENT INFO:</p>
+        </td>
+  <td>
+        </td>'        </tr>
+
+        {% for content_2 in Student_info %}
+
+
+        <tr>
+         <td> <center> <label for={{content_2.0}}> {{content_2.0}}:</label></center></td>
+         <td> <center> <textarea rows="0" cols="0" name={{content_2.0}} id={{content_2.0}}>{{content_2.1}}</textarea></center></td>
+        </tr>
+       {% endfor %}
+
+
+        <input type="hidden" name="stage" value=1 checked onclick="return false;"/> <br>
+
+
+        <tr>
+
+         <td> <center> <input type="submit" value="update" class="default" /></center></td>
+
+                                          </form>
+
+              <td> <center>    <form action="modsOut" method="GET">
+    <input type="hidden" name="session_id" value={{title.5}} checked onclick="return false;"/>
+        <input type="submit" value="Download Mods">
+    </form></center></td>
+
+                          </tr>
+
+
+                         {% endfor %}
+
+         </table>
+
+
+
+
+</body>
+</html>

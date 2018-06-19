@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{S{\'A}NDOR, ALEXANDER}
+and {ADZEMOVIC, HARIS}",
+title="Comparison of user and item- based collaborative filtering on sparse data: - En analys av ett arbetsmarknadspolitiskt styrmedel ur ett h{\aa}llbarhetsperspektiv",
+abstract="Recommender systems are used extensively today in many areas to help users and con- sumers with making decisions. Amazon recommends books based on what you have previously viewed and purchased, Netﬂix presents you with shows and movies you might enjoy based on your interactions with the platform and Facebook serves personal- ized ads to every user based on gathered browsing information. These systems are based on shared similarities and there are several ways to develop and model them. This study compares two methods, user and item-based ﬁltering in k nearest neighbours systems. The methods are compared on how much they deviate from the true answer when pre- dicting user ratings of movies based on sparse data. The study showed that none of the methods could be considered objectively better than the other and that the choice of system should be based on the data set. iii"
+}
+

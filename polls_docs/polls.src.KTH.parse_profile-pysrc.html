@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>polls.src.KTH.parse_profile</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="polls-module.html">Package&nbsp;polls</a> ::
+        <a href="polls.src-module.html">Package&nbsp;src</a> ::
+        <a href="polls.src.KTH-module.html">Package&nbsp;KTH</a> ::
+        Module&nbsp;parse_profile
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="polls.src.KTH.parse_profile-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="polls.src.KTH.parse_profile-module.html">Module polls.src.KTH.parse_profile</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">csv</tt><tt class="py-op">,</tt> <tt class="py-name">requests</tt><tt class="py-op">,</tt> <tt class="py-name">time</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">pprint</tt> <tt class="py-keyword">import</tt> <tt class="py-name">pprint</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">optparse</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">io</tt> <tt class="py-keyword">import</tt> <tt class="py-name">StringIO</tt><tt class="py-op">,</tt> <tt class="py-name">BytesIO</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">lxml</tt> <tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Variable polls.src.start.html=polls.src.start-module.html#html"><a title="polls.src.start.html" class="py-name" href="#" onclick="return doclink('link-0', 'html', 'link-0');">html</a></tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">json</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"># Use Python Pandas to create XLSX files</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pandas</tt> <tt class="py-keyword">as</tt> <tt class="py-name">pd</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-string">'KTHconfig.json'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt class="py-name">json_data_file</tt><tt class="py-op">:</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">       <tt id="link-1" class="py-name" targets="Variable polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.configuration=polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group-module.html#configuration,Variable polls.src.Canvas.canvas.ccreate.configuration=polls.src.Canvas.canvas.ccreate-module.html#configuration,Variable polls.src.Canvas.canvas.cdel.configuration=polls.src.Canvas.canvas.cdel-module.html#configuration,Variable polls.src.Canvas.canvas.cget.configuration=polls.src.Canvas.canvas.cget-module.html#configuration,Variable polls.src.Canvas.canvas.cgetall.configuration=polls.src.Canvas.canvas.cgetall-module.html#configuration,Variable polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.configuration=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.configuration=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#configuration,Variable polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.configuration=polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.configuration=polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.configuration=polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.compute_stats_for_pages_in_course.configuration=polls.src.Canvas.canvas.compute_stats_for_pages_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.cput.configuration=polls.src.Canvas.canvas.cput-module.html#configuration,Variable polls.src.Canvas.canvas.create_proposal_gradebook_columns.configuration=polls.src.Canvas.canvas.create_proposal_gradebook_columns-module.html#configuration,Variable polls.src.Canvas.canvas.create_sections_in_course.configuration=polls.src.Canvas.canvas.create_sections_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.custom_column_data.configuration=polls.src.Canvas.canvas.custom_column_data-module.html#configuration,Variable polls.src.Canvas.canvas.delete_custom_column.configuration=polls.src.Canvas.canvas.delete_custom_column-module.html#configuration,Variable polls.src.Canvas.canvas.delete_page.configuration=polls.src.Canvas.canvas.delete_page-module.html#configuration,Variable polls.src.Canvas.canvas.delete_section_by_id.configuration=polls.src.Canvas.canvas.delete_section_by_id-module.html#configuration,Variable polls.src.Canvas.canvas.export_gradebook.configuration=polls.src.Canvas.canvas.export_gradebook-module.html#configuration,Variable polls.src.Canvas.canvas.extract_text_from_pages_in_course.configuration=polls.src.Canvas.canvas.extract_text_from_pages_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.fill_proposal_gradebook_columns.configuration=polls.src.Canvas.canvas.fill_proposal_gradebook_columns-module.html#configuration,Variable polls.src.Canvas.canvas.get_file.configuration=polls.src.Canvas.canvas.get_file-module.html#configuration,Variable polls.src.Canvas.canvas.get_submission.configuration=polls.src.Canvas.canvas.get_submission-module.html#configuration,Variable polls.src.Canvas.canvas.get_submission_as_file.configuration=polls.src.Canvas.canvas.get_submission_as_file-module.html#configuration,Variable polls.src.Canvas.canvas.insert_appointment.configuration=polls.src.Canvas.canvas.insert_appointment-module.html#configuration,Variable polls.src.Canvas.canvas.insert_appointment_by_group.configuration=polls.src.Canvas.canvas.insert_appointment_by_group-module.html#configuration,Variable polls.src.Canvas.canvas.insert_formula_questions.configuration=polls.src.Canvas.canvas.insert_formula_questions-module.html#configuration,Variable polls.src.Canvas.canvas.insert_page2.configuration=polls.src.Canvas.canvas.insert_page2-module.html#configuration,Variable polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.configuration=polls.src.Canvas.canvas.insert_quiz_from_spreadsheet-module.html#configuration,Variable polls.src.Canvas.canvas.list_assignments.configuration=polls.src.Canvas.canvas.list_assignments-module.html#configuration,Variable polls.src.Canvas.canvas.list_course_analytics.configuration=polls.src.Canvas.canvas.list_course_analytics-module.html#configuration,Variable polls.src.Canvas.canvas.list_custom_column_entries.configuration=polls.src.Canvas.canvas.list_custom_column_entries-module.html#configuration,Variable polls.src.Canvas.canvas.list_custom_columns.configuration=polls.src.Canvas.canvas.list_custom_columns-module.html#configuration,Variable polls.src.Canvas.canvas.list_groups_in_course.configuration=polls.src.Canvas.canvas.list_groups_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.list_groups_in_course2.configuration=polls.src.Canvas.canvas.list_groups_in_course2-module.html#configuration,Variable polls.src.Canvas.canvas.list_my_appointments.configuration=polls.src.Canvas.canvas.list_my_appointments-module.html#configuration,Variable polls.src.Canvas.canvas.list_pages.configuration=polls.src.Canvas.canvas.list_pages-module.html#configuration,Variable polls.src.Canvas.canvas.list_quizzes.configuration=polls.src.Canvas.canvas.list_quizzes-module.html#configuration,Variable polls.src.Canvas.canvas.list_sections_in_course.configuration=polls.src.Canvas.canvas.list_sections_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.list_studentList_assignment.configuration=polls.src.Canvas.canvas.list_studentList_assignment-module.html#configuration,Variable polls.src.Canvas.canvas.list_students_and_observers_in_course.configuration=polls.src.Canvas.canvas.list_students_and_observers_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.list_students_in_course.configuration=polls.src.Canvas.canvas.list_students_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.list_submissions.configuration=polls.src.Canvas.canvas.list_submissions-module.html#configuration,Variable polls.src.Canvas.canvas.list_users_in_course.configuration=polls.src.Canvas.canvas.list_users_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.list_users_in_course_with_students_email.configuration=polls.src.Canvas.canvas.list_users_in_course_with_students_email-module.html#configuration,Variable polls.src.Canvas.canvas.list_your_courses.configuration=polls.src.Canvas.canvas.list_your_courses-module.html#configuration,Variable polls.src.Canvas.canvas.list_your_courses2.configuration=polls.src.Canvas.canvas.list_your_courses2-module.html#configuration,Variable polls.src.Canvas.canvas.make_appointment.configuration=polls.src.Canvas.canvas.make_appointment-module.html#configuration,Variable polls.src.Canvas.canvas.mine_for_urls_in_page.configuration=polls.src.Canvas.canvas.mine_for_urls_in_page-module.html#configuration,Variable polls.src.Canvas.canvas.place_students_in_sections_in_course.configuration=polls.src.Canvas.canvas.place_students_in_sections_in_course-module.html#configuration,Variable polls.src.Canvas.canvas.test.configuration=polls.src.Canvas.canvas.test-module.html#configuration,Variable polls.src.Canvas.canvas.update_page_example1.configuration=polls.src.Canvas.canvas.update_page_example1-module.html#configuration,Variable polls.src.KTH.parse_profile.configuration=polls.src.KTH.parse_profile-module.html#configuration,Variable polls.src.start_proporsal.configuration=polls.src.start_proporsal-module.html#configuration,Variable polls.views.configuration=polls.views-module.html#configuration"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.configuration
+polls.src.Canvas.canvas.ccreate.configuration
+polls.src.Canvas.canvas.cdel.configuration
+polls.src.Canvas.canvas.cget.configuration
+polls.src.Canvas.canvas.cgetall.configuration
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.configuration
+polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_stats_for_pages_in_course.configuration
+polls.src.Canvas.canvas.cput.configuration
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.configuration
+polls.src.Canvas.canvas.create_sections_in_course.configuration
+polls.src.Canvas.canvas.custom_column_data.configuration
+polls.src.Canvas.canvas.delete_custom_column.configuration
+polls.src.Canvas.canvas.delete_page.configuration
+polls.src.Canvas.canvas.delete_section_by_id.configuration
+polls.src.Canvas.canvas.export_gradebook.configuration
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.configuration
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.configuration
+polls.src.Canvas.canvas.get_file.configuration
+polls.src.Canvas.canvas.get_submission.configuration
+polls.src.Canvas.canvas.get_submission_as_file.configuration
+polls.src.Canvas.canvas.insert_appointment.configuration
+polls.src.Canvas.canvas.insert_appointment_by_group.configuration
+polls.src.Canvas.canvas.insert_formula_questions.configuration
+polls.src.Canvas.canvas.insert_page2.configuration
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.configuration
+polls.src.Canvas.canvas.list_assignments.configuration
+polls.src.Canvas.canvas.list_course_analytics.configuration
+polls.src.Canvas.canvas.list_custom_column_entries.configuration
+polls.src.Canvas.canvas.list_custom_columns.configuration
+polls.src.Canvas.canvas.list_groups_in_course.configuration
+polls.src.Canvas.canvas.list_groups_in_course2.configuration
+polls.src.Canvas.canvas.list_my_appointments.configuration
+polls.src.Canvas.canvas.list_pages.configuration
+polls.src.Canvas.canvas.list_quizzes.configuration
+polls.src.Canvas.canvas.list_sections_in_course.configuration
+polls.src.Canvas.canvas.list_studentList_assignment.configuration
+polls.src.Canvas.canvas.list_students_and_observers_in_course.configuration
+polls.src.Canvas.canvas.list_students_in_course.configuration
+polls.src.Canvas.canvas.list_submissions.configuration
+polls.src.Canvas.canvas.list_users_in_course.configuration
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.configuration
+polls.src.Canvas.canvas.list_your_courses.configuration
+polls.src.Canvas.canvas.list_your_courses2.configuration
+polls.src.Canvas.canvas.make_appointment.configuration
+polls.src.Canvas.canvas.mine_for_urls_in_page.configuration
+polls.src.Canvas.canvas.place_students_in_sections_in_course.configuration
+polls.src.Canvas.canvas.test.configuration
+polls.src.Canvas.canvas.update_page_example1.configuration
+polls.src.KTH.parse_profile.configuration
+polls.src.start_proporsal.configuration
+polls.views.configuration" class="py-name" href="#" onclick="return doclink('link-1', 'configuration', 'link-1');">configuration</a></tt> <tt class="py-op">=</tt> <tt class="py-name">json</tt><tt class="py-op">.</tt><tt class="py-name">load</tt><tt class="py-op">(</tt><tt class="py-name">json_data_file</tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">        </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">       <tt id="link-2" class="py-name" targets="Variable polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.baseUrl=polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group-module.html#baseUrl,Variable polls.src.Canvas.canvas.ccreate.baseUrl=polls.src.Canvas.canvas.ccreate-module.html#baseUrl,Variable polls.src.Canvas.canvas.cdel.baseUrl=polls.src.Canvas.canvas.cdel-module.html#baseUrl,Variable polls.src.Canvas.canvas.cget.baseUrl=polls.src.Canvas.canvas.cget-module.html#baseUrl,Variable polls.src.Canvas.canvas.cgetall.baseUrl=polls.src.Canvas.canvas.cgetall-module.html#baseUrl,Variable polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.baseUrl=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.baseUrl=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#baseUrl,Variable polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.baseUrl=polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.baseUrl=polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.baseUrl=polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.compute_stats_for_pages_in_course.baseUrl=polls.src.Canvas.canvas.compute_stats_for_pages_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.cput.baseUrl=polls.src.Canvas.canvas.cput-module.html#baseUrl,Variable polls.src.Canvas.canvas.create_proposal_gradebook_columns.baseUrl=polls.src.Canvas.canvas.create_proposal_gradebook_columns-module.html#baseUrl,Variable polls.src.Canvas.canvas.create_sections_in_course.baseUrl=polls.src.Canvas.canvas.create_sections_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.custom_column_data.baseUrl=polls.src.Canvas.canvas.custom_column_data-module.html#baseUrl,Variable polls.src.Canvas.canvas.delete_custom_column.baseUrl=polls.src.Canvas.canvas.delete_custom_column-module.html#baseUrl,Variable polls.src.Canvas.canvas.delete_page.baseUrl=polls.src.Canvas.canvas.delete_page-module.html#baseUrl,Variable polls.src.Canvas.canvas.delete_section_by_id.baseUrl=polls.src.Canvas.canvas.delete_section_by_id-module.html#baseUrl,Variable polls.src.Canvas.canvas.export_gradebook.baseUrl=polls.src.Canvas.canvas.export_gradebook-module.html#baseUrl,Variable polls.src.Canvas.canvas.extract_text_from_pages_in_course.baseUrl=polls.src.Canvas.canvas.extract_text_from_pages_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.fill_proposal_gradebook_columns.baseUrl=polls.src.Canvas.canvas.fill_proposal_gradebook_columns-module.html#baseUrl,Variable polls.src.Canvas.canvas.get_file.baseUrl=polls.src.Canvas.canvas.get_file-module.html#baseUrl,Variable polls.src.Canvas.canvas.get_submission.baseUrl=polls.src.Canvas.canvas.get_submission-module.html#baseUrl,Variable polls.src.Canvas.canvas.get_submission_as_file.baseUrl=polls.src.Canvas.canvas.get_submission_as_file-module.html#baseUrl,Variable polls.src.Canvas.canvas.insert_appointment.baseUrl=polls.src.Canvas.canvas.insert_appointment-module.html#baseUrl,Variable polls.src.Canvas.canvas.insert_appointment_by_group.baseUrl=polls.src.Canvas.canvas.insert_appointment_by_group-module.html#baseUrl,Variable polls.src.Canvas.canvas.insert_formula_questions.baseUrl=polls.src.Canvas.canvas.insert_formula_questions-module.html#baseUrl,Variable polls.src.Canvas.canvas.insert_page2.baseUrl=polls.src.Canvas.canvas.insert_page2-module.html#baseUrl,Variable polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.baseUrl=polls.src.Canvas.canvas.insert_quiz_from_spreadsheet-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_assignments.baseUrl=polls.src.Canvas.canvas.list_assignments-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_course_analytics.baseUrl=polls.src.Canvas.canvas.list_course_analytics-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_custom_column_entries.baseUrl=polls.src.Canvas.canvas.list_custom_column_entries-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_custom_columns.baseUrl=polls.src.Canvas.canvas.list_custom_columns-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_groups_in_course.baseUrl=polls.src.Canvas.canvas.list_groups_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_groups_in_course2.baseUrl=polls.src.Canvas.canvas.list_groups_in_course2-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_my_appointments.baseUrl=polls.src.Canvas.canvas.list_my_appointments-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_pages.baseUrl=polls.src.Canvas.canvas.list_pages-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_quizzes.baseUrl=polls.src.Canvas.canvas.list_quizzes-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_sections_in_course.baseUrl=polls.src.Canvas.canvas.list_sections_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_studentList_assignment.baseUrl=polls.src.Canvas.canvas.list_studentList_assignment-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_students_and_observers_in_course.baseUrl=polls.src.Canvas.canvas.list_students_and_observers_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_students_in_course.baseUrl=polls.src.Canvas.canvas.list_students_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_submissions.baseUrl=polls.src.Canvas.canvas.list_submissions-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_users_in_course.baseUrl=polls.src.Canvas.canvas.list_users_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_users_in_course_with_students_email.baseUrl=polls.src.Canvas.canvas.list_users_in_course_with_students_email-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_your_courses.baseUrl=polls.src.Canvas.canvas.list_your_courses-module.html#baseUrl,Variable polls.src.Canvas.canvas.list_your_courses2.baseUrl=polls.src.Canvas.canvas.list_your_courses2-module.html#baseUrl,Variable polls.src.Canvas.canvas.make_appointment.baseUrl=polls.src.Canvas.canvas.make_appointment-module.html#baseUrl,Variable polls.src.Canvas.canvas.mine_for_urls_in_page.baseUrl=polls.src.Canvas.canvas.mine_for_urls_in_page-module.html#baseUrl,Variable polls.src.Canvas.canvas.place_students_in_sections_in_course.baseUrl=polls.src.Canvas.canvas.place_students_in_sections_in_course-module.html#baseUrl,Variable polls.src.Canvas.canvas.test.baseUrl=polls.src.Canvas.canvas.test-module.html#baseUrl,Variable polls.src.Canvas.canvas.update_page_example1.baseUrl=polls.src.Canvas.canvas.update_page_example1-module.html#baseUrl,Variable polls.src.KTH.parse_profile.baseUrl=polls.src.KTH.parse_profile-module.html#baseUrl,Variable polls.src.start_proporsal.baseUrl=polls.src.start_proporsal-module.html#baseUrl,Variable polls.views.baseUrl=polls.views-module.html#baseUrl"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.baseUrl
+polls.src.Canvas.canvas.ccreate.baseUrl
+polls.src.Canvas.canvas.cdel.baseUrl
+polls.src.Canvas.canvas.cget.baseUrl
+polls.src.Canvas.canvas.cgetall.baseUrl
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.baseUrl
+polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_stats_for_pages_in_course.baseUrl
+polls.src.Canvas.canvas.cput.baseUrl
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.baseUrl
+polls.src.Canvas.canvas.create_sections_in_course.baseUrl
+polls.src.Canvas.canvas.custom_column_data.baseUrl
+polls.src.Canvas.canvas.delete_custom_column.baseUrl
+polls.src.Canvas.canvas.delete_page.baseUrl
+polls.src.Canvas.canvas.delete_section_by_id.baseUrl
+polls.src.Canvas.canvas.export_gradebook.baseUrl
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.baseUrl
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.baseUrl
+polls.src.Canvas.canvas.get_file.baseUrl
+polls.src.Canvas.canvas.get_submission.baseUrl
+polls.src.Canvas.canvas.get_submission_as_file.baseUrl
+polls.src.Canvas.canvas.insert_appointment.baseUrl
+polls.src.Canvas.canvas.insert_appointment_by_group.baseUrl
+polls.src.Canvas.canvas.insert_formula_questions.baseUrl
+polls.src.Canvas.canvas.insert_page2.baseUrl
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.baseUrl
+polls.src.Canvas.canvas.list_assignments.baseUrl
+polls.src.Canvas.canvas.list_course_analytics.baseUrl
+polls.src.Canvas.canvas.list_custom_column_entries.baseUrl
+polls.src.Canvas.canvas.list_custom_columns.baseUrl
+polls.src.Canvas.canvas.list_groups_in_course.baseUrl
+polls.src.Canvas.canvas.list_groups_in_course2.baseUrl
+polls.src.Canvas.canvas.list_my_appointments.baseUrl
+polls.src.Canvas.canvas.list_pages.baseUrl
+polls.src.Canvas.canvas.list_quizzes.baseUrl
+polls.src.Canvas.canvas.list_sections_in_course.baseUrl
+polls.src.Canvas.canvas.list_studentList_assignment.baseUrl
+polls.src.Canvas.canvas.list_students_and_observers_in_course.baseUrl
+polls.src.Canvas.canvas.list_students_in_course.baseUrl
+polls.src.Canvas.canvas.list_submissions.baseUrl
+polls.src.Canvas.canvas.list_users_in_course.baseUrl
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.baseUrl
+polls.src.Canvas.canvas.list_your_courses.baseUrl
+polls.src.Canvas.canvas.list_your_courses2.baseUrl
+polls.src.Canvas.canvas.make_appointment.baseUrl
+polls.src.Canvas.canvas.mine_for_urls_in_page.baseUrl
+polls.src.Canvas.canvas.place_students_in_sections_in_course.baseUrl
+polls.src.Canvas.canvas.test.baseUrl
+polls.src.Canvas.canvas.update_page_example1.baseUrl
+polls.src.KTH.parse_profile.baseUrl
+polls.src.start_proporsal.baseUrl
+polls.views.baseUrl" class="py-name" href="#" onclick="return doclink('link-2', 'baseUrl', 'link-2');">baseUrl</a></tt><tt class="py-op">=</tt><tt class="py-string">"https://"</tt><tt class="py-op">+</tt><tt id="link-3" class="py-name"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.configuration
+polls.src.Canvas.canvas.ccreate.configuration
+polls.src.Canvas.canvas.cdel.configuration
+polls.src.Canvas.canvas.cget.configuration
+polls.src.Canvas.canvas.cgetall.configuration
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.configuration
+polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.configuration
+polls.src.Canvas.canvas.compute_stats_for_pages_in_course.configuration
+polls.src.Canvas.canvas.cput.configuration
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.configuration
+polls.src.Canvas.canvas.create_sections_in_course.configuration
+polls.src.Canvas.canvas.custom_column_data.configuration
+polls.src.Canvas.canvas.delete_custom_column.configuration
+polls.src.Canvas.canvas.delete_page.configuration
+polls.src.Canvas.canvas.delete_section_by_id.configuration
+polls.src.Canvas.canvas.export_gradebook.configuration
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.configuration
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.configuration
+polls.src.Canvas.canvas.get_file.configuration
+polls.src.Canvas.canvas.get_submission.configuration
+polls.src.Canvas.canvas.get_submission_as_file.configuration
+polls.src.Canvas.canvas.insert_appointment.configuration
+polls.src.Canvas.canvas.insert_appointment_by_group.configuration
+polls.src.Canvas.canvas.insert_formula_questions.configuration
+polls.src.Canvas.canvas.insert_page2.configuration
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.configuration
+polls.src.Canvas.canvas.list_assignments.configuration
+polls.src.Canvas.canvas.list_course_analytics.configuration
+polls.src.Canvas.canvas.list_custom_column_entries.configuration
+polls.src.Canvas.canvas.list_custom_columns.configuration
+polls.src.Canvas.canvas.list_groups_in_course.configuration
+polls.src.Canvas.canvas.list_groups_in_course2.configuration
+polls.src.Canvas.canvas.list_my_appointments.configuration
+polls.src.Canvas.canvas.list_pages.configuration
+polls.src.Canvas.canvas.list_quizzes.configuration
+polls.src.Canvas.canvas.list_sections_in_course.configuration
+polls.src.Canvas.canvas.list_studentList_assignment.configuration
+polls.src.Canvas.canvas.list_students_and_observers_in_course.configuration
+polls.src.Canvas.canvas.list_students_in_course.configuration
+polls.src.Canvas.canvas.list_submissions.configuration
+polls.src.Canvas.canvas.list_users_in_course.configuration
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.configuration
+polls.src.Canvas.canvas.list_your_courses.configuration
+polls.src.Canvas.canvas.list_your_courses2.configuration
+polls.src.Canvas.canvas.make_appointment.configuration
+polls.src.Canvas.canvas.mine_for_urls_in_page.configuration
+polls.src.Canvas.canvas.place_students_in_sections_in_course.configuration
+polls.src.Canvas.canvas.test.configuration
+polls.src.Canvas.canvas.update_page_example1.configuration
+polls.src.KTH.parse_profile.configuration
+polls.src.start_proporsal.configuration
+polls.views.configuration" class="py-name" href="#" onclick="return doclink('link-3', 'configuration', 'link-1');">configuration</a></tt><tt class="py-op">[</tt><tt class="py-string">"kth"</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">"host"</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-string">"/api/profile/1.1/"</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-keyword">print</tt> <tt class="py-string">"dealing with"</tt> <tt class="py-op">+</tt> <tt id="link-4" class="py-name"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.baseUrl
+polls.src.Canvas.canvas.ccreate.baseUrl
+polls.src.Canvas.canvas.cdel.baseUrl
+polls.src.Canvas.canvas.cget.baseUrl
+polls.src.Canvas.canvas.cgetall.baseUrl
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.baseUrl
+polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_stats_for_pages_in_course.baseUrl
+polls.src.Canvas.canvas.cput.baseUrl
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.baseUrl
+polls.src.Canvas.canvas.create_sections_in_course.baseUrl
+polls.src.Canvas.canvas.custom_column_data.baseUrl
+polls.src.Canvas.canvas.delete_custom_column.baseUrl
+polls.src.Canvas.canvas.delete_page.baseUrl
+polls.src.Canvas.canvas.delete_section_by_id.baseUrl
+polls.src.Canvas.canvas.export_gradebook.baseUrl
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.baseUrl
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.baseUrl
+polls.src.Canvas.canvas.get_file.baseUrl
+polls.src.Canvas.canvas.get_submission.baseUrl
+polls.src.Canvas.canvas.get_submission_as_file.baseUrl
+polls.src.Canvas.canvas.insert_appointment.baseUrl
+polls.src.Canvas.canvas.insert_appointment_by_group.baseUrl
+polls.src.Canvas.canvas.insert_formula_questions.baseUrl
+polls.src.Canvas.canvas.insert_page2.baseUrl
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.baseUrl
+polls.src.Canvas.canvas.list_assignments.baseUrl
+polls.src.Canvas.canvas.list_course_analytics.baseUrl
+polls.src.Canvas.canvas.list_custom_column_entries.baseUrl
+polls.src.Canvas.canvas.list_custom_columns.baseUrl
+polls.src.Canvas.canvas.list_groups_in_course.baseUrl
+polls.src.Canvas.canvas.list_groups_in_course2.baseUrl
+polls.src.Canvas.canvas.list_my_appointments.baseUrl
+polls.src.Canvas.canvas.list_pages.baseUrl
+polls.src.Canvas.canvas.list_quizzes.baseUrl
+polls.src.Canvas.canvas.list_sections_in_course.baseUrl
+polls.src.Canvas.canvas.list_studentList_assignment.baseUrl
+polls.src.Canvas.canvas.list_students_and_observers_in_course.baseUrl
+polls.src.Canvas.canvas.list_students_in_course.baseUrl
+polls.src.Canvas.canvas.list_submissions.baseUrl
+polls.src.Canvas.canvas.list_users_in_course.baseUrl
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.baseUrl
+polls.src.Canvas.canvas.list_your_courses.baseUrl
+polls.src.Canvas.canvas.list_your_courses2.baseUrl
+polls.src.Canvas.canvas.make_appointment.baseUrl
+polls.src.Canvas.canvas.mine_for_urls_in_page.baseUrl
+polls.src.Canvas.canvas.place_students_in_sections_in_course.baseUrl
+polls.src.Canvas.canvas.test.baseUrl
+polls.src.Canvas.canvas.update_page_example1.baseUrl
+polls.src.KTH.parse_profile.baseUrl
+polls.src.start_proporsal.baseUrl
+polls.views.baseUrl" class="py-name" href="#" onclick="return doclink('link-4', 'baseUrl', 'link-2');">baseUrl</a></tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">       </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.payload=polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group-module.html#payload,Variable polls.src.Canvas.canvas.create_proposal_gradebook_columns.payload=polls.src.Canvas.canvas.create_proposal_gradebook_columns-module.html#payload,Variable polls.src.Canvas.canvas.create_sections_in_course.payload=polls.src.Canvas.canvas.create_sections_in_course-module.html#payload,Variable polls.src.Canvas.canvas.custom_column_data.payload=polls.src.Canvas.canvas.custom_column_data-module.html#payload,Variable polls.src.Canvas.canvas.delete_custom_column.payload=polls.src.Canvas.canvas.delete_custom_column-module.html#payload,Variable polls.src.Canvas.canvas.delete_page.payload=polls.src.Canvas.canvas.delete_page-module.html#payload,Variable polls.src.Canvas.canvas.delete_section_by_id.payload=polls.src.Canvas.canvas.delete_section_by_id-module.html#payload,Variable polls.src.Canvas.canvas.export_gradebook.payload=polls.src.Canvas.canvas.export_gradebook-module.html#payload,Variable polls.src.Canvas.canvas.extract_text_from_pages_in_course.payload=polls.src.Canvas.canvas.extract_text_from_pages_in_course-module.html#payload,Variable polls.src.Canvas.canvas.fill_proposal_gradebook_columns.payload=polls.src.Canvas.canvas.fill_proposal_gradebook_columns-module.html#payload,Variable polls.src.Canvas.canvas.get_file.payload=polls.src.Canvas.canvas.get_file-module.html#payload,Variable polls.src.Canvas.canvas.get_submission.payload=polls.src.Canvas.canvas.get_submission-module.html#payload,Variable polls.src.Canvas.canvas.get_submission_as_file.payload=polls.src.Canvas.canvas.get_submission_as_file-module.html#payload,Variable polls.src.Canvas.canvas.insert_appointment.payload=polls.src.Canvas.canvas.insert_appointment-module.html#payload,Variable polls.src.Canvas.canvas.insert_appointment_by_group.payload=polls.src.Canvas.canvas.insert_appointment_by_group-module.html#payload,Variable polls.src.Canvas.canvas.insert_formula_questions.payload=polls.src.Canvas.canvas.insert_formula_questions-module.html#payload,Variable polls.src.Canvas.canvas.insert_page2.payload=polls.src.Canvas.canvas.insert_page2-module.html#payload,Variable polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.payload=polls.src.Canvas.canvas.insert_quiz_from_spreadsheet-module.html#payload,Variable polls.src.Canvas.canvas.list_assignments.payload=polls.src.Canvas.canvas.list_assignments-module.html#payload,Variable polls.src.Canvas.canvas.list_course_analytics.payload=polls.src.Canvas.canvas.list_course_analytics-module.html#payload,Variable polls.src.Canvas.canvas.list_custom_column_entries.payload=polls.src.Canvas.canvas.list_custom_column_entries-module.html#payload,Variable polls.src.Canvas.canvas.list_custom_columns.payload=polls.src.Canvas.canvas.list_custom_columns-module.html#payload,Variable polls.src.Canvas.canvas.list_groups_in_course.payload=polls.src.Canvas.canvas.list_groups_in_course-module.html#payload,Variable polls.src.Canvas.canvas.list_groups_in_course2.payload=polls.src.Canvas.canvas.list_groups_in_course2-module.html#payload,Variable polls.src.Canvas.canvas.list_my_appointments.payload=polls.src.Canvas.canvas.list_my_appointments-module.html#payload,Variable polls.src.Canvas.canvas.list_pages.payload=polls.src.Canvas.canvas.list_pages-module.html#payload,Variable polls.src.Canvas.canvas.list_quizzes.payload=polls.src.Canvas.canvas.list_quizzes-module.html#payload,Variable polls.src.Canvas.canvas.list_sections_in_course.payload=polls.src.Canvas.canvas.list_sections_in_course-module.html#payload,Variable polls.src.Canvas.canvas.list_studentList_assignment.payload=polls.src.Canvas.canvas.list_studentList_assignment-module.html#payload,Variable polls.src.Canvas.canvas.list_students_and_observers_in_course.payload=polls.src.Canvas.canvas.list_students_and_observers_in_course-module.html#payload,Variable polls.src.Canvas.canvas.list_students_in_course.payload=polls.src.Canvas.canvas.list_students_in_course-module.html#payload,Variable polls.src.Canvas.canvas.list_submissions.payload=polls.src.Canvas.canvas.list_submissions-module.html#payload,Variable polls.src.Canvas.canvas.list_users_in_course.payload=polls.src.Canvas.canvas.list_users_in_course-module.html#payload,Variable polls.src.Canvas.canvas.list_users_in_course_with_students_email.payload=polls.src.Canvas.canvas.list_users_in_course_with_students_email-module.html#payload,Variable polls.src.Canvas.canvas.list_your_courses.payload=polls.src.Canvas.canvas.list_your_courses-module.html#payload,Variable polls.src.Canvas.canvas.list_your_courses2.payload=polls.src.Canvas.canvas.list_your_courses2-module.html#payload,Variable polls.src.Canvas.canvas.make_appointment.payload=polls.src.Canvas.canvas.make_appointment-module.html#payload,Variable polls.src.Canvas.canvas.mine_for_urls_in_page.payload=polls.src.Canvas.canvas.mine_for_urls_in_page-module.html#payload,Variable polls.src.Canvas.canvas.place_students_in_sections_in_course.payload=polls.src.Canvas.canvas.place_students_in_sections_in_course-module.html#payload,Variable polls.src.Canvas.canvas.update_page_example1.payload=polls.src.Canvas.canvas.update_page_example1-module.html#payload,Variable polls.src.KTH.parse_profile.payload=polls.src.KTH.parse_profile-module.html#payload"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.payload
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.payload
+polls.src.Canvas.canvas.create_sections_in_course.payload
+polls.src.Canvas.canvas.custom_column_data.payload
+polls.src.Canvas.canvas.delete_custom_column.payload
+polls.src.Canvas.canvas.delete_page.payload
+polls.src.Canvas.canvas.delete_section_by_id.payload
+polls.src.Canvas.canvas.export_gradebook.payload
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.payload
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.payload
+polls.src.Canvas.canvas.get_file.payload
+polls.src.Canvas.canvas.get_submission.payload
+polls.src.Canvas.canvas.get_submission_as_file.payload
+polls.src.Canvas.canvas.insert_appointment.payload
+polls.src.Canvas.canvas.insert_appointment_by_group.payload
+polls.src.Canvas.canvas.insert_formula_questions.payload
+polls.src.Canvas.canvas.insert_page2.payload
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.payload
+polls.src.Canvas.canvas.list_assignments.payload
+polls.src.Canvas.canvas.list_course_analytics.payload
+polls.src.Canvas.canvas.list_custom_column_entries.payload
+polls.src.Canvas.canvas.list_custom_columns.payload
+polls.src.Canvas.canvas.list_groups_in_course.payload
+polls.src.Canvas.canvas.list_groups_in_course2.payload
+polls.src.Canvas.canvas.list_my_appointments.payload
+polls.src.Canvas.canvas.list_pages.payload
+polls.src.Canvas.canvas.list_quizzes.payload
+polls.src.Canvas.canvas.list_sections_in_course.payload
+polls.src.Canvas.canvas.list_studentList_assignment.payload
+polls.src.Canvas.canvas.list_students_and_observers_in_course.payload
+polls.src.Canvas.canvas.list_students_in_course.payload
+polls.src.Canvas.canvas.list_submissions.payload
+polls.src.Canvas.canvas.list_users_in_course.payload
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.payload
+polls.src.Canvas.canvas.list_your_courses.payload
+polls.src.Canvas.canvas.list_your_courses2.payload
+polls.src.Canvas.canvas.make_appointment.payload
+polls.src.Canvas.canvas.mine_for_urls_in_page.payload
+polls.src.Canvas.canvas.place_students_in_sections_in_course.payload
+polls.src.Canvas.canvas.update_page_example1.payload
+polls.src.KTH.parse_profile.payload" class="py-name" href="#" onclick="return doclink('link-5', 'payload', 'link-5');">payload</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="get_user_info"></a><div id="get_user_info-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="get_user_info-toggle" onclick="return toggle('get_user_info');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="polls.src.KTH.parse_profile-module.html#get_user_info">get_user_info</a><tt class="py-op">(</tt><tt class="py-param">userid</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+</div><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">    </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-name">info_found</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt id="link-6" class="py-name" targets="Variable polls.src.start.url=polls.src.start-module.html#url,Module polls.url=polls.url-module.html"><a title="polls.src.start.url
+polls.url" class="py-name" href="#" onclick="return doclink('link-6', 'url', 'link-6');">url</a></tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.baseUrl
+polls.src.Canvas.canvas.ccreate.baseUrl
+polls.src.Canvas.canvas.cdel.baseUrl
+polls.src.Canvas.canvas.cget.baseUrl
+polls.src.Canvas.canvas.cgetall.baseUrl
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.baseUrl
+polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.baseUrl
+polls.src.Canvas.canvas.compute_stats_for_pages_in_course.baseUrl
+polls.src.Canvas.canvas.cput.baseUrl
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.baseUrl
+polls.src.Canvas.canvas.create_sections_in_course.baseUrl
+polls.src.Canvas.canvas.custom_column_data.baseUrl
+polls.src.Canvas.canvas.delete_custom_column.baseUrl
+polls.src.Canvas.canvas.delete_page.baseUrl
+polls.src.Canvas.canvas.delete_section_by_id.baseUrl
+polls.src.Canvas.canvas.export_gradebook.baseUrl
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.baseUrl
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.baseUrl
+polls.src.Canvas.canvas.get_file.baseUrl
+polls.src.Canvas.canvas.get_submission.baseUrl
+polls.src.Canvas.canvas.get_submission_as_file.baseUrl
+polls.src.Canvas.canvas.insert_appointment.baseUrl
+polls.src.Canvas.canvas.insert_appointment_by_group.baseUrl
+polls.src.Canvas.canvas.insert_formula_questions.baseUrl
+polls.src.Canvas.canvas.insert_page2.baseUrl
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.baseUrl
+polls.src.Canvas.canvas.list_assignments.baseUrl
+polls.src.Canvas.canvas.list_course_analytics.baseUrl
+polls.src.Canvas.canvas.list_custom_column_entries.baseUrl
+polls.src.Canvas.canvas.list_custom_columns.baseUrl
+polls.src.Canvas.canvas.list_groups_in_course.baseUrl
+polls.src.Canvas.canvas.list_groups_in_course2.baseUrl
+polls.src.Canvas.canvas.list_my_appointments.baseUrl
+polls.src.Canvas.canvas.list_pages.baseUrl
+polls.src.Canvas.canvas.list_quizzes.baseUrl
+polls.src.Canvas.canvas.list_sections_in_course.baseUrl
+polls.src.Canvas.canvas.list_studentList_assignment.baseUrl
+polls.src.Canvas.canvas.list_students_and_observers_in_course.baseUrl
+polls.src.Canvas.canvas.list_students_in_course.baseUrl
+polls.src.Canvas.canvas.list_submissions.baseUrl
+polls.src.Canvas.canvas.list_users_in_course.baseUrl
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.baseUrl
+polls.src.Canvas.canvas.list_your_courses.baseUrl
+polls.src.Canvas.canvas.list_your_courses2.baseUrl
+polls.src.Canvas.canvas.make_appointment.baseUrl
+polls.src.Canvas.canvas.mine_for_urls_in_page.baseUrl
+polls.src.Canvas.canvas.place_students_in_sections_in_course.baseUrl
+polls.src.Canvas.canvas.test.baseUrl
+polls.src.Canvas.canvas.update_page_example1.baseUrl
+polls.src.KTH.parse_profile.baseUrl
+polls.src.start_proporsal.baseUrl
+polls.views.baseUrl" class="py-name" href="#" onclick="return doclink('link-7', 'baseUrl', 'link-2');">baseUrl</a></tt> <tt class="py-op">+</tt><tt class="py-op">(</tt><tt class="py-name">userid</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">"url: "</tt> <tt class="py-op">+</tt> <tt id="link-8" class="py-name"><a title="polls.src.start.url
+polls.url" class="py-name" href="#" onclick="return doclink('link-8', 'url', 'link-6');">url</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">    <tt class="py-name">r</tt> <tt class="py-op">=</tt> <tt class="py-name">requests</tt><tt class="py-op">.</tt><tt class="py-name">get</tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="polls.src.start.url
+polls.url" class="py-name" href="#" onclick="return doclink('link-9', 'url', 'link-6');">url</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">r</tt><tt class="py-op">.</tt><tt class="py-name">status_code</tt> <tt class="py-op">==</tt> <tt class="py-name">requests</tt><tt class="py-op">.</tt><tt class="py-name">codes</tt><tt class="py-op">.</tt><tt class="py-name">ok</tt><tt class="py-op">:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-name">page_response</tt><tt class="py-op">=</tt><tt class="py-name">r</tt><tt class="py-op">.</tt><tt class="py-name">json</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">p_response</tt> <tt class="py-keyword">in</tt> <tt class="py-name">page_response</tt><tt class="py-op">:</tt>   </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">        <tt class="py-name">info_found</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">p_response</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">    <tt class="py-comment">#while r.links['current']['url'] != r.links['last']['url']:  </tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">            <tt class="py-comment">#  r = requests.get(r.links['next']['url'], headers=header)  </tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">             <tt class="py-comment"># page_response = r.json()  </tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">              <tt class="py-comment">#for p_response in page_response:  </tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">                  <tt class="py-comment">#   info_found.append(p_response)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">.</tt><tt class="py-name">json</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">r</tt><tt class="py-op">.</tt><tt class="py-name">json</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">"__main__"</tt><tt class="py-op">:</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">    <tt id="link-10" class="py-name" targets="Function polls.src.KTH.parse_profile.get_user_info()=polls.src.KTH.parse_profile-module.html#get_user_info"><a title="polls.src.KTH.parse_profile.get_user_info" class="py-name" href="#" onclick="return doclink('link-10', 'get_user_info', 'link-10');">get_user_info</a></tt><tt class="py-op">(</tt><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">argv</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun 19 07:34:22 2018
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{AGUILERA, MIGUEL}
+and {KARLSSON, LOUISE}",
+title="Semantic and Physical Modeling and Simulation of Multi-Domain Energy Systems: Gas Turbines and Electrical Power Networks: SICS - Swedish Institute of Computer Science",
+abstract="Simulating the global climate in ﬁne granularity is essential in climate science research. Current algorithms for computing climate models are based on mathematical models that are computationally expensive. Climate simulation runs can take days or months to execute on High Performance Computing (HPC) platforms. As such, the amount of computational resources determines the level of resolution for the simulations. If simulation time could be reduced without compromising model ﬁdelity, higher resolution simulations would be possible leading to potentially new insights in climate science research. In this project, broadband radiative transfer modeling is examined, as this is an important part in climate simulators that takes around 30{\%} to 50{\%} time of a typical general circulation model. This thesis project presents a convolutional neural network (CNN) to model this most time consuming component. As a result, swift radiation prediction through the trained deep neural network achieves a 7x speedup compared to the calculation time of the original function. The average prediction error (MSE) is around 0.004 with 98.71{\%} of accuracy."
+}
+

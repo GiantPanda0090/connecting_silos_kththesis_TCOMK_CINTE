@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{API, Web}
+and {ARAYA, CRISTIAN}",
+title="Web API protocol and security analysis: A case study of knowledge management in projects at a Swedish bank",
+abstract="There is problem that every company has its own customer portal. This problem can be solved by creating a platform that gathers all customers' portals in one place. For such platform, it is required a web API protocol that is fast, secure and has capacity for many users. Consequently, a survey of various web API protocols has been made by testing their performance and security. The task was to find out which web API protocol offered high security as well as high performance in terms of response time both at low and high load. This included an investigation of previous work to find out if certain protocols could be ruled out. During the work, the platform's backend was also developed, which needed to implement chosen web API protocols that would later be tested. The performed tests measured the APIs' connection time and their response time with and without load. The results were analyzed and showed that the protocols had both pros and cons. Finally, a protocol was chosen that was suitable for the platform because it offered high security and fast connection. In addition, the server was not affected negatively by the number of connections. Reactive REST was the web API protocol chosen for this platform."
+}
+

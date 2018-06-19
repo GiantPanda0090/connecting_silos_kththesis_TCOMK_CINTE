@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>polls.src.Canvas.canvas</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="polls-module.html">Package&nbsp;polls</a> ::
+        <a href="polls.src-module.html">Package&nbsp;src</a> ::
+        <a href="polls.src.Canvas-module.html">Package&nbsp;Canvas</a> ::
+        Package&nbsp;canvas
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="polls.src.Canvas.canvas-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="polls.src.Canvas.canvas-module.html">Package polls.src.Canvas.canvas</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Function polls.src.Canvas.canvas.get_file.list_submissions()=polls.src.Canvas.canvas.get_file-module.html#list_submissions,Function polls.src.Canvas.canvas.get_submission.list_submissions()=polls.src.Canvas.canvas.get_submission-module.html#list_submissions,Function polls.src.Canvas.canvas.get_submission_as_file.list_submissions()=polls.src.Canvas.canvas.get_submission_as_file-module.html#list_submissions,Function polls.src.Canvas.canvas.list_studentList_assignment.list_submissions()=polls.src.Canvas.canvas.list_studentList_assignment-module.html#list_submissions,Module polls.src.Canvas.canvas.list_submissions=polls.src.Canvas.canvas.list_submissions-module.html,Function polls.src.Canvas.canvas.list_submissions.list_submissions()=polls.src.Canvas.canvas.list_submissions-module.html#list_submissions"><a title="polls.src.Canvas.canvas.get_file.list_submissions
+polls.src.Canvas.canvas.get_submission.list_submissions
+polls.src.Canvas.canvas.get_submission_as_file.list_submissions
+polls.src.Canvas.canvas.list_studentList_assignment.list_submissions
+polls.src.Canvas.canvas.list_submissions
+polls.src.Canvas.canvas.list_submissions.list_submissions" class="py-name" href="#" onclick="return doclink('link-0', 'list_submissions', 'link-0');">list_submissions</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Function polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.list_assignments()=polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group-module.html#list_assignments,Function polls.src.Canvas.canvas.export_gradebook.list_assignments()=polls.src.Canvas.canvas.export_gradebook-module.html#list_assignments,Function polls.src.Canvas.canvas.insert_appointment.list_assignments()=polls.src.Canvas.canvas.insert_appointment-module.html#list_assignments,Function polls.src.Canvas.canvas.insert_appointment_by_group.list_assignments()=polls.src.Canvas.canvas.insert_appointment_by_group-module.html#list_assignments,Function polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.list_assignments()=polls.src.Canvas.canvas.insert_quiz_from_spreadsheet-module.html#list_assignments,Module polls.src.Canvas.canvas.list_assignments=polls.src.Canvas.canvas.list_assignments-module.html,Function polls.src.Canvas.canvas.list_assignments.list_assignments()=polls.src.Canvas.canvas.list_assignments-module.html#list_assignments,Function polls.src.Canvas.canvas.list_course_analytics.list_assignments()=polls.src.Canvas.canvas.list_course_analytics-module.html#list_assignments,Function polls.src.Canvas.canvas.list_groups_in_course.list_assignments()=polls.src.Canvas.canvas.list_groups_in_course-module.html#list_assignments,Function polls.src.Canvas.canvas.list_groups_in_course2.list_assignments()=polls.src.Canvas.canvas.list_groups_in_course2-module.html#list_assignments,Function polls.src.Canvas.canvas.list_my_appointments.list_assignments()=polls.src.Canvas.canvas.list_my_appointments-module.html#list_assignments,Function polls.src.Canvas.canvas.list_quizzes.list_assignments()=polls.src.Canvas.canvas.list_quizzes-module.html#list_assignments,Function polls.src.Canvas.canvas.list_students_and_observers_in_course.list_assignments()=polls.src.Canvas.canvas.list_students_and_observers_in_course-module.html#list_assignments,Function polls.src.Canvas.canvas.list_students_in_course.list_assignments()=polls.src.Canvas.canvas.list_students_in_course-module.html#list_assignments,Function polls.src.Canvas.canvas.list_users_in_course.list_assignments()=polls.src.Canvas.canvas.list_users_in_course-module.html#list_assignments,Function polls.src.Canvas.canvas.list_users_in_course_with_students_email.list_assignments()=polls.src.Canvas.canvas.list_users_in_course_with_students_email-module.html#list_assignments,Function polls.src.Canvas.canvas.make_appointment.list_assignments()=polls.src.Canvas.canvas.make_appointment-module.html#list_assignments"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.list_assignments
+polls.src.Canvas.canvas.export_gradebook.list_assignments
+polls.src.Canvas.canvas.insert_appointment.list_assignments
+polls.src.Canvas.canvas.insert_appointment_by_group.list_assignments
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.list_assignments
+polls.src.Canvas.canvas.list_assignments
+polls.src.Canvas.canvas.list_assignments.list_assignments
+polls.src.Canvas.canvas.list_course_analytics.list_assignments
+polls.src.Canvas.canvas.list_groups_in_course.list_assignments
+polls.src.Canvas.canvas.list_groups_in_course2.list_assignments
+polls.src.Canvas.canvas.list_my_appointments.list_assignments
+polls.src.Canvas.canvas.list_quizzes.list_assignments
+polls.src.Canvas.canvas.list_students_and_observers_in_course.list_assignments
+polls.src.Canvas.canvas.list_students_in_course.list_assignments
+polls.src.Canvas.canvas.list_users_in_course.list_assignments
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.list_assignments
+polls.src.Canvas.canvas.make_appointment.list_assignments" class="py-name" href="#" onclick="return doclink('link-1', 'list_assignments', 'link-1');">list_assignments</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module polls.src.Canvas.canvas.list_studentList_assignment=polls.src.Canvas.canvas.list_studentList_assignment-module.html"><a title="polls.src.Canvas.canvas.list_studentList_assignment" class="py-name" href="#" onclick="return doclink('link-2', 'list_studentList_assignment', 'link-2');">list_studentList_assignment</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Module polls.src.Canvas.canvas.fill_proposal_gradebook_columns=polls.src.Canvas.canvas.fill_proposal_gradebook_columns-module.html"><a title="polls.src.Canvas.canvas.fill_proposal_gradebook_columns" class="py-name" href="#" onclick="return doclink('link-3', 'fill_proposal_gradebook_columns', 'link-3');">fill_proposal_gradebook_columns</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Function polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.main()=polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group-module.html#main,Function polls.src.Canvas.canvas.augument_gradebook.main()=polls.src.Canvas.canvas.augument_gradebook-module.html#main,Function polls.src.Canvas.canvas.augument_list_students_in_course.main()=polls.src.Canvas.canvas.augument_list_students_in_course-module.html#main,Function polls.src.Canvas.canvas.ccreate.main()=polls.src.Canvas.canvas.ccreate-module.html#main,Function polls.src.Canvas.canvas.cdel.main()=polls.src.Canvas.canvas.cdel-module.html#main,Function polls.src.Canvas.canvas.cget.main()=polls.src.Canvas.canvas.cget-module.html#main,Function polls.src.Canvas.canvas.cgetall.main()=polls.src.Canvas.canvas.cgetall-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.main()=polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.main()=polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.compute_stats_for_pages_in_course.main()=polls.src.Canvas.canvas.compute_stats_for_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.cput.main()=polls.src.Canvas.canvas.cput-module.html#main,Function polls.src.Canvas.canvas.create_proposal_gradebook_columns.main()=polls.src.Canvas.canvas.create_proposal_gradebook_columns-module.html#main,Function polls.src.Canvas.canvas.create_sections_in_course.main()=polls.src.Canvas.canvas.create_sections_in_course-module.html#main,Function polls.src.Canvas.canvas.custom_column_data.main()=polls.src.Canvas.canvas.custom_column_data-module.html#main,Function polls.src.Canvas.canvas.delete_custom_column.main()=polls.src.Canvas.canvas.delete_custom_column-module.html#main,Function polls.src.Canvas.canvas.delete_page.main()=polls.src.Canvas.canvas.delete_page-module.html#main,Function polls.src.Canvas.canvas.delete_section_by_id.main()=polls.src.Canvas.canvas.delete_section_by_id-module.html#main,Function polls.src.Canvas.canvas.export_gradebook.main()=polls.src.Canvas.canvas.export_gradebook-module.html#main,Function polls.src.Canvas.canvas.extract_text_from_pages_in_course.main()=polls.src.Canvas.canvas.extract_text_from_pages_in_course-module.html#main,Function polls.src.Canvas.canvas.fill_proposal_gradebook_columns.main()=polls.src.Canvas.canvas.fill_proposal_gradebook_columns-module.html#main,Function polls.src.Canvas.canvas.get_file.main()=polls.src.Canvas.canvas.get_file-module.html#main,Function polls.src.Canvas.canvas.get_submission.main()=polls.src.Canvas.canvas.get_submission-module.html#main,Function polls.src.Canvas.canvas.get_submission_as_file.main()=polls.src.Canvas.canvas.get_submission_as_file-module.html#main,Function polls.src.Canvas.canvas.insert_appointment.main()=polls.src.Canvas.canvas.insert_appointment-module.html#main,Function polls.src.Canvas.canvas.insert_appointment_by_group.main()=polls.src.Canvas.canvas.insert_appointment_by_group-module.html#main,Function polls.src.Canvas.canvas.insert_formula_questions.main()=polls.src.Canvas.canvas.insert_formula_questions-module.html#main,Function polls.src.Canvas.canvas.insert_page2.main()=polls.src.Canvas.canvas.insert_page2-module.html#main,Function polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.main()=polls.src.Canvas.canvas.insert_quiz_from_spreadsheet-module.html#main,Function polls.src.Canvas.canvas.list_course_analytics.main()=polls.src.Canvas.canvas.list_course_analytics-module.html#main,Function polls.src.Canvas.canvas.list_groups_in_course.main()=polls.src.Canvas.canvas.list_groups_in_course-module.html#main,Function polls.src.Canvas.canvas.list_groups_in_course2.main()=polls.src.Canvas.canvas.list_groups_in_course2-module.html#main,Function polls.src.Canvas.canvas.list_my_appointments.main()=polls.src.Canvas.canvas.list_my_appointments-module.html#main,Function polls.src.Canvas.canvas.list_pages.main()=polls.src.Canvas.canvas.list_pages-module.html#main,Function polls.src.Canvas.canvas.list_quizzes.main()=polls.src.Canvas.canvas.list_quizzes-module.html#main,Function polls.src.Canvas.canvas.list_sections_in_course.main()=polls.src.Canvas.canvas.list_sections_in_course-module.html#main,Function polls.src.Canvas.canvas.list_studentList_assignment.main()=polls.src.Canvas.canvas.list_studentList_assignment-module.html#main,Function polls.src.Canvas.canvas.list_students_and_observers_in_course.main()=polls.src.Canvas.canvas.list_students_and_observers_in_course-module.html#main,Function polls.src.Canvas.canvas.list_students_in_course.main()=polls.src.Canvas.canvas.list_students_in_course-module.html#main,Function polls.src.Canvas.canvas.list_users_in_course.main()=polls.src.Canvas.canvas.list_users_in_course-module.html#main,Function polls.src.Canvas.canvas.list_users_in_course_with_students_email.main()=polls.src.Canvas.canvas.list_users_in_course_with_students_email-module.html#main,Function polls.src.Canvas.canvas.list_your_courses.main()=polls.src.Canvas.canvas.list_your_courses-module.html#main,Function polls.src.Canvas.canvas.list_your_courses2.main()=polls.src.Canvas.canvas.list_your_courses2-module.html#main,Function polls.src.Canvas.canvas.make_appointment.main()=polls.src.Canvas.canvas.make_appointment-module.html#main,Function polls.src.Canvas.canvas.mine_for_urls_in_page.main()=polls.src.Canvas.canvas.mine_for_urls_in_page-module.html#main,Function polls.src.Canvas.canvas.place_students_in_sections_in_course.main()=polls.src.Canvas.canvas.place_students_in_sections_in_course-module.html#main,Function polls.src.Canvas.canvas.test.main()=polls.src.Canvas.canvas.test-module.html#main,Function polls.src.Canvas.canvas.update_page_example1.main()=polls.src.Canvas.canvas.update_page_example1-module.html#main,Function polls.src.Canvas.unit_test.U_1.main()=polls.src.Canvas.unit_test.U_1-module.html#main,Function polls.src.Canvas.unit_test.U_2.main()=polls.src.Canvas.unit_test.U_2-module.html#main,Function polls.src.Canvas.unit_test.U_2_4.main()=polls.src.Canvas.unit_test.U_2_4-module.html#main,Function polls.src.Canvas.unit_test.U_5.main()=polls.src.Canvas.unit_test.U_5-module.html#main,Function polls.src.mods.xmlGenerator.main()=polls.src.mods.xmlGenerator-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.headings.main()=polls.src.parse.kth_extract.pdfssa4met.headings-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.kthextract.main()=polls.src.parse.kth_extract.pdfssa4met.kthextract-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.references.main()=polls.src.parse.kth_extract.pdfssa4met.references-module.html#main,Function polls.src.parse.kth_extract.pdfssa4met.socialtags.main()=polls.src.parse.kth_extract.pdfssa4met.socialtags-module.html#main,Function polls.src.start.main()=polls.src.start-module.html#main,Function polls.src.start_proporsal.main()=polls.src.start_proporsal-module.html#main"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.main
+polls.src.Canvas.canvas.augument_gradebook.main
+polls.src.Canvas.canvas.augument_list_students_in_course.main
+polls.src.Canvas.canvas.ccreate.main
+polls.src.Canvas.canvas.cdel.main
+polls.src.Canvas.canvas.cget.main
+polls.src.Canvas.canvas.cgetall.main
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_list_of_KTH_play_URLs_on_pages_in_course3.main
+polls.src.Canvas.canvas.compute_list_of_URLs_in_text_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_list_of_URLs_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_list_of_word_on_pages_in_course.main
+polls.src.Canvas.canvas.compute_stats_for_pages_in_course.main
+polls.src.Canvas.canvas.cput.main
+polls.src.Canvas.canvas.create_proposal_gradebook_columns.main
+polls.src.Canvas.canvas.create_sections_in_course.main
+polls.src.Canvas.canvas.custom_column_data.main
+polls.src.Canvas.canvas.delete_custom_column.main
+polls.src.Canvas.canvas.delete_page.main
+polls.src.Canvas.canvas.delete_section_by_id.main
+polls.src.Canvas.canvas.export_gradebook.main
+polls.src.Canvas.canvas.extract_text_from_pages_in_course.main
+polls.src.Canvas.canvas.fill_proposal_gradebook_columns.main
+polls.src.Canvas.canvas.get_file.main
+polls.src.Canvas.canvas.get_submission.main
+polls.src.Canvas.canvas.get_submission_as_file.main
+polls.src.Canvas.canvas.insert_appointment.main
+polls.src.Canvas.canvas.insert_appointment_by_group.main
+polls.src.Canvas.canvas.insert_formula_questions.main
+polls.src.Canvas.canvas.insert_page2.main
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.main
+polls.src.Canvas.canvas.list_course_analytics.main
+polls.src.Canvas.canvas.list_groups_in_course.main
+polls.src.Canvas.canvas.list_groups_in_course2.main
+polls.src.Canvas.canvas.list_my_appointments.main
+polls.src.Canvas.canvas.list_pages.main
+polls.src.Canvas.canvas.list_quizzes.main
+polls.src.Canvas.canvas.list_sections_in_course.main
+polls.src.Canvas.canvas.list_studentList_assignment.main
+polls.src.Canvas.canvas.list_students_and_observers_in_course.main
+polls.src.Canvas.canvas.list_students_in_course.main
+polls.src.Canvas.canvas.list_users_in_course.main
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.main
+polls.src.Canvas.canvas.list_your_courses.main
+polls.src.Canvas.canvas.list_your_courses2.main
+polls.src.Canvas.canvas.make_appointment.main
+polls.src.Canvas.canvas.mine_for_urls_in_page.main
+polls.src.Canvas.canvas.place_students_in_sections_in_course.main
+polls.src.Canvas.canvas.test.main
+polls.src.Canvas.canvas.update_page_example1.main
+polls.src.Canvas.unit_test.U_1.main
+polls.src.Canvas.unit_test.U_2.main
+polls.src.Canvas.unit_test.U_2_4.main
+polls.src.Canvas.unit_test.U_5.main
+polls.src.mods.xmlGenerator.main
+polls.src.parse.kth_extract.pdfssa4met.headings.main
+polls.src.parse.kth_extract.pdfssa4met.kthextract.main
+polls.src.parse.kth_extract.pdfssa4met.references.main
+polls.src.parse.kth_extract.pdfssa4met.socialtags.main
+polls.src.start.main
+polls.src.start_proporsal.main" class="py-name" href="#" onclick="return doclink('link-4', 'main', 'link-4');">main</a></tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name" targets="Function polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.list_custom_column_entries()=polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.custom_column_data.list_custom_column_entries()=polls.src.Canvas.canvas.custom_column_data-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.delete_custom_column.list_custom_column_entries()=polls.src.Canvas.canvas.delete_custom_column-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.export_gradebook.list_custom_column_entries()=polls.src.Canvas.canvas.export_gradebook-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.get_file.list_custom_column_entries()=polls.src.Canvas.canvas.get_file-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.get_submission.list_custom_column_entries()=polls.src.Canvas.canvas.get_submission-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.get_submission_as_file.list_custom_column_entries()=polls.src.Canvas.canvas.get_submission_as_file-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.insert_appointment.list_custom_column_entries()=polls.src.Canvas.canvas.insert_appointment-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.insert_appointment_by_group.list_custom_column_entries()=polls.src.Canvas.canvas.insert_appointment_by_group-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.list_custom_column_entries()=polls.src.Canvas.canvas.insert_quiz_from_spreadsheet-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_assignments.list_custom_column_entries()=polls.src.Canvas.canvas.list_assignments-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_course_analytics.list_custom_column_entries()=polls.src.Canvas.canvas.list_course_analytics-module.html#list_custom_column_entries,Module polls.src.Canvas.canvas.list_custom_column_entries=polls.src.Canvas.canvas.list_custom_column_entries-module.html,Function polls.src.Canvas.canvas.list_custom_column_entries.list_custom_column_entries()=polls.src.Canvas.canvas.list_custom_column_entries-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_custom_columns.list_custom_column_entries()=polls.src.Canvas.canvas.list_custom_columns-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_groups_in_course.list_custom_column_entries()=polls.src.Canvas.canvas.list_groups_in_course-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_groups_in_course2.list_custom_column_entries()=polls.src.Canvas.canvas.list_groups_in_course2-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_my_appointments.list_custom_column_entries()=polls.src.Canvas.canvas.list_my_appointments-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_quizzes.list_custom_column_entries()=polls.src.Canvas.canvas.list_quizzes-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_studentList_assignment.list_custom_column_entries()=polls.src.Canvas.canvas.list_studentList_assignment-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_students_and_observers_in_course.list_custom_column_entries()=polls.src.Canvas.canvas.list_students_and_observers_in_course-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_students_in_course.list_custom_column_entries()=polls.src.Canvas.canvas.list_students_in_course-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_submissions.list_custom_column_entries()=polls.src.Canvas.canvas.list_submissions-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_users_in_course.list_custom_column_entries()=polls.src.Canvas.canvas.list_users_in_course-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.list_users_in_course_with_students_email.list_custom_column_entries()=polls.src.Canvas.canvas.list_users_in_course_with_students_email-module.html#list_custom_column_entries,Function polls.src.Canvas.canvas.make_appointment.list_custom_column_entries()=polls.src.Canvas.canvas.make_appointment-module.html#list_custom_column_entries"><a title="polls.src.Canvas.canvas.augment_list_of_students_in_course_with_group.list_custom_column_entries
+polls.src.Canvas.canvas.custom_column_data.list_custom_column_entries
+polls.src.Canvas.canvas.delete_custom_column.list_custom_column_entries
+polls.src.Canvas.canvas.export_gradebook.list_custom_column_entries
+polls.src.Canvas.canvas.get_file.list_custom_column_entries
+polls.src.Canvas.canvas.get_submission.list_custom_column_entries
+polls.src.Canvas.canvas.get_submission_as_file.list_custom_column_entries
+polls.src.Canvas.canvas.insert_appointment.list_custom_column_entries
+polls.src.Canvas.canvas.insert_appointment_by_group.list_custom_column_entries
+polls.src.Canvas.canvas.insert_quiz_from_spreadsheet.list_custom_column_entries
+polls.src.Canvas.canvas.list_assignments.list_custom_column_entries
+polls.src.Canvas.canvas.list_course_analytics.list_custom_column_entries
+polls.src.Canvas.canvas.list_custom_column_entries
+polls.src.Canvas.canvas.list_custom_column_entries.list_custom_column_entries
+polls.src.Canvas.canvas.list_custom_columns.list_custom_column_entries
+polls.src.Canvas.canvas.list_groups_in_course.list_custom_column_entries
+polls.src.Canvas.canvas.list_groups_in_course2.list_custom_column_entries
+polls.src.Canvas.canvas.list_my_appointments.list_custom_column_entries
+polls.src.Canvas.canvas.list_quizzes.list_custom_column_entries
+polls.src.Canvas.canvas.list_studentList_assignment.list_custom_column_entries
+polls.src.Canvas.canvas.list_students_and_observers_in_course.list_custom_column_entries
+polls.src.Canvas.canvas.list_students_in_course.list_custom_column_entries
+polls.src.Canvas.canvas.list_submissions.list_custom_column_entries
+polls.src.Canvas.canvas.list_users_in_course.list_custom_column_entries
+polls.src.Canvas.canvas.list_users_in_course_with_students_email.list_custom_column_entries
+polls.src.Canvas.canvas.make_appointment.list_custom_column_entries" class="py-name" href="#" onclick="return doclink('link-5', 'list_custom_column_entries', 'link-5');">list_custom_column_entries</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun 19 07:34:22 2018
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

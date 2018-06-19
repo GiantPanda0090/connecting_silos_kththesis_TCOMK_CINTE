@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{ABRAHAMSSON, JOHAN}
+and {DANMO, JOHAN}",
+title="The Stabilizing Spoon: Self-stabilizing utensil to help people with impaired motor skills",
+abstract="The technology for assisting people who are functionally challenged has improved over the recent decades. With to- day's technology, people with Parkinson's disease can, with a device on their wrist, be able to draw pictures. Human limbs lost due to accidents can be replaced with bionic limbs and with help from smartphones, blind people can by au- dio be informed what kind of object that appear in front of them. These are a few examples where technology has eased everyday life for people with impaired functionality. The purpose of this thesis is to analyze how an Arduino mi- crocontroller can be utilized to help people with impaired motor skills during their eating process. A prototype of a stabilizing spoon was constructed to work under real cir- cumstances and intended to be a complement for people who are in need of assistance during their eating process. To make this possible, a sensor with gyroscopes combined with accelerometers was used to identify which direction the device's handle was being tilted, as well as how fast its position was changed. Two servo motors were placed orthogonally to each other to establish a system of two de- grees of freedom. With this setup, the spoon was intended to maintain its spoon bowl in a horizontal position. Exper- imental results of the spoon showed promising performance with some limitations."
+}
+

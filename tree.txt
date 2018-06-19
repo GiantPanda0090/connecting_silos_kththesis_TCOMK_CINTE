@@ -1,0 +1,32 @@
+.
+├── django_heroku
+├── mysite
+├── polls
+│   ├── Documentation
+│   ├── download_targz
+│   ├── ffdriver
+│   ├── library
+│   │   ├── Canvas-master
+│   │   └── pdfssa4met_original
+│   ├── migrations
+│   ├── output
+│   │   └── parse_result
+│   ├── Source
+│   ├── src
+│   │   ├── Canvas
+│   │   ├── Diva
+│   │   ├── KTH
+│   │   ├── mods
+│   │   └── parse
+│   ├── templates
+│   │   └── polls
+│   └── venv
+│       ├── bin
+│       ├── include
+│       ├── lib
+│       └── local
+├── polls_docs
+└── test
+    └── testproject
+
+29 directories

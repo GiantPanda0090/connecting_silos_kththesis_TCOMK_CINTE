@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{{\AA}KERMARK, WILHELM}
+and {AHLQVIST, OSCAR}",
+title="Examining the Implications of Adding Sentiment Analysis when Clustering based on Party Affiliation through Twitter: IN DEGREE PROJECT DESIGN AND PRODUCT REALISATION, SECOND CYCLE, 30 CREDITS ,",
+abstract="Political discussion is very common and a popular statistic for the po- litically interested are the surveys determining people's party afﬁlia- tion. Today they are done manually but it would be beneﬁcial if there was an automated method which could produce the same or similar results. On the social network Twitter there are a lot of users discussing politics, all from political leaders and representatives to just regular people with an interest for the subject. Because of that and also for its convenience when it comes to collecting data, Twitter has been used before in previous work to cluster political users based on what they are discussing. What has not been done before which this thesis con- tributes is clustering with sentiment analysis. In other terms, trying to cluster people based on what they are discussing but also if their opinion is positive or negative. What was noted in this work was that the part of clustering without sentiment analysis, that had been done in previous studies, was successfully replicated. However adding the sentiment analysis did not give the desired effect and only worsened the results. iv"
+}
+

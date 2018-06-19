@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{ACKLAND, PATRIK}
+and {FAVRE, MARTIN}",
+title="Fast and Scalable Static Analysis using Deterministic Concurrency: Unders{\"o}kning av laboratorieutrustnings v{\"a}rmeavgivning",
+abstract="This thesis presents an algorithm for solving a subset of static analysis data ﬂow prob- lems known as Interprocedural Finite Distribute Subset problems. The algorithm, called IFDS-RA, is an implementation of the IFDS algorithm which is an algorithm for solving such problems. IFDS-RA is implemented using Reactive Async which is a deterministic, concurrent, programming model. The scalability of IFDS-RA is compared to the state-of- the-art Heros implementation of the IFDS algorithm and evaluated using three different taint analyses on one to eight processing cores. The results show that IFDS-RA performs better than Heros when using multiple cores. Additionally, the results show that Heros does not take advantage of multiple cores even if there are multiple cores available on the system. ii"
+}
+

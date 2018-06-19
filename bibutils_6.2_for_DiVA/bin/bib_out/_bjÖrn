@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{T.I., BJ{\"O}RN}
+and {MARCUS, E.}",
+title="Automated Classification of Steel Samples: An investigation using Convolutional Neural Networks",
+abstract="Automated image recognition software has earlier been used for various analyses in the steel making industry. In this study, the possibility to apply such software to classify Scanning Electron Microscope (SEM) images of two steel samples was investigated. The two steel samples were of the same steel grade but with the difference that they had been treated with calcium for a different length of time. To enable automated image recognition, a Convolutional Neural Network (CNN) was built. The construction of the software was performed with open source code provided by Keras Documentation, thus ensuring an easily reproducible program. The network was trained, validated and tested, first for non-binarized images and then with binarized images. Binarized images were used to ensure that the network's prediction only considers the inclusion information and not the substrate. The non-binarized images gave a classification accuracy of 99.99 {\%}. For the binarized images, the classification accuracy obtained was 67.9{\%}. The results show that it is possible to classify steel samples using CNNs. One interesting aspect of the success in classifying steel samples is that further studies on CNNs could enable automated classification of inclusions. KEYWORDS: CNN, Automated classification, Inclusions, Steel."
+}
+

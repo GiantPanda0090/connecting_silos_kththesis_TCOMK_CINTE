@@ -1,0 +1,14 @@
+<p>The project will be organized as a two person project building upon previous</p> 
+
+<p>work that has already been done by Gerald Q. Maguire Jr. regarding the</p> 
+
+<p>custom files in Canvas for thesis projects and the existing work he has</p> 
+
+<p>already done in parsing PDF documents.</p> 
+
+<p>Organization: KTH, EECS, CoS, RSlab</p> 
+
+<p>Supervisor: Ander Västberg</p> 
+
+<p>Examiner’s name: Gerald Q. Maguire Jr.</p> 
+

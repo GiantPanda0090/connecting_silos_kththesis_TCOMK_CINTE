@@ -1,0 +1,50 @@
+<p>Increasing the output voltage of piezoelectric energy harvesters are one of the most</p> 
+
+<p>important aspects in this field. This is because of their low range of generated power</p> 
+
+<p>which has to be increased if it is desired to be used in the industry. For this reason,</p> 
+
+<p>this work has been based to find different solutions that lead the piezoelectric energy</p> 
+
+<p>harvesters to experience a boost of power. During the research, it was noticed that</p> 
+
+<p>there are three important facts that can lead to such a boost and based on those, the</p> 
+
+<p>work of this study was directed to a certain direction for finding advantages and</p> 
+
+<p>disadvantages of different methods for power enhancement in piezoelectric energy</p> 
+
+<p>harvesting. These facts include harvester’s mechanical configuration which is about</p> 
+
+<p>how piezoelectric crystals can be used in a mechanical system so the stress can be</p> 
+
+<p>applied easier for a maximum power. In this matter, three different configurations</p> 
+
+<p>were studied and compared to see which model is most likely to generate a desirable</p> 
+
+<p>amount of power. The second method affecting the output voltages is the right choice</p> 
+
+<p>of material. In this part, piezoelectric material was divided in to three different groups</p> 
+
+<p>and each was studied and compared to each other. Furthermore, to investigate how the</p> 
+
+<p>output power can be enhanced, electrical circuits that transfer the generated power</p> 
+
+<p>from the piezoelectric material to a storage buffer was studied. Different circuit</p> 
+
+<p>topologies used nowadays in this field, were chosen and compared to see which</p> 
+
+<p>circuit topology can enhance the power.</p> 
+
+<p>An experimental work was also conducted to see how vibration and deflection can</p> 
+
+<p>affect the generated and a simple circuit with a piezoelectric power source was</p> 
+
+<p>connected to a LED to experiment if the piezo material can light up the LED.</p> 
+
+<p>Last but not at least, the application of piezoelectric energy harvesting in the medical</p> 
+
+<p>field was reviewed to see whether if this kind of technology has a bright future in the</p> 
+
+<p>medicine.</p> 
+

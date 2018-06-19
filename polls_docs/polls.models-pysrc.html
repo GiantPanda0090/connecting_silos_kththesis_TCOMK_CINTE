@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>polls.models</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="polls-module.html">Package&nbsp;polls</a> ::
+        Module&nbsp;models
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="polls.models-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="polls.models-module.html">Module polls.models</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__future__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">unicode_literals</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">db</tt> <tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module polls.models=polls.models-module.html"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-0', 'models', 'link-0');">models</a></tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment"># Create your models here.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="Question"></a><div id="Question-def"><a name="L8"></a><tt class="py-lineno"> 8</tt> <a class="py-toggle" href="#" id="Question-toggle" onclick="return toggle('Question');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="polls.models.Question-class.html">Question</a><tt class="py-op">(</tt><tt class="py-base-class">models</tt><tt class="py-op">.</tt><tt class="py-base-class">Model</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Question-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Question-expanded"><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">    <tt id="link-1" class="py-name" targets="Variable polls.models.Question.question_text=polls.models.Question-class.html#question_text"><a title="polls.models.Question.question_text" class="py-name" href="#" onclick="return doclink('link-1', 'question_text', 'link-1');">question_text</a></tt> <tt class="py-op">=</tt> <tt id="link-2" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-2', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">CharField</tt><tt class="py-op">(</tt><tt class="py-name">max_length</tt><tt class="py-op">=</tt><tt class="py-number">200</tt><tt class="py-op">)</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">    <tt id="link-3" class="py-name" targets="Variable polls.models.Question.pub_date=polls.models.Question-class.html#pub_date"><a title="polls.models.Question.pub_date" class="py-name" href="#" onclick="return doclink('link-3', 'pub_date', 'link-3');">pub_date</a></tt> <tt class="py-op">=</tt> <tt id="link-4" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-4', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">DateTimeField</tt><tt class="py-op">(</tt><tt class="py-string">'date published'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="Choice"></a><div id="Choice-def"><a name="L13"></a><tt class="py-lineno">13</tt> <a class="py-toggle" href="#" id="Choice-toggle" onclick="return toggle('Choice');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="polls.models.Choice-class.html">Choice</a><tt class="py-op">(</tt><tt class="py-base-class">models</tt><tt class="py-op">.</tt><tt class="py-base-class">Model</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Choice-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Choice-expanded"><a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Variable polls.models.Choice.question=polls.models.Choice-class.html#question"><a title="polls.models.Choice.question" class="py-name" href="#" onclick="return doclink('link-5', 'question', 'link-5');">question</a></tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-6', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">ForeignKey</tt><tt class="py-op">(</tt><tt id="link-7" class="py-name" targets="Class polls.models.Question=polls.models.Question-class.html"><a title="polls.models.Question" class="py-name" href="#" onclick="return doclink('link-7', 'Question', 'link-7');">Question</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt id="link-8" class="py-name" targets="Variable polls.models.Choice.choice_text=polls.models.Choice-class.html#choice_text"><a title="polls.models.Choice.choice_text" class="py-name" href="#" onclick="return doclink('link-8', 'choice_text', 'link-8');">choice_text</a></tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-9', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">CharField</tt><tt class="py-op">(</tt><tt class="py-name">max_length</tt><tt class="py-op">=</tt><tt class="py-number">200</tt><tt class="py-op">)</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">    <tt id="link-10" class="py-name" targets="Variable polls.models.Choice.votes=polls.models.Choice-class.html#votes"><a title="polls.models.Choice.votes" class="py-name" href="#" onclick="return doclink('link-10', 'votes', 'link-10');">votes</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-11', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">IntegerField</tt><tt class="py-op">(</tt><tt class="py-name">default</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="Allowed_course_id"></a><div id="Allowed_course_id-def"><a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="Allowed_course_id-toggle" onclick="return toggle('Allowed_course_id');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="polls.models.Allowed_course_id-class.html">Allowed_course_id</a><tt class="py-op">(</tt><tt class="py-base-class">models</tt><tt class="py-op">.</tt><tt class="py-base-class">Model</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Allowed_course_id-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Allowed_course_id-expanded"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">  <tt id="link-12" class="py-name" targets="Variable polls.models.Allowed_course_id.course_id_install=polls.models.Allowed_course_id-class.html#course_id_install,Variable polls.models.Related_assignment_id.course_id_install=polls.models.Related_assignment_id-class.html#course_id_install,Variable polls.models.U_1data.course_id_install=polls.models.U_1data-class.html#course_id_install"><a title="polls.models.Allowed_course_id.course_id_install
+polls.models.Related_assignment_id.course_id_install
+polls.models.U_1data.course_id_install" class="py-name" href="#" onclick="return doclink('link-12', 'course_id_install', 'link-12');">course_id_install</a></tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-13', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">IntegerField</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">   </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="Related_assignment_id"></a><div id="Related_assignment_id-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="Related_assignment_id-toggle" onclick="return toggle('Related_assignment_id');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="polls.models.Related_assignment_id-class.html">Related_assignment_id</a><tt class="py-op">(</tt><tt class="py-base-class">models</tt><tt class="py-op">.</tt><tt class="py-base-class">Model</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Related_assignment_id-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Related_assignment_id-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">  <tt id="link-14" class="py-name"><a title="polls.models.Allowed_course_id.course_id_install
+polls.models.Related_assignment_id.course_id_install
+polls.models.U_1data.course_id_install" class="py-name" href="#" onclick="return doclink('link-14', 'course_id_install', 'link-12');">course_id_install</a></tt> <tt class="py-op">=</tt><tt id="link-15" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-15', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">ManyToManyField</tt><tt class="py-op">(</tt><tt id="link-16" class="py-name" targets="Class polls.models.Allowed_course_id=polls.models.Allowed_course_id-class.html"><a title="polls.models.Allowed_course_id" class="py-name" href="#" onclick="return doclink('link-16', 'Allowed_course_id', 'link-16');">Allowed_course_id</a></tt><tt class="py-op">,</tt> <tt class="py-name">through</tt><tt class="py-op">=</tt><tt class="py-string">'U_1data'</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">  <tt id="link-17" class="py-name" targets="Variable polls.models.Related_assignment_id.assignment_id=polls.models.Related_assignment_id-class.html#assignment_id"><a title="polls.models.Related_assignment_id.assignment_id" class="py-name" href="#" onclick="return doclink('link-17', 'assignment_id', 'link-17');">assignment_id</a></tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-18', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">IntegerField</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">  <tt id="link-19" class="py-name" targets="Variable polls.models.Related_assignment_id.assignment_id_beta=polls.models.Related_assignment_id-class.html#assignment_id_beta"><a title="polls.models.Related_assignment_id.assignment_id_beta" class="py-name" href="#" onclick="return doclink('link-19', 'assignment_id_beta', 'link-19');">assignment_id_beta</a></tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-20', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">IntegerField</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">  <tt id="link-21" class="py-name" targets="Variable polls.models.Related_assignment_id.assignment_id_thesis=polls.models.Related_assignment_id-class.html#assignment_id_thesis"><a title="polls.models.Related_assignment_id.assignment_id_thesis" class="py-name" href="#" onclick="return doclink('link-21', 'assignment_id_thesis', 'link-21');">assignment_id_thesis</a></tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-22', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">IntegerField</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="U_1data"></a><div id="U_1data-def"><a name="L28"></a><tt class="py-lineno">28</tt> <a class="py-toggle" href="#" id="U_1data-toggle" onclick="return toggle('U_1data');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="polls.models.U_1data-class.html">U_1data</a><tt class="py-op">(</tt><tt class="py-base-class">models</tt><tt class="py-op">.</tt><tt class="py-base-class">Model</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="U_1data-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="U_1data-expanded"><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt id="link-23" class="py-name"><a title="polls.models.Allowed_course_id.course_id_install
+polls.models.Related_assignment_id.course_id_install
+polls.models.U_1data.course_id_install" class="py-name" href="#" onclick="return doclink('link-23', 'course_id_install', 'link-12');">course_id_install</a></tt> <tt class="py-op">=</tt> <tt id="link-24" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-24', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">ForeignKey</tt><tt class="py-op">(</tt><tt id="link-25" class="py-name"><a title="polls.models.Allowed_course_id" class="py-name" href="#" onclick="return doclink('link-25', 'Allowed_course_id', 'link-16');">Allowed_course_id</a></tt><tt class="py-op">,</tt> <tt class="py-name">on_delete</tt><tt class="py-op">=</tt><tt id="link-26" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-26', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">CASCADE</tt><tt class="py-op">)</tt>   </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt id="link-27" class="py-name" targets="Variable polls.models.U_1data.related_assignment_id=polls.models.U_1data-class.html#related_assignment_id"><a title="polls.models.U_1data.related_assignment_id" class="py-name" href="#" onclick="return doclink('link-27', 'related_assignment_id', 'link-27');">related_assignment_id</a></tt> <tt class="py-op">=</tt> <tt id="link-28" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-28', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">ForeignKey</tt><tt class="py-op">(</tt><tt id="link-29" class="py-name" targets="Class polls.models.Related_assignment_id=polls.models.Related_assignment_id-class.html"><a title="polls.models.Related_assignment_id" class="py-name" href="#" onclick="return doclink('link-29', 'Related_assignment_id', 'link-29');">Related_assignment_id</a></tt><tt class="py-op">,</tt> <tt class="py-name">on_delete</tt><tt class="py-op">=</tt><tt id="link-30" class="py-name"><a title="polls.models" class="py-name" href="#" onclick="return doclink('link-30', 'models', 'link-0');">models</a></tt><tt class="py-op">.</tt><tt class="py-name">CASCADE</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="polls-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jun 19 07:34:21 2018
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

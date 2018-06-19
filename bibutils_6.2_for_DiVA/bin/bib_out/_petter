@@ -1,0 +1,7 @@
+﻿@Book{ref1,
+author="{ANDERSSON, PETTER}
+and {W{\"O}RLUND, ROBERT}",
+title="A comparative study between server and client rendering of real- time data visualizations using D3: Futures studies through the lens of feminist epistemologies",
+abstract="Applying visualization techniques to larger data sets is important to make them easier to explore and analyze. It is also desirable for the visualizations to be done efﬁciently where there is a continuous ﬂow of data that needs to be visualized. This thesis will explore the performance difference of client and server rendering respectively with the implemented JavaScript visualization framework D3. To perform the comparative study, two prototypes were created, one using server-side rendering and one using client-side rendering. The time was measured and compared between the two versions to see the impact on render and total time for different data sizes and different amount of concurrently connected clients. Render- ing times on the client version showed to be faster than on the server, however the data as JSON objects transferred in the client version was signiﬁcantly larger than the SVG elements in the server version, which leads to a trade off between transferring times and rendering times between the two versions. Increasing the amount of concurrent clients showed to have a signiﬁcant impact on the server version for larger data sets which was to be expected. iii"
+}
+

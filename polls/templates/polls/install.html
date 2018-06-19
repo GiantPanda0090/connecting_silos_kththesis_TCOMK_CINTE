@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+
+    <form action="accept_form" method="post">
+    {% csrf_token %}
+    <label for="courseid">Course ID: </label>
+    <input id="courseid" type="int" name="courseid" placeholder="Canvas course ID"><br />
+    <input type="submit" value="OK" class="default" />
+</form>
+
+
+
+
+</body>
+</html>
