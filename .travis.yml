@@ -12,7 +12,7 @@ env: # => 4
       -DJANGO=1.8 DB=mysql
 
 install: # => 5
-      - pip install -r requirements.txt
+      - pip install -r polls/requirements.txt
 
 before_script: # => 6
       - mysql -e 'create database test;' -u root
