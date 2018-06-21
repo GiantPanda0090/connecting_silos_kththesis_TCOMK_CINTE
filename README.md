@@ -46,7 +46,7 @@
  The data in the thesis report is partially automated with module: test_accuracy.py <br />
 
  DiVA location for thesis report:<br />
-
+ http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-230996<br />
  
 
 
