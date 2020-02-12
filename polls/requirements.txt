@@ -1,5 +1,5 @@
 
-Django == 1.11.13   
+Django == 1.11.28   
 lxml == 4.2.1    
 PyVirtualDisplay==0.2.1    
 requests == 2.18.4   
